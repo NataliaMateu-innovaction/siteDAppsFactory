@@ -1,0 +1,89 @@
+---
+import { getCollection, render } from 'astro:content';
+import Inner from '../../layouts/Inner.astro';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog', ({ data }) => !data.borrador);
+  return posts.map((post) => ({ params: { slug: post.id }, props: { post } }));
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+const fmt = (d: Date) =>
+  d.toLocaleDateString('es-AR', { day: '2-digit', month: 'long', year: 'numeric' });
+---
+
+<Inner
+  title={`${post.data.titulo} · DAppsFactory`}
+  description={post.data.bajada}
+  eyebrow={post.data.tema}
+  h1={post.data.titulo}
+  bajada={`${fmt(post.data.fecha)} · ${post.data.autor}`}
+>
+  <section style="background:var(--bg-light); color:var(--text-on-light); padding:clamp(64px,8vw,110px) 0 clamp(96px,12vw,140px);">
+    <div style="max-width:1280px; margin:0 auto; padding:0 clamp(20px,5vw,40px);">
+      <article class="df-prose">
+        <Content />
+      </article>
+      <p style="margin:clamp(48px,6vw,72px) 0 0;">
+        <a href="/blog/" style="display:inline-flex; align-items:center; gap:8px; min-height:44px; font-size:0.9375rem; font-weight:500; border-bottom:1px solid var(--hairline-light);">
+          ← Volver al blog
+        </a>
+      </p>
+    </div>
+  </section>
+</Inner>
+
+<style is:global>
+  /* Tipografía de artículo — misma escala y colores que el resto del sitio. */
+  .df-prose { max-width: 68ch; }
+  .df-prose h2 {
+    margin: clamp(40px, 5vw, 64px) 0 16px;
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: clamp(1.5rem, 2.6vw, 2rem);
+    line-height: 1.15;
+    letter-spacing: -0.025em;
+  }
+  .df-prose h3 {
+    margin: clamp(28px, 4vw, 40px) 0 12px;
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: clamp(1.125rem, 1.8vw, 1.375rem);
+    line-height: 1.25;
+    letter-spacing: -0.02em;
+  }
+  .df-prose p,
+  .df-prose li {
+    margin: 0 0 20px;
+    font-size: clamp(1rem, 1.15vw, 1.125rem);
+    line-height: 1.62;
+    color: var(--muted-on-light);
+    text-wrap: pretty;
+  }
+  .df-prose strong { color: var(--text-on-light); font-weight: 600; }
+  .df-prose ul, .df-prose ol { margin: 0 0 20px; padding-left: 22px; }
+  .df-prose li { margin-bottom: 8px; }
+  .df-prose a { border-bottom: 1px solid var(--hairline-light); }
+  .df-prose a:hover { color: var(--text-on-light); border-bottom-color: var(--text-on-light); }
+  .df-prose code {
+    font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: 0.875em;
+    background: var(--surface-light);
+    padding: 2px 6px;
+    border-radius: 4px;
+  }
+  .df-prose pre {
+    margin: 0 0 24px;
+    padding: 24px;
+    border-radius: 16px;
+    background: var(--bg-dark);
+    overflow-x: auto;
+  }
+  .df-prose pre code { background: none; padding: 0; color: #C9C9D1; }
+  .df-prose blockquote {
+    margin: 0 0 24px;
+    padding-left: 20px;
+    border-left: 2px solid var(--hairline-light);
+  }
+</style>

@@ -1,0 +1,99 @@
+---
+import Inner from '../layouts/Inner.astro';
+
+/*
+  El formulario postea a PUBLIC_FORM_ENDPOINT (ver .env.example).
+  El sitio es estático, así que necesita un backend externo: un servicio tipo
+  Formspree/Basin, o una función serverless propia. Mientras no esté configurado,
+  la página muestra el mail y LinkedIn en lugar del formulario, para no ofrecer
+  algo que se traga los mensajes en silencio.
+*/
+const endpoint = import.meta.env.PUBLIC_FORM_ENDPOINT ?? '';
+const email = 'hola@dappsfactory.com';
+const linkedin = 'https://www.linkedin.com/';
+
+const label = 'display:block; margin-bottom:8px; font-size:0.8125rem; font-weight:500; letter-spacing:0.08em; text-transform:uppercase; color:var(--muted-on-light);';
+const field = 'width:100%; padding:14px 16px; font:inherit; font-size:1rem; color:var(--text-on-light); background:var(--bg-light); border:1px solid var(--hairline-light); border-radius:12px; min-height:44px;';
+---
+
+<Inner
+  title="Contacto · DAppsFactory"
+  description="Contanos qué querés poner en producción. 30 minutos con alguien que ya construyó esto, sin pitch de ventas."
+  eyebrow="Contacto"
+  h1="Contanos qué querés poner en producción."
+  bajada="30 minutos con alguien que ya construyó esto. Sin pitch de ventas."
+>
+  <section style="background:var(--bg-light); color:var(--text-on-light); padding:clamp(64px,8vw,110px) 0 clamp(96px,12vw,140px);">
+    <div style="max-width:1280px; margin:0 auto; padding:0 clamp(20px,5vw,40px);">
+      <div data-grid="proc" style="display:grid; grid-template-columns:1fr; gap:clamp(40px,6vw,72px);">
+        <div>
+          {endpoint ? (
+            <form method="POST" action={endpoint} style="display:flex; flex-direction:column; gap:24px; max-width:560px;">
+              <div>
+                <label for="nombre" style={label}>Nombre</label>
+                <input id="nombre" name="nombre" type="text" required autocomplete="name" style={field} />
+              </div>
+              <div>
+                <label for="email" style={label}>Email de trabajo</label>
+                <input id="email" name="email" type="email" required autocomplete="email" style={field} />
+              </div>
+              <div>
+                <label for="empresa" style={label}>Empresa</label>
+                <input id="empresa" name="empresa" type="text" autocomplete="organization" style={field} />
+              </div>
+              <div>
+                <label for="mensaje" style={label}>Qué querés poner en producción</label>
+                <textarea id="mensaje" name="mensaje" rows="6" required style={`${field} resize:vertical;`}></textarea>
+              </div>
+              {/* honeypot anti-spam: invisible para personas, tentador para bots */}
+              <div style="position:absolute; left:-9999px;" aria-hidden="true">
+                <label for="sitio-web">No completar</label>
+                <input id="sitio-web" name="sitio-web" type="text" tabindex="-1" autocomplete="off" />
+              </div>
+              <button
+                type="submit"
+                data-cta="1"
+                style="display:inline-flex; align-items:center; justify-content:center; gap:10px; align-self:start; border-radius:999px; padding:16px 28px; font-size:1rem; font-weight:600; color:#060607; background:var(--brand-gradient); min-height:44px; cursor:pointer;"
+              >
+                Enviar
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 12L12 4M12 4H6M12 4v6" stroke="#060607" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </button>
+            </form>
+          ) : (
+            <div style="max-width:560px; padding:28px; border:1px dashed var(--hairline-light); border-radius:16px;">
+              <p style="margin:0 0 12px; font-family:var(--font-display); font-weight:600; font-size:1.125rem; letter-spacing:-0.01em;">
+                El formulario todavía no está conectado.
+              </p>
+              <p style="margin:0 0 20px; font-size:1rem; line-height:1.62; color:var(--muted-on-light); text-wrap:pretty;">
+                Falta definir el backend que recibe los mensajes. Hasta entonces, escribinos directo —
+                así ningún mensaje se pierde en silencio.
+              </p>
+              <p style="margin:0; font-size:1rem; line-height:1.8;">
+                <a href={`mailto:${email}`} style="border-bottom:1px solid var(--hairline-light);">{email}</a><br />
+                <a href={linkedin} rel="noopener" style="border-bottom:1px solid var(--hairline-light);">LinkedIn</a>
+              </p>
+            </div>
+          )}
+        </div>
+
+        <div>
+          <h2 style="margin:0 0 20px; font-family:var(--font-display); font-weight:600; font-size:clamp(1.25rem,2vw,1.6rem); line-height:1.2; letter-spacing:-0.02em;">
+            Qué pasa después
+          </h2>
+          <ol style="margin:0; padding:0; list-style:none;">
+            {[
+              ['01', 'Te respondemos en un día hábil.'],
+              ['02', 'Media hora con alguien técnico, no con un comercial.'],
+              ['03', 'Si tiene sentido, te mandamos un alcance y un rango. Si no, te lo decimos.']
+            ].map(([n, t]) => (
+              <li style="display:grid; grid-template-columns:auto 1fr; gap:16px; padding:18px 0; border-bottom:1px solid var(--hairline-light);">
+                <span style="font-family:var(--font-display); font-size:0.8125rem; font-weight:600; letter-spacing:0.14em; color:var(--muted-on-light);">{n}</span>
+                <span style="font-size:1rem; line-height:1.62; color:var(--muted-on-light); text-wrap:pretty;">{t}</span>
+              </li>
+            ))}
+          </ol>
+        </div>
+      </div>
+    </div>
+  </section>
+</Inner>

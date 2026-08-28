@@ -1,0 +1,42 @@
+  <div aria-hidden="true" style="position:fixed; inset:0; z-index:90; pointer-events:none; mix-blend-mode:overlay; opacity:0.04; background-image:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22160%22%20height%3D%22160%22%3E%3Cfilter%20id%3D%22n%22%3E%3CfeTurbulence%20type%3D%22fractalNoise%22%20baseFrequency%3D%220.85%22%20numOctaves%3D%222%22%2F%3E%3C%2Ffilter%3E%3Crect%20width%3D%22160%22%20height%3D%22160%22%20filter%3D%22url(%2523n)%22%2F%3E%3C%2Fsvg%3E"); background-size:160px 160px;"></div>
+
+  <div data-ref="pre" aria-hidden="true" style="position:fixed; inset:0; z-index:100; background:var(--bg-dark); display:flex; align-items:center; justify-content:center; transition:transform 500ms cubic-bezier(0.76,0,0.24,1); opacity:0; pointer-events:none;">
+    <svg width="64" height="64" viewBox="0 0 64 64" fill="none" aria-hidden="true">
+      <defs><linearGradient id="dfg" x1="0" y1="0" x2="64" y2="0"><stop offset="0" stop-color="#B4F759"/><stop offset="0.28" stop-color="#01C7C5"/><stop offset="0.55" stop-color="#3296E3"/><stop offset="0.8" stop-color="#7973F6"/><stop offset="1" stop-color="#8E71F5"/></linearGradient></defs>
+      <circle cx="32" cy="32" r="28" stroke="url(#dfg)" stroke-width="2" stroke-linecap="round" stroke-dasharray="176" style="animation:dfDraw 700ms ease-out forwards; transform:rotate(-90deg); transform-origin:32px 32px;"></circle>
+    </svg>
+  </div>
+
+  <nav data-ref="nav" aria-label="Principal" style="position:fixed; top:0; left:0; width:100%; z-index:50; transition:background 300ms ease, padding 300ms ease, border-color 300ms ease; border-bottom:1px solid transparent; padding:20px 0;">
+    <div style="max-width:1280px; margin:0 auto; padding:0 clamp(20px,5vw,40px); display:flex; align-items:center; justify-content:space-between; gap:24px;">
+      <a href="#top" aria-label="DAppsFactory · inicio" style="display:flex; align-items:center;">
+        <img src="/logo-dappsfactory.svg" alt="DAppsFactory" width="744" height="310" style="display:block; height:56px; width:auto;" />
+      </a>
+      <div style="display:none; gap:32px; align-items:center;" data-navlinks="1">
+        <a href="#soluciones" style="font-size:0.875rem; font-weight:500; color:var(--muted-on-dark); transition:color 200ms ease;">Soluciones</a>
+        <a href="#proceso" style="font-size:0.875rem; font-weight:500; color:var(--muted-on-dark); transition:color 200ms ease;">Cómo trabajamos</a>
+        <a href="#casos" style="font-size:0.875rem; font-weight:500; color:var(--muted-on-dark); transition:color 200ms ease;">Casos</a>
+        <a href="#seguridad" style="font-size:0.875rem; font-weight:500; color:var(--muted-on-dark); transition:color 200ms ease;">Seguridad</a>
+      </div>
+      <div style="display:flex; align-items:center; gap:8px;">
+        <a href="#contacto" data-magnetic="1" style="display:none; align-items:center; border-radius:999px; padding:10px 20px; font-size:0.875rem; font-weight:600; color:#060607; background:var(--brand-gradient); transition:transform 200ms ease, filter 200ms ease; min-height:44px; box-sizing:border-box; align-content:center; white-space:nowrap; justify-content:center;" data-navcta="1">Agendar 30 min</a>
+        <button type="button" data-menu-toggle aria-label="Abrir menú" aria-expanded="false" style="width:44px; height:44px; display:flex; align-items:center; justify-content:center;" data-burger="1">
+          <span aria-hidden="true" style="display:block; width:20px; height:9px; border-top:1px solid var(--text-on-dark); border-bottom:1px solid var(--text-on-dark);"></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <div data-ref="panelWrap" style="position:fixed; inset:0; z-index:60; visibility:hidden; opacity:0; transition:opacity 300ms ease, visibility 300ms ease;">
+    <div data-menu-close style="position:absolute; inset:0; background:rgba(6,6,7,0.6); backdrop-filter:blur(8px);"></div>
+    <div data-ref="panel" role="dialog" aria-label="Menú" style="position:absolute; top:0; right:0; width:min(88vw,360px); height:100dvh; background:var(--surface-dark); border-left:1px solid var(--hairline-dark); padding:24px clamp(20px,6vw,32px); display:flex; flex-direction:column; gap:4px; transform:translateX(100%); transition:transform 450ms cubic-bezier(0.22,1,0.36,1);">
+      <div style="display:flex; justify-content:flex-end; margin-bottom:24px;">
+        <button type="button" data-menu-close aria-label="Cerrar menú" style="width:44px; height:44px; display:flex; align-items:center; justify-content:center; font-size:1.25rem; color:var(--muted-on-dark);">✕</button>
+      </div>
+      <a href="#soluciones" data-menu-close style="padding:14px 0; border-bottom:1px solid var(--hairline-dark); font-family:var(--font-display); font-size:1.25rem; font-weight:600; letter-spacing:-0.02em;">Soluciones</a>
+      <a href="#proceso" data-menu-close style="padding:14px 0; border-bottom:1px solid var(--hairline-dark); font-family:var(--font-display); font-size:1.25rem; font-weight:600; letter-spacing:-0.02em;">Cómo trabajamos</a>
+      <a href="#casos" data-menu-close style="padding:14px 0; border-bottom:1px solid var(--hairline-dark); font-family:var(--font-display); font-size:1.25rem; font-weight:600; letter-spacing:-0.02em;">Casos</a>
+      <a href="#seguridad" data-menu-close style="padding:14px 0; border-bottom:1px solid var(--hairline-dark); font-family:var(--font-display); font-size:1.25rem; font-weight:600; letter-spacing:-0.02em;">Seguridad</a>
+      <a href="#contacto" data-menu-close style="margin-top:24px; text-align:center; border-radius:999px; padding:16px 24px; font-size:0.9375rem; font-weight:600; color:#060607; background:var(--brand-gradient);">Agendar 30 min</a>
+    </div>
+  </div>

@@ -1,0 +1,47 @@
+---
+/*
+  Layout para las páginas internas (Blog, Equipo, Contacto).
+
+  No introduce lenguaje visual nuevo: reusa los mismos tokens, la misma escala
+  tipográfica y los mismos contenedores que la home. El bloque de cabecera copia
+  la estructura "eyebrow + H1 + bajada" que ya usan todas las secciones.
+*/
+import Base from './Base.astro';
+import Chrome from '../components/Chrome.astro';
+import Footer from '../components/Footer.astro';
+
+interface Props {
+  title: string;
+  description: string;
+  eyebrow: string;
+  h1: string;
+  bajada?: string;
+}
+const { title, description, eyebrow, h1, bajada } = Astro.props;
+---
+
+<Base title={title} description={description}>
+  <Chrome />
+  <main id="top" style="display:block;">
+    <section
+      style="background:var(--bg-dark); color:var(--text-on-dark); padding:clamp(140px,16vw,220px) 0 clamp(48px,6vw,72px);"
+    >
+      <div style="max-width:1280px; margin:0 auto; padding:0 clamp(20px,5vw,40px);">
+        <div style="display:flex; align-items:center; gap:10px; margin-bottom:24px;">
+          <span aria-hidden="true" style="width:6px; height:6px; border-radius:50%; background:var(--brand-gradient);"></span>
+          <span style="font-size:0.75rem; font-weight:500; letter-spacing:0.18em; text-transform:uppercase; color:var(--muted-on-dark);">{eyebrow}</span>
+        </div>
+        <h1
+          style="margin:0 0 20px; max-width:16ch; font-family:var(--font-display); font-weight:700; font-size:clamp(2.4rem,4.4vw,4rem); line-height:1.0; letter-spacing:-0.035em;"
+        >{h1}</h1>
+        {bajada && (
+          <p style="margin:0; max-width:56ch; font-size:clamp(1rem,1.15vw,1.125rem); line-height:1.62; color:var(--muted-on-dark); text-wrap:pretty;">{bajada}</p>
+        )}
+      </div>
+    </section>
+
+    <slot />
+
+    <Footer />
+  </main>
+</Base>

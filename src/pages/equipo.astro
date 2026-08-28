@@ -1,0 +1,59 @@
+---
+import Inner from '../layouts/Inner.astro';
+
+/*
+  PENDIENTE DE CONTENIDO: nombres, roles, bios y fotos reales del equipo.
+  Los de abajo son marcadores con la estructura correcta — reemplazar, no
+  publicar así. El handoff ya listaba el logo oficial y los logos de clientes
+  como pendientes; esto se suma a esa lista.
+*/
+const equipo = [
+  { nombre: 'Nombre Apellido', rol: 'Dirección técnica', bio: 'Una línea sobre qué construyó antes y qué resuelve acá.' },
+  { nombre: 'Nombre Apellido', rol: 'Arquitectura blockchain', bio: 'Una línea sobre qué construyó antes y qué resuelve acá.' },
+  { nombre: 'Nombre Apellido', rol: 'Cumplimiento y riesgo', bio: 'Una línea sobre qué construyó antes y qué resuelve acá.' },
+  { nombre: 'Nombre Apellido', rol: 'Producto', bio: 'Una línea sobre qué construyó antes y qué resuelve acá.' }
+];
+---
+
+<Inner
+  title="Equipo · DAppsFactory"
+  description="El equipo multidisciplinario que construye infraestructura blockchain para bancos, financieras y desarrolladoras."
+  eyebrow="Equipo"
+  h1="Quiénes lo construyen."
+  bajada="Un equipo multidisciplinario: ingeniería, arquitectura blockchain y cumplimiento trabajando sobre el mismo problema."
+>
+  <section style="background:var(--bg-light); color:var(--text-on-light); padding:clamp(64px,8vw,110px) 0 clamp(96px,12vw,140px);">
+    <div style="max-width:1280px; margin:0 auto; padding:0 clamp(20px,5vw,40px);">
+      <div data-grid="metrics" style="display:grid; grid-template-columns:1fr; gap:clamp(28px,4vw,40px) clamp(24px,3vw,40px);">
+        {equipo.map((p) => (
+          <div>
+            <div
+              aria-hidden="true"
+              style="width:100%; aspect-ratio:4 / 5; border-radius:16px; background:var(--surface-light); border:1px dashed var(--hairline-light); margin-bottom:20px;"
+            ></div>
+            <h2 style="margin:0 0 4px; font-family:var(--font-display); font-weight:600; font-size:1.0625rem; letter-spacing:-0.01em;">{p.nombre}</h2>
+            <p style="margin:0 0 10px; font-size:0.8125rem; font-weight:500; letter-spacing:0.08em; text-transform:uppercase; color:var(--muted-on-light);">{p.rol}</p>
+            <p style="margin:0; font-size:0.9375rem; line-height:1.55; color:var(--muted-on-light); text-wrap:pretty;">{p.bio}</p>
+          </div>
+        ))}
+      </div>
+
+      <div style="margin-top:clamp(64px,8vw,110px); padding-top:clamp(40px,5vw,56px); border-top:1px solid var(--hairline-light);">
+        <h2 style="margin:0 0 20px; max-width:20ch; font-family:var(--font-display); font-weight:700; font-size:clamp(2rem,4.4vw,3.5rem); line-height:1.04; letter-spacing:-0.03em;">
+          ¿Querés trabajar con nosotros?
+        </h2>
+        <p style="margin:0 0 28px; max-width:52ch; font-size:clamp(1rem,1.15vw,1.125rem); line-height:1.62; color:var(--muted-on-light); text-wrap:pretty;">
+          Escribinos contando en qué te gustaría trabajar. Si no hay búsqueda abierta, igual leemos todo.
+        </p>
+        <a
+          href="/contacto/"
+          data-cta="1"
+          style="display:inline-flex; align-items:center; justify-content:center; gap:10px; border-radius:999px; padding:16px 28px; font-size:1rem; font-weight:600; color:#060607; background:var(--brand-gradient); min-height:44px;"
+        >
+          Escribinos
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 12L12 4M12 4H6M12 4v6" stroke="#060607" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+</Inner>

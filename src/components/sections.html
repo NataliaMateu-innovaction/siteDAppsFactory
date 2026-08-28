@@ -1,0 +1,550 @@
+
+    <section aria-labelledby="hero-h1" style="position:relative; width:100%; min-height:100svh; display:flex; align-items:center; overflow:hidden; background:var(--bg-dark);">
+      <video data-ref="video" autoplay muted loop playsinline preload="metadata" poster="/media/V1-poster.jpg" aria-hidden="true" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; transform:translate3d(0,calc(var(--hero-p) * 12vh),0); opacity:calc(1 - var(--hero-p) * 0.5); will-change:transform;">
+        <source src="/media/V1-loop.webm" type="video/webm" />
+        <source src="/media/V1-loop.mp4" type="video/mp4" />
+      </video>
+      <img data-ref="poster" src="/media/V1-poster.jpg" alt="" aria-hidden="true" style="display:none; position:absolute; inset:0; width:100%; height:100%; object-fit:cover;" />
+      <div aria-hidden="true" data-ref="heroOverlay" style="position:absolute; inset:0; background:linear-gradient(90deg, rgba(6,6,7,0.94) 0%, rgba(6,6,7,0.80) 42%, rgba(6,6,7,0.25) 100%);"></div>
+      <div style="position:relative; width:100%; max-width:1280px; margin:0 auto; padding:120px clamp(20px,5vw,40px) 96px; opacity:max(0, calc(1 - var(--hero-p) * 1.25));">
+        <div style="max-width:680px;">
+          <div data-reveal="1" data-delay="0" style="display:flex; align-items:center; gap:10px; margin-bottom:28px;">
+            <span aria-hidden="true" style="width:6px; height:6px; border-radius:50%; background:var(--brand-gradient);"></span>
+            <span style="font-size:0.75rem; font-weight:500; letter-spacing:0.18em; text-transform:uppercase; color:var(--muted-on-dark); white-space:nowrap;">Blockchain Infrastructure</span>
+          </div>
+          <h1 id="hero-h1" style="margin:0 0 28px; font-family:var(--font-display); font-weight:700; font-size:clamp(2.4rem,4.4vw,4rem); line-height:1.0; letter-spacing:-0.035em; color:var(--text-on-dark);">
+            <span style="display:block; overflow:hidden; padding-bottom:0.16em; margin-bottom:-0.16em;"><span data-line="1" data-delay="120" style="display:block;">Blockchain que ya opera</span></span>
+            <span style="display:block; overflow:hidden; padding-bottom:0.16em; margin-bottom:-0.16em;"><span data-line="1" data-delay="210" style="display:block;">dentro del sistema</span></span>
+            <span style="display:block; overflow:hidden; padding-bottom:0.16em; margin-bottom:-0.16em;"><span data-line="1" data-delay="300" style="display:block;">financiero regulado.</span></span>
+          </h1>
+          <p data-reveal="1" data-delay="450" style="margin:0 0 40px; max-width:560px; font-size:clamp(1rem,1.15vw,1.125rem); line-height:1.62; color:#C9C9D1;">Tokenización de activos, wallets fiat + cripto y desarrollo blockchain para bancos, financieras y desarrolladoras. Construimos la capa que conecta tu operación con la red — incluido el cumplimiento.</p>
+          <div data-reveal="1" data-delay="600" style="display:flex; flex-wrap:wrap; align-items:center; gap:12px 28px;">
+            <a href="#contacto" data-magnetic="1" data-cta="1" style="display:inline-flex; align-items:center; justify-content:center; gap:10px; border-radius:999px; padding:16px 28px; font-size:1rem; font-weight:600; color:#060607; background:var(--brand-gradient); box-shadow:0 8px 32px rgba(82,119,247,0.25); transition:transform 200ms ease, filter 200ms ease; min-height:44px;">
+              Agendar 30 min con un especialista
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 12L12 4M12 4H6M12 4v6" stroke="#060607" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+            <a href="#soluciones" data-underline="1" style="display:inline-flex; align-items:center; gap:8px; min-height:44px; font-size:0.9375rem; font-weight:500; color:var(--text-on-dark); white-space:nowrap;">
+              <span style="position:relative;">Ver soluciones<span aria-hidden="true" style="position:absolute; left:0; bottom:-4px; width:100%; height:1px; background:var(--brand-gradient); transform:scaleX(0.2); transform-origin:left; transition:transform 350ms cubic-bezier(0.22,1,0.36,1);" data-ul="1"></span></span>
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true" data-hidesm="1"><path d="M8 3v10M8 13l-4-4M8 13l4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section aria-label="Alcance" style="border-top:1px solid var(--hairline-dark); background:var(--bg-dark); padding:64px 0 72px;">
+      <div style="max-width:1280px; margin:0 auto; padding:0 clamp(20px,5vw,40px); display:flex; flex-direction:column; align-items:center; gap:36px;">
+        <p data-reveal="1" style="margin:0; max-width:520px; text-align:center; font-size:0.875rem; line-height:1.7; color:var(--muted-on-dark);">Operamos con bancos, financieras y desarrolladoras en Argentina, México, Estados Unidos y Europa.</p>
+        <div id="df-marquee" data-reveal="1" data-delay="120" style="width:100%; overflow:hidden; mask-image:linear-gradient(90deg, transparent 0, #000 120px, #000 calc(100% - 120px), transparent 100%); -webkit-mask-image:linear-gradient(90deg, transparent 0, #000 120px, #000 calc(100% - 120px), transparent 100%);">
+          <div data-track="1" style="display:flex; width:max-content; animation:dfMarquee 40s linear infinite;">
+            <div style="display:flex; align-items:center; gap:clamp(40px,6vw,88px); padding-right:clamp(40px,6vw,88px);">
+              <div class="df-logo-slot" role="img" aria-label="Logo cliente 1 (pendiente)"><span>Logo cliente 1</span></div>
+              <div class="df-logo-slot" role="img" aria-label="Logo cliente 2 (pendiente)"><span>Logo cliente 2</span></div>
+              <div class="df-logo-slot" role="img" aria-label="Logo cliente 3 (pendiente)"><span>Logo cliente 3</span></div>
+              <div class="df-logo-slot" role="img" aria-label="Logo cliente 4 (pendiente)"><span>Logo cliente 4</span></div>
+              <div class="df-logo-slot" role="img" aria-label="Logo cliente 5 (pendiente)"><span>Logo cliente 5</span></div>
+              <div class="df-logo-slot" role="img" aria-label="Logo cliente 6 (pendiente)"><span>Logo cliente 6</span></div>
+            </div>
+            <div aria-hidden="true" style="display:flex; align-items:center; gap:clamp(40px,6vw,88px); padding-right:clamp(40px,6vw,88px);">
+              <div class="df-logo-slot" role="img" aria-label="Logo cliente 1 (pendiente)"><span>Logo cliente 1</span></div>
+              <div class="df-logo-slot" role="img" aria-label="Logo cliente 2 (pendiente)"><span>Logo cliente 2</span></div>
+              <div class="df-logo-slot" role="img" aria-label="Logo cliente 3 (pendiente)"><span>Logo cliente 3</span></div>
+              <div class="df-logo-slot" role="img" aria-label="Logo cliente 4 (pendiente)"><span>Logo cliente 4</span></div>
+              <div class="df-logo-slot" role="img" aria-label="Logo cliente 5 (pendiente)"><span>Logo cliente 5</span></div>
+              <div class="df-logo-slot" role="img" aria-label="Logo cliente 6 (pendiente)"><span>Logo cliente 6</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="soluciones" data-sec="svc" aria-labelledby="svc-h2" style="position:relative; background:var(--bg-light); color:var(--text-on-light); padding:clamp(96px,12vw,180px) 0 clamp(48px,6vw,90px); clip-path:polygon(0 var(--cut), 100% 0, 100% 100%, 0 100%); margin-top:calc(-1 * var(--cut));">
+      <div aria-hidden="true" style="position:absolute; top:0; left:0; width:100%; height:1px; background:var(--brand-gradient); transform:scaleX(calc(0.15 + 0.85 * var(--svc))); transform-origin:left;"></div>
+      <div style="max-width:1280px; margin:0 auto; padding:0 clamp(20px,5vw,40px);">
+        <div data-reveal="1" style="max-width:640px;">
+          <div style="display:flex; align-items:center; gap:10px; margin-bottom:24px;">
+            <span aria-hidden="true" style="width:6px; height:6px; border-radius:50%; background:var(--brand-gradient);"></span>
+            <span style="font-size:0.75rem; font-weight:500; letter-spacing:0.18em; text-transform:uppercase; color:var(--muted-on-light);">Qué construimos</span>
+          </div>
+          <h2 id="svc-h2" style="margin:0 0 20px; font-family:var(--font-display); font-weight:700; font-size:clamp(2rem,4.4vw,3.5rem); line-height:1.04; letter-spacing:-0.03em;">Tres capas. Un mismo sistema.</h2>
+          <p style="margin:0; font-size:clamp(1rem,1.15vw,1.125rem); line-height:1.62; color:var(--muted-on-light);">Se contratan por separado. Funcionan mejor juntas.</p>
+        </div>
+
+        <div data-grid="svcx" style="display:grid; grid-template-columns:1fr; gap:clamp(40px,7vw,110px); align-items:start; margin-top:clamp(72px,9vw,120px);">
+          <div data-svcindex="1" style="position:sticky; top:18vh;">
+            
+              <button type="button" data-idx="0" data-go-panel="0" aria-current="true" style="display:block; width:100%; text-align:left; padding:22px 0; border-top:1px solid var(--hairline-light); opacity:1; transition:opacity 450ms ease;">
+                <span style="display:grid; grid-template-columns:auto 1fr; gap:18px; align-items:baseline;">
+                  <span style="font-family:var(--font-display); font-weight:700; font-size:1.5rem; letter-spacing:-0.03em; background:var(--brand-gradient); -webkit-background-clip:text; background-clip:text; color:transparent;">01</span>
+                  <span style="font-family:var(--font-display); font-weight:600; font-size:1.0625rem; letter-spacing:-0.01em; color:var(--text-on-light);">Tokenización de activos</span>
+                </span>
+                <span aria-hidden="true" data-bar="1" style="display:block; margin-top:14px; margin-left:calc(1.5rem + 18px); height:2px; border-radius:2px; background:var(--brand-gradient); transform:scaleX(1); transform-origin:left; transition:transform 500ms cubic-bezier(0.22,1,0.36,1);"></span>
+              </button>
+            
+
+              <button type="button" data-idx="1" data-go-panel="1" aria-current="false" style="display:block; width:100%; text-align:left; padding:22px 0; border-top:1px solid var(--hairline-light); opacity:0.38; transition:opacity 450ms ease;">
+                <span style="display:grid; grid-template-columns:auto 1fr; gap:18px; align-items:baseline;">
+                  <span style="font-family:var(--font-display); font-weight:700; font-size:1.5rem; letter-spacing:-0.03em; background:var(--brand-gradient); -webkit-background-clip:text; background-clip:text; color:transparent;">02</span>
+                  <span style="font-family:var(--font-display); font-weight:600; font-size:1.0625rem; letter-spacing:-0.01em; color:var(--text-on-light);">Wallets Fiat + Cripto</span>
+                </span>
+                <span aria-hidden="true" data-bar="1" style="display:block; margin-top:14px; margin-left:calc(1.5rem + 18px); height:2px; border-radius:2px; background:var(--brand-gradient); transform:scaleX(0); transform-origin:left; transition:transform 500ms cubic-bezier(0.22,1,0.36,1);"></span>
+              </button>
+            
+
+              <button type="button" data-idx="2" data-go-panel="2" aria-current="false" style="display:block; width:100%; text-align:left; padding:22px 0; border-top:1px solid var(--hairline-light); opacity:0.38; transition:opacity 450ms ease;">
+                <span style="display:grid; grid-template-columns:auto 1fr; gap:18px; align-items:baseline;">
+                  <span style="font-family:var(--font-display); font-weight:700; font-size:1.5rem; letter-spacing:-0.03em; background:var(--brand-gradient); -webkit-background-clip:text; background-clip:text; color:transparent;">03</span>
+                  <span style="font-family:var(--font-display); font-weight:600; font-size:1.0625rem; letter-spacing:-0.01em; color:var(--text-on-light);">Desarrollo Blockchain</span>
+                </span>
+                <span aria-hidden="true" data-bar="1" style="display:block; margin-top:14px; margin-left:calc(1.5rem + 18px); height:2px; border-radius:2px; background:var(--brand-gradient); transform:scaleX(0); transform-origin:left; transition:transform 500ms cubic-bezier(0.22,1,0.36,1);"></span>
+              </button>
+            
+            <div aria-hidden="true" style="height:1px; background:var(--hairline-light);"></div>
+          </div>
+
+          <div>
+            <div data-panel="0" data-reveal="1" style="padding-bottom:clamp(48px,7vw,90px);">
+              <div data-visual="1" style="position:relative; overflow:hidden; background:var(--bg-dark); aspect-ratio:4 / 5; border-radius:24px; max-width:520px;">
+                <picture>
+            <source srcset="/media/DF-servicio-01-tokenizacion.avif" type="image/avif" />
+            <source srcset="/media/DF-servicio-01-tokenizacion.webp" type="image/webp" />
+            <img alt="Bloque de aluminio fraccionado en láminas idénticas con canales de luz" loading="lazy" style="width:100%; height:100%; object-fit:cover; position:absolute; inset:0;" src="/media/DF-servicio-01-tokenizacion.webp" width="1040" height="1300" decoding="async" />
+          </picture>
+              </div>
+              <p data-cap="1" style="margin:16px 0 0; max-width:520px; font-size:0.8125rem; line-height:1.5; color:var(--muted-on-light);">Un activo entero se fracciona en participaciones idénticas, transferibles y trazables.</p>
+              <div style="margin-top:40px; font-family:var(--font-display); font-weight:700; font-size:clamp(3rem,6vw,5rem); line-height:1; letter-spacing:-0.04em; background:var(--brand-gradient); -webkit-background-clip:text; background-clip:text; color:transparent; background-size:280% 100%; background-position:0% 0;">01</div>
+              <h3 style="margin:12px 0 0; font-family:var(--font-display); font-weight:600; font-size:clamp(1.25rem,2vw,1.6rem); line-height:1.2; letter-spacing:-0.02em; color:var(--text-on-light);">Tokenización de activos</h3>
+              <p style="margin:14px 0 0; max-width:560px; font-size:clamp(1rem,1.15vw,1.125rem); line-height:1.62; color:var(--muted-on-light); text-wrap:pretty;">Convertimos un activo real —un inmueble, una cartera de créditos, un fondo— en un instrumento digital que se emite, se transfiere y se liquida on-chain. Con la estructura legal y el registro que tu regulador espera ver.</p>
+              <a href="#" data-tlink="1" style="display:inline-flex; align-items:center; gap:8px; margin-top:26px; font-size:0.9375rem; font-weight:500; color:var(--text-on-light); text-decoration:none; border-bottom:1px solid var(--hairline-light); padding-bottom:5px; transition:gap 250ms ease, border-color 250ms ease;">
+                Ver tokenización de activos
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg>
+              </a>
+            </div>
+
+            <div data-panel="1" data-reveal="1" style="border-top:1px solid var(--hairline-light); padding:clamp(48px,7vw,90px) 0;">
+              <div data-visual="1" style="position:relative; overflow:hidden; background:var(--bg-dark); aspect-ratio:4 / 5; border-radius:24px; max-width:520px;">
+                <picture>
+            <source srcset="/media/DF-servicio-02-wallets.avif" type="image/avif" />
+            <source srcset="/media/DF-servicio-02-wallets.webp" type="image/webp" />
+            <img alt="Dos canales de luz que convergen en un único punto sobre una pieza de aluminio" loading="lazy" style="width:100%; height:100%; object-fit:cover; position:absolute; inset:0;" src="/media/DF-servicio-02-wallets.webp" width="1040" height="1300" decoding="async" />
+          </picture>
+              </div>
+              <p data-cap="1" style="margin:16px 0 0; max-width:520px; font-size:0.8125rem; line-height:1.5; color:var(--muted-on-light);">Dos flujos de dinero —pesos y cripto— convergen en una sola cuenta.</p>
+              <div style="margin-top:40px; font-family:var(--font-display); font-weight:700; font-size:clamp(3rem,6vw,5rem); line-height:1; letter-spacing:-0.04em; background:var(--brand-gradient); -webkit-background-clip:text; background-clip:text; color:transparent; background-size:280% 100%; background-position:50% 0;">02</div>
+              <h3 style="margin:12px 0 0; font-family:var(--font-display); font-weight:600; font-size:clamp(1.25rem,2vw,1.6rem); line-height:1.2; letter-spacing:-0.02em; color:var(--text-on-light);">Wallets Fiat + Cripto</h3>
+              <p style="margin:14px 0 0; max-width:560px; font-size:clamp(1rem,1.15vw,1.125rem); line-height:1.62; color:var(--muted-on-light); text-wrap:pretty;">Una sola billetera donde conviven pesos, dólares y stablecoins. Onboarding con KYC, cuentas, transferencias y conversión — bajo tu marca y tus reglas de negocio.</p>
+              <a href="#" data-tlink="1" style="display:inline-flex; align-items:center; gap:8px; margin-top:26px; font-size:0.9375rem; font-weight:500; color:var(--text-on-light); text-decoration:none; border-bottom:1px solid var(--hairline-light); padding-bottom:5px; transition:gap 250ms ease, border-color 250ms ease;">
+                Ver wallets fiat + cripto
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg>
+              </a>
+            </div>
+
+            <div data-panel="2" data-reveal="1" style="border-top:1px solid var(--hairline-light); padding:clamp(48px,7vw,90px) 0;">
+              <div data-visual="1" style="box-sizing:border-box; background:var(--bg-dark); aspect-ratio:4 / 5; border-radius:24px; max-width:520px; padding:32px; overflow:hidden; font-family:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace; font-size:0.78rem; line-height:1.85; color:#9AA0A8;">
+                <div style="color:#5A6068;"># ejemplo ilustrativo</div>
+                <div style="margin-top:1.85em;"><span style="color:#B4F759;">POST</span> <span style="color:#01C7C5;">/v1/assets/tokenize</span></div>
+                <div style="margin-top:1.85em;">{</div>
+                <div>&nbsp;&nbsp;<span style="color:#01C7C5;">"asset_id"</span>: <span style="color:#8E71F5;">"prop_8f21"</span>,</div>
+                <div>&nbsp;&nbsp;<span style="color:#01C7C5;">"supply"</span>: <span style="color:#8E71F5;">10000</span>,</div>
+                <div>&nbsp;&nbsp;<span style="color:#01C7C5;">"network"</span>: <span style="color:#8E71F5;">"polygon"</span>,</div>
+                <div>&nbsp;&nbsp;<span style="color:#01C7C5;">"compliance"</span>: {</div>
+                <div>&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#01C7C5;">"kyc"</span>: <span style="color:#8E71F5;">true</span>,</div>
+                <div>&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#01C7C5;">"jurisdiction"</span>: <span style="color:#8E71F5;">"AR"</span></div>
+                <div>&nbsp;&nbsp;}</div>
+                <div>}</div>
+                <div style="margin-top:1.85em; color:#B4F759;">201 Created</div>
+                <div><span style="color:#01C7C5;">contract</span>: <span style="color:#8E71F5;">0x7a3f…c210</span></div>
+              </div>
+              <p data-cap="1" style="margin:16px 0 0; max-width:520px; font-size:0.8125rem; line-height:1.5; color:var(--muted-on-light);">Una llamada emite el activo con sus reglas de cumplimiento adentro.</p>
+              <div style="margin-top:40px; font-family:var(--font-display); font-weight:700; font-size:clamp(3rem,6vw,5rem); line-height:1; letter-spacing:-0.04em; background:var(--brand-gradient); -webkit-background-clip:text; background-clip:text; color:transparent; background-size:280% 100%; background-position:100% 0;">03</div>
+              <h3 style="margin:12px 0 0; font-family:var(--font-display); font-weight:600; font-size:clamp(1.25rem,2vw,1.6rem); line-height:1.2; letter-spacing:-0.02em; color:var(--text-on-light);">Desarrollo Blockchain</h3>
+              <p style="margin:14px 0 0; max-width:560px; font-size:clamp(1rem,1.15vw,1.125rem); line-height:1.62; color:var(--muted-on-light); text-wrap:pretty;">Smart contracts auditados, integración con tu core y APIs que tu equipo puede mantener. Sin dependencia eterna del proveedor.</p>
+              <a href="#" data-tlink="1" style="display:inline-flex; align-items:center; gap:8px; margin-top:26px; font-size:0.9375rem; font-weight:500; color:var(--text-on-light); text-decoration:none; border-bottom:1px solid var(--hairline-light); padding-bottom:5px; transition:gap 250ms ease, border-color 250ms ease;">
+                Ver desarrollo blockchain
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="proceso" data-sec="proc" aria-labelledby="proc-h2" style="background:var(--surface-dark); color:var(--text-on-dark); padding:clamp(96px,12vw,180px) 0;">
+      <div style="max-width:1280px; margin:0 auto; padding:0 clamp(20px,5vw,40px); display:grid; grid-template-columns:1fr; gap:clamp(48px,6vw,80px);" data-grid="proc">
+        <div data-sticky="proc" style="align-self:start;">
+          <div style="display:flex; align-items:center; gap:10px; margin-bottom:24px;">
+            <span aria-hidden="true" style="width:6px; height:6px; border-radius:50%; background:var(--brand-gradient);"></span>
+            <span style="font-size:0.75rem; font-weight:500; letter-spacing:0.18em; text-transform:uppercase; color:var(--muted-on-dark);">Cómo trabajamos</span>
+          </div>
+          <h2 id="proc-h2" style="margin:0 0 20px; max-width:14ch; font-family:var(--font-display); font-weight:700; font-size:clamp(2rem,4.4vw,3.5rem); line-height:1.04; letter-spacing:-0.03em;">El piloto funciona. Producción es otra cosa.</h2>
+          <p style="margin:0; max-width:44ch; font-size:clamp(1rem,1.15vw,1.125rem); line-height:1.62; color:var(--muted-on-dark); text-wrap:pretty;">Los proyectos blockchain casi nunca mueren en la parte técnica. Mueren cuando hay que conectarlos al core, pasar auditoría, resolver custodia y sostenerlos 24/7 con plata adentro.</p>
+        </div>
+        <div style="position:relative; padding-left:clamp(24px,3vw,40px);">
+          <div aria-hidden="true" style="position:absolute; left:0; top:0; width:1px; height:100%; background:var(--brand-gradient); transform:scaleY(var(--proc)); transform-origin:top;"></div>
+          <div style="padding:clamp(24px,3vw,36px) 0; border-bottom:1px solid var(--hairline-dark); opacity:calc(0.35 + 0.65 * var(--s1)); transition:opacity 350ms ease;">
+            <div style="font-family:var(--font-display); font-size:0.8125rem; font-weight:600; letter-spacing:0.14em; color:#8E71F5; margin-bottom:12px; transform:scale(calc(1 + 0.06 * var(--s1))); transform-origin:left; transition:transform 350ms ease;">01</div>
+            <h3 style="margin:0 0 10px; font-family:var(--font-display); font-weight:600; font-size:clamp(1.25rem,2vw,1.6rem); line-height:1.2; letter-spacing:-0.02em;">Diagnóstico y arquitectura</h3>
+            <p style="margin:0; max-width:52ch; font-size:1rem; line-height:1.62; color:var(--muted-on-dark); text-wrap:pretty;">Definimos qué se tokeniza, sobre qué red, con qué modelo de custodia y bajo qué marco. Sale un documento, no un pitch.</p>
+          </div>
+          <div style="padding:clamp(24px,3vw,36px) 0; border-bottom:1px solid var(--hairline-dark); opacity:calc(0.35 + 0.65 * var(--s2)); transition:opacity 350ms ease;">
+            <div style="font-family:var(--font-display); font-size:0.8125rem; font-weight:600; letter-spacing:0.14em; color:#7973F6; margin-bottom:12px; transform:scale(calc(1 + 0.06 * var(--s2))); transform-origin:left; transition:transform 350ms ease;">02</div>
+            <h3 style="margin:0 0 10px; font-family:var(--font-display); font-weight:600; font-size:clamp(1.25rem,2vw,1.6rem); line-height:1.2; letter-spacing:-0.02em;">Prueba de concepto acotada</h3>
+            <p style="margin:0; max-width:52ch; font-size:1rem; line-height:1.62; color:var(--muted-on-dark); text-wrap:pretty;">Un alcance chico y medible, en semanas. Si no cierra, se corta acá y sabés por qué.</p>
+          </div>
+          <div style="padding:clamp(24px,3vw,36px) 0; border-bottom:1px solid var(--hairline-dark); opacity:calc(0.35 + 0.65 * var(--s3)); transition:opacity 350ms ease;">
+            <div style="font-family:var(--font-display); font-size:0.8125rem; font-weight:600; letter-spacing:0.14em; color:#3296E3; margin-bottom:12px; transform:scale(calc(1 + 0.06 * var(--s3))); transform-origin:left; transition:transform 350ms ease;">03</div>
+            <h3 style="margin:0 0 10px; font-family:var(--font-display); font-weight:600; font-size:clamp(1.25rem,2vw,1.6rem); line-height:1.2; letter-spacing:-0.02em;">Integración y auditoría</h3>
+            <p style="margin:0; max-width:52ch; font-size:1rem; line-height:1.62; color:var(--muted-on-dark); text-wrap:pretty;">Conexión con tu core, auditoría externa de contratos y pruebas de carga antes de tocar producción.</p>
+          </div>
+          <div style="padding:clamp(24px,3vw,36px) 0; opacity:calc(0.35 + 0.65 * var(--s4)); transition:opacity 350ms ease;">
+            <div style="font-family:var(--font-display); font-size:0.8125rem; font-weight:600; letter-spacing:0.14em; color:#01C7C5; margin-bottom:12px; transform:scale(calc(1 + 0.06 * var(--s4))); transform-origin:left; transition:transform 350ms ease;">04</div>
+            <h3 style="margin:0 0 10px; font-family:var(--font-display); font-weight:600; font-size:clamp(1.25rem,2vw,1.6rem); line-height:1.2; letter-spacing:-0.02em;">Producción y operación</h3>
+            <p style="margin:0; max-width:52ch; font-size:1rem; line-height:1.62; color:var(--muted-on-dark); text-wrap:pretty;">Salida a producción, monitoreo y soporte. Con documentación para que tu equipo lo opere.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section data-sec="arch" aria-labelledby="arch-h2" style="background:var(--bg-light); color:var(--text-on-light);">
+      <div data-archwrap="1" style="position:relative;">
+        <div data-archstage="1" style="padding:clamp(96px,12vw,160px) 0 clamp(48px,6vw,80px);">
+          <div style="max-width:1280px; margin:0 auto; padding:0 clamp(20px,5vw,40px); display:grid; grid-template-columns:1fr; gap:clamp(48px,6vw,64px); align-items:center;" data-grid="arch">
+            <div data-archhead="1">
+              <div style="display:flex; align-items:center; gap:10px; margin-bottom:24px;">
+                <span aria-hidden="true" style="width:6px; height:6px; border-radius:50%; background:var(--brand-gradient);"></span>
+                <span style="font-size:0.75rem; font-weight:500; letter-spacing:0.18em; text-transform:uppercase; color:var(--muted-on-light);">Integración</span>
+              </div>
+              <h2 id="arch-h2" style="margin:0 0 20px; font-family:var(--font-display); font-weight:700; font-size:clamp(2rem,4.4vw,3.5rem); line-height:1.04; letter-spacing:-0.03em;">Se integra a lo que ya tenés.</h2>
+              <p style="margin:0; max-width:44ch; font-size:clamp(1rem,1.15vw,1.125rem); line-height:1.62; color:var(--muted-on-light); text-wrap:pretty;">No reemplazamos tu core ni tu stack. Nos ubicamos como una capa entre tu operación y la red, con APIs REST, webhooks y SDKs.</p>
+            </div>
+            <div data-archdiagram="1" style="position:relative; width:100%;">
+              <div data-asplit="1" style="display:grid; grid-template-columns:minmax(0,60fr) minmax(0,40fr); align-items:center; column-gap:0; width:100%;">
+                <div data-agroup="1" style="position:relative; width:100%; aspect-ratio:16 / 10; perspective:1200px;">
+                  <div data-astack="1" style="position:absolute; inset:0; transform:rotateX(calc(var(--arch) * 14deg)); transform-style:preserve-3d;">
+                  <picture>
+            <source srcset="/media/DAppsFactory-capa-a.avif" type="image/avif" />
+            <source srcset="/media/DAppsFactory-capa-a.webp" type="image/webp" />
+            <img data-alayer="a" alt="Capa superior: tu negocio" loading="lazy" style="position:absolute; inset:0; width:100%; height:100%; object-fit:contain; z-index:3; transform:translate3d(0,calc(-14px + var(--arch) * -96px),0); will-change:transform;" src="/media/DAppsFactory-capa-a.webp" width="1400" height="348" decoding="async" />
+          </picture>
+                  <picture>
+            <source srcset="/media/DAppsFactory-capa-b.avif" type="image/avif" />
+            <source srcset="/media/DAppsFactory-capa-b.webp" type="image/webp" />
+            <img data-alayer="b" alt="Capa DAppsFactory" loading="lazy" style="position:absolute; inset:0; width:100%; height:100%; object-fit:contain; z-index:2; transform:translate3d(0,0px,0); will-change:transform;" src="/media/DAppsFactory-capa-b.webp" width="1400" height="348" decoding="async" />
+          </picture>
+                  <picture>
+            <source srcset="/media/DAppsFactory-capa-c.avif" type="image/avif" />
+            <source srcset="/media/DAppsFactory-capa-c.webp" type="image/webp" />
+            <img data-alayer="c" alt="Capa inferior: redes" loading="lazy" style="position:absolute; inset:0; width:100%; height:100%; object-fit:contain; z-index:1; transform:translate3d(0,calc(14px + var(--arch) * 96px),0); will-change:transform;" src="/media/DAppsFactory-capa-c.webp" width="1400" height="348" decoding="async" />
+          </picture>
+                  </div>
+                </div>
+                <div data-alabels="1" style="position:relative; align-self:stretch;">
+                <div data-alabel="a" style="position:absolute; left:0; top:50%; display:flex; align-items:center; gap:12px; transform:translateY(calc(-50% + -72px + var(--arch) * -38px)); opacity:var(--la); transition:opacity 400ms ease;">
+                  <span data-aline="a" aria-hidden="true" style="flex:0 0 auto; width:clamp(20px,4vw,64px); height:1px; background:var(--hairline-light); transform:scaleX(var(--la)); transform-origin:left; transition:transform 500ms cubic-bezier(0.22,1,0.36,1);"></span>
+                  <span style="display:block;">
+                    <span style="display:block; font-family:var(--font-display); font-weight:600; font-size:1rem; letter-spacing:-0.01em; color:var(--text-on-light);">Tu negocio</span>
+                    <span style="display:block; margin-top:4px; font-size:0.8125rem; font-weight:400; line-height:1.5; color:var(--muted-on-light);">Core bancario · ERP · CRM · app</span>
+                  </span>
+                </div>
+                <div data-alabel="b" style="position:absolute; left:0; top:50%; display:flex; align-items:center; gap:12px; transform:translateY(calc(-50% + 0px)); opacity:var(--lb); transition:opacity 400ms ease;">
+                  <span data-aline="b" aria-hidden="true" style="flex:0 0 auto; width:clamp(20px,4vw,64px); height:1px; background:var(--hairline-light); transform:scaleX(var(--lb)); transform-origin:left; transition:transform 500ms cubic-bezier(0.22,1,0.36,1);"></span>
+                  <span style="display:block;">
+                    <span style="display:block; font-family:var(--font-display); font-weight:600; font-size:1rem; letter-spacing:-0.01em; color:var(--text-on-light);">Capa DAppsFactory</span>
+                    <span style="display:block; margin-top:4px; font-size:0.8125rem; font-weight:400; line-height:1.5; color:var(--muted-on-light);">APIs · orquestación · custodia · KYC/AML · reporting</span>
+                  </span>
+                </div>
+                <div data-alabel="c" style="position:absolute; left:0; top:50%; display:flex; align-items:center; gap:12px; transform:translateY(calc(-50% + 72px + var(--arch) * 38px)); opacity:var(--lc); transition:opacity 400ms ease;">
+                  <span data-aline="c" aria-hidden="true" style="flex:0 0 auto; width:clamp(20px,4vw,64px); height:1px; background:var(--hairline-light); transform:scaleX(var(--lc)); transform-origin:left; transition:transform 500ms cubic-bezier(0.22,1,0.36,1);"></span>
+                  <span style="display:block;">
+                    <span style="display:block; font-family:var(--font-display); font-weight:600; font-size:1rem; letter-spacing:-0.01em; color:var(--text-on-light);">Redes</span>
+                    <span style="display:block; margin-top:4px; font-size:0.8125rem; font-weight:400; line-height:1.5; color:var(--muted-on-light);">Ethereum · Polygon · Base · redes permisionadas</span>
+                  </span>
+                </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="casos" aria-labelledby="casos-h2" style="background:var(--bg-dark); color:var(--text-on-dark); padding:clamp(96px,12vw,180px) 0;">
+      <div style="max-width:1280px; margin:0 auto; padding:0 clamp(20px,5vw,40px);">
+        <div data-reveal="1" style="text-align:center; max-width:560px; margin:0 auto clamp(56px,7vw,88px);">
+          <div style="display:flex; align-items:center; justify-content:center; gap:10px; margin-bottom:24px;">
+            <span aria-hidden="true" style="width:6px; height:6px; border-radius:50%; background:var(--brand-gradient);"></span>
+            <span style="font-size:0.75rem; font-weight:500; letter-spacing:0.18em; text-transform:uppercase; color:var(--muted-on-dark);">Dónde se aplica</span>
+          </div>
+          <h2 id="casos-h2" style="margin:0; font-family:var(--font-display); font-weight:700; font-size:clamp(2rem,4.4vw,3.5rem); line-height:1.04; letter-spacing:-0.03em;">Cuatro problemas que resolvemos.</h2>
+        </div>
+        <div style="border-top:1px solid var(--hairline-dark);">
+          
+            <a href="#contacto" data-row="1" style="position:relative; display:grid; grid-template-columns:1fr; gap:8px 24px; align-items:start; padding:clamp(24px,3vw,36px) clamp(12px,2vw,20px); border-bottom:1px solid var(--hairline-dark); transition:background 250ms ease;" data-reveal="1">
+              <span style="font-family:var(--font-display); font-size:0.8125rem; font-weight:600; letter-spacing:0.14em; color:var(--muted-on-dark);">01</span>
+              <h3 data-rowtitle="1" style="margin:0; font-family:var(--font-display); font-weight:600; font-size:clamp(1.25rem,2vw,1.6rem); line-height:1.2; letter-spacing:-0.02em; transition:transform 250ms cubic-bezier(0.22,1,0.36,1);">Real estate tokenizado</h3>
+              <p style="margin:0; font-size:1rem; line-height:1.62; color:var(--muted-on-dark); max-width:56ch; text-wrap:pretty;">Fraccionar un desarrollo inmobiliario en participaciones digitales, con registro de titularidad y distribución automática de rentas.</p>
+              <span data-rowarrow="1" aria-hidden="true" style="display:none; justify-self:end; align-self:center; transition:transform 250ms cubic-bezier(0.22,1,0.36,1);">
+                <svg width="18" height="18" viewBox="0 0 16 16" fill="none"><path d="M4 12L12 4M12 4H6M12 4v6" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+              <span data-rowline="1" aria-hidden="true" style="position:absolute; left:0; bottom:-1px; width:100%; height:1px; background:var(--brand-gradient); transform:scaleX(0); transform-origin:left; transition:transform 350ms cubic-bezier(0.22,1,0.36,1);"></span>
+            </a>
+          
+
+            <a href="#contacto" data-row="1" style="position:relative; display:grid; grid-template-columns:1fr; gap:8px 24px; align-items:start; padding:clamp(24px,3vw,36px) clamp(12px,2vw,20px); border-bottom:1px solid var(--hairline-dark); transition:background 250ms ease;" data-reveal="1">
+              <span style="font-family:var(--font-display); font-size:0.8125rem; font-weight:600; letter-spacing:0.14em; color:var(--muted-on-dark);">02</span>
+              <h3 data-rowtitle="1" style="margin:0; font-family:var(--font-display); font-weight:600; font-size:clamp(1.25rem,2vw,1.6rem); line-height:1.2; letter-spacing:-0.02em; transition:transform 250ms cubic-bezier(0.22,1,0.36,1);">Cartera de créditos on-chain</h3>
+              <p style="margin:0; font-size:1rem; line-height:1.62; color:var(--muted-on-dark); max-width:56ch; text-wrap:pretty;">Llevar originación y cesión de cartera a un registro compartido y auditable entre entidades.</p>
+              <span data-rowarrow="1" aria-hidden="true" style="display:none; justify-self:end; align-self:center; transition:transform 250ms cubic-bezier(0.22,1,0.36,1);">
+                <svg width="18" height="18" viewBox="0 0 16 16" fill="none"><path d="M4 12L12 4M12 4H6M12 4v6" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+              <span data-rowline="1" aria-hidden="true" style="position:absolute; left:0; bottom:-1px; width:100%; height:1px; background:var(--brand-gradient); transform:scaleX(0); transform-origin:left; transition:transform 350ms cubic-bezier(0.22,1,0.36,1);"></span>
+            </a>
+          
+
+            <a href="#contacto" data-row="1" style="position:relative; display:grid; grid-template-columns:1fr; gap:8px 24px; align-items:start; padding:clamp(24px,3vw,36px) clamp(12px,2vw,20px); border-bottom:1px solid var(--hairline-dark); transition:background 250ms ease;" data-reveal="1">
+              <span style="font-family:var(--font-display); font-size:0.8125rem; font-weight:600; letter-spacing:0.14em; color:var(--muted-on-dark);">03</span>
+              <h3 data-rowtitle="1" style="margin:0; font-family:var(--font-display); font-weight:600; font-size:clamp(1.25rem,2vw,1.6rem); line-height:1.2; letter-spacing:-0.02em; transition:transform 250ms cubic-bezier(0.22,1,0.36,1);">Billetera fiat + cripto de marca</h3>
+              <p style="margin:0; font-size:1rem; line-height:1.62; color:var(--muted-on-dark); max-width:56ch; text-wrap:pretty;">Producto propio con cuentas, conversión y stablecoins, sin construir el back-end desde cero.</p>
+              <span data-rowarrow="1" aria-hidden="true" style="display:none; justify-self:end; align-self:center; transition:transform 250ms cubic-bezier(0.22,1,0.36,1);">
+                <svg width="18" height="18" viewBox="0 0 16 16" fill="none"><path d="M4 12L12 4M12 4H6M12 4v6" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+              <span data-rowline="1" aria-hidden="true" style="position:absolute; left:0; bottom:-1px; width:100%; height:1px; background:var(--brand-gradient); transform:scaleX(0); transform-origin:left; transition:transform 350ms cubic-bezier(0.22,1,0.36,1);"></span>
+            </a>
+          
+
+            <a href="#contacto" data-row="1" style="position:relative; display:grid; grid-template-columns:1fr; gap:8px 24px; align-items:start; padding:clamp(24px,3vw,36px) clamp(12px,2vw,20px); border-bottom:1px solid var(--hairline-dark); transition:background 250ms ease;" data-reveal="1">
+              <span style="font-family:var(--font-display); font-size:0.8125rem; font-weight:600; letter-spacing:0.14em; color:var(--muted-on-dark);">04</span>
+              <h3 data-rowtitle="1" style="margin:0; font-family:var(--font-display); font-weight:600; font-size:clamp(1.25rem,2vw,1.6rem); line-height:1.2; letter-spacing:-0.02em; transition:transform 250ms cubic-bezier(0.22,1,0.36,1);">Liquidación entre entidades</h3>
+              <p style="margin:0; font-size:1rem; line-height:1.62; color:var(--muted-on-dark); max-width:56ch; text-wrap:pretty;">Settlement en minutos en lugar de días, con trazabilidad completa por operación.</p>
+              <span data-rowarrow="1" aria-hidden="true" style="display:none; justify-self:end; align-self:center; transition:transform 250ms cubic-bezier(0.22,1,0.36,1);">
+                <svg width="18" height="18" viewBox="0 0 16 16" fill="none"><path d="M4 12L12 4M12 4H6M12 4v6" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+              <span data-rowline="1" aria-hidden="true" style="position:absolute; left:0; bottom:-1px; width:100%; height:1px; background:var(--brand-gradient); transform:scaleX(0); transform-origin:left; transition:transform 350ms cubic-bezier(0.22,1,0.36,1);"></span>
+            </a>
+          
+        </div>
+      </div>
+    </section>
+
+    <section aria-labelledby="metricas-h2" style="background:var(--bg-light); color:var(--text-on-light); padding:clamp(96px,12vw,180px) 0;">
+      <div style="max-width:1280px; margin:0 auto; padding:0 clamp(20px,5vw,40px);">
+        <h2 id="metricas-h2" data-reveal="1" style="margin:0 0 clamp(48px,6vw,80px); max-width:16ch; font-family:var(--font-display); font-weight:700; font-size:clamp(2rem,4.4vw,3.5rem); line-height:1.04; letter-spacing:-0.03em;">Los números que sí podemos mostrar.</h2>
+        <div style="width:100%; display:grid; grid-template-columns:1fr; gap:clamp(28px,3vw,0px);" data-grid="metrics">
+          <div data-reveal="1" data-metric="1" style="padding-left:24px; border-left:1px solid var(--hairline-light);">
+            <div style="font-family:var(--font-display); font-weight:700; font-size:clamp(3rem,7vw,7rem); line-height:1; letter-spacing:-0.04em; background:var(--brand-gradient); -webkit-background-clip:text; background-clip:text; color:transparent; display:flex; align-items:baseline; gap:0.1em;"><span data-count="3,2">3,2</span><span style="font-size:0.34em;">M</span></div>
+            <div style="margin-top:16px; font-size:0.875rem; font-weight:400; line-height:1.4; color:var(--muted-on-light);">usuarios finales en productos que construimos</div>
+          </div>
+          <div data-reveal="1" data-metric="1" data-delay="120" style="padding-left:24px; border-left:1px solid var(--hairline-light);">
+            <div style="font-family:var(--font-display); font-weight:700; font-size:clamp(3rem,7vw,7rem); line-height:1; letter-spacing:-0.04em; background:var(--brand-gradient); -webkit-background-clip:text; background-clip:text; color:transparent;"><span data-count="40+">40+</span></div>
+            <div style="margin-top:16px; font-size:0.875rem; font-weight:400; line-height:1.4; color:var(--muted-on-light);">integraciones en producción</div>
+          </div>
+          <div data-reveal="1" data-metric="1" data-delay="240" style="padding-left:24px; border-left:1px solid var(--hairline-light);">
+            <div style="font-family:var(--font-display); font-weight:700; font-size:clamp(3rem,7vw,7rem); line-height:1; letter-spacing:-0.04em; background:var(--brand-gradient); -webkit-background-clip:text; background-clip:text; color:transparent;"><span data-count="6">6</span></div>
+            <div style="margin-top:16px; font-size:0.875rem; font-weight:400; line-height:1.4; color:var(--muted-on-light);">países donde operamos</div>
+          </div>
+          <div data-reveal="1" data-metric="1" data-delay="360" style="padding-left:24px; border-left:1px solid var(--hairline-light);">
+            <div style="font-family:var(--font-display); font-weight:700; font-size:clamp(3rem,7vw,7rem); line-height:1; letter-spacing:-0.04em; background:var(--brand-gradient); -webkit-background-clip:text; background-clip:text; color:transparent;"><span data-count="25">25</span></div>
+            <div style="margin-top:16px; font-size:0.875rem; font-weight:400; line-height:1.4; color:var(--muted-on-light);">años de la compañía</div>
+          </div>
+        </div>
+
+        <div id="df-clients" data-reveal="1" style="margin-top:96px; width:100%; overflow:hidden; mask-image:linear-gradient(90deg, transparent 0, #000 120px, #000 calc(100% - 120px), transparent 100%); -webkit-mask-image:linear-gradient(90deg, transparent 0, #000 120px, #000 calc(100% - 120px), transparent 100%);">
+          <div data-track="1" style="display:flex; width:max-content; animation:dfMarquee 40s linear infinite;">
+            <div style="display:flex; align-items:center; gap:clamp(40px,6vw,88px); padding-right:clamp(40px,6vw,88px);">
+              <div class="df-logo-slot" role="img" aria-label="Logo cliente 1 (pendiente)"><span>Logo cliente 1</span></div>
+              <div class="df-logo-slot" role="img" aria-label="Logo cliente 2 (pendiente)"><span>Logo cliente 2</span></div>
+              <div class="df-logo-slot" role="img" aria-label="Logo cliente 3 (pendiente)"><span>Logo cliente 3</span></div>
+              <div class="df-logo-slot" role="img" aria-label="Logo cliente 4 (pendiente)"><span>Logo cliente 4</span></div>
+              <div class="df-logo-slot" role="img" aria-label="Logo cliente 5 (pendiente)"><span>Logo cliente 5</span></div>
+              <div class="df-logo-slot" role="img" aria-label="Logo cliente 6 (pendiente)"><span>Logo cliente 6</span></div>
+            </div>
+            <div aria-hidden="true" style="display:flex; align-items:center; gap:clamp(40px,6vw,88px); padding-right:clamp(40px,6vw,88px);">
+              <div class="df-logo-slot" role="img" aria-label="Logo cliente 1 (pendiente)"><span>Logo cliente 1</span></div>
+              <div class="df-logo-slot" role="img" aria-label="Logo cliente 2 (pendiente)"><span>Logo cliente 2</span></div>
+              <div class="df-logo-slot" role="img" aria-label="Logo cliente 3 (pendiente)"><span>Logo cliente 3</span></div>
+              <div class="df-logo-slot" role="img" aria-label="Logo cliente 4 (pendiente)"><span>Logo cliente 4</span></div>
+              <div class="df-logo-slot" role="img" aria-label="Logo cliente 5 (pendiente)"><span>Logo cliente 5</span></div>
+              <div class="df-logo-slot" role="img" aria-label="Logo cliente 6 (pendiente)"><span>Logo cliente 6</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="seguridad" aria-labelledby="seg-h2" style="background:var(--surface-dark); color:var(--text-on-dark); padding:clamp(96px,12vw,180px) 0;">
+      <div style="max-width:1280px; margin:0 auto; padding:0 clamp(20px,5vw,40px); display:grid; grid-template-columns:1fr; gap:clamp(48px,6vw,80px);" data-grid="proc">
+        <div data-sticky="seg" style="align-self:start;">
+          <div style="display:flex; align-items:center; gap:10px; margin-bottom:24px;">
+            <span aria-hidden="true" style="width:6px; height:6px; border-radius:50%; background:var(--brand-gradient);"></span>
+            <span style="font-size:0.75rem; font-weight:500; letter-spacing:0.18em; text-transform:uppercase; color:var(--muted-on-dark);">Lo que revisa tu área de riesgo</span>
+          </div>
+          <h2 id="seg-h2" style="margin:0; max-width:16ch; font-family:var(--font-display); font-weight:700; font-size:clamp(2rem,4.4vw,3.5rem); line-height:1.04; letter-spacing:-0.03em;">Escrito para pasar el comité, no solo la demo.</h2>
+        </div>
+        <div>
+          <div data-reveal="1" style="display:grid; grid-template-columns:20px 1fr; gap:16px 20px; padding:clamp(20px,2.5vw,28px) 0; border-bottom:1px solid var(--hairline-dark);">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--muted-on-dark)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="margin-top:4px;">
+              <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/>
+              <path d="m9 12 2 2 4-4"/>
+            </svg>
+            <div>
+              <h3 style="margin:0 0 8px; font-family:var(--font-display); font-weight:600; font-size:1.125rem; line-height:1.3; letter-spacing:-0.015em;">Auditoría de contratos</h3>
+              <p style="margin:0; max-width:52ch; font-size:1rem; line-height:1.62; color:var(--muted-on-dark); text-wrap:pretty;"><strong style="font-weight:700; color:inherit; font-size:inherit;">¿Quién audita el código?</strong> Una firma externa, antes de cada salida a producción. El informe queda en tu poder, no en el nuestro.</p>
+            </div>
+          </div>
+          <div data-reveal="1" style="display:grid; grid-template-columns:20px 1fr; gap:16px 20px; padding:clamp(20px,2.5vw,28px) 0; border-bottom:1px solid var(--hairline-dark);">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--muted-on-dark)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="margin-top:4px;">
+              <path d="M2.586 17.414A2 2 0 0 0 2 18.828V21a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1v-1a1 1 0 0 1 1-1h1a1 1 0 0 0 1-1v-1a1 1 0 0 1 1-1h.172a2 2 0 0 0 1.414-.586l.814-.814a6.5 6.5 0 1 0-4-4z"/>
+              <circle cx="16.5" cy="7.5" r="0.5" fill="var(--muted-on-dark)"/>
+            </svg>
+            <div>
+              <h3 style="margin:0 0 8px; font-family:var(--font-display); font-weight:600; font-size:1.125rem; line-height:1.3; letter-spacing:-0.015em;">Custodia</h3>
+              <p style="margin:0; max-width:52ch; font-size:1rem; line-height:1.62; color:var(--muted-on-dark); text-wrap:pretty;"><strong style="font-weight:700; color:inherit; font-size:inherit;">¿Dónde quedan las llaves?</strong> Donde vos decidas: self-custody, MPC o un custodio regulado. Se define en la etapa de arquitectura y queda por escrito — no se resuelve sobre la marcha.</p>
+            </div>
+          </div>
+          <div data-reveal="1" style="display:grid; grid-template-columns:20px 1fr; gap:16px 20px; padding:clamp(20px,2.5vw,28px) 0; border-bottom:1px solid var(--hairline-dark);">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--muted-on-dark)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="margin-top:4px;">
+              <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+              <circle cx="9" cy="7" r="4"/>
+              <path d="m16 11 2 2 4-4"/>
+            </svg>
+            <div>
+              <h3 style="margin:0 0 8px; font-family:var(--font-display); font-weight:600; font-size:1.125rem; line-height:1.3; letter-spacing:-0.015em;">KYC / AML</h3>
+              <p style="margin:0; max-width:52ch; font-size:1rem; line-height:1.62; color:var(--muted-on-dark); text-wrap:pretty;"><strong style="font-weight:700; color:inherit; font-size:inherit;">¿Cómo entra un cliente?</strong> KYC, screening contra listas y monitoreo continuo, dentro del mismo flujo de onboarding. No es un módulo aparte que alguien tiene que acordarse de correr.</p>
+            </div>
+          </div>
+          <div data-reveal="1" style="display:grid; grid-template-columns:20px 1fr; gap:16px 20px; padding:clamp(20px,2.5vw,28px) 0; border-bottom:1px solid var(--hairline-dark);">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--muted-on-dark)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="margin-top:4px;">
+              <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7z"/>
+              <path d="M14 2v5h5"/>
+              <circle cx="11.5" cy="14.5" r="2.5"/>
+              <path d="m13.3 16.3 1.7 1.7"/>
+            </svg>
+            <div>
+              <h3 style="margin:0 0 8px; font-family:var(--font-display); font-weight:600; font-size:1.125rem; line-height:1.3; letter-spacing:-0.015em;">Trazabilidad</h3>
+              <p style="margin:0; max-width:52ch; font-size:1rem; line-height:1.62; color:var(--muted-on-dark); text-wrap:pretty;"><strong style="font-weight:700; color:inherit; font-size:inherit;">¿Y cuando pregunta el regulador?</strong> Cada operación queda registrada con su trazabilidad completa y se exporta en el formato que te pidan. Sin reconstruir nada a mano.</p>
+            </div>
+          </div>
+          <div data-reveal="1" style="display:grid; grid-template-columns:20px 1fr; gap:16px 20px; padding:clamp(20px,2.5vw,28px) 0; border-bottom:1px solid var(--hairline-dark);">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--muted-on-dark)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="margin-top:4px;">
+              <path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/>
+              <path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/>
+              <path d="M7 21h10"/>
+              <path d="M12 3v18"/>
+              <path d="M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2"/>
+            </svg>
+            <div>
+              <h3 style="margin:0 0 8px; font-family:var(--font-display); font-weight:600; font-size:1.125rem; line-height:1.3; letter-spacing:-0.015em;">Marcos regulatorios</h3>
+              <p style="margin:0; max-width:52ch; font-size:1rem; line-height:1.62; color:var(--muted-on-dark); text-wrap:pretty;"><strong style="font-weight:700; color:inherit; font-size:inherit;">¿Bajo qué marco trabajan?</strong> CNV y UIF en Argentina, CNBV en México. Cuando del otro lado hay una entidad financiera, también los requerimientos del BCRA.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section aria-labelledby="faq-h2" style="background:var(--bg-light); color:var(--text-on-light); padding:clamp(96px,12vw,180px) 0;">
+      <div style="max-width:1280px; margin:0 auto; padding:0 clamp(20px,5vw,40px);">
+        <h2 id="faq-h2" data-reveal="1" style="margin:0 auto clamp(48px,6vw,72px); max-width:20ch; text-align:center; font-family:var(--font-display); font-weight:700; font-size:clamp(2rem,4.4vw,3.5rem); line-height:1.04; letter-spacing:-0.03em;">Preguntas que nos hacen antes de firmar.</h2>
+        <div style="max-width:860px; margin:0 auto;">
+          
+            <div style="border-bottom:1px solid var(--hairline-light);">
+              <button type="button" data-faq-toggle="0" aria-expanded="false" aria-controls="faq-panel-0" id="faq-btn-0" style="width:100%; display:flex; align-items:flex-start; justify-content:space-between; gap:24px; text-align:left; padding:24px 0; min-height:44px;">
+                <span style="font-family:var(--font-display); font-weight:600; font-size:clamp(1.0625rem,1.7vw,1.375rem); line-height:1.3; letter-spacing:-0.02em;">¿Cuánto tarda un proyecto en llegar a producción?</span>
+                <span aria-hidden="true" style="flex:none; margin-top:4px; width:20px; height:20px; position:relative; transform:rotate(0deg); transition:transform 350ms cubic-bezier(0.22,1,0.36,1);">
+                  <span style="position:absolute; left:0; top:9px; width:20px; height:1.5px; background:var(--text-on-light);"></span>
+                  <span style="position:absolute; left:9px; top:0; width:1.5px; height:20px; background:var(--text-on-light);"></span>
+                </span>
+              </button>
+              <div id="faq-panel-0" data-faqpanel="1" role="region" aria-labelledby="faq-btn-0" style="display:grid; grid-template-rows:0fr; transition:grid-template-rows 350ms cubic-bezier(0.22,1,0.36,1);">
+                <div style="overflow:hidden; min-height:0;">
+                  <p style="margin:0; padding:0 0 28px; max-width:64ch; font-size:clamp(1rem,1.15vw,1.125rem); line-height:1.62; color:var(--muted-on-light); text-wrap:pretty;">Depende del alcance y de tu core. Una wallet de marca sobre nuestra infraestructura arranca en meses; una tokenización con estructura legal nueva depende más del regulador que de nosotros. En la primera llamada te damos un rango, no una promesa.</p>
+                </div>
+              </div>
+            </div>
+          
+
+            <div style="border-bottom:1px solid var(--hairline-light);">
+              <button type="button" data-faq-toggle="1" aria-expanded="false" aria-controls="faq-panel-1" id="faq-btn-1" style="width:100%; display:flex; align-items:flex-start; justify-content:space-between; gap:24px; text-align:left; padding:24px 0; min-height:44px;">
+                <span style="font-family:var(--font-display); font-weight:600; font-size:clamp(1.0625rem,1.7vw,1.375rem); line-height:1.3; letter-spacing:-0.02em;">¿Sobre qué red trabajan?</span>
+                <span aria-hidden="true" style="flex:none; margin-top:4px; width:20px; height:20px; position:relative; transform:rotate(0deg); transition:transform 350ms cubic-bezier(0.22,1,0.36,1);">
+                  <span style="position:absolute; left:0; top:9px; width:20px; height:1.5px; background:var(--text-on-light);"></span>
+                  <span style="position:absolute; left:9px; top:0; width:1.5px; height:20px; background:var(--text-on-light);"></span>
+                </span>
+              </button>
+              <div id="faq-panel-1" data-faqpanel="1" role="region" aria-labelledby="faq-btn-1" style="display:grid; grid-template-rows:0fr; transition:grid-template-rows 350ms cubic-bezier(0.22,1,0.36,1);">
+                <div style="overflow:hidden; min-height:0;">
+                  <p style="margin:0; padding:0 0 28px; max-width:64ch; font-size:clamp(1rem,1.15vw,1.125rem); line-height:1.62; color:var(--muted-on-light); text-wrap:pretty;">La que corresponda al caso. No arrancamos con la red elegida: arrancamos con el requerimiento y de ahí sale la red.</p>
+                </div>
+              </div>
+            </div>
+          
+
+            <div style="border-bottom:1px solid var(--hairline-light);">
+              <button type="button" data-faq-toggle="2" aria-expanded="false" aria-controls="faq-panel-2" id="faq-btn-2" style="width:100%; display:flex; align-items:flex-start; justify-content:space-between; gap:24px; text-align:left; padding:24px 0; min-height:44px;">
+                <span style="font-family:var(--font-display); font-weight:600; font-size:clamp(1.0625rem,1.7vw,1.375rem); line-height:1.3; letter-spacing:-0.02em;">¿Quién custodia los activos?</span>
+                <span aria-hidden="true" style="flex:none; margin-top:4px; width:20px; height:20px; position:relative; transform:rotate(0deg); transition:transform 350ms cubic-bezier(0.22,1,0.36,1);">
+                  <span style="position:absolute; left:0; top:9px; width:20px; height:1.5px; background:var(--text-on-light);"></span>
+                  <span style="position:absolute; left:9px; top:0; width:1.5px; height:20px; background:var(--text-on-light);"></span>
+                </span>
+              </button>
+              <div id="faq-panel-2" data-faqpanel="1" role="region" aria-labelledby="faq-btn-2" style="display:grid; grid-template-rows:0fr; transition:grid-template-rows 350ms cubic-bezier(0.22,1,0.36,1);">
+                <div style="overflow:hidden; min-height:0;">
+                  <p style="margin:0; padding:0 0 28px; max-width:64ch; font-size:clamp(1rem,1.15vw,1.125rem); line-height:1.62; color:var(--muted-on-light); text-wrap:pretty;">Vos, un custodio regulado o un esquema MPC. Lo definimos en la etapa de arquitectura y queda por escrito.</p>
+                </div>
+              </div>
+            </div>
+          
+
+            <div style="border-bottom:1px solid var(--hairline-light);">
+              <button type="button" data-faq-toggle="3" aria-expanded="false" aria-controls="faq-panel-3" id="faq-btn-3" style="width:100%; display:flex; align-items:flex-start; justify-content:space-between; gap:24px; text-align:left; padding:24px 0; min-height:44px;">
+                <span style="font-family:var(--font-display); font-weight:600; font-size:clamp(1.0625rem,1.7vw,1.375rem); line-height:1.3; letter-spacing:-0.02em;">¿Nos quedamos atados a ustedes?</span>
+                <span aria-hidden="true" style="flex:none; margin-top:4px; width:20px; height:20px; position:relative; transform:rotate(0deg); transition:transform 350ms cubic-bezier(0.22,1,0.36,1);">
+                  <span style="position:absolute; left:0; top:9px; width:20px; height:1.5px; background:var(--text-on-light);"></span>
+                  <span style="position:absolute; left:9px; top:0; width:1.5px; height:20px; background:var(--text-on-light);"></span>
+                </span>
+              </button>
+              <div id="faq-panel-3" data-faqpanel="1" role="region" aria-labelledby="faq-btn-3" style="display:grid; grid-template-rows:0fr; transition:grid-template-rows 350ms cubic-bezier(0.22,1,0.36,1);">
+                <div style="overflow:hidden; min-height:0;">
+                  <p style="margin:0; padding:0 0 28px; max-width:64ch; font-size:clamp(1rem,1.15vw,1.125rem); line-height:1.62; color:var(--muted-on-light); text-wrap:pretty;">No. El código, la documentación y los accesos son tuyos. Si tu equipo quiere operarlo solo, lo dejamos preparado para eso.</p>
+                </div>
+              </div>
+            </div>
+          
+
+            <div style="border-bottom:1px solid var(--hairline-light);">
+              <button type="button" data-faq-toggle="4" aria-expanded="false" aria-controls="faq-panel-4" id="faq-btn-4" style="width:100%; display:flex; align-items:flex-start; justify-content:space-between; gap:24px; text-align:left; padding:24px 0; min-height:44px;">
+                <span style="font-family:var(--font-display); font-weight:600; font-size:clamp(1.0625rem,1.7vw,1.375rem); line-height:1.3; letter-spacing:-0.02em;">¿Para quién no son?</span>
+                <span aria-hidden="true" style="flex:none; margin-top:4px; width:20px; height:20px; position:relative; transform:rotate(0deg); transition:transform 350ms cubic-bezier(0.22,1,0.36,1);">
+                  <span style="position:absolute; left:0; top:9px; width:20px; height:1.5px; background:var(--text-on-light);"></span>
+                  <span style="position:absolute; left:9px; top:0; width:1.5px; height:20px; background:var(--text-on-light);"></span>
+                </span>
+              </button>
+              <div id="faq-panel-4" data-faqpanel="1" role="region" aria-labelledby="faq-btn-4" style="display:grid; grid-template-rows:0fr; transition:grid-template-rows 350ms cubic-bezier(0.22,1,0.36,1);">
+                <div style="overflow:hidden; min-height:0;">
+                  <p style="margin:0; padding:0 0 28px; max-width:64ch; font-size:clamp(1rem,1.15vw,1.125rem); line-height:1.62; color:var(--muted-on-light); text-wrap:pretty;">Si buscás lanzar un token sin caso de uso ni marco legal, no somos el proveedor.</p>
+                </div>
+              </div>
+            </div>
+          
+        </div>
+      </div>
+    </section>
+
+    <section id="contacto" aria-labelledby="cta-h2" style="position:relative; overflow:hidden; background:var(--bg-dark); min-height:70vh; display:flex; align-items:center; padding:clamp(96px,12vw,160px) 0;">
+      <div aria-hidden="true" style="position:absolute; inset:-10%; filter:blur(90px); pointer-events:none;">
+        <span style="position:absolute; left:8%; top:10%; width:46%; height:70%; border-radius:50%; background:#01C7C5; opacity:0.18; animation:dfMesh1 20s ease-in-out infinite alternate; display:block;"></span>
+        <span style="position:absolute; left:36%; top:20%; width:40%; height:64%; border-radius:50%; background:#3296E3; opacity:0.18; animation:dfMesh2 20s ease-in-out infinite alternate; display:block;"></span>
+        <span style="position:absolute; left:58%; top:6%; width:44%; height:74%; border-radius:50%; background:#8E71F5; opacity:0.18; animation:dfMesh3 20s ease-in-out infinite alternate; display:block;"></span>
+      </div>
+      <div style="position:relative; max-width:780px; margin:0 auto; padding:0 clamp(20px,5vw,40px); text-align:center;">
+        <h2 id="cta-h2" data-reveal="1" style="margin:0 0 20px; font-family:var(--font-display); font-weight:700; font-size:clamp(2rem,4.4vw,3.5rem); line-height:1.04; letter-spacing:-0.03em;">Contanos qué querés poner en <span style="background:var(--brand-gradient); -webkit-background-clip:text; background-clip:text; color:transparent;">producción</span>.</h2>
+        <p data-reveal="1" data-delay="120" style="margin:0 auto 40px; max-width:48ch; font-size:clamp(1rem,1.15vw,1.125rem); line-height:1.62; color:var(--muted-on-dark);">30 minutos con alguien que ya construyó esto. Sin pitch de ventas.</p>
+        <div data-reveal="1" data-delay="240" style="display:flex; justify-content:center;">
+          <a href="#contacto" data-magnetic="1" data-cta="1" style="display:inline-flex; align-items:center; justify-content:center; gap:10px; border-radius:999px; padding:18px 32px; font-size:1rem; font-weight:600; color:#060607; background:var(--brand-gradient); box-shadow:0 12px 48px rgba(82,119,247,0.30); transition:transform 200ms ease, filter 200ms ease; min-height:44px;" data-fullsm="1">
+            Agendar la llamada
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 12L12 4M12 4H6M12 4v6" stroke="#060607" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+        <p data-reveal="1" data-delay="320" style="margin:24px 0 0; font-size:0.875rem; color:var(--muted-on-dark);">Si preferís escribir: <a href="mailto:hola@dappsfactory.com" style="color:var(--text-on-dark); border-bottom:1px solid var(--hairline-dark);">hola@dappsfactory.com</a> · <a href="https://www.linkedin.com/" style="color:var(--text-on-dark); border-bottom:1px solid var(--hairline-dark);">LinkedIn</a></p>
+      </div>
+    </section>
+

@@ -1,0 +1,215 @@
+/* ============================================================================
+   Layout responsive — portado desde el layout() en JS del componente de Design.
+   ----------------------------------------------------------------------------
+   El original resolvía TODO el responsive en JavaScript, con matchMedia e inline
+   styles aplicados después del primer render. Eso obligaba a esperar al JS para
+   ver la página bien maquetada, y era la causa de que FCP y LCP cayeran juntos.
+
+   Breakpoints EXACTOS del JS:  sm 641px · md 769px · wide 900px · lg 1025px.
+
+   IMPORTANTE — por qué están escritas las DOS ramas de cada regla:
+   el markup de Design trae inline styles que unas veces son el estado mobile y
+   otras el de desktop; el JS pisaba el que hiciera falta. Asumir una sola rama
+   dejaba el índice de Servicios visible en mobile, encimado con el texto.
+   Así que cada regla replica el ternario del JS completo: min-width y max-width.
+
+   Los !important son necesarios: una hoja de estilos no le gana en especificidad
+   a un inline style. Es la única forma de reemplazar el JS sin reescribir las
+   530 líneas de markup y arriesgar cambios de diseño no pedidos.
+   ========================================================================== */
+
+/* ---------------------------------------------------------------- sm 641px */
+@media (min-width: 641px) {
+  [data-hidesm] { display: block !important; }
+  [data-fullsm] { width: auto !important; }
+  [data-cta] { width: auto !important; }
+  [data-grid="metrics"] { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
+  [data-grid="footer"] { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
+}
+@media (max-width: 640.98px) {
+  [data-hidesm] { display: none !important; }
+  [data-fullsm] { width: 100% !important; }
+  [data-cta] { width: 100% !important; }
+  [data-grid="metrics"] { grid-template-columns: 1fr !important; }
+  [data-grid="footer"] { grid-template-columns: 1fr !important; }
+}
+
+/* ---------------------------------------------------------------- md 769px */
+@media (min-width: 769px) {
+  [data-navlinks] { display: flex !important; }
+  [data-navcta] { display: inline-flex !important; }
+  [data-burger] { display: none !important; }
+
+  [data-grid="svc"],
+  [data-grid="svc-rev"] { grid-template-columns: minmax(0, 5fr) minmax(0, 5fr) !important; }
+  [data-grid="svc-03"] {
+    grid-template-columns: minmax(0, 3fr) minmax(0, 5fr) minmax(0, 4fr) !important;
+    align-items: end !important;
+  }
+  [data-grid="proc"] { grid-template-columns: minmax(0, 6fr) minmax(0, 6fr) !important; }
+  [data-grid="metrics"] {
+    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+    row-gap: 0 !important;
+  }
+  [data-grid="footer"] {
+    grid-template-columns: minmax(0, 4fr) minmax(0, 2fr) minmax(0, 2fr) minmax(0, 3fr) !important;
+  }
+
+  [data-sticky] { position: sticky !important; top: 25vh !important; }
+  [data-row] {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 4fr) minmax(0, 5fr) 32px !important;
+    align-items: center !important;
+  }
+  [data-rowarrow] { display: block !important; }
+
+  [data-ref="heroOverlay"] {
+    background: linear-gradient(90deg, rgba(6, 6, 7, 0.94) 0%, rgba(6, 6, 7, 0.78) 40%, rgba(6, 6, 7, 0.10) 100%) !important;
+  }
+}
+@media (max-width: 768.98px) {
+  [data-navlinks] { display: none !important; }
+  [data-navcta] { display: none !important; }
+  [data-burger] { display: flex !important; }
+
+  [data-grid="svc"],
+  [data-grid="svc-rev"],
+  [data-grid="svc-03"],
+  [data-grid="proc"] { grid-template-columns: 1fr !important; }
+  [data-grid="svc-03"] { align-items: start !important; }
+  [data-grid="metrics"] { row-gap: clamp(28px, 4vw, 40px) !important; }
+
+  [data-sticky] { position: static !important; }
+  [data-row] { grid-template-columns: 1fr !important; align-items: start !important; }
+  [data-rowarrow] { display: none !important; }
+
+  [data-ref="heroOverlay"] {
+    background: linear-gradient(180deg, rgba(6, 6, 7, 0.35) 0%, rgba(6, 6, 7, 0.80) 48%, rgba(6, 6, 7, 0.95) 100%) !important;
+  }
+  [data-parallax] { transform: none !important; }
+}
+
+/* -------------------------------------------------------------- wide 900px */
+@media (min-width: 900px) {
+  [data-grid="svcx"] { grid-template-columns: 340px minmax(0, 1fr) !important; }
+  [data-svcindex] { display: block !important; }
+  [data-visual], [data-cap] { max-width: 520px !important; }
+
+  [data-asplit] {
+    grid-template-columns: minmax(0, 60fr) minmax(0, 40fr) !important;
+    row-gap: 0 !important;
+  }
+  [data-alabels] { align-self: stretch !important; }
+  [data-alabel] { position: absolute !important; top: 50% !important; margin-top: 0 !important; }
+}
+@media (max-width: 899.98px) {
+  [data-grid="svcx"] { grid-template-columns: 1fr !important; }
+  /* el índice sticky de Servicios NO existe por debajo de 900px */
+  [data-svcindex] { display: none !important; }
+  [data-visual], [data-cap] { max-width: 100% !important; }
+
+  [data-asplit] { grid-template-columns: 1fr !important; row-gap: 28px !important; }
+  [data-alabels] { align-self: auto !important; }
+  /* los labels de Arquitectura vuelven al flujo normal, debajo del stack */
+  [data-alabel] {
+    position: relative !important;
+    top: auto !important;
+    margin-top: 18px !important;
+    transform: none !important;
+  }
+}
+
+/* --------------------------------------------------------------- lg 1025px */
+@media (min-width: 1025px) {
+  [data-grid="arch"] { grid-template-columns: repeat(12, minmax(0, 1fr)) !important; }
+  [data-archhead] { grid-column: 1 / 6 !important; }
+  [data-archdiagram] { grid-column: 6 / 13 !important; min-height: 60vh !important; }
+
+  /* el pin de Arquitectura existe SOLO en lg y sin reduced-motion */
+  @media (prefers-reduced-motion: no-preference) {
+    [data-archwrap] { height: 250vh !important; }
+    [data-archstage] {
+      position: sticky !important;
+      top: 0 !important;
+      height: 100vh !important;
+      display: flex !important;
+      align-items: center !important;
+      overflow: hidden !important;
+    }
+  }
+}
+@media (max-width: 1024.98px) {
+  [data-grid="arch"] { grid-template-columns: 1fr !important; }
+  [data-archhead] { grid-column: auto !important; }
+  [data-archdiagram] { grid-column: auto !important; min-height: 0 !important; }
+  /* sin pin: la sección vuelve a altura natural */
+  [data-archwrap] { height: auto !important; }
+  [data-archstage] {
+    position: static !important;
+    height: auto !important;
+    display: block !important;
+    overflow: visible !important;
+  }
+}
+
+/* ---------------------------------------------------------------------------
+   El nav es fixed, así que sin esto los anclas del menú (#soluciones, #proceso,
+   #casos, #seguridad) caen con el título tapado por el nav — medido: entre 57 y
+   69 px ocultos. 104px = alto del nav comprimido (89px) más aire.
+   ------------------------------------------------------------------------ */
+html {
+  scroll-padding-top: 104px;
+}
+
+/* constantes que el JS aplicaba en todos los anchos */
+[data-grid="arch"] {
+  row-gap: clamp(40px, 5vw, 64px);
+  column-gap: clamp(24px, 3vw, 40px);
+  align-items: center;
+}
+[data-grid="svc-03"] {
+  column-gap: clamp(28px, 4vw, 56px);
+  row-gap: clamp(16px, 3vw, 28px);
+}
+[data-archdiagram] { display: flex; align-items: center; }
+[data-line] { white-space: normal; }
+
+/* ---------------------------------------------------------------------------
+   reduced-motion: sin pin, sin scrub, sin marquee. El handoff lo pedía en todas
+   las secciones y no estaba verificado en ninguna.
+   ------------------------------------------------------------------------ */
+@media (prefers-reduced-motion: reduce) {
+  [data-archwrap] { height: auto !important; }
+  [data-archstage] {
+    position: static !important;
+    height: auto !important;
+    display: block !important;
+    overflow: visible !important;
+  }
+  [data-track] { animation: none !important; transform: none !important; }
+  [data-reveal], [data-line] { opacity: 1 !important; transform: none !important; }
+  [data-parallax] { transform: none !important; }
+}
+
+/* placeholder de logo de cliente — el logo oficial y los de clientes siguen
+   pendientes (handoff, puntos 2 y 3). Mantiene la caja de 150x44 para no mover
+   el layout, y el rótulo visible adentro para saber qué slot es cuál, igual que
+   lo mostraba el <image-slot> del runtime de Design. */
+.df-logo-slot {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  width: 150px;
+  height: 44px;
+  /* neutro a propósito: la franja del hero va sobre #060607 y la de Métricas
+     sobre #F5F3EF. Un hairline de marca sería invisible en una de las dos. */
+  border: 1px dashed rgba(128, 128, 134, 0.4);
+  border-radius: 6px;
+}
+.df-logo-slot > span {
+  font-size: 0.75rem;
+  font-weight: 400;
+  line-height: 1;
+  color: rgba(128, 128, 134, 0.95);
+  white-space: nowrap;
+}

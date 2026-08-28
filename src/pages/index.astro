@@ -1,0 +1,17 @@
+---
+import Base from '../layouts/Base.astro';
+import Chrome from '../components/Chrome.astro';
+import Footer from '../components/Footer.astro';
+import sections from '../components/sections.html?raw';
+---
+
+<Base
+  title="DAppsFactory · Infraestructura blockchain para el sistema financiero regulado"
+  description="Tokenización de activos, wallets fiat + cripto y desarrollo blockchain para bancos, financieras y desarrolladoras. Construimos la capa que conecta tu operación con la red — incluido el cumplimiento."
+>
+  <Chrome />
+  <main id="top" style="display:block;">
+    <Fragment set:html={sections} />
+    <Footer />
+  </main>
+</Base>
