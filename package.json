@@ -1,15 +1,13 @@
 {
-  "name": "dappsfactory-web",
-  "type": "module",
+  "name": "dappsfactory-homepage",
   "version": "1.0.0",
-  "private": true,
+  "description": "DAppsFactory Homepage",
   "scripts": {
-    "dev": "astro dev",
-    "build": "astro build",
-    "preview": "astro preview",
-    "check": "astro check"
+    "dev": "serve \"DAppsFactory Homepage Build\" -l 3000",
+    "start": "serve \"DAppsFactory Homepage Build\" -l 3000",
+    "serve": "serve \"DAppsFactory Homepage Build\""
   },
   "dependencies": {
-    "astro": "^5.13.2"
+    "serve": "^14.2.4"
   }
 }

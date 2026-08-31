@@ -1,22 +1,14 @@
-# dependencias
+# Dependencies
 node_modules/
+.npm/
 
-# salida de build
-dist/
-.astro/
-
-# entorno — .env.example SÍ va al repo, .env real no
-.env
-.env.*
-!.env.example
-
-# artefactos de QA: 17 MB de capturas y diffs generados por scripts.
-# Se regeneran corriendo el proyecto; no tiene sentido versionarlos.
-qa-shots/
-qa-diff/
-
-# sistema
+# Logs & scratch
+*.log
 .DS_Store
 Thumbs.db
-*.log
-npm-debug.log*
+.env
+.env.local
+
+# IDE & Editor
+.vscode/
+.idea/

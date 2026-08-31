@@ -1,0 +1,4322 @@
+[
+ {
+  "id": "ct0",
+  "txt": "DAppsFactory",
+  "sel": "span",
+  "color": "rgb(250, 250, 248)",
+  "opacity": 1,
+  "fs": 17,
+  "fw": 600,
+  "large": false,
+  "clip": false,
+  "bg": [
+   6,
+   6,
+   7
+  ],
+  "bgImg": null,
+  "box": {
+   "x": 144,
+   "y": 32,
+   "w": 106,
+   "h": 20
+  },
+  "fgHex": "#fafaf8",
+  "bgHex": "#060607",
+  "tipo": "solido",
+  "min": 19.38012273982099,
+  "note": ""
+ },
+ {
+  "id": "ct1",
+  "txt": "Soluciones",
+  "sel": "a",
+  "color": "rgb(138, 138, 148)",
+  "opacity": 1,
+  "fs": 14,
+  "fw": 500,
+  "large": false,
+  "clip": false,
+  "bg": [
+   6,
+   6,
+   7
+  ],
+  "bgImg": null,
+  "box": {
+   "x": 512,
+   "y": 34,
+   "w": 74,
+   "h": 17
+  },
+  "fgHex": "#8a8a94",
+  "bgHex": "#060607",
+  "tipo": "solido",
+  "min": 5.92525592069075,
+  "note": ""
+ },
+ {
+  "id": "ct2",
+  "txt": "Cómo trabajamos",
+  "sel": "a",
+  "color": "rgb(138, 138, 148)",
+  "opacity": 1,
+  "fs": 14,
+  "fw": 500,
+  "large": false,
+  "clip": false,
+  "bg": [
+   6,
+   6,
+   7
+  ],
+  "bgImg": null,
+  "box": {
+   "x": 618,
+   "y": 34,
+   "w": 118,
+   "h": 17
+  },
+  "fgHex": "#8a8a94",
+  "bgHex": "#060607",
+  "tipo": "solido",
+  "min": 5.92525592069075,
+  "note": ""
+ },
+ {
+  "id": "ct3",
+  "txt": "Casos",
+  "sel": "a",
+  "color": "rgb(138, 138, 148)",
+  "opacity": 1,
+  "fs": 14,
+  "fw": 500,
+  "large": false,
+  "clip": false,
+  "bg": [
+   6,
+   6,
+   7
+  ],
+  "bgImg": null,
+  "box": {
+   "x": 768,
+   "y": 34,
+   "w": 42,
+   "h": 17
+  },
+  "fgHex": "#8a8a94",
+  "bgHex": "#060607",
+  "tipo": "solido",
+  "min": 5.92525592069075,
+  "note": ""
+ },
+ {
+  "id": "ct4",
+  "txt": "Seguridad",
+  "sel": "a",
+  "color": "rgb(138, 138, 148)",
+  "opacity": 1,
+  "fs": 14,
+  "fw": 500,
+  "large": false,
+  "clip": false,
+  "bg": [
+   6,
+   6,
+   7
+  ],
+  "bgImg": null,
+  "box": {
+   "x": 841,
+   "y": 34,
+   "w": 69,
+   "h": 17
+  },
+  "fgHex": "#8a8a94",
+  "bgHex": "#060607",
+  "tipo": "solido",
+  "min": 5.92525592069075,
+  "note": ""
+ },
+ {
+  "id": "ct6",
+  "txt": "Blockchain Infrastructure",
+  "sel": "span",
+  "color": "rgb(138, 138, 148)",
+  "opacity": 1,
+  "fs": 12,
+  "fw": 500,
+  "large": false,
+  "clip": false,
+  "bg": [
+   6,
+   6,
+   7
+  ],
+  "bgImg": null,
+  "box": {
+   "x": 136,
+   "y": 245,
+   "w": 244,
+   "h": 15
+  },
+  "fgHex": "#8a8a94",
+  "bgHex": "#060607",
+  "tipo": "solido",
+  "min": 5.92525592069075,
+  "note": ""
+ },
+ {
+  "id": "ct7",
+  "txt": "Blockchain que ya opera",
+  "sel": "span",
+  "color": "rgb(250, 250, 248)",
+  "opacity": 1,
+  "fs": 63.4,
+  "fw": 700,
+  "large": true,
+  "clip": false,
+  "bg": [
+   6,
+   6,
+   7
+  ],
+  "bgImg": null,
+  "box": {
+   "x": 120,
+   "y": 288,
+   "w": 680,
+   "h": 63
+  },
+  "fgHex": "#fafaf8",
+  "bgHex": "#060607",
+  "tipo": "solido",
+  "min": 19.38012273982099,
+  "note": ""
+ },
+ {
+  "id": "ct8",
+  "txt": "dentro del sistema",
+  "sel": "span",
+  "color": "rgb(250, 250, 248)",
+  "opacity": 1,
+  "fs": 63.4,
+  "fw": 700,
+  "large": true,
+  "clip": false,
+  "bg": [
+   6,
+   6,
+   7
+  ],
+  "bgImg": null,
+  "box": {
+   "x": 120,
+   "y": 352,
+   "w": 680,
+   "h": 63
+  },
+  "fgHex": "#fafaf8",
+  "bgHex": "#060607",
+  "tipo": "solido",
+  "min": 19.38012273982099,
+  "note": ""
+ },
+ {
+  "id": "ct9",
+  "txt": "financiero regulado.",
+  "sel": "span",
+  "color": "rgb(250, 250, 248)",
+  "opacity": 1,
+  "fs": 63.4,
+  "fw": 700,
+  "large": true,
+  "clip": false,
+  "bg": [
+   6,
+   6,
+   7
+  ],
+  "bgImg": null,
+  "box": {
+   "x": 120,
+   "y": 415,
+   "w": 680,
+   "h": 63
+  },
+  "fgHex": "#fafaf8",
+  "bgHex": "#060607",
+  "tipo": "solido",
+  "min": 19.38012273982099,
+  "note": ""
+ },
+ {
+  "id": "ct10",
+  "txt": "Tokenización de activos, wallets fiat + cripto y desarrollo blockc",
+  "sel": "p",
+  "color": "rgb(201, 201, 209)",
+  "opacity": 1,
+  "fs": 16.6,
+  "fw": 400,
+  "large": false,
+  "clip": false,
+  "bg": [
+   6,
+   6,
+   7
+  ],
+  "bgImg": null,
+  "box": {
+   "x": 120,
+   "y": 506,
+   "w": 560,
+   "h": 80
+  },
+  "fgHex": "#c9c9d1",
+  "bgHex": "#060607",
+  "tipo": "solido",
+  "min": 12.305258346553106,
+  "note": ""
+ },
+ {
+  "id": "ct12",
+  "txt": "Ver soluciones",
+  "sel": "span",
+  "color": "rgb(250, 250, 248)",
+  "opacity": 1,
+  "fs": 15,
+  "fw": 500,
+  "large": false,
+  "clip": false,
+  "bg": [
+   6,
+   6,
+   7
+  ],
+  "bgImg": null,
+  "box": {
+   "x": 506,
+   "y": 643,
+   "w": 106,
+   "h": 19
+  },
+  "fgHex": "#fafaf8",
+  "bgHex": "#060607",
+  "tipo": "solido",
+  "min": 19.38012273982099,
+  "note": ""
+ },
+ {
+  "id": "ct13",
+  "txt": "Operamos con bancos, financieras y desarrolladoras en Argentina, M",
+  "sel": "p",
+  "color": "rgb(138, 138, 148)",
+  "opacity": 1,
+  "fs": 14,
+  "fw": 400,
+  "large": false,
+  "clip": false,
+  "bg": [
+   6,
+   6,
+   7
+  ],
+  "bgImg": null,
+  "box": {
+   "x": 460,
+   "y": 965,
+   "w": 520,
+   "h": 48
+  },
+  "fgHex": "#8a8a94",
+  "bgHex": "#060607",
+  "tipo": "solido",
+  "min": 5.92525592069075,
+  "note": ""
+ },
+ {
+  "id": "ct14",
+  "txt": "Qué construimos",
+  "sel": "span",
+  "color": "rgb(90, 90, 99)",
+  "opacity": 1,
+  "fs": 12,
+  "fw": 500,
+  "large": false,
+  "clip": false,
+  "bg": [
+   245,
+   243,
+   239
+  ],
+  "bgImg": null,
+  "box": {
+   "x": 136,
+   "y": 1265,
+   "w": 151,
+   "h": 15
+  },
+  "fgHex": "#5a5a63",
+  "bgHex": "#f5f3ef",
+  "tipo": "solido",
+  "min": 6.157577083899862,
+  "note": ""
+ },
+ {
+  "id": "ct15",
+  "txt": "Tres capas. Un mismo sistema.",
+  "sel": "h2#svc-h2",
+  "color": "rgb(11, 11, 13)",
+  "opacity": 1,
+  "fs": 56,
+  "fw": 700,
+  "large": true,
+  "clip": false,
+  "bg": [
+   245,
+   243,
+   239
+  ],
+  "bgImg": null,
+  "box": {
+   "x": 120,
+   "y": 1304,
+   "w": 640,
+   "h": 116
+  },
+  "fgHex": "#0b0b0d",
+  "bgHex": "#f5f3ef",
+  "tipo": "solido",
+  "min": 17.744127458728713,
+  "note": ""
+ },
+ {
+  "id": "ct16",
+  "txt": "Se contratan por separado. Funcionan mejor juntas.",
+  "sel": "p",
+  "color": "rgb(90, 90, 99)",
+  "opacity": 1,
+  "fs": 16.6,
+  "fw": 400,
+  "large": false,
+  "clip": false,
+  "bg": [
+   245,
+   243,
+   239
+  ],
+  "bgImg": null,
+  "box": {
+   "x": 120,
+   "y": 1441,
+   "w": 640,
+   "h": 27
+  },
+  "fgHex": "#5a5a63",
+  "bgHex": "#f5f3ef",
+  "tipo": "solido",
+  "min": 6.157577083899862,
+  "note": ""
+ },
+ {
+  "id": "ct18",
+  "txt": "Tokenización de activos",
+  "sel": "span",
+  "color": "rgb(11, 11, 13)",
+  "opacity": 1,
+  "fs": 17,
+  "fw": 600,
+  "large": false,
+  "clip": false,
+  "bg": [
+   245,
+   243,
+   239
+  ],
+  "bgImg": null,
+  "box": {
+   "x": 162,
+   "y": 1618,
+   "w": 179,
+   "h": 20
+  },
+  "fgHex": "#0b0b0d",
+  "bgHex": "#f5f3ef",
+  "tipo": "solido",
+  "min": 17.744127458728713,
+  "note": ""
+ },
+ {
+  "id": "ct20",
+  "txt": "Wallets Fiat + Cripto",
+  "sel": "span",
+  "color": "rgb(11, 11, 13)",
+  "opacity": 0.38,
+  "fs": 17,
+  "fw": 600,
+  "large": false,
+  "clip": false,
+  "bg": [
+   245,
+   243,
+   239
+  ],
+  "bgImg": null,
+  "box": {
+   "x": 167,
+   "y": 1708,
+   "w": 150,
+   "h": 20
+  },
+  "fgHex": "#9c9b99",
+  "bgHex": "#f5f3ef",
+  "tipo": "solido",
+  "min": 2.508539816069186,
+  "note": ""
+ },
+ {
+  "id": "ct22",
+  "txt": "Desarrollo Blockchain",
+  "sel": "span",
+  "color": "rgb(11, 11, 13)",
+  "opacity": 0.38,
+  "fs": 17,
+  "fw": 600,
+  "large": false,
+  "clip": false,
+  "bg": [
+   245,
+   243,
+   239
+  ],
+  "bgImg": null,
+  "box": {
+   "x": 167,
+   "y": 1798,
+   "w": 161,
+   "h": 20
+  },
+  "fgHex": "#9c9b99",
+  "bgHex": "#f5f3ef",
+  "tipo": "solido",
+  "min": 2.508539816069186,
+  "note": ""
+ },
+ {
+  "id": "ct23",
+  "txt": "Un activo entero se fracciona en participaciones idénticas, transf",
+  "sel": "p",
+  "color": "rgb(90, 90, 99)",
+  "opacity": 1,
+  "fs": 13,
+  "fw": 400,
+  "large": false,
+  "clip": false,
+  "bg": [
+   245,
+   243,
+   239
+  ],
+  "bgImg": null,
+  "box": {
+   "x": 561,
+   "y": 2254,
+   "w": 520,
+   "h": 20
+  },
+  "fgHex": "#5a5a63",
+  "bgHex": "#f5f3ef",
+  "tipo": "solido",
+  "min": 6.157577083899862,
+  "note": ""
+ },
+ {
+  "id": "ct24",
+  "txt": "01",
+  "sel": "div",
+  "color": "rgba(0, 0, 0, 0)",
+  "opacity": 1,
+  "fs": 80,
+  "fw": 700,
+  "large": true,
+  "clip": true,
+  "bg": [
+   245,
+   243,
+   239
+  ],
+  "bgImg": null,
+  "box": {
+   "x": 561,
+   "y": 2313,
+   "w": 759,
+   "h": 80
+  },
+  "bgHex": "#f5f3ef",
+  "tipo": "DEGRADE",
+  "min": 1.1561948826340025,
+  "max": 3.386163560223035,
+  "peorStop": "#b4f759",
+  "mejorStop": "#7973f6",
+  "note": ""
+ },
+ {
+  "id": "ct25",
+  "txt": "Tokenización de activos",
+  "sel": "h3",
+  "color": "rgb(11, 11, 13)",
+  "opacity": 1,
+  "fs": 25.6,
+  "fw": 600,
+  "large": true,
+  "clip": false,
+  "bg": [
+   245,
+   243,
+   239
+  ],
+  "bgImg": null,
+  "box": {
+   "x": 561,
+   "y": 2405,
+   "w": 759,
+   "h": 31
+  },
+  "fgHex": "#0b0b0d",
+  "bgHex": "#f5f3ef",
+  "tipo": "solido",
+  "min": 17.744127458728713,
+  "note": ""
+ },
+ {
+  "id": "ct26",
+  "txt": "Convertimos un activo real —un inmueble, una cartera de créditos, ",
+  "sel": "p",
+  "color": "rgb(90, 90, 99)",
+  "opacity": 1,
+  "fs": 16.6,
+  "fw": 400,
+  "large": false,
+  "clip": false,
+  "bg": [
+   245,
+   243,
+   239
+  ],
+  "bgImg": null,
+  "box": {
+   "x": 561,
+   "y": 2450,
+   "w": 560,
+   "h": 107
+  },
+  "fgHex": "#5a5a63",
+  "bgHex": "#f5f3ef",
+  "tipo": "solido",
+  "min": 6.157577083899862,
+  "note": ""
+ },
+ {
+  "id": "ct27",
+  "txt": "Ver tokenización de activos",
+  "sel": "a",
+  "color": "rgb(11, 11, 13)",
+  "opacity": 1,
+  "fs": 15,
+  "fw": 500,
+  "large": false,
+  "clip": false,
+  "bg": [
+   245,
+   243,
+   239
+  ],
+  "bgImg": null,
+  "box": {
+   "x": 561,
+   "y": 2583,
+   "w": 220,
+   "h": 25
+  },
+  "fgHex": "#0b0b0d",
+  "bgHex": "#f5f3ef",
+  "tipo": "solido",
+  "min": 17.744127458728713,
+  "note": ""
+ },
+ {
+  "id": "ct28",
+  "txt": "Dos flujos de dinero —pesos y cripto— convergen en una sola cuenta",
+  "sel": "p",
+  "color": "rgb(90, 90, 99)",
+  "opacity": 1,
+  "fs": 13,
+  "fw": 400,
+  "large": false,
+  "clip": false,
+  "bg": [
+   245,
+   243,
+   239
+  ],
+  "bgImg": null,
+  "box": {
+   "x": 561,
+   "y": 3455,
+   "w": 520,
+   "h": 20
+  },
+  "fgHex": "#5a5a63",
+  "bgHex": "#f5f3ef",
+  "tipo": "solido",
+  "min": 6.157577083899862,
+  "note": ""
+ },
+ {
+  "id": "ct29",
+  "txt": "02",
+  "sel": "div",
+  "color": "rgba(0, 0, 0, 0)",
+  "opacity": 1,
+  "fs": 80,
+  "fw": 700,
+  "large": true,
+  "clip": true,
+  "bg": [
+   245,
+   243,
+   239
+  ],
+  "bgImg": null,
+  "box": {
+   "x": 561,
+   "y": 3515,
+   "w": 759,
+   "h": 80
+  },
+  "bgHex": "#f5f3ef",
+  "tipo": "DEGRADE",
+  "min": 1.1561948826340025,
+  "max": 3.386163560223035,
+  "peorStop": "#b4f759",
+  "mejorStop": "#7973f6",
+  "note": ""
+ },
+ {
+  "id": "ct30",
+  "txt": "Wallets Fiat + Cripto",
+  "sel": "h3",
+  "color": "rgb(11, 11, 13)",
+  "opacity": 1,
+  "fs": 25.6,
+  "fw": 600,
+  "large": true,
+  "clip": false,
+  "bg": [
+   245,
+   243,
+   239
+  ],
+  "bgImg": null,
+  "box": {
+   "x": 561,
+   "y": 3607,
+   "w": 759,
+   "h": 31
+  },
+  "fgHex": "#0b0b0d",
+  "bgHex": "#f5f3ef",
+  "tipo": "solido",
+  "min": 17.744127458728713,
+  "note": ""
+ },
+ {
+  "id": "ct31",
+  "txt": "Una sola billetera donde conviven pesos, dólares y stablecoins. On",
+  "sel": "p",
+  "color": "rgb(90, 90, 99)",
+  "opacity": 1,
+  "fs": 16.6,
+  "fw": 400,
+  "large": false,
+  "clip": false,
+  "bg": [
+   245,
+   243,
+   239
+  ],
+  "bgImg": null,
+  "box": {
+   "x": 561,
+   "y": 3651,
+   "w": 560,
+   "h": 80
+  },
+  "fgHex": "#5a5a63",
+  "bgHex": "#f5f3ef",
+  "tipo": "solido",
+  "min": 6.157577083899862,
+  "note": ""
+ },
+ {
+  "id": "ct32",
+  "txt": "Ver wallets fiat + cripto",
+  "sel": "a",
+  "color": "rgb(11, 11, 13)",
+  "opacity": 1,
+  "fs": 15,
+  "fw": 500,
+  "large": false,
+  "clip": false,
+  "bg": [
+   245,
+   243,
+   239
+  ],
+  "bgImg": null,
+  "box": {
+   "x": 561,
+   "y": 3758,
+   "w": 189,
+   "h": 25
+  },
+  "fgHex": "#0b0b0d",
+  "bgHex": "#f5f3ef",
+  "tipo": "solido",
+  "min": 17.744127458728713,
+  "note": ""
+ },
+ {
+  "id": "ct33",
+  "txt": "# ejemplo ilustrativo",
+  "sel": "div",
+  "color": "rgb(90, 96, 104)",
+  "opacity": 1,
+  "fs": 12.5,
+  "fw": 400,
+  "large": false,
+  "clip": false,
+  "bg": [
+   6,
+   6,
+   7
+  ],
+  "bgImg": null,
+  "box": {
+   "x": 593,
+   "y": 3996,
+   "w": 456,
+   "h": 23
+  },
+  "fgHex": "#5a6068",
+  "bgHex": "#060607",
+  "tipo": "solido",
+  "min": 3.1901805920570627,
+  "note": ""
+ },
+ {
+  "id": "ct34",
+  "txt": "POST",
+  "sel": "span",
+  "color": "rgb(180, 247, 89)",
+  "opacity": 1,
+  "fs": 12.5,
+  "fw": 400,
+  "large": false,
+  "clip": false,
+  "bg": [
+   6,
+   6,
+   7
+  ],
+  "bgImg": null,
+  "box": {
+   "x": 593,
+   "y": 4045,
+   "w": 30,
+   "h": 17
+  },
+  "fgHex": "#b4f759",
+  "bgHex": "#060607",
+  "tipo": "solido",
+  "min": 15.806564967941105,
+  "note": ""
+ },
+ {
+  "id": "ct35",
+  "txt": "/v1/assets/tokenize",
+  "sel": "span",
+  "color": "rgb(1, 199, 197)",
+  "opacity": 1,
+  "fs": 12.5,
+  "fw": 400,
+  "large": false,
+  "clip": false,
+  "bg": [
+   6,
+   6,
+   7
+  ],
+  "bgImg": null,
+  "box": {
+   "x": 630,
+   "y": 4045,
+   "w": 142,
+   "h": 17
+  },
+  "fgHex": "#01c7c5",
+  "bgHex": "#060607",
+  "tipo": "solido",
+  "min": 9.622214135482944,
+  "note": ""
+ },
+ {
+  "id": "ct36",
+  "txt": "{",
+  "sel": "div",
+  "color": "rgb(154, 160, 168)",
+  "opacity": 1,
+  "fs": 12.5,
+  "fw": 400,
+  "large": false,
+  "clip": false,
+  "bg": [
+   6,
+   6,
+   7
+  ],
+  "bgImg": null,
+  "box": {
+   "x": 593,
+   "y": 4088,
+   "w": 456,
+   "h": 23
+  },
+  "fgHex": "#9aa0a8",
+  "bgHex": "#060607",
+  "tipo": "solido",
+  "min": 7.684495613087982,
+  "note": ""
+ },
+ {
+  "id": "ct37",
+  "txt": ": ,",
+  "sel": "div",
+  "color": "rgb(154, 160, 168)",
+  "opacity": 1,
+  "fs": 12.5,
+  "fw": 400,
+  "large": false,
+  "clip": false,
+  "bg": [
+   6,
+   6,
+   7
+  ],
+  "bgImg": null,
+  "box": {
+   "x": 593,
+   "y": 4111,
+   "w": 456,
+   "h": 23
+  },
+  "fgHex": "#9aa0a8",
+  "bgHex": "#060607",
+  "tipo": "solido",
+  "min": 7.684495613087982,
+  "note": ""
+ },
+ {
+  "id": "ct38",
+  "txt": "\"asset_id\"",
+  "sel": "span",
+  "color": "rgb(1, 199, 197)",
+  "opacity": 1,
+  "fs": 12.5,
+  "fw": 400,
+  "large": false,
+  "clip": false,
+  "bg": [
+   6,
+   6,
+   7
+  ],
+  "bgImg": null,
+  "box": {
+   "x": 593,
+   "y": 4114,
+   "w": 75,
+   "h": 17
+  },
+  "fgHex": "#01c7c5",
+  "bgHex": "#060607",
+  "tipo": "solido",
+  "min": 9.622214135482944,
+  "note": ""
+ },
+ {
+  "id": "ct39",
+  "txt": "\"prop_8f21\"",
+  "sel": "span",
+  "color": "rgb(142, 113, 245)",
+  "opacity": 1,
+  "fs": 12.5,
+  "fw": 400,
+  "large": false,
+  "clip": false,
+  "bg": [
+   6,
+   6,
+   7
+  ],
+  "bgImg": null,
+  "box": {
+   "x": 683,
+   "y": 4114,
+   "w": 82,
+   "h": 17
+  },
+  "fgHex": "#8e71f5",
+  "bgHex": "#060607",
+  "tipo": "solido",
+  "min": 5.623433598854145,
+  "note": ""
+ },
+ {
+  "id": "ct40",
+  "txt": ": ,",
+  "sel": "div",
+  "color": "rgb(154, 160, 168)",
+  "opacity": 1,
+  "fs": 12.5,
+  "fw": 400,
+  "large": false,
+  "clip": false,
+  "bg": [
+   6,
+   6,
+   7
+  ],
+  "bgImg": null,
+  "box": {
+   "x": 593,
+   "y": 4134,
+   "w": 456,
+   "h": 23
+  },
+  "fgHex": "#9aa0a8",
+  "bgHex": "#060607",
+  "tipo": "solido",
+  "min": 7.684495613087982,
+  "note": ""
+ },
+ {
+  "id": "ct41",
+  "txt": "\"supply\"",
+  "sel": "span",
+  "color": "rgb(1, 199, 197)",
+  "opacity": 1,
+  "fs": 12.5,
+  "fw": 400,
+  "large": false,
+  "clip": false,
+  "bg": [
+   6,
+   6,
+   7
+  ],
+  "bgImg": null,
+  "box": {
+   "x": 593,
+   "y": 4137,
+   "w": 60,
+   "h": 17
+  },
+  "fgHex": "#01c7c5",
+  "bgHex": "#060607",
+  "tipo": "solido",
+  "min": 9.622214135482944,
+  "note": ""
+ },
+ {
+  "id": "ct42",
+  "txt": "10000",
+  "sel": "span",
+  "color": "rgb(142, 113, 245)",
+  "opacity": 1,
+  "fs": 12.5,
+  "fw": 400,
+  "large": false,
+  "clip": false,
+  "bg": [
+   6,
+   6,
+   7
+  ],
+  "bgImg": null,
+  "box": {
+   "x": 668,
+   "y": 4137,
+   "w": 37,
+   "h": 17
+  },
+  "fgHex": "#8e71f5",
+  "bgHex": "#060607",
+  "tipo": "solido",
+  "min": 5.623433598854145,
+  "note": ""
+ },
+ {
+  "id": "ct43",
+  "txt": ": ,",
+  "sel": "div",
+  "color": "rgb(154, 160, 168)",
+  "opacity": 1,
+  "fs": 12.5,
+  "fw": 400,
+  "large": false,
+  "clip": false,
+  "bg": [
+   6,
+   6,
+   7
+  ],
+  "bgImg": null,
+  "box": {
+   "x": 593,
+   "y": 4158,
+   "w": 456,
+   "h": 23
+  },
+  "fgHex": "#9aa0a8",
+  "bgHex": "#060607",
+  "tipo": "solido",
+  "min": 7.684495613087982,
+  "note": ""
+ },
+ {
+  "id": "ct44",
+  "txt": "\"network\"",
+  "sel": "span",
+  "color": "rgb(1, 199, 197)",
+  "opacity": 1,
+  "fs": 12.5,
+  "fw": 400,
+  "large": false,
+  "clip": false,
+  "bg": [
+   6,
+   6,
+   7
+  ],
+  "bgImg": null,
+  "box": {
+   "x": 593,
+   "y": 4161,
+   "w": 67,
+   "h": 17
+  },
+  "fgHex": "#01c7c5",
+  "bgHex": "#060607",
+  "tipo": "solido",
+  "min": 9.622214135482944,
+  "note": ""
+ },
+ {
+  "id": "ct45",
+  "txt": "\"polygon\"",
+  "sel": "span",
+  "color": "rgb(142, 113, 245)",
+  "opacity": 1,
+  "fs": 12.5,
+  "fw": 400,
+  "large": false,
+  "clip": false,
+  "bg": [
+   6,
+   6,
+   7
+  ],
+  "bgImg": null,
+  "box": {
+   "x": 675,
+   "y": 4161,
+   "w": 67,
+   "h": 17
+  },
+  "fgHex": "#8e71f5",
+  "bgHex": "#060607",
+  "tipo": "solido",
+  "min": 5.623433598854145,
+  "note": ""
+ },
+ {
+  "id": "ct46",
+  "txt": ": {",
+  "sel": "div",
+  "color": "rgb(154, 160, 168)",
+  "opacity": 1,
+  "fs": 12.5,
+  "fw": 400,
+  "large": false,
+  "clip": false,
+  "bg": [
+   6,
+   6,
+   7
+  ],
+  "bgImg": null,
+  "box": {
+   "x": 593,
+   "y": 4181,
+   "w": 456,
+   "h": 23
+  },
+  "fgHex": "#9aa0a8",
+  "bgHex": "#060607",
+  "tipo": "solido",
+  "min": 7.684495613087982,
+  "note": ""
+ },
+ {
+  "id": "ct47",
+  "txt": "\"compliance\"",
+  "sel": "span",
+  "color": "rgb(1, 199, 197)",
+  "opacity": 1,
+  "fs": 12.5,
+  "fw": 400,
+  "large": false,
+  "clip": false,
+  "bg": [
+   6,
+   6,
+   7
+  ],
+  "bgImg": null,
+  "box": {
+   "x": 593,
+   "y": 4184,
+   "w": 90,
+   "h": 17
+  },
+  "fgHex": "#01c7c5",
+  "bgHex": "#060607",
+  "tipo": "solido",
+  "min": 9.622214135482944,
+  "note": ""
+ },
+ {
+  "id": "ct48",
+  "txt": ": ,",
+  "sel": "div",
+  "color": "rgb(154, 160, 168)",
+  "opacity": 1,
+  "fs": 12.5,
+  "fw": 400,
+  "large": false,
+  "clip": false,
+  "bg": [
+   6,
+   6,
+   7
+  ],
+  "bgImg": null,
+  "box": {
+   "x": 593,
+   "y": 4204,
+   "w": 456,
+   "h": 23
+  },
+  "fgHex": "#9aa0a8",
+  "bgHex": "#060607",
+  "tipo": "solido",
+  "min": 7.684495613087982,
+  "note": ""
+ },
+ {
+  "id": "ct49",
+  "txt": "\"kyc\"",
+  "sel": "span",
+  "color": "rgb(1, 199, 197)",
+  "opacity": 1,
+  "fs": 12.5,
+  "fw": 400,
+  "large": false,
+  "clip": false,
+  "bg": [
+   6,
+   6,
+   7
+  ],
+  "bgImg": null,
+  "box": {
+   "x": 593,
+   "y": 4207,
+   "w": 37,
+   "h": 17
+  },
+  "fgHex": "#01c7c5",
+  "bgHex": "#060607",
+  "tipo": "solido",
+  "min": 9.622214135482944,
+  "note": ""
+ },
+ {
+  "id": "ct50",
+  "txt": "true",
+  "sel": "span",
+  "color": "rgb(142, 113, 245)",
+  "opacity": 1,
+  "fs": 12.5,
+  "fw": 400,
+  "large": false,
+  "clip": false,
+  "bg": [
+   6,
+   6,
+   7
+  ],
+  "bgImg": null,
+  "box": {
+   "x": 645,
+   "y": 4207,
+   "w": 30,
+   "h": 17
+  },
+  "fgHex": "#8e71f5",
+  "bgHex": "#060607",
+  "tipo": "solido",
+  "min": 5.623433598854145,
+  "note": ""
+ },
+ {
+  "id": "ct51",
+  "txt": ":",
+  "sel": "div",
+  "color": "rgb(154, 160, 168)",
+  "opacity": 1,
+  "fs": 12.5,
+  "fw": 400,
+  "large": false,
+  "clip": false,
+  "bg": [
+   6,
+   6,
+   7
+  ],
+  "bgImg": null,
+  "box": {
+   "x": 593,
+   "y": 4227,
+   "w": 456,
+   "h": 23
+  },
+  "fgHex": "#9aa0a8",
+  "bgHex": "#060607",
+  "tipo": "solido",
+  "min": 7.684495613087982,
+  "note": ""
+ },
+ {
+  "id": "ct52",
+  "txt": "\"jurisdiction\"",
+  "sel": "span",
+  "color": "rgb(1, 199, 197)",
+  "opacity": 1,
+  "fs": 12.5,
+  "fw": 400,
+  "large": false,
+  "clip": false,
+  "bg": [
+   6,
+   6,
+   7
+  ],
+  "bgImg": null,
+  "box": {
+   "x": 593,
+   "y": 4230,
+   "w": 105,
+   "h": 17
+  },
+  "fgHex": "#01c7c5",
+  "bgHex": "#060607",
+  "tipo": "solido",
+  "min": 9.622214135482944,
+  "note": ""
+ },
+ {
+  "id": "ct53",
+  "txt": "\"AR\"",
+  "sel": "span",
+  "color": "rgb(142, 113, 245)",
+  "opacity": 1,
+  "fs": 12.5,
+  "fw": 400,
+  "large": false,
+  "clip": false,
+  "bg": [
+   6,
+   6,
+   7
+  ],
+  "bgImg": null,
+  "box": {
+   "x": 713,
+   "y": 4230,
+   "w": 30,
+   "h": 17
+  },
+  "fgHex": "#8e71f5",
+  "bgHex": "#060607",
+  "tipo": "solido",
+  "min": 5.623433598854145,
+  "note": ""
+ },
+ {
+  "id": "ct54",
+  "txt": "}",
+  "sel": "div",
+  "color": "rgb(154, 160, 168)",
+  "opacity": 1,
+  "fs": 12.5,
+  "fw": 400,
+  "large": false,
+  "clip": false,
+  "bg": [
+   6,
+   6,
+   7
+  ],
+  "bgImg": null,
+  "box": {
+   "x": 593,
+   "y": 4250,
+   "w": 456,
+   "h": 23
+  },
+  "fgHex": "#9aa0a8",
+  "bgHex": "#060607",
+  "tipo": "solido",
+  "min": 7.684495613087982,
+  "note": ""
+ },
+ {
+  "id": "ct55",
+  "txt": "}",
+  "sel": "div",
+  "color": "rgb(154, 160, 168)",
+  "opacity": 1,
+  "fs": 12.5,
+  "fw": 400,
+  "large": false,
+  "clip": false,
+  "bg": [
+   6,
+   6,
+   7
+  ],
+  "bgImg": null,
+  "box": {
+   "x": 593,
+   "y": 4273,
+   "w": 456,
+   "h": 23
+  },
+  "fgHex": "#9aa0a8",
+  "bgHex": "#060607",
+  "tipo": "solido",
+  "min": 7.684495613087982,
+  "note": ""
+ },
+ {
+  "id": "ct56",
+  "txt": "201 Created",
+  "sel": "div",
+  "color": "rgb(180, 247, 89)",
+  "opacity": 1,
+  "fs": 12.5,
+  "fw": 400,
+  "large": false,
+  "clip": false,
+  "bg": [
+   6,
+   6,
+   7
+  ],
+  "bgImg": null,
+  "box": {
+   "x": 593,
+   "y": 4319,
+   "w": 456,
+   "h": 23
+  },
+  "fgHex": "#b4f759",
+  "bgHex": "#060607",
+  "tipo": "solido",
+  "min": 15.806564967941105,
+  "note": ""
+ },
+ {
+  "id": "ct57",
+  "txt": ":",
+  "sel": "div",
+  "color": "rgb(154, 160, 168)",
+  "opacity": 1,
+  "fs": 12.5,
+  "fw": 400,
+  "large": false,
+  "clip": false,
+  "bg": [
+   6,
+   6,
+   7
+  ],
+  "bgImg": null,
+  "box": {
+   "x": 593,
+   "y": 4342,
+   "w": 456,
+   "h": 23
+  },
+  "fgHex": "#9aa0a8",
+  "bgHex": "#060607",
+  "tipo": "solido",
+  "min": 7.684495613087982,
+  "note": ""
+ },
+ {
+  "id": "ct58",
+  "txt": "contract",
+  "sel": "span",
+  "color": "rgb(1, 199, 197)",
+  "opacity": 1,
+  "fs": 12.5,
+  "fw": 400,
+  "large": false,
+  "clip": false,
+  "bg": [
+   6,
+   6,
+   7
+  ],
+  "bgImg": null,
+  "box": {
+   "x": 593,
+   "y": 4345,
+   "w": 60,
+   "h": 17
+  },
+  "fgHex": "#01c7c5",
+  "bgHex": "#060607",
+  "tipo": "solido",
+  "min": 9.622214135482944,
+  "note": ""
+ },
+ {
+  "id": "ct59",
+  "txt": "0x7a3f…c210",
+  "sel": "span",
+  "color": "rgb(142, 113, 245)",
+  "opacity": 1,
+  "fs": 12.5,
+  "fw": 400,
+  "large": false,
+  "clip": false,
+  "bg": [
+   6,
+   6,
+   7
+  ],
+  "bgImg": null,
+  "box": {
+   "x": 668,
+   "y": 4345,
+   "w": 82,
+   "h": 17
+  },
+  "fgHex": "#8e71f5",
+  "bgHex": "#060607",
+  "tipo": "solido",
+  "min": 5.623433598854145,
+  "note": ""
+ },
+ {
+  "id": "ct60",
+  "txt": "Una llamada emite el activo con sus reglas de cumplimiento adentro",
+  "sel": "p",
+  "color": "rgb(90, 90, 99)",
+  "opacity": 1,
+  "fs": 13,
+  "fw": 400,
+  "large": false,
+  "clip": false,
+  "bg": [
+   245,
+   243,
+   239
+  ],
+  "bgImg": null,
+  "box": {
+   "x": 561,
+   "y": 4630,
+   "w": 520,
+   "h": 20
+  },
+  "fgHex": "#5a5a63",
+  "bgHex": "#f5f3ef",
+  "tipo": "solido",
+  "min": 6.157577083899862,
+  "note": ""
+ },
+ {
+  "id": "ct61",
+  "txt": "03",
+  "sel": "div",
+  "color": "rgba(0, 0, 0, 0)",
+  "opacity": 1,
+  "fs": 80,
+  "fw": 700,
+  "large": true,
+  "clip": true,
+  "bg": [
+   245,
+   243,
+   239
+  ],
+  "bgImg": null,
+  "box": {
+   "x": 561,
+   "y": 4689,
+   "w": 759,
+   "h": 80
+  },
+  "bgHex": "#f5f3ef",
+  "tipo": "DEGRADE",
+  "min": 1.1561948826340025,
+  "max": 3.386163560223035,
+  "peorStop": "#b4f759",
+  "mejorStop": "#7973f6",
+  "note": ""
+ },
+ {
+  "id": "ct62",
+  "txt": "Desarrollo Blockchain",
+  "sel": "h3",
+  "color": "rgb(11, 11, 13)",
+  "opacity": 1,
+  "fs": 25.6,
+  "fw": 600,
+  "large": true,
+  "clip": false,
+  "bg": [
+   245,
+   243,
+   239
+  ],
+  "bgImg": null,
+  "box": {
+   "x": 561,
+   "y": 4781,
+   "w": 759,
+   "h": 31
+  },
+  "fgHex": "#0b0b0d",
+  "bgHex": "#f5f3ef",
+  "tipo": "solido",
+  "min": 17.744127458728713,
+  "note": ""
+ },
+ {
+  "id": "ct63",
+  "txt": "Smart contracts auditados, integración con tu core y APIs que tu e",
+  "sel": "p",
+  "color": "rgb(90, 90, 99)",
+  "opacity": 1,
+  "fs": 16.6,
+  "fw": 400,
+  "large": false,
+  "clip": false,
+  "bg": [
+   245,
+   243,
+   239
+  ],
+  "bgImg": null,
+  "box": {
+   "x": 561,
+   "y": 4826,
+   "w": 560,
+   "h": 54
+  },
+  "fgHex": "#5a5a63",
+  "bgHex": "#f5f3ef",
+  "tipo": "solido",
+  "min": 6.157577083899862,
+  "note": ""
+ },
+ {
+  "id": "ct64",
+  "txt": "Ver desarrollo blockchain",
+  "sel": "a",
+  "color": "rgb(11, 11, 13)",
+  "opacity": 1,
+  "fs": 15,
+  "fw": 500,
+  "large": false,
+  "clip": false,
+  "bg": [
+   245,
+   243,
+   239
+  ],
+  "bgImg": null,
+  "box": {
+   "x": 561,
+   "y": 4906,
+   "w": 205,
+   "h": 25
+  },
+  "fgHex": "#0b0b0d",
+  "bgHex": "#f5f3ef",
+  "tipo": "solido",
+  "min": 17.744127458728713,
+  "note": ""
+ },
+ {
+  "id": "ct65",
+  "txt": "Cómo trabajamos",
+  "sel": "span",
+  "color": "rgb(138, 138, 148)",
+  "opacity": 1,
+  "fs": 12,
+  "fw": 500,
+  "large": false,
+  "clip": false,
+  "bg": [
+   16,
+   16,
+   20
+  ],
+  "bgImg": null,
+  "box": {
+   "x": 136,
+   "y": 5280,
+   "w": 157,
+   "h": 15
+  },
+  "fgHex": "#8a8a94",
+  "bgHex": "#101014",
+  "tipo": "solido",
+  "min": 5.5536019595601935,
+  "note": ""
+ },
+ {
+  "id": "ct66",
+  "txt": "El piloto funciona. Producción es otra cosa.",
+  "sel": "h2#proc-h2",
+  "color": "rgb(250, 250, 248)",
+  "opacity": 1,
+  "fs": 56,
+  "fw": 700,
+  "large": true,
+  "clip": false,
+  "bg": [
+   16,
+   16,
+   20
+  ],
+  "bgImg": null,
+  "box": {
+   "x": 120,
+   "y": 5319,
+   "w": 514,
+   "h": 175
+  },
+  "fgHex": "#fafaf8",
+  "bgHex": "#101014",
+  "tipo": "solido",
+  "min": 18.16452977981072,
+  "note": ""
+ },
+ {
+  "id": "ct67",
+  "txt": "Los proyectos blockchain casi nunca mueren en la parte técnica. Mu",
+  "sel": "p",
+  "color": "rgb(138, 138, 148)",
+  "opacity": 1,
+  "fs": 16.6,
+  "fw": 400,
+  "large": false,
+  "clip": false,
+  "bg": [
+   16,
+   16,
+   20
+  ],
+  "bgImg": null,
+  "box": {
+   "x": 120,
+   "y": 5514,
+   "w": 460,
+   "h": 107
+  },
+  "fgHex": "#8a8a94",
+  "bgHex": "#101014",
+  "tipo": "solido",
+  "min": 5.5536019595601935,
+  "note": ""
+ },
+ {
+  "id": "ct68",
+  "txt": "01",
+  "sel": "div",
+  "color": "rgb(142, 113, 245)",
+  "opacity": 0.35,
+  "fs": 13,
+  "fw": 600,
+  "large": false,
+  "clip": false,
+  "bg": [
+   16,
+   16,
+   20
+  ],
+  "bgImg": null,
+  "box": {
+   "x": 800,
+   "y": 5316,
+   "w": 520,
+   "h": 16
+  },
+  "fgHex": "#3c3263",
+  "bgHex": "#101014",
+  "tipo": "solido",
+  "min": 1.6518487346106834,
+  "note": ""
+ },
+ {
+  "id": "ct69",
+  "txt": "Diagnóstico y arquitectura",
+  "sel": "h3",
+  "color": "rgb(250, 250, 248)",
+  "opacity": 0.35,
+  "fs": 25.6,
+  "fw": 600,
+  "large": true,
+  "clip": false,
+  "bg": [
+   16,
+   16,
+   20
+  ],
+  "bgImg": null,
+  "box": {
+   "x": 800,
+   "y": 5344,
+   "w": 520,
+   "h": 31
+  },
+  "fgHex": "#626264",
+  "bgHex": "#101014",
+  "tipo": "solido",
+  "min": 3.1139454516840663,
+  "note": ""
+ },
+ {
+  "id": "ct70",
+  "txt": "Definimos qué se tokeniza, sobre qué red, con qué modelo de custod",
+  "sel": "p",
+  "color": "rgb(138, 138, 148)",
+  "opacity": 0.35,
+  "fs": 16,
+  "fw": 400,
+  "large": false,
+  "clip": false,
+  "bg": [
+   16,
+   16,
+   20
+  ],
+  "bgImg": null,
+  "box": {
+   "x": 800,
+   "y": 5385,
+   "w": 520,
+   "h": 52
+  },
+  "fgHex": "#3b3b41",
+  "bgHex": "#101014",
+  "tipo": "solido",
+  "min": 1.6989263600698694,
+  "note": ""
+ },
+ {
+  "id": "ct71",
+  "txt": "02",
+  "sel": "div",
+  "color": "rgb(121, 115, 246)",
+  "opacity": 0.35,
+  "fs": 13,
+  "fw": 600,
+  "large": false,
+  "clip": false,
+  "bg": [
+   16,
+   16,
+   20
+  ],
+  "bgImg": null,
+  "box": {
+   "x": 800,
+   "y": 5509,
+   "w": 520,
+   "h": 16
+  },
+  "fgHex": "#353363",
+  "bgHex": "#101014",
+  "tipo": "solido",
+  "min": 1.6253249166292327,
+  "note": ""
+ },
+ {
+  "id": "ct72",
+  "txt": "Prueba de concepto acotada",
+  "sel": "h3",
+  "color": "rgb(250, 250, 248)",
+  "opacity": 0.35,
+  "fs": 25.6,
+  "fw": 600,
+  "large": true,
+  "clip": false,
+  "bg": [
+   16,
+   16,
+   20
+  ],
+  "bgImg": null,
+  "box": {
+   "x": 800,
+   "y": 5537,
+   "w": 520,
+   "h": 31
+  },
+  "fgHex": "#626264",
+  "bgHex": "#101014",
+  "tipo": "solido",
+  "min": 3.1139454516840663,
+  "note": ""
+ },
+ {
+  "id": "ct73",
+  "txt": "Un alcance chico y medible, en semanas. Si no cierra, se corta acá",
+  "sel": "p",
+  "color": "rgb(138, 138, 148)",
+  "opacity": 0.35,
+  "fs": 16,
+  "fw": 400,
+  "large": false,
+  "clip": false,
+  "bg": [
+   16,
+   16,
+   20
+  ],
+  "bgImg": null,
+  "box": {
+   "x": 800,
+   "y": 5578,
+   "w": 520,
+   "h": 52
+  },
+  "fgHex": "#3b3b41",
+  "bgHex": "#101014",
+  "tipo": "solido",
+  "min": 1.6989263600698694,
+  "note": ""
+ },
+ {
+  "id": "ct74",
+  "txt": "03",
+  "sel": "div",
+  "color": "rgb(50, 150, 227)",
+  "opacity": 0.35,
+  "fs": 13,
+  "fw": 600,
+  "large": false,
+  "clip": false,
+  "bg": [
+   16,
+   16,
+   20
+  ],
+  "bgImg": null,
+  "box": {
+   "x": 800,
+   "y": 5703,
+   "w": 520,
+   "h": 16
+  },
+  "fgHex": "#1c3f5c",
+  "bgHex": "#101014",
+  "tipo": "solido",
+  "min": 1.7301731427687288,
+  "note": ""
+ },
+ {
+  "id": "ct75",
+  "txt": "Integración y auditoría",
+  "sel": "h3",
+  "color": "rgb(250, 250, 248)",
+  "opacity": 0.35,
+  "fs": 25.6,
+  "fw": 600,
+  "large": true,
+  "clip": false,
+  "bg": [
+   16,
+   16,
+   20
+  ],
+  "bgImg": null,
+  "box": {
+   "x": 800,
+   "y": 5731,
+   "w": 520,
+   "h": 31
+  },
+  "fgHex": "#626264",
+  "bgHex": "#101014",
+  "tipo": "solido",
+  "min": 3.1139454516840663,
+  "note": ""
+ },
+ {
+  "id": "ct76",
+  "txt": "Conexión con tu core, auditoría externa de contratos y pruebas de ",
+  "sel": "p",
+  "color": "rgb(138, 138, 148)",
+  "opacity": 0.35,
+  "fs": 16,
+  "fw": 400,
+  "large": false,
+  "clip": false,
+  "bg": [
+   16,
+   16,
+   20
+  ],
+  "bgImg": null,
+  "box": {
+   "x": 800,
+   "y": 5772,
+   "w": 520,
+   "h": 52
+  },
+  "fgHex": "#3b3b41",
+  "bgHex": "#101014",
+  "tipo": "solido",
+  "min": 1.6989263600698694,
+  "note": ""
+ },
+ {
+  "id": "ct77",
+  "txt": "04",
+  "sel": "div",
+  "color": "rgb(1, 199, 197)",
+  "opacity": 0.35,
+  "fs": 13,
+  "fw": 600,
+  "large": false,
+  "clip": false,
+  "bg": [
+   16,
+   16,
+   20
+  ],
+  "bgImg": null,
+  "box": {
+   "x": 800,
+   "y": 5896,
+   "w": 520,
+   "h": 16
+  },
+  "fgHex": "#0b5052",
+  "bgHex": "#101014",
+  "tipo": "solido",
+  "min": 2.065091868404603,
+  "note": ""
+ },
+ {
+  "id": "ct78",
+  "txt": "Producción y operación",
+  "sel": "h3",
+  "color": "rgb(250, 250, 248)",
+  "opacity": 0.35,
+  "fs": 25.6,
+  "fw": 600,
+  "large": true,
+  "clip": false,
+  "bg": [
+   16,
+   16,
+   20
+  ],
+  "bgImg": null,
+  "box": {
+   "x": 800,
+   "y": 5924,
+   "w": 520,
+   "h": 31
+  },
+  "fgHex": "#626264",
+  "bgHex": "#101014",
+  "tipo": "solido",
+  "min": 3.1139454516840663,
+  "note": ""
+ },
+ {
+  "id": "ct79",
+  "txt": "Salida a producción, monitoreo y soporte. Con documentación para q",
+  "sel": "p",
+  "color": "rgb(138, 138, 148)",
+  "opacity": 0.35,
+  "fs": 16,
+  "fw": 400,
+  "large": false,
+  "clip": false,
+  "bg": [
+   16,
+   16,
+   20
+  ],
+  "bgImg": null,
+  "box": {
+   "x": 800,
+   "y": 5965,
+   "w": 520,
+   "h": 52
+  },
+  "fgHex": "#3b3b41",
+  "bgHex": "#101014",
+  "tipo": "solido",
+  "min": 1.6989263600698694,
+  "note": ""
+ },
+ {
+  "id": "ct80",
+  "txt": "Integración",
+  "sel": "span",
+  "color": "rgb(90, 90, 99)",
+  "opacity": 1,
+  "fs": 12,
+  "fw": 500,
+  "large": false,
+  "clip": false,
+  "bg": [
+   245,
+   243,
+   239
+  ],
+  "bgImg": null,
+  "box": {
+   "x": 136,
+   "y": 6588,
+   "w": 106,
+   "h": 15
+  },
+  "fgHex": "#5a5a63",
+  "bgHex": "#f5f3ef",
+  "tipo": "solido",
+  "min": 6.157577083899862,
+  "note": ""
+ },
+ {
+  "id": "ct81",
+  "txt": "Se integra a lo que ya tenés.",
+  "sel": "h2#arch-h2",
+  "color": "rgb(11, 11, 13)",
+  "opacity": 1,
+  "fs": 56,
+  "fw": 700,
+  "large": true,
+  "clip": false,
+  "bg": [
+   245,
+   243,
+   239
+  ],
+  "bgImg": null,
+  "box": {
+   "x": 120,
+   "y": 6627,
+   "w": 477,
+   "h": 116
+  },
+  "fgHex": "#0b0b0d",
+  "bgHex": "#f5f3ef",
+  "tipo": "solido",
+  "min": 17.744127458728713,
+  "note": ""
+ },
+ {
+  "id": "ct82",
+  "txt": "No reemplazamos tu core ni tu stack. Nos ubicamos como una capa en",
+  "sel": "p",
+  "color": "rgb(90, 90, 99)",
+  "opacity": 1,
+  "fs": 16.6,
+  "fw": 400,
+  "large": false,
+  "clip": false,
+  "bg": [
+   245,
+   243,
+   239
+  ],
+  "bgImg": null,
+  "box": {
+   "x": 120,
+   "y": 6763,
+   "w": 460,
+   "h": 80
+  },
+  "fgHex": "#5a5a63",
+  "bgHex": "#f5f3ef",
+  "tipo": "solido",
+  "min": 6.157577083899862,
+  "note": ""
+ },
+ {
+  "id": "ct83",
+  "txt": "Tu negocio",
+  "sel": "span",
+  "color": "rgb(11, 11, 13)",
+  "opacity": 1,
+  "fs": 16,
+  "fw": 600,
+  "large": false,
+  "clip": false,
+  "bg": [
+   245,
+   243,
+   239
+  ],
+  "bgImg": null,
+  "box": {
+   "x": 1116,
+   "y": 6584,
+   "w": 198,
+   "h": 20
+  },
+  "fgHex": "#0b0b0d",
+  "bgHex": "#f5f3ef",
+  "tipo": "solido",
+  "min": 17.744127458728713,
+  "note": ""
+ },
+ {
+  "id": "ct84",
+  "txt": "Core bancario · ERP · CRM · app",
+  "sel": "span",
+  "color": "rgb(90, 90, 99)",
+  "opacity": 1,
+  "fs": 13,
+  "fw": 400,
+  "large": false,
+  "clip": false,
+  "bg": [
+   245,
+   243,
+   239
+  ],
+  "bgImg": null,
+  "box": {
+   "x": 1116,
+   "y": 6608,
+   "w": 198,
+   "h": 20
+  },
+  "fgHex": "#5a5a63",
+  "bgHex": "#f5f3ef",
+  "tipo": "solido",
+  "min": 6.157577083899862,
+  "note": ""
+ },
+ {
+  "id": "ct85",
+  "txt": "Capa DAppsFactory",
+  "sel": "span",
+  "color": "rgb(11, 11, 13)",
+  "opacity": 1,
+  "fs": 16,
+  "fw": 600,
+  "large": false,
+  "clip": false,
+  "bg": [
+   245,
+   243,
+   239
+  ],
+  "bgImg": null,
+  "box": {
+   "x": 1116,
+   "y": 6684,
+   "w": 204,
+   "h": 20
+  },
+  "fgHex": "#0b0b0d",
+  "bgHex": "#f5f3ef",
+  "tipo": "solido",
+  "min": 17.744127458728713,
+  "note": ""
+ },
+ {
+  "id": "ct86",
+  "txt": "APIs · orquestación · custodia · KYC/AML · reporting",
+  "sel": "span",
+  "color": "rgb(90, 90, 99)",
+  "opacity": 1,
+  "fs": 13,
+  "fw": 400,
+  "large": false,
+  "clip": false,
+  "bg": [
+   245,
+   243,
+   239
+  ],
+  "bgImg": null,
+  "box": {
+   "x": 1116,
+   "y": 6708,
+   "w": 204,
+   "h": 39
+  },
+  "fgHex": "#5a5a63",
+  "bgHex": "#f5f3ef",
+  "tipo": "solido",
+  "min": 6.157577083899862,
+  "note": ""
+ },
+ {
+  "id": "ct87",
+  "txt": "Redes",
+  "sel": "span",
+  "color": "rgb(11, 11, 13)",
+  "opacity": 1,
+  "fs": 16,
+  "fw": 600,
+  "large": false,
+  "clip": false,
+  "bg": [
+   245,
+   243,
+   239
+  ],
+  "bgImg": null,
+  "box": {
+   "x": 1116,
+   "y": 6794,
+   "w": 204,
+   "h": 20
+  },
+  "fgHex": "#0b0b0d",
+  "bgHex": "#f5f3ef",
+  "tipo": "solido",
+  "min": 17.744127458728713,
+  "note": ""
+ },
+ {
+  "id": "ct88",
+  "txt": "Ethereum · Polygon · Base · redes permisionadas",
+  "sel": "span",
+  "color": "rgb(90, 90, 99)",
+  "opacity": 1,
+  "fs": 13,
+  "fw": 400,
+  "large": false,
+  "clip": false,
+  "bg": [
+   245,
+   243,
+   239
+  ],
+  "bgImg": null,
+  "box": {
+   "x": 1116,
+   "y": 6818,
+   "w": 204,
+   "h": 39
+  },
+  "fgHex": "#5a5a63",
+  "bgHex": "#f5f3ef",
+  "tipo": "solido",
+  "min": 6.157577083899862,
+  "note": ""
+ },
+ {
+  "id": "ct89",
+  "txt": "Dónde se aplica",
+  "sel": "span",
+  "color": "rgb(138, 138, 148)",
+  "opacity": 1,
+  "fs": 12,
+  "fw": 500,
+  "large": false,
+  "clip": false,
+  "bg": [
+   6,
+   6,
+   7
+  ],
+  "bgImg": null,
+  "box": {
+   "x": 658,
+   "y": 8649,
+   "w": 140,
+   "h": 15
+  },
+  "fgHex": "#8a8a94",
+  "bgHex": "#060607",
+  "tipo": "solido",
+  "min": 5.92525592069075,
+  "note": ""
+ },
+ {
+  "id": "ct90",
+  "txt": "Cuatro problemas que resolvemos.",
+  "sel": "h2#casos-h2",
+  "color": "rgb(250, 250, 248)",
+  "opacity": 1,
+  "fs": 56,
+  "fw": 700,
+  "large": true,
+  "clip": false,
+  "bg": [
+   6,
+   6,
+   7
+  ],
+  "bgImg": null,
+  "box": {
+   "x": 440,
+   "y": 8688,
+   "w": 560,
+   "h": 116
+  },
+  "fgHex": "#fafaf8",
+  "bgHex": "#060607",
+  "tipo": "solido",
+  "min": 19.38012273982099,
+  "note": ""
+ },
+ {
+  "id": "ct91",
+  "txt": "01",
+  "sel": "span",
+  "color": "rgb(138, 138, 148)",
+  "opacity": 1,
+  "fs": 13,
+  "fw": 600,
+  "large": false,
+  "clip": false,
+  "bg": [
+   6,
+   6,
+   7
+  ],
+  "bgImg": null,
+  "box": {
+   "x": 140,
+   "y": 8947,
+   "w": 17,
+   "h": 16
+  },
+  "fgHex": "#8a8a94",
+  "bgHex": "#060607",
+  "tipo": "solido",
+  "min": 5.92525592069075,
+  "note": ""
+ },
+ {
+  "id": "ct92",
+  "txt": "Real estate tokenizado",
+  "sel": "span",
+  "color": "rgb(250, 250, 248)",
+  "opacity": 1,
+  "fs": 25.6,
+  "fw": 600,
+  "large": true,
+  "clip": false,
+  "bg": [
+   6,
+   6,
+   7
+  ],
+  "bgImg": null,
+  "box": {
+   "x": 270,
+   "y": 8939,
+   "w": 249,
+   "h": 31
+  },
+  "fgHex": "#fafaf8",
+  "bgHex": "#060607",
+  "tipo": "solido",
+  "min": 19.38012273982099,
+  "note": ""
+ },
+ {
+  "id": "ct93",
+  "txt": "Fraccionar un desarrollo inmobiliario en participaciones digitales",
+  "sel": "span",
+  "color": "rgb(138, 138, 148)",
+  "opacity": 1,
+  "fs": 16,
+  "fw": 400,
+  "large": false,
+  "clip": false,
+  "bg": [
+   6,
+   6,
+   7
+  ],
+  "bgImg": null,
+  "box": {
+   "x": 716,
+   "y": 8931,
+   "w": 524,
+   "h": 46
+  },
+  "fgHex": "#8a8a94",
+  "bgHex": "#060607",
+  "tipo": "solido",
+  "min": 5.92525592069075,
+  "note": ""
+ },
+ {
+  "id": "ct94",
+  "txt": "02",
+  "sel": "span",
+  "color": "rgb(138, 138, 148)",
+  "opacity": 1,
+  "fs": 13,
+  "fw": 600,
+  "large": false,
+  "clip": false,
+  "bg": [
+   6,
+   6,
+   7
+  ],
+  "bgImg": null,
+  "box": {
+   "x": 140,
+   "y": 9072,
+   "w": 19,
+   "h": 16
+  },
+  "fgHex": "#8a8a94",
+  "bgHex": "#060607",
+  "tipo": "solido",
+  "min": 5.92525592069075,
+  "note": ""
+ },
+ {
+  "id": "ct95",
+  "txt": "Cartera de créditos on-chain",
+  "sel": "span",
+  "color": "rgb(250, 250, 248)",
+  "opacity": 1,
+  "fs": 25.6,
+  "fw": 600,
+  "large": true,
+  "clip": false,
+  "bg": [
+   6,
+   6,
+   7
+  ],
+  "bgImg": null,
+  "box": {
+   "x": 270,
+   "y": 9063,
+   "w": 315,
+   "h": 31
+  },
+  "fgHex": "#fafaf8",
+  "bgHex": "#060607",
+  "tipo": "solido",
+  "min": 19.38012273982099,
+  "note": ""
+ },
+ {
+  "id": "ct96",
+  "txt": "Llevar originación y cesión de cartera a un registro compartido y ",
+  "sel": "span",
+  "color": "rgb(138, 138, 148)",
+  "opacity": 1,
+  "fs": 16,
+  "fw": 400,
+  "large": false,
+  "clip": false,
+  "bg": [
+   6,
+   6,
+   7
+  ],
+  "bgImg": null,
+  "box": {
+   "x": 716,
+   "y": 9056,
+   "w": 488,
+   "h": 46
+  },
+  "fgHex": "#8a8a94",
+  "bgHex": "#060607",
+  "tipo": "solido",
+  "min": 5.92525592069075,
+  "note": ""
+ },
+ {
+  "id": "ct97",
+  "txt": "03",
+  "sel": "span",
+  "color": "rgb(138, 138, 148)",
+  "opacity": 1,
+  "fs": 13,
+  "fw": 600,
+  "large": false,
+  "clip": false,
+  "bg": [
+   6,
+   6,
+   7
+  ],
+  "bgImg": null,
+  "box": {
+   "x": 140,
+   "y": 9197,
+   "w": 20,
+   "h": 16
+  },
+  "fgHex": "#8a8a94",
+  "bgHex": "#060607",
+  "tipo": "solido",
+  "min": 5.92525592069075,
+  "note": ""
+ },
+ {
+  "id": "ct98",
+  "txt": "Billetera fiat + cripto de marca",
+  "sel": "span",
+  "color": "rgb(250, 250, 248)",
+  "opacity": 1,
+  "fs": 25.6,
+  "fw": 600,
+  "large": true,
+  "clip": false,
+  "bg": [
+   6,
+   6,
+   7
+  ],
+  "bgImg": null,
+  "box": {
+   "x": 270,
+   "y": 9188,
+   "w": 325,
+   "h": 31
+  },
+  "fgHex": "#fafaf8",
+  "bgHex": "#060607",
+  "tipo": "solido",
+  "min": 19.38012273982099,
+  "note": ""
+ },
+ {
+  "id": "ct99",
+  "txt": "Producto propio con cuentas, conversión y stablecoins, sin constru",
+  "sel": "span",
+  "color": "rgb(138, 138, 148)",
+  "opacity": 1,
+  "fs": 16,
+  "fw": 400,
+  "large": false,
+  "clip": false,
+  "bg": [
+   6,
+   6,
+   7
+  ],
+  "bgImg": null,
+  "box": {
+   "x": 716,
+   "y": 9181,
+   "w": 518,
+   "h": 46
+  },
+  "fgHex": "#8a8a94",
+  "bgHex": "#060607",
+  "tipo": "solido",
+  "min": 5.92525592069075,
+  "note": ""
+ },
+ {
+  "id": "ct100",
+  "txt": "04",
+  "sel": "span",
+  "color": "rgb(138, 138, 148)",
+  "opacity": 1,
+  "fs": 13,
+  "fw": 600,
+  "large": false,
+  "clip": false,
+  "bg": [
+   6,
+   6,
+   7
+  ],
+  "bgImg": null,
+  "box": {
+   "x": 140,
+   "y": 9321,
+   "w": 20,
+   "h": 16
+  },
+  "fgHex": "#8a8a94",
+  "bgHex": "#060607",
+  "tipo": "solido",
+  "min": 5.92525592069075,
+  "note": ""
+ },
+ {
+  "id": "ct101",
+  "txt": "Liquidación entre entidades",
+  "sel": "span",
+  "color": "rgb(250, 250, 248)",
+  "opacity": 1,
+  "fs": 25.6,
+  "fw": 600,
+  "large": true,
+  "clip": false,
+  "bg": [
+   6,
+   6,
+   7
+  ],
+  "bgImg": null,
+  "box": {
+   "x": 270,
+   "y": 9313,
+   "w": 304,
+   "h": 31
+  },
+  "fgHex": "#fafaf8",
+  "bgHex": "#060607",
+  "tipo": "solido",
+  "min": 19.38012273982099,
+  "note": ""
+ },
+ {
+  "id": "ct102",
+  "txt": "Settlement en minutos en lugar de días, con trazabilidad completa ",
+  "sel": "span",
+  "color": "rgb(138, 138, 148)",
+  "opacity": 1,
+  "fs": 16,
+  "fw": 400,
+  "large": false,
+  "clip": false,
+  "bg": [
+   6,
+   6,
+   7
+  ],
+  "bgImg": null,
+  "box": {
+   "x": 716,
+   "y": 9306,
+   "w": 499,
+   "h": 46
+  },
+  "fgHex": "#8a8a94",
+  "bgHex": "#060607",
+  "tipo": "solido",
+  "min": 5.92525592069075,
+  "note": ""
+ },
+ {
+  "id": "ct103",
+  "txt": "Los números que sí podemos mostrar.",
+  "sel": "h2#metricas-h2",
+  "color": "rgb(11, 11, 13)",
+  "opacity": 1,
+  "fs": 56,
+  "fw": 700,
+  "large": true,
+  "clip": false,
+  "bg": [
+   245,
+   243,
+   239
+  ],
+  "bgImg": null,
+  "box": {
+   "x": 120,
+   "y": 9738,
+   "w": 587,
+   "h": 116
+  },
+  "fgHex": "#0b0b0d",
+  "bgHex": "#f5f3ef",
+  "tipo": "solido",
+  "min": 17.744127458728713,
+  "note": ""
+ },
+ {
+  "id": "ct106",
+  "txt": "usuarios finales en productos que construimos",
+  "sel": "div",
+  "color": "rgb(90, 90, 99)",
+  "opacity": 1,
+  "fs": 14,
+  "fw": 400,
+  "large": false,
+  "clip": false,
+  "bg": [
+   245,
+   243,
+   239
+  ],
+  "bgImg": null,
+  "box": {
+   "x": 145,
+   "y": 10051,
+   "w": 254,
+   "h": 39
+  },
+  "fgHex": "#5a5a63",
+  "bgHex": "#f5f3ef",
+  "tipo": "solido",
+  "min": 6.157577083899862,
+  "note": ""
+ },
+ {
+  "id": "ct108",
+  "txt": "integraciones en producción",
+  "sel": "div",
+  "color": "rgb(90, 90, 99)",
+  "opacity": 1,
+  "fs": 14,
+  "fw": 400,
+  "large": false,
+  "clip": false,
+  "bg": [
+   245,
+   243,
+   239
+  ],
+  "bgImg": null,
+  "box": {
+   "x": 452,
+   "y": 10051,
+   "w": 254,
+   "h": 20
+  },
+  "fgHex": "#5a5a63",
+  "bgHex": "#f5f3ef",
+  "tipo": "solido",
+  "min": 6.157577083899862,
+  "note": ""
+ },
+ {
+  "id": "ct110",
+  "txt": "países donde operamos",
+  "sel": "div",
+  "color": "rgb(90, 90, 99)",
+  "opacity": 1,
+  "fs": 14,
+  "fw": 400,
+  "large": false,
+  "clip": false,
+  "bg": [
+   245,
+   243,
+   239
+  ],
+  "bgImg": null,
+  "box": {
+   "x": 759,
+   "y": 10051,
+   "w": 254,
+   "h": 20
+  },
+  "fgHex": "#5a5a63",
+  "bgHex": "#f5f3ef",
+  "tipo": "solido",
+  "min": 6.157577083899862,
+  "note": ""
+ },
+ {
+  "id": "ct112",
+  "txt": "años de la compañía",
+  "sel": "div",
+  "color": "rgb(90, 90, 99)",
+  "opacity": 1,
+  "fs": 14,
+  "fw": 400,
+  "large": false,
+  "clip": false,
+  "bg": [
+   245,
+   243,
+   239
+  ],
+  "bgImg": null,
+  "box": {
+   "x": 1066,
+   "y": 10051,
+   "w": 254,
+   "h": 20
+  },
+  "fgHex": "#5a5a63",
+  "bgHex": "#f5f3ef",
+  "tipo": "solido",
+  "min": 6.157577083899862,
+  "note": ""
+ },
+ {
+  "id": "ct113",
+  "txt": "Lo que revisa tu área de riesgo",
+  "sel": "span",
+  "color": "rgb(138, 138, 148)",
+  "opacity": 1,
+  "fs": 12,
+  "fw": 500,
+  "large": false,
+  "clip": false,
+  "bg": [
+   16,
+   16,
+   20
+  ],
+  "bgImg": null,
+  "box": {
+   "x": 136,
+   "y": 10576,
+   "w": 279,
+   "h": 15
+  },
+  "fgHex": "#8a8a94",
+  "bgHex": "#101014",
+  "tipo": "solido",
+  "min": 5.5536019595601935,
+  "note": ""
+ },
+ {
+  "id": "ct114",
+  "txt": "Escrito para pasar el comité, no solo la demo.",
+  "sel": "h2#seg-h2",
+  "color": "rgb(250, 250, 248)",
+  "opacity": 1,
+  "fs": 56,
+  "fw": 700,
+  "large": true,
+  "clip": false,
+  "bg": [
+   16,
+   16,
+   20
+  ],
+  "bgImg": null,
+  "box": {
+   "x": 120,
+   "y": 10615,
+   "w": 560,
+   "h": 175
+  },
+  "fgHex": "#fafaf8",
+  "bgHex": "#101014",
+  "tipo": "solido",
+  "min": 18.16452977981072,
+  "note": ""
+ },
+ {
+  "id": "ct115",
+  "txt": "Auditoría de contratos",
+  "sel": "h3",
+  "color": "rgb(250, 250, 248)",
+  "opacity": 1,
+  "fs": 18,
+  "fw": 600,
+  "large": false,
+  "clip": false,
+  "bg": [
+   16,
+   16,
+   20
+  ],
+  "bgImg": null,
+  "box": {
+   "x": 800,
+   "y": 10604,
+   "w": 520,
+   "h": 23
+  },
+  "fgHex": "#fafaf8",
+  "bgHex": "#101014",
+  "tipo": "solido",
+  "min": 18.16452977981072,
+  "note": ""
+ },
+ {
+  "id": "ct116",
+  "txt": "Una firma externa, antes de cada salida a producción. El informe q",
+  "sel": "p",
+  "color": "rgb(138, 138, 148)",
+  "opacity": 1,
+  "fs": 16,
+  "fw": 400,
+  "large": false,
+  "clip": false,
+  "bg": [
+   16,
+   16,
+   20
+  ],
+  "bgImg": null,
+  "box": {
+   "x": 800,
+   "y": 10635,
+   "w": 520,
+   "h": 52
+  },
+  "fgHex": "#8a8a94",
+  "bgHex": "#101014",
+  "tipo": "solido",
+  "min": 5.5536019595601935,
+  "note": ""
+ },
+ {
+  "id": "ct117",
+  "txt": "¿Quién audita el código?",
+  "sel": "strong",
+  "color": "rgb(138, 138, 148)",
+  "opacity": 1,
+  "fs": 16,
+  "fw": 700,
+  "large": false,
+  "clip": false,
+  "bg": [
+   16,
+   16,
+   20
+  ],
+  "bgImg": null,
+  "box": {
+   "x": 800,
+   "y": 10637,
+   "w": 190,
+   "h": 20
+  },
+  "fgHex": "#8a8a94",
+  "bgHex": "#101014",
+  "tipo": "solido",
+  "min": 5.5536019595601935,
+  "note": ""
+ },
+ {
+  "id": "ct118",
+  "txt": "Custodia",
+  "sel": "h3",
+  "color": "rgb(250, 250, 248)",
+  "opacity": 1,
+  "fs": 18,
+  "fw": 600,
+  "large": false,
+  "clip": false,
+  "bg": [
+   16,
+   16,
+   20
+  ],
+  "bgImg": null,
+  "box": {
+   "x": 800,
+   "y": 10744,
+   "w": 520,
+   "h": 23
+  },
+  "fgHex": "#fafaf8",
+  "bgHex": "#101014",
+  "tipo": "solido",
+  "min": 18.16452977981072,
+  "note": ""
+ },
+ {
+  "id": "ct119",
+  "txt": "Donde vos decidas: self-custody, MPC o un custodio regulado. Se de",
+  "sel": "p",
+  "color": "rgb(138, 138, 148)",
+  "opacity": 1,
+  "fs": 16,
+  "fw": 400,
+  "large": false,
+  "clip": false,
+  "bg": [
+   16,
+   16,
+   20
+  ],
+  "bgImg": null,
+  "box": {
+   "x": 800,
+   "y": 10776,
+   "w": 520,
+   "h": 78
+  },
+  "fgHex": "#8a8a94",
+  "bgHex": "#101014",
+  "tipo": "solido",
+  "min": 5.5536019595601935,
+  "note": ""
+ },
+ {
+  "id": "ct120",
+  "txt": "¿Dónde quedan las llaves?",
+  "sel": "strong",
+  "color": "rgb(138, 138, 148)",
+  "opacity": 1,
+  "fs": 16,
+  "fw": 700,
+  "large": false,
+  "clip": false,
+  "bg": [
+   16,
+   16,
+   20
+  ],
+  "bgImg": null,
+  "box": {
+   "x": 800,
+   "y": 10778,
+   "w": 205,
+   "h": 20
+  },
+  "fgHex": "#8a8a94",
+  "bgHex": "#101014",
+  "tipo": "solido",
+  "min": 5.5536019595601935,
+  "note": ""
+ },
+ {
+  "id": "ct121",
+  "txt": "KYC / AML",
+  "sel": "h3",
+  "color": "rgb(250, 250, 248)",
+  "opacity": 1,
+  "fs": 18,
+  "fw": 600,
+  "large": false,
+  "clip": false,
+  "bg": [
+   16,
+   16,
+   20
+  ],
+  "bgImg": null,
+  "box": {
+   "x": 800,
+   "y": 10910,
+   "w": 520,
+   "h": 23
+  },
+  "fgHex": "#fafaf8",
+  "bgHex": "#101014",
+  "tipo": "solido",
+  "min": 18.16452977981072,
+  "note": ""
+ },
+ {
+  "id": "ct122",
+  "txt": "KYC, screening contra listas y monitoreo continuo, dentro del mism",
+  "sel": "p",
+  "color": "rgb(138, 138, 148)",
+  "opacity": 1,
+  "fs": 16,
+  "fw": 400,
+  "large": false,
+  "clip": false,
+  "bg": [
+   16,
+   16,
+   20
+  ],
+  "bgImg": null,
+  "box": {
+   "x": 800,
+   "y": 10942,
+   "w": 520,
+   "h": 78
+  },
+  "fgHex": "#8a8a94",
+  "bgHex": "#101014",
+  "tipo": "solido",
+  "min": 5.5536019595601935,
+  "note": ""
+ },
+ {
+  "id": "ct123",
+  "txt": "¿Cómo entra un cliente?",
+  "sel": "strong",
+  "color": "rgb(138, 138, 148)",
+  "opacity": 1,
+  "fs": 16,
+  "fw": 700,
+  "large": false,
+  "clip": false,
+  "bg": [
+   16,
+   16,
+   20
+  ],
+  "bgImg": null,
+  "box": {
+   "x": 800,
+   "y": 10944,
+   "w": 187,
+   "h": 20
+  },
+  "fgHex": "#8a8a94",
+  "bgHex": "#101014",
+  "tipo": "solido",
+  "min": 5.5536019595601935,
+  "note": ""
+ },
+ {
+  "id": "ct124",
+  "txt": "Trazabilidad",
+  "sel": "h3",
+  "color": "rgb(250, 250, 248)",
+  "opacity": 1,
+  "fs": 18,
+  "fw": 600,
+  "large": false,
+  "clip": false,
+  "bg": [
+   16,
+   16,
+   20
+  ],
+  "bgImg": null,
+  "box": {
+   "x": 800,
+   "y": 11076,
+   "w": 520,
+   "h": 23
+  },
+  "fgHex": "#fafaf8",
+  "bgHex": "#101014",
+  "tipo": "solido",
+  "min": 18.16452977981072,
+  "note": ""
+ },
+ {
+  "id": "ct125",
+  "txt": "Cada operación queda registrada con su trazabilidad completa y se ",
+  "sel": "p",
+  "color": "rgb(138, 138, 148)",
+  "opacity": 1,
+  "fs": 16,
+  "fw": 400,
+  "large": false,
+  "clip": false,
+  "bg": [
+   16,
+   16,
+   20
+  ],
+  "bgImg": null,
+  "box": {
+   "x": 800,
+   "y": 11108,
+   "w": 520,
+   "h": 78
+  },
+  "fgHex": "#8a8a94",
+  "bgHex": "#101014",
+  "tipo": "solido",
+  "min": 5.5536019595601935,
+  "note": ""
+ },
+ {
+  "id": "ct126",
+  "txt": "¿Y cuando pregunta el regulador?",
+  "sel": "strong",
+  "color": "rgb(138, 138, 148)",
+  "opacity": 1,
+  "fs": 16,
+  "fw": 700,
+  "large": false,
+  "clip": false,
+  "bg": [
+   16,
+   16,
+   20
+  ],
+  "bgImg": null,
+  "box": {
+   "x": 800,
+   "y": 11110,
+   "w": 261,
+   "h": 20
+  },
+  "fgHex": "#8a8a94",
+  "bgHex": "#101014",
+  "tipo": "solido",
+  "min": 5.5536019595601935,
+  "note": ""
+ },
+ {
+  "id": "ct127",
+  "txt": "Marcos regulatorios",
+  "sel": "h3",
+  "color": "rgb(250, 250, 248)",
+  "opacity": 1,
+  "fs": 18,
+  "fw": 600,
+  "large": false,
+  "clip": false,
+  "bg": [
+   16,
+   16,
+   20
+  ],
+  "bgImg": null,
+  "box": {
+   "x": 800,
+   "y": 11242,
+   "w": 520,
+   "h": 23
+  },
+  "fgHex": "#fafaf8",
+  "bgHex": "#101014",
+  "tipo": "solido",
+  "min": 18.16452977981072,
+  "note": ""
+ },
+ {
+  "id": "ct128",
+  "txt": "CNV y UIF en Argentina, CNBV en México. Cuando del otro lado hay u",
+  "sel": "p",
+  "color": "rgb(138, 138, 148)",
+  "opacity": 1,
+  "fs": 16,
+  "fw": 400,
+  "large": false,
+  "clip": false,
+  "bg": [
+   16,
+   16,
+   20
+  ],
+  "bgImg": null,
+  "box": {
+   "x": 800,
+   "y": 11274,
+   "w": 520,
+   "h": 78
+  },
+  "fgHex": "#8a8a94",
+  "bgHex": "#101014",
+  "tipo": "solido",
+  "min": 5.5536019595601935,
+  "note": ""
+ },
+ {
+  "id": "ct129",
+  "txt": "¿Bajo qué marco trabajan?",
+  "sel": "strong",
+  "color": "rgb(138, 138, 148)",
+  "opacity": 1,
+  "fs": 16,
+  "fw": 700,
+  "large": false,
+  "clip": false,
+  "bg": [
+   16,
+   16,
+   20
+  ],
+  "bgImg": null,
+  "box": {
+   "x": 800,
+   "y": 11276,
+   "w": 205,
+   "h": 20
+  },
+  "fgHex": "#8a8a94",
+  "bgHex": "#101014",
+  "tipo": "solido",
+  "min": 5.5536019595601935,
+  "note": ""
+ },
+ {
+  "id": "ct130",
+  "txt": "Preguntas que nos hacen antes de firmar.",
+  "sel": "h2#faq-h2",
+  "color": "rgb(11, 11, 13)",
+  "opacity": 1,
+  "fs": 56,
+  "fw": 700,
+  "large": true,
+  "clip": false,
+  "bg": [
+   245,
+   243,
+   239
+  ],
+  "bgImg": null,
+  "box": {
+   "x": 353,
+   "y": 11726,
+   "w": 734,
+   "h": 116
+  },
+  "fgHex": "#0b0b0d",
+  "bgHex": "#f5f3ef",
+  "tipo": "solido",
+  "min": 17.744127458728713,
+  "note": ""
+ },
+ {
+  "id": "ct131",
+  "txt": "¿Cuánto tarda un proyecto en llegar a producción?",
+  "sel": "span",
+  "color": "rgb(11, 11, 13)",
+  "opacity": 1,
+  "fs": 22,
+  "fw": 600,
+  "large": false,
+  "clip": false,
+  "bg": [
+   245,
+   243,
+   239
+  ],
+  "bgImg": null,
+  "box": {
+   "x": 290,
+   "y": 11940,
+   "w": 474,
+   "h": 26
+  },
+  "fgHex": "#0b0b0d",
+  "bgHex": "#f5f3ef",
+  "tipo": "solido",
+  "min": 17.744127458728713,
+  "note": ""
+ },
+ {
+  "id": "ct132",
+  "txt": "Depende del alcance y de tu core. Una wallet de marca sobre nuestr",
+  "sel": "span",
+  "color": "rgb(90, 90, 99)",
+  "opacity": 1,
+  "fs": 16.6,
+  "fw": 400,
+  "large": false,
+  "clip": false,
+  "bg": [
+   245,
+   243,
+   239
+  ],
+  "bgImg": null,
+  "box": {
+   "x": 290,
+   "y": 11994,
+   "w": 665,
+   "h": 100
+  },
+  "fgHex": "#5a5a63",
+  "bgHex": "#f5f3ef",
+  "tipo": "solido",
+  "min": 6.157577083899862,
+  "note": ""
+ },
+ {
+  "id": "ct133",
+  "txt": "¿Sobre qué red trabajan?",
+  "sel": "span",
+  "color": "rgb(11, 11, 13)",
+  "opacity": 1,
+  "fs": 22,
+  "fw": 600,
+  "large": false,
+  "clip": false,
+  "bg": [
+   245,
+   243,
+   239
+  ],
+  "bgImg": null,
+  "box": {
+   "x": 290,
+   "y": 12017,
+   "w": 236,
+   "h": 26
+  },
+  "fgHex": "#0b0b0d",
+  "bgHex": "#f5f3ef",
+  "tipo": "solido",
+  "min": 17.744127458728713,
+  "note": ""
+ },
+ {
+  "id": "ct134",
+  "txt": "La que corresponda al caso. No arrancamos con la red elegida: arra",
+  "sel": "span",
+  "color": "rgb(90, 90, 99)",
+  "opacity": 1,
+  "fs": 16.6,
+  "fw": 400,
+  "large": false,
+  "clip": false,
+  "bg": [
+   245,
+   243,
+   239
+  ],
+  "bgImg": null,
+  "box": {
+   "x": 290,
+   "y": 12072,
+   "w": 646,
+   "h": 47
+  },
+  "fgHex": "#5a5a63",
+  "bgHex": "#f5f3ef",
+  "tipo": "solido",
+  "min": 6.157577083899862,
+  "note": ""
+ },
+ {
+  "id": "ct135",
+  "txt": "¿Quién custodia los activos?",
+  "sel": "span",
+  "color": "rgb(11, 11, 13)",
+  "opacity": 1,
+  "fs": 22,
+  "fw": 600,
+  "large": false,
+  "clip": false,
+  "bg": [
+   245,
+   243,
+   239
+  ],
+  "bgImg": null,
+  "box": {
+   "x": 290,
+   "y": 12095,
+   "w": 268,
+   "h": 26
+  },
+  "fgHex": "#0b0b0d",
+  "bgHex": "#f5f3ef",
+  "tipo": "solido",
+  "min": 17.744127458728713,
+  "note": ""
+ },
+ {
+  "id": "ct136",
+  "txt": "Vos, un custodio regulado o un esquema MPC. Lo definimos en la eta",
+  "sel": "span",
+  "color": "rgb(90, 90, 99)",
+  "opacity": 1,
+  "fs": 16.6,
+  "fw": 400,
+  "large": false,
+  "clip": false,
+  "bg": [
+   245,
+   243,
+   239
+  ],
+  "bgImg": null,
+  "box": {
+   "x": 290,
+   "y": 12149,
+   "w": 587,
+   "h": 47
+  },
+  "fgHex": "#5a5a63",
+  "bgHex": "#f5f3ef",
+  "tipo": "solido",
+  "min": 6.157577083899862,
+  "note": ""
+ },
+ {
+  "id": "ct137",
+  "txt": "¿Nos quedamos atados a ustedes?",
+  "sel": "span",
+  "color": "rgb(11, 11, 13)",
+  "opacity": 1,
+  "fs": 22,
+  "fw": 600,
+  "large": false,
+  "clip": false,
+  "bg": [
+   245,
+   243,
+   239
+  ],
+  "bgImg": null,
+  "box": {
+   "x": 290,
+   "y": 12172,
+   "w": 331,
+   "h": 26
+  },
+  "fgHex": "#0b0b0d",
+  "bgHex": "#f5f3ef",
+  "tipo": "solido",
+  "min": 17.744127458728713,
+  "note": ""
+ },
+ {
+  "id": "ct138",
+  "txt": "No. El código, la documentación y los accesos son tuyos. Si tu equ",
+  "sel": "span",
+  "color": "rgb(90, 90, 99)",
+  "opacity": 1,
+  "fs": 16.6,
+  "fw": 400,
+  "large": false,
+  "clip": false,
+  "bg": [
+   245,
+   243,
+   239
+  ],
+  "bgImg": null,
+  "box": {
+   "x": 290,
+   "y": 12227,
+   "w": 601,
+   "h": 47
+  },
+  "fgHex": "#5a5a63",
+  "bgHex": "#f5f3ef",
+  "tipo": "solido",
+  "min": 6.157577083899862,
+  "note": ""
+ },
+ {
+  "id": "ct139",
+  "txt": "¿Para quién no son?",
+  "sel": "span",
+  "color": "rgb(11, 11, 13)",
+  "opacity": 1,
+  "fs": 22,
+  "fw": 600,
+  "large": false,
+  "clip": false,
+  "bg": [
+   245,
+   243,
+   239
+  ],
+  "bgImg": null,
+  "box": {
+   "x": 290,
+   "y": 12250,
+   "w": 189,
+   "h": 26
+  },
+  "fgHex": "#0b0b0d",
+  "bgHex": "#f5f3ef",
+  "tipo": "solido",
+  "min": 17.744127458728713,
+  "note": ""
+ },
+ {
+  "id": "ct140",
+  "txt": "Si buscás lanzar un token sin caso de uso ni marco legal, no somos",
+  "sel": "span",
+  "color": "rgb(90, 90, 99)",
+  "opacity": 1,
+  "fs": 16.6,
+  "fw": 400,
+  "large": false,
+  "clip": false,
+  "bg": [
+   245,
+   243,
+   239
+  ],
+  "bgImg": null,
+  "box": {
+   "x": 290,
+   "y": 12305,
+   "w": 634,
+   "h": 20
+  },
+  "fgHex": "#5a5a63",
+  "bgHex": "#f5f3ef",
+  "tipo": "solido",
+  "min": 6.157577083899862,
+  "note": ""
+ },
+ {
+  "id": "ct141",
+  "txt": "Contanos qué querés poner en .",
+  "sel": "h2#cta-h2",
+  "color": "rgb(250, 250, 248)",
+  "opacity": 1,
+  "fs": 56,
+  "fw": 700,
+  "large": true,
+  "clip": false,
+  "bg": [
+   6,
+   6,
+   7
+  ],
+  "bgImg": null,
+  "box": {
+   "x": 370,
+   "y": 12635,
+   "w": 700,
+   "h": 116
+  },
+  "fgHex": "#fafaf8",
+  "bgHex": "#060607",
+  "tipo": "solido",
+  "min": 19.38012273982099,
+  "note": ""
+ },
+ {
+  "id": "ct142",
+  "txt": "producción",
+  "sel": "span",
+  "color": "rgba(0, 0, 0, 0)",
+  "opacity": 1,
+  "fs": 56,
+  "fw": 700,
+  "large": true,
+  "clip": true,
+  "bg": [
+   6,
+   6,
+   7
+  ],
+  "bgImg": null,
+  "box": {
+   "x": 609,
+   "y": 12689,
+   "w": 277,
+   "h": 68
+  },
+  "bgHex": "#060607",
+  "tipo": "DEGRADE",
+  "min": 5.397101824210659,
+  "max": 15.806564967941105,
+  "peorStop": "#7973f6",
+  "mejorStop": "#b4f759",
+  "note": ""
+ },
+ {
+  "id": "ct143",
+  "txt": "30 minutos con alguien que ya construyó esto. Sin pitch de ventas.",
+  "sel": "p",
+  "color": "rgb(138, 138, 148)",
+  "opacity": 1,
+  "fs": 16.6,
+  "fw": 400,
+  "large": false,
+  "clip": false,
+  "bg": [
+   6,
+   6,
+   7
+  ],
+  "bgImg": null,
+  "box": {
+   "x": 469,
+   "y": 12772,
+   "w": 501,
+   "h": 54
+  },
+  "fgHex": "#8a8a94",
+  "bgHex": "#060607",
+  "tipo": "solido",
+  "min": 5.92525592069075,
+  "note": ""
+ },
+ {
+  "id": "ct145",
+  "txt": "Si preferís escribir: ·",
+  "sel": "p",
+  "color": "rgb(138, 138, 148)",
+  "opacity": 1,
+  "fs": 14,
+  "fw": 400,
+  "large": false,
+  "clip": false,
+  "bg": [
+   6,
+   6,
+   7
+  ],
+  "bgImg": null,
+  "box": {
+   "x": 370,
+   "y": 12946,
+   "w": 700,
+   "h": 17
+  },
+  "fgHex": "#8a8a94",
+  "bgHex": "#060607",
+  "tipo": "solido",
+  "min": 5.92525592069075,
+  "note": ""
+ },
+ {
+  "id": "ct146",
+  "txt": "hola@dappsfactory.com",
+  "sel": "span",
+  "color": "rgb(250, 250, 248)",
+  "opacity": 1,
+  "fs": 14,
+  "fw": 400,
+  "large": false,
+  "clip": false,
+  "bg": [
+   6,
+   6,
+   7
+  ],
+  "bgImg": null,
+  "box": {
+   "x": 670,
+   "y": 12946,
+   "w": 162,
+   "h": 17
+  },
+  "fgHex": "#fafaf8",
+  "bgHex": "#060607",
+  "tipo": "solido",
+  "min": 19.38012273982099,
+  "note": ""
+ },
+ {
+  "id": "ct147",
+  "txt": "LinkedIn",
+  "sel": "a",
+  "color": "rgb(250, 250, 248)",
+  "opacity": 1,
+  "fs": 14,
+  "fw": 400,
+  "large": false,
+  "clip": false,
+  "bg": [
+   6,
+   6,
+   7
+  ],
+  "bgImg": null,
+  "box": {
+   "x": 843,
+   "y": 12946,
+   "w": 56,
+   "h": 18
+  },
+  "fgHex": "#fafaf8",
+  "bgHex": "#060607",
+  "tipo": "solido",
+  "min": 19.38012273982099,
+  "note": ""
+ },
+ {
+  "id": "ct148",
+  "txt": "DAppsFactory",
+  "sel": "span",
+  "color": "rgb(250, 250, 248)",
+  "opacity": 1,
+  "fs": 17,
+  "fw": 600,
+  "large": false,
+  "clip": false,
+  "bg": [
+   6,
+   6,
+   7
+  ],
+  "bgImg": null,
+  "box": {
+   "x": 144,
+   "y": 13188,
+   "w": 106,
+   "h": 20
+  },
+  "fgHex": "#fafaf8",
+  "bgHex": "#060607",
+  "tipo": "solido",
+  "min": 19.38012273982099,
+  "note": ""
+ },
+ {
+  "id": "ct149",
+  "txt": "Infraestructura blockchain para tokenización, wallets y productos ",
+  "sel": "p",
+  "color": "rgb(138, 138, 148)",
+  "opacity": 1,
+  "fs": 15,
+  "fw": 400,
+  "large": false,
+  "clip": false,
+  "bg": [
+   6,
+   6,
+   7
+  ],
+  "bgImg": null,
+  "box": {
+   "x": 120,
+   "y": 13224,
+   "w": 360,
+   "h": 49
+  },
+  "fgHex": "#8a8a94",
+  "bgHex": "#060607",
+  "tipo": "solido",
+  "min": 5.92525592069075,
+  "note": ""
+ },
+ {
+  "id": "ct150",
+  "txt": "Soluciones",
+  "sel": "div",
+  "color": "rgb(111, 111, 121)",
+  "opacity": 1,
+  "fs": 12,
+  "fw": 500,
+  "large": false,
+  "clip": false,
+  "bg": [
+   6,
+   6,
+   7
+  ],
+  "bgImg": null,
+  "box": {
+   "x": 552,
+   "y": 13188,
+   "w": 192,
+   "h": 15
+  },
+  "fgHex": "#6f6f79",
+  "bgHex": "#060607",
+  "tipo": "solido",
+  "min": 4.075541775797377,
+  "note": ""
+ },
+ {
+  "id": "ct151",
+  "txt": "Tokenización",
+  "sel": "a",
+  "color": "rgb(138, 138, 148)",
+  "opacity": 1,
+  "fs": 15,
+  "fw": 400,
+  "large": false,
+  "clip": false,
+  "bg": [
+   6,
+   6,
+   7
+  ],
+  "bgImg": null,
+  "box": {
+   "x": 552,
+   "y": 13219,
+   "w": 192,
+   "h": 19
+  },
+  "fgHex": "#8a8a94",
+  "bgHex": "#060607",
+  "tipo": "solido",
+  "min": 5.92525592069075,
+  "note": ""
+ },
+ {
+  "id": "ct152",
+  "txt": "Wallets fiat + cripto",
+  "sel": "a",
+  "color": "rgb(138, 138, 148)",
+  "opacity": 1,
+  "fs": 15,
+  "fw": 400,
+  "large": false,
+  "clip": false,
+  "bg": [
+   6,
+   6,
+   7
+  ],
+  "bgImg": null,
+  "box": {
+   "x": 552,
+   "y": 13248,
+   "w": 192,
+   "h": 19
+  },
+  "fgHex": "#8a8a94",
+  "bgHex": "#060607",
+  "tipo": "solido",
+  "min": 5.92525592069075,
+  "note": ""
+ },
+ {
+  "id": "ct153",
+  "txt": "Desarrollo blockchain",
+  "sel": "a",
+  "color": "rgb(138, 138, 148)",
+  "opacity": 1,
+  "fs": 15,
+  "fw": 400,
+  "large": false,
+  "clip": false,
+  "bg": [
+   6,
+   6,
+   7
+  ],
+  "bgImg": null,
+  "box": {
+   "x": 552,
+   "y": 13277,
+   "w": 192,
+   "h": 19
+  },
+  "fgHex": "#8a8a94",
+  "bgHex": "#060607",
+  "tipo": "solido",
+  "min": 5.92525592069075,
+  "note": ""
+ },
+ {
+  "id": "ct154",
+  "txt": "Empresa",
+  "sel": "div",
+  "color": "rgb(111, 111, 121)",
+  "opacity": 1,
+  "fs": 12,
+  "fw": 500,
+  "large": false,
+  "clip": false,
+  "bg": [
+   6,
+   6,
+   7
+  ],
+  "bgImg": null,
+  "box": {
+   "x": 792,
+   "y": 13188,
+   "w": 192,
+   "h": 15
+  },
+  "fgHex": "#6f6f79",
+  "bgHex": "#060607",
+  "tipo": "solido",
+  "min": 4.075541775797377,
+  "note": ""
+ },
+ {
+  "id": "ct155",
+  "txt": "Cómo trabajamos",
+  "sel": "a",
+  "color": "rgb(138, 138, 148)",
+  "opacity": 1,
+  "fs": 15,
+  "fw": 400,
+  "large": false,
+  "clip": false,
+  "bg": [
+   6,
+   6,
+   7
+  ],
+  "bgImg": null,
+  "box": {
+   "x": 792,
+   "y": 13219,
+   "w": 192,
+   "h": 19
+  },
+  "fgHex": "#8a8a94",
+  "bgHex": "#060607",
+  "tipo": "solido",
+  "min": 5.92525592069075,
+  "note": ""
+ },
+ {
+  "id": "ct156",
+  "txt": "Casos",
+  "sel": "a",
+  "color": "rgb(138, 138, 148)",
+  "opacity": 1,
+  "fs": 15,
+  "fw": 400,
+  "large": false,
+  "clip": false,
+  "bg": [
+   6,
+   6,
+   7
+  ],
+  "bgImg": null,
+  "box": {
+   "x": 792,
+   "y": 13248,
+   "w": 192,
+   "h": 19
+  },
+  "fgHex": "#8a8a94",
+  "bgHex": "#060607",
+  "tipo": "solido",
+  "min": 5.92525592069075,
+  "note": ""
+ },
+ {
+  "id": "ct157",
+  "txt": "Seguridad",
+  "sel": "a",
+  "color": "rgb(138, 138, 148)",
+  "opacity": 1,
+  "fs": 15,
+  "fw": 400,
+  "large": false,
+  "clip": false,
+  "bg": [
+   6,
+   6,
+   7
+  ],
+  "bgImg": null,
+  "box": {
+   "x": 792,
+   "y": 13277,
+   "w": 192,
+   "h": 19
+  },
+  "fgHex": "#8a8a94",
+  "bgHex": "#060607",
+  "tipo": "solido",
+  "min": 5.92525592069075,
+  "note": ""
+ },
+ {
+  "id": "ct158",
+  "txt": "Contacto",
+  "sel": "div",
+  "color": "rgb(111, 111, 121)",
+  "opacity": 1,
+  "fs": 12,
+  "fw": 500,
+  "large": false,
+  "clip": false,
+  "bg": [
+   6,
+   6,
+   7
+  ],
+  "bgImg": null,
+  "box": {
+   "x": 1032,
+   "y": 13188,
+   "w": 288,
+   "h": 15
+  },
+  "fgHex": "#6f6f79",
+  "bgHex": "#060607",
+  "tipo": "solido",
+  "min": 4.075541775797377,
+  "note": ""
+ },
+ {
+  "id": "ct159",
+  "txt": "hola@dappsfactory.com",
+  "sel": "span",
+  "color": "rgb(138, 138, 148)",
+  "opacity": 1,
+  "fs": 15,
+  "fw": 400,
+  "large": false,
+  "clip": false,
+  "bg": [
+   6,
+   6,
+   7
+  ],
+  "bgImg": null,
+  "box": {
+   "x": 1032,
+   "y": 13219,
+   "w": 173,
+   "h": 19
+  },
+  "fgHex": "#8a8a94",
+  "bgHex": "#060607",
+  "tipo": "solido",
+  "min": 5.92525592069075,
+  "note": ""
+ },
+ {
+  "id": "ct160",
+  "txt": "LinkedIn",
+  "sel": "a",
+  "color": "rgb(138, 138, 148)",
+  "opacity": 1,
+  "fs": 15,
+  "fw": 400,
+  "large": false,
+  "clip": false,
+  "bg": [
+   6,
+   6,
+   7
+  ],
+  "bgImg": null,
+  "box": {
+   "x": 1032,
+   "y": 13248,
+   "w": 288,
+   "h": 19
+  },
+  "fgHex": "#8a8a94",
+  "bgHex": "#060607",
+  "tipo": "solido",
+  "min": 5.92525592069075,
+  "note": ""
+ },
+ {
+  "id": "ct161",
+  "txt": "Agendar 30 min",
+  "sel": "a",
+  "color": "rgb(138, 138, 148)",
+  "opacity": 1,
+  "fs": 15,
+  "fw": 400,
+  "large": false,
+  "clip": false,
+  "bg": [
+   6,
+   6,
+   7
+  ],
+  "bgImg": null,
+  "box": {
+   "x": 1032,
+   "y": 13277,
+   "w": 288,
+   "h": 19
+  },
+  "fgHex": "#8a8a94",
+  "bgHex": "#060607",
+  "tipo": "solido",
+  "min": 5.92525592069075,
+  "note": ""
+ },
+ {
+  "id": "ct162",
+  "txt": "© 2026 DAppsFactory · by innovAction",
+  "sel": "span",
+  "color": "rgb(111, 111, 121)",
+  "opacity": 1,
+  "fs": 13,
+  "fw": 400,
+  "large": false,
+  "clip": false,
+  "bg": [
+   6,
+   6,
+   7
+  ],
+  "bgImg": null,
+  "box": {
+   "x": 120,
+   "y": 13373,
+   "w": 240,
+   "h": 16
+  },
+  "fgHex": "#6f6f79",
+  "bgHex": "#060607",
+  "tipo": "solido",
+  "min": 4.075541775797377,
+  "note": ""
+ },
+ {
+  "id": "ct163",
+  "txt": "Política de privacidad",
+  "sel": "a",
+  "color": "rgb(111, 111, 121)",
+  "opacity": 1,
+  "fs": 13,
+  "fw": 400,
+  "large": false,
+  "clip": false,
+  "bg": [
+   6,
+   6,
+   7
+  ],
+  "bgImg": null,
+  "box": {
+   "x": 1107,
+   "y": 13373,
+   "w": 132,
+   "h": 16
+  },
+  "fgHex": "#6f6f79",
+  "bgHex": "#060607",
+  "tipo": "solido",
+  "min": 4.075541775797377,
+  "note": ""
+ },
+ {
+  "id": "ct164",
+  "txt": "Términos",
+  "sel": "a",
+  "color": "rgb(111, 111, 121)",
+  "opacity": 1,
+  "fs": 13,
+  "fw": 400,
+  "large": false,
+  "clip": false,
+  "bg": [
+   6,
+   6,
+   7
+  ],
+  "bgImg": null,
+  "box": {
+   "x": 1263,
+   "y": 13373,
+   "w": 57,
+   "h": 16
+  },
+  "fgHex": "#6f6f79",
+  "bgHex": "#060607",
+  "tipo": "solido",
+  "min": 4.075541775797377,
+  "note": ""
+ }
+]
