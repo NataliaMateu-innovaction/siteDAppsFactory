@@ -1,0 +1,70 @@
+---
+/*
+  Las tres capas son PNG con alfa, alineadas píxel a píxel entre sí (mismo
+  lienzo). Van superpuestas en un contenedor de aspect-ratio fijo, en
+  position:absolute — sin flex, sin grid, sin gap — para que en reposo se vea
+  una sola losa con dos bordes asomando (y: -14 / 0 / +14) y se abran con el
+  scroll (y: -110 / 0 / +110, rotateX 0→14deg). Solo eje Y.
+*/
+import { Picture } from 'astro:assets';
+import Eyebrow from '../Eyebrow.astro';
+import { archLayers } from '../../data/site';
+import capaA from '../../assets/DAppsFactory-capa-a.png';
+import capaB from '../../assets/DAppsFactory-capa-b.png';
+import capaC from '../../assets/DAppsFactory-capa-c.png';
+
+const layers = [
+  { key: 'a', src: capaA, alt: 'Capa superior: tu negocio' },
+  { key: 'b', src: capaB, alt: 'Capa DAppsFactory' },
+  { key: 'c', src: capaC, alt: 'Capa inferior: redes' },
+];
+const layerSizes = '(min-width: 1025px) 430px, (min-width: 900px) 60vw, calc(100vw - 40px)';
+---
+
+<section class="arch is-light" data-sec="arch" aria-labelledby="arch-h2">
+  <div class="arch__wrap" data-archwrap>
+    <div class="arch__stage">
+      <div class="container arch__grid">
+        <div class="arch__head">
+          <Eyebrow label="Integración" />
+          <h2 id="arch-h2" class="h2 arch__h2">Se integra a lo que ya tenés.</h2>
+          <p class="lead arch__lead">
+            No reemplazamos tu core ni tu stack. Nos ubicamos como una capa entre tu operación y la red, con APIs REST,
+            webhooks y SDKs.
+          </p>
+        </div>
+        <div class="arch__diagram">
+          <div class="arch__split">
+            <div class="arch__group">
+              <div class="arch__stack">
+                {layers.map((l) => (
+                  <Picture
+                    src={l.src}
+                    formats={['avif', 'webp']}
+                    fallbackFormat="webp"
+                    widths={[640, 1280]}
+                    sizes={layerSizes}
+                    alt={l.alt}
+                    loading="lazy"
+                    class={`arch__layer arch__layer--${l.key}`}
+                  />
+                ))}
+              </div>
+            </div>
+            <div class="arch__labels">
+              {archLayers.map((l) => (
+                <div class={`arch__label arch__label--${l.key}`}>
+                  <span class="arch__label-line" aria-hidden="true"></span>
+                  <span>
+                    <span class="arch__label-title">{l.title}</span>
+                    <span class="arch__label-sub">{l.sub}</span>
+                  </span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

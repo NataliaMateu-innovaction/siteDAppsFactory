@@ -1,5 +1,16 @@
 # DAppsFactory — Homepage · Documento de traspaso
 
+> **Estado 17/09/2026:** el export de Claude Design se portó a Astro (ver [README.md](README.md)).
+> Lo que sigue abajo es el documento original del handoff. Ya resueltos en el port:
+> el logo oficial en nav y footer (punto 3), el bug de las capas de Arquitectura,
+> el QA en 390/768/1440, `prefers-reduced-motion`, el H1 del hero en mobile, y los
+> PNG de >1 MB (ahora AVIF/WebP de 5–65 KB). Siguen pendientes los puntos que dependen
+> de datos del cliente (2, 5, 6, 7, 8) y la auditoría de contraste AA completa.
+> La sección Métricas (punto 1) se reemplazó por Clientes y proyectos con los 10
+> proyectos del sitio anterior (dappsfactory.io/#clientes); los textos de Cómo
+> trabajamos, Seguridad y FAQ se reemplazaron por la versión formal del cliente.
+
+
 Estado al momento del export desde Claude Design. Este documento es la verdad actual del proyecto: el Prompt Maestro original quedó desactualizado por las decisiones que se tomaron durante la iteración.
 
 ---

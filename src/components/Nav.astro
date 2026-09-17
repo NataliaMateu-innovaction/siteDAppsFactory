@@ -1,0 +1,31 @@
+---
+import { navLinks } from '../data/site';
+---
+
+<nav class="nav" data-nav aria-label="Principal">
+  <div class="container nav__inner">
+    <a href="/" class="nav__logo" aria-label="DAppsFactory · inicio">
+      <img src="/logo-dappsfactory.svg" alt="DAppsFactory" width="744" height="310" />
+    </a>
+    <div class="nav__links">
+      {navLinks.map((l) => <a href={l.href}>{l.label}</a>)}
+    </div>
+    <div class="nav__right">
+      <a href="/contacto/" class="nav__cta" data-magnetic>Agendar 30 min</a>
+      <button type="button" class="nav__burger" data-menu-toggle aria-label="Abrir menú" aria-expanded="false" aria-controls="menu-panel">
+        <span aria-hidden="true"></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<div class="panel-wrap" data-panel-wrap>
+  <div class="panel-wrap__backdrop" data-menu-close></div>
+  <div class="panel" id="menu-panel" role="dialog" aria-label="Menú">
+    <div class="panel__close-row">
+      <button type="button" class="panel__close" data-menu-close aria-label="Cerrar menú">✕</button>
+    </div>
+    {navLinks.map((l) => <a href={l.href} class="panel__link" data-menu-close>{l.label}</a>)}
+    <a href="/contacto/" class="panel__cta" data-menu-close>Agendar 30 min</a>
+  </div>
+</div>

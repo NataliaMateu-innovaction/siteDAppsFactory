@@ -1,0 +1,111 @@
+---
+import { Picture } from 'astro:assets';
+import Eyebrow from '../Eyebrow.astro';
+import { services } from '../../data/site';
+import img01 from '../../assets/DF-servicio-01-tokenizacion.png';
+import img02 from '../../assets/DF-servicio-02-wallets.png';
+
+const visualSizes = '(min-width: 900px) 520px, calc(100vw - 40px)';
+const [s1, s2, s3] = services;
+---
+
+<section id="soluciones" class="svc is-light" data-sec="svc" aria-labelledby="svc-h2">
+  <div class="svc__topline" aria-hidden="true"></div>
+  <div class="container">
+    <div class="svc__head" data-reveal>
+      <Eyebrow label="Qué construimos" />
+      <h2 id="svc-h2" class="h2">Tres capas. Un mismo sistema.</h2>
+      <p class="lead">Se contratan por separado. Funcionan mejor juntas.</p>
+    </div>
+
+    <div class="svc__grid">
+      <div class="svc__index">
+        {services.map((s, i) => (
+          <button type="button" class="svc__idx" data-idx={i} aria-current={i === 0 ? 'true' : 'false'}>
+            <span class="svc__idx-row">
+              <span class="svc__idx-num gradient-text">{s.n}</span>
+              <span class="svc__idx-name">{s.name}</span>
+            </span>
+            <span class="svc__idx-bar" aria-hidden="true"></span>
+          </button>
+        ))}
+        <div class="svc__index-end" aria-hidden="true"></div>
+      </div>
+
+      <div>
+        <article class="svc__panel" data-panel="0" data-reveal>
+          <div class="svc__visual">
+            <Picture
+              src={img01}
+              formats={['avif', 'webp']}
+              fallbackFormat="webp"
+              widths={[520, 1040]}
+              sizes={visualSizes}
+              alt="Bloque de aluminio fraccionado en láminas idénticas con canales de luz"
+              loading="lazy"
+            />
+          </div>
+          <p class="svc__cap">{s1.caption}</p>
+          <div class="svc__num svc__num--1 gradient-text">{s1.n}</div>
+          <h3 class="h3 svc__h3">{s1.name}</h3>
+          <p class="lead svc__p">{s1.text}</p>
+          <a href={s1.link.href} class="tlink">
+            {s1.link.label}
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7" /><path d="M7 7h10v10" /></svg>
+          </a>
+        </article>
+
+        <article class="svc__panel" data-panel="1" data-reveal>
+          <div class="svc__visual">
+            <Picture
+              src={img02}
+              formats={['avif', 'webp']}
+              fallbackFormat="webp"
+              widths={[520, 1040]}
+              sizes={visualSizes}
+              alt="Dos canales de luz que convergen en un único punto sobre una pieza de aluminio"
+              loading="lazy"
+            />
+          </div>
+          <p class="svc__cap">{s2.caption}</p>
+          <div class="svc__num svc__num--2 gradient-text">{s2.n}</div>
+          <h3 class="h3 svc__h3">{s2.name}</h3>
+          <p class="lead svc__p">{s2.text}</p>
+          <a href={s2.link.href} class="tlink">
+            {s2.link.label}
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7" /><path d="M7 7h10v10" /></svg>
+          </a>
+        </article>
+
+        <article class="svc__panel" data-panel="2" data-reveal>
+          {/* Servicio 03: panel de código del mismo tamaño y radio que las
+              imágenes. El "# ejemplo ilustrativo" es a propósito: si se saca,
+              el endpoint tiene que ser real. */}
+          <div class="svc__visual code" aria-label="Ejemplo ilustrativo de llamada a la API">
+            <div class="code__dim"># ejemplo ilustrativo</div>
+            <div class="code__gap"><span class="code__lime">POST</span> <span class="code__cyan">/v1/assets/tokenize</span></div>
+            <div class="code__gap">&#123;</div>
+            <div class="code__i1"><span class="code__cyan">"asset_id"</span>: <span class="code__violet">"prop_8f21"</span>,</div>
+            <div class="code__i1"><span class="code__cyan">"supply"</span>: <span class="code__violet">10000</span>,</div>
+            <div class="code__i1"><span class="code__cyan">"network"</span>: <span class="code__violet">"polygon"</span>,</div>
+            <div class="code__i1"><span class="code__cyan">"compliance"</span>: &#123;</div>
+            <div class="code__i2"><span class="code__cyan">"kyc"</span>: <span class="code__violet">true</span>,</div>
+            <div class="code__i2"><span class="code__cyan">"jurisdiction"</span>: <span class="code__violet">"AR"</span></div>
+            <div class="code__i1">&#125;</div>
+            <div>&#125;</div>
+            <div class="code__gap code__lime">201 Created</div>
+            <div><span class="code__cyan">contract</span>: <span class="code__violet">0x7a3f…c210</span></div>
+          </div>
+          <p class="svc__cap">{s3.caption}</p>
+          <div class="svc__num svc__num--3 gradient-text">{s3.n}</div>
+          <h3 class="h3 svc__h3">{s3.name}</h3>
+          <p class="lead svc__p">{s3.text}</p>
+          <a href={s3.link.href} class="tlink">
+            {s3.link.label}
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7" /><path d="M7 7h10v10" /></svg>
+          </a>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>

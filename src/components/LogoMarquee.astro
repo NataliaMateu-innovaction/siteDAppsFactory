@@ -1,0 +1,32 @@
+---
+/*
+  Franja de clientes en loop. El track se duplica (segunda copia aria-hidden)
+  para que el marquee sea continuo. Mientras un cliente no tenga logo, se
+  muestra su nombre como wordmark.
+*/
+import { clients } from '../data/site';
+
+interface Props {
+  id: string;
+}
+const { id } = Astro.props;
+const groups = [false, true];
+---
+
+<div id={id} class="marquee" data-reveal>
+  <div class="marquee__track">
+    {groups.map((hidden) => (
+      <div class="marquee__group" aria-hidden={hidden ? 'true' : undefined}>
+        {clients.map((c) =>
+          c.src ? (
+            <div class="logo-slot">
+              <img src={c.src} alt={hidden ? '' : c.name} loading="lazy" />
+            </div>
+          ) : (
+            <div class="logo-slot logo-slot--text">{c.name}</div>
+          )
+        )}
+      </div>
+    ))}
+  </div>
+</div>

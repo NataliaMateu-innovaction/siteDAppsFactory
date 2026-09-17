@@ -1,0 +1,24 @@
+---
+import Eyebrow from '../Eyebrow.astro';
+import { process, processSteps } from '../../data/site';
+---
+
+<section id="proceso" class="proc section is-dark" data-sec="proc" aria-labelledby="proc-h2">
+  <div class="container split">
+    <div class="split__head">
+      <Eyebrow label={process.eyebrow} />
+      <h2 id="proc-h2" class="h2 proc__h2">{process.title}</h2>
+      <p class="lead proc__lead">{process.lead}</p>
+    </div>
+    <div class="proc__steps">
+      <div class="proc__line" aria-hidden="true"></div>
+      {processSteps.map((s, i) => (
+        <div class="proc__step" data-step={i + 1} style={`--step-color:${s.color}`}>
+          <div class="proc__num">{s.n}</div>
+          <h3 class="h3 proc__h3">{s.title}</h3>
+          <p class="body proc__p">{s.text}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

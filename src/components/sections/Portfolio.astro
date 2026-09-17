@@ -1,0 +1,56 @@
+---
+/*
+  Clientes y proyectos. Reemplaza a la sección de métricas. Sin páginas de
+  detalle: la ficha entera (cliente, año, qué se hizo, tags) va en la tarjeta y,
+  cuando el proyecto tiene sitio propio, un link externo.
+*/
+import Eyebrow from '../Eyebrow.astro';
+import { portfolio, projects } from '../../data/site';
+const delays = [0, 120, 240];
+---
+
+<section id="proyectos" class="portfolio section is-light" aria-labelledby="portfolio-h2">
+  <div class="container">
+    <div class="portfolio__head" data-reveal>
+      <Eyebrow label={portfolio.eyebrow} />
+      <h2 id="portfolio-h2" class="h2 portfolio__h2">{portfolio.title}</h2>
+      <p class="lead portfolio__lead">{portfolio.lead}</p>
+    </div>
+
+    <div class="portfolio__grid">
+      {projects.map((p, i) => (
+        <article class="project" data-reveal data-delay={delays[i % 3] || undefined}>
+          <div class="project__tile" aria-hidden="true">
+            <span class="project__tile-line"></span>
+            <span class="project__tile-n">{String(i + 1).padStart(2, '0')}</span>
+            {p.logo ? (
+              <img class="project__logo" src={p.logo} alt="" loading="lazy" />
+            ) : (
+              <span class="project__wordmark">{p.client}</span>
+            )}
+          </div>
+          <div class="project__meta">
+            <span>{p.client}</span>
+            {p.year && (
+              <>
+                <span class="project__meta-sep" aria-hidden="true">·</span>
+                <span>{p.year}</span>
+              </>
+            )}
+          </div>
+          <h3 class="h3 project__title">{p.title}</h3>
+          <p class="body project__text">{p.text}</p>
+          <ul class="project__tags" aria-label="Tecnologías">
+            {p.tags.map((t) => <li class="project__tag">{t}</li>)}
+          </ul>
+          {p.href && (
+            <a href={p.href} class="tlink project__link" target="_blank" rel="noopener noreferrer">
+              Ver proyecto
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7" /><path d="M7 7h10v10" /></svg>
+            </a>
+          )}
+        </article>
+      ))}
+    </div>
+  </div>
+</section>

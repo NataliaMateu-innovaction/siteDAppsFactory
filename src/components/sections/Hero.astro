@@ -1,0 +1,49 @@
+---
+import Eyebrow from '../Eyebrow.astro';
+---
+
+<section class="hero is-dark" aria-labelledby="hero-h1">
+  <video
+    class="hero__video"
+    data-hero-video
+    autoplay
+    muted
+    loop
+    playsinline
+    preload="metadata"
+    poster="/media/V1-poster.jpg"
+    aria-hidden="true"
+  >
+    <source src="/media/V1-loop.webm" type="video/webm" />
+    <source src="/media/V1-loop.mp4" type="video/mp4" />
+  </video>
+  <img class="hero__poster" src="/media/V1-poster.jpg" alt="" aria-hidden="true" width="1920" height="1080" />
+  <div class="hero__overlay" aria-hidden="true"></div>
+
+  <div class="container hero__inner">
+    <div class="hero__content">
+      <div class="hero__rise" style="--d: 0ms">
+        <Eyebrow label="Blockchain Infrastructure" class="hero__eyebrow" />
+      </div>
+      <h1 id="hero-h1" class="hero__h1">
+        <span class="hero__line-wrap"><span class="hero__line" style="--d: 120ms">Blockchain que ya opera</span></span>
+        <span class="hero__line-wrap"><span class="hero__line" style="--d: 210ms">dentro del sistema</span></span>
+        <span class="hero__line-wrap"><span class="hero__line" style="--d: 300ms">financiero regulado.</span></span>
+      </h1>
+      <p class="hero__lead hero__rise" style="--d: 450ms">
+        Tokenización de activos, wallets fiat + cripto y desarrollo blockchain para bancos, financieras y desarrolladoras.
+        Construimos la capa que conecta tu operación con la red — incluido el cumplimiento.
+      </p>
+      <div class="hero__ctas hero__rise" style="--d: 600ms">
+        <a href="/contacto/" class="btn-primary" data-magnetic>
+          Agendar 30 min con un especialista
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 12L12 4M12 4H6M12 4v6" stroke="#060607" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" /></svg>
+        </a>
+        <a href="#soluciones" class="hero__secondary">
+          <span class="hero__secondary-label">Ver soluciones<span class="hero__secondary-ul" aria-hidden="true"></span></span>
+          <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M8 3v10M8 13l-4-4M8 13l4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" /></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

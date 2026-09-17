@@ -1,0 +1,96 @@
+---
+import { getCollection, render } from 'astro:content';
+import { Picture } from 'astro:assets';
+import Base from '../../layouts/Base.astro';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog', ({ data }) => !data.draft);
+  return posts.map((post) => ({ params: { slug: post.id }, props: { post } }));
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+import { fechaLarga as fmt } from '../../utils/date';
+
+// Otras notas, para no dejar al lector en un callejón
+const others = (await getCollection('blog', ({ data }) => !data.draft))
+  .filter((p) => p.id !== post.id)
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
+  .slice(0, 3);
+
+const jsonLd = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'BlogPosting',
+  headline: post.data.title,
+  description: post.data.description,
+  datePublished: post.data.pubDate.toISOString(),
+  author: { '@type': 'Person', name: post.data.author },
+  publisher: { '@type': 'Organization', name: 'DAppsFactory' },
+  mainEntityOfPage: new URL(`/blog/${post.id}/`, Astro.site).toString(),
+});
+---
+
+<Base title={`${post.data.title} · Blog DAppsFactory`} description={post.data.description || post.data.title}>
+  <article class="post">
+    <header class="page-head page-head--post is-dark">
+      <div class="container post__head">
+        <a href="/blog/" class="post__back">
+          <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M13 8H3M3 8l4-4M3 8l4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" /></svg>
+          Blog
+        </a>
+        <h1 class="page-head__h1 post__h1">{post.data.title}</h1>
+        <div class="post__meta">
+          <time datetime={post.data.pubDate.toISOString()}>{fmt(post.data.pubDate)}</time>
+          <span class="post-card__meta-sep" aria-hidden="true">·</span>
+          <span>{post.data.author}</span>
+        </div>
+      </div>
+    </header>
+
+    <div class="post__body is-light">
+      <div class="container">
+        {post.data.cover && (
+          <div class="post__cover">
+            <Picture src={post.data.cover} formats={['avif', 'webp']} fallbackFormat="webp" widths={[760, 1520]} sizes="(min-width: 900px) 760px, calc(100vw - 40px)" alt="" loading="eager" />
+          </div>
+        )}
+        <div class="prose">
+          <Content />
+        </div>
+        <div class="post__cta">
+          <p class="lead">¿Tenés un proyecto de tokenización o una wallet fiat + cripto en carpeta?</p>
+          <a href="/contacto/" class="btn-primary" data-magnetic>
+            Agendar 30 min con un especialista
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 12L12 4M12 4H6M12 4v6" stroke="#060607" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" /></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    {others.length > 0 && (
+      <aside class="post__more is-light" aria-label="Más notas">
+        <div class="container">
+          <h2 class="h3 post__more-title">Seguir leyendo</h2>
+          <div class="blog__grid">
+            {others.map((p) => (
+              <a href={`/blog/${p.id}/`} class="post-card">
+                <div class="post-card__tile">
+                  {p.data.cover ? (
+                    <Picture src={p.data.cover} formats={['avif', 'webp']} fallbackFormat="webp" widths={[420, 840]} sizes="(min-width: 1025px) 400px, (min-width: 641px) 50vw, calc(100vw - 40px)" alt="" loading="lazy" />
+                  ) : (
+                    <span class="post-card__tile-line" aria-hidden="true"></span>
+                  )}
+                </div>
+                <div class="post-card__body">
+                  <div class="post-card__meta"><time datetime={p.data.pubDate.toISOString()}>{fmt(p.data.pubDate)}</time></div>
+                  <h3 class="h3 post-card__title">{p.data.title}</h3>
+                </div>
+              </a>
+            ))}
+          </div>
+        </div>
+      </aside>
+    )}
+  </article>
+  <script type="application/ld+json" set:html={jsonLd} />
+</Base>

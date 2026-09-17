@@ -1,0 +1,51 @@
+---
+import { contact } from '../data/site';
+const year = new Date().getFullYear();
+---
+
+<footer class="footer is-dark">
+  <div class="container">
+    <div class="footer__grid">
+      <div>
+        <a href="/" class="footer__logo" aria-label="DAppsFactory · inicio">
+          <img src="/logo-dappsfactory.svg" alt="DAppsFactory" width="744" height="310" />
+        </a>
+        <p class="footer__p">Infraestructura blockchain para tokenización, wallets y productos financieros digitales.</p>
+      </div>
+      <div>
+        <div class="footer__title">Soluciones</div>
+        <div class="footer__links">
+          <a href="/#soluciones">Tokenización</a>
+          <a href="/#soluciones">Wallets fiat + cripto</a>
+          <a href="/#soluciones">Desarrollo blockchain</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer__title">Empresa</div>
+        <div class="footer__links">
+          <a href="/#proceso">Cómo trabajamos</a>
+          <a href="/#casos">Casos</a>
+          <a href="/#proyectos">Proyectos</a>
+          <a href="/#seguridad">Seguridad</a>
+          <a href="/blog/">Blog</a>
+          <a href="/contacto/">Contacto</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer__title">Contacto</div>
+        <div class="footer__links">
+          <a href={`mailto:${contact.email}`}>{contact.email}</a>
+          <a href={contact.linkedin} target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a href={contact.instagram} target="_blank" rel="noopener noreferrer">Instagram</a>
+          <a href={contact.whatsapp} target="_blank" rel="noopener noreferrer">WhatsApp</a>
+          <a href="/contacto/">Agendar 30 min</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer__rule" aria-hidden="true"></div>
+    <div class="footer__bottom">
+      <span>© {year} DAppsFactory · by innovAction</span>
+      <span class="footer__legal"><a href="#">Política de privacidad</a><a href="#">Términos</a></span>
+    </div>
+  </div>
+</footer>

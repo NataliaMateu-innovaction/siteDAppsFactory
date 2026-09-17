@@ -1,0 +1,33 @@
+---
+/*
+  Layout de páginas interiores (blog, contacto): cabecera oscura con eyebrow,
+  título y bajada, y después el contenido que mande cada página.
+*/
+import Base from './Base.astro';
+
+interface Props {
+  title: string;
+  description: string;
+  eyebrow?: string;
+  h1: string;
+  lead?: string;
+  ogImage?: string;
+}
+const { title, description, eyebrow, h1, lead, ogImage } = Astro.props;
+---
+
+<Base title={title} description={description} ogImage={ogImage}>
+  <header class="page-head is-dark">
+    <div class="container">
+      {eyebrow && (
+        <div class="eyebrow">
+          <span class="eyebrow__dot" aria-hidden="true"></span>
+          <span class="eyebrow__label">{eyebrow}</span>
+        </div>
+      )}
+      <h1 class="page-head__h1">{h1}</h1>
+      {lead && <p class="lead page-head__lead">{lead}</p>}
+    </div>
+  </header>
+  <slot />
+</Base>

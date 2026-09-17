@@ -1,0 +1,13 @@
+---
+interface Props {
+  label: string;
+  center?: boolean;
+  class?: string;
+}
+const { label, center = false, class: cls = '' } = Astro.props;
+---
+
+<div class:list={['eyebrow', { 'eyebrow--center': center }, cls]}>
+  <span class="eyebrow__dot" aria-hidden="true"></span>
+  <span class="eyebrow__label">{label}</span>
+</div>

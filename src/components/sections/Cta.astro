@@ -1,0 +1,29 @@
+---
+import { contact, agendaHref } from '../../data/site';
+---
+
+<section id="contacto" class="cta is-dark" aria-labelledby="cta-h2">
+  <div class="cta__mesh" aria-hidden="true">
+    <span class="cta__blob cta__blob--1"></span>
+    <span class="cta__blob cta__blob--2"></span>
+    <span class="cta__blob cta__blob--3"></span>
+  </div>
+  <div class="cta__inner">
+    <h2 id="cta-h2" class="h2 cta__h2" data-reveal>
+      Contanos qué querés poner en <span class="gradient-text">producción</span>.
+    </h2>
+    <p class="lead cta__lead" data-reveal data-delay="120">30 minutos con alguien que ya construyó esto. Sin pitch de ventas.</p>
+    <div class="cta__btn" data-reveal data-delay="240">
+      <a href={agendaHref} class="btn-primary btn-primary--lg" data-magnetic>
+        Agendar la llamada
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 12L12 4M12 4H6M12 4v6" stroke="#060607" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" /></svg>
+      </a>
+    </div>
+    <p class="cta__alt" data-reveal data-delay="320">
+      Si preferís escribir: <a href={`mailto:${contact.email}`}>{contact.email}</a>{' · '}
+      <a href={contact.whatsapp} target="_blank" rel="noopener noreferrer">WhatsApp</a>{' · '}
+      <a href={contact.linkedin} target="_blank" rel="noopener noreferrer">LinkedIn</a>{' · '}
+      <a href={contact.instagram} target="_blank" rel="noopener noreferrer">Instagram</a>
+    </p>
+  </div>
+</section>

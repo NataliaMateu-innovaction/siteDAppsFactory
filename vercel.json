@@ -1,5 +1,187 @@
 {
-  "framework": null,
-  "buildCommand": "echo 'No build required for static site'",
-  "outputDirectory": "DAppsFactory Homepage Build"
+  "framework": "astro",
+  "buildCommand": "astro build",
+  "outputDirectory": "dist",
+  "redirects": [
+    {
+      "source": "/blog.html",
+      "destination": "/blog/",
+      "permanent": true
+    },
+    {
+      "source": "/blog02.html",
+      "destination": "/blog/",
+      "permanent": true
+    },
+    {
+      "source": "/blog03.html",
+      "destination": "/blog/",
+      "permanent": true
+    },
+    {
+      "source": "/blog04.html",
+      "destination": "/blog/",
+      "permanent": true
+    },
+    {
+      "source": "/blog05.html",
+      "destination": "/blog/",
+      "permanent": true
+    },
+    {
+      "source": "/blogs.html",
+      "destination": "/blog/",
+      "permanent": true
+    },
+    {
+      "source": "/index.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/blog-post16.html",
+      "destination": "/blog/analisis-de-mercado-expectativas-para-nuevos-negocios-blockchain-en-ee-uu-para-2025/",
+      "permanent": true
+    },
+    {
+      "source": "/blog-post30.html",
+      "destination": "/blog/antes-de-tokenizar-un-activo-estas-son-las-cinco-decisiones-estrategicas-que-debe-tomar/",
+      "permanent": true
+    },
+    {
+      "source": "/blog-post05.html",
+      "destination": "/blog/argentina-y-el-potencial-de-la-blockchain-el-proximo-hub-de-innovacion/",
+      "permanent": true
+    },
+    {
+      "source": "/blog-post06.html",
+      "destination": "/blog/blockchain-y-el-futuro-de-las-finanzas-estamos-preparados-para-la-revolucion-digital/",
+      "permanent": true
+    },
+    {
+      "source": "/blog-post27.html",
+      "destination": "/blog/blockchain-ya-no-es-una-tendencia-por-que-se-esta-convirtiendo-en-la-nueva-infraestructura/",
+      "permanent": true
+    },
+    {
+      "source": "/blog-post17.html",
+      "destination": "/blog/certificados-ambientales-en-blockchain-transparencia-y-trazabilidad-garantizada/",
+      "permanent": true
+    },
+    {
+      "source": "/blog-post21.html",
+      "destination": "/blog/como-tokenizar-activos-del-mundo-real-rwa-guia-paso-a-paso/",
+      "permanent": true
+    },
+    {
+      "source": "/blog-post02.html",
+      "destination": "/blog/dappsfactory-desarrolladora-de-plataformas-de-rwa-tokenization-y-miembros-de-la-erc3643-as/",
+      "permanent": true
+    },
+    {
+      "source": "/blog-post09.html",
+      "destination": "/blog/de-la-mineria-tradicional-a-la-inteligente-transformando-la-industria-con-blockchain/",
+      "permanent": true
+    },
+    {
+      "source": "/blog-post19.html",
+      "destination": "/blog/desarrollo-de-plataformas-de-tokenizacion-arquitectura-regulacion-y-tecnologia/",
+      "permanent": true
+    },
+    {
+      "source": "/blog-post24.html",
+      "destination": "/blog/desarrollo-de-tokenizacion-de-activos-con-erc-3643-como-construir-plataformas-reguladas-en/",
+      "permanent": true
+    },
+    {
+      "source": "/blog-post15.html",
+      "destination": "/blog/descifrando-las-capas-de-la-blockchain-una-guia-esencial/",
+      "permanent": true
+    },
+    {
+      "source": "/blog-post07.html",
+      "destination": "/blog/erc-3643-el-estandar-de-tokenizacion-que-revoluciona-el-cumplimiento-normativo/",
+      "permanent": true
+    },
+    {
+      "source": "/blog-post20.html",
+      "destination": "/blog/erc-3643-el-estandar-para-la-tokenizacion-regulada-de-activos/",
+      "permanent": true
+    },
+    {
+      "source": "/blog-post28.html",
+      "destination": "/blog/erc-3643-el-estandar-que-esta-impulsando-la-tokenizacion-institucional/",
+      "permanent": true
+    },
+    {
+      "source": "/blog-post01.html",
+      "destination": "/blog/erc3643-la-tokenizacion-inmobiliaria-en-america-latina/",
+      "permanent": true
+    },
+    {
+      "source": "/blog-post13.html",
+      "destination": "/blog/la-tokenizacion-como-estrategia-de-negocio-nuevas-oportunidades-en-la-economia-digital/",
+      "permanent": true
+    },
+    {
+      "source": "/blog-post08.html",
+      "destination": "/blog/la-tokenizacion-de-activos-del-mundo-real-rwa-una-revolucion-en-los-mercados/",
+      "permanent": true
+    },
+    {
+      "source": "/blog-post14.html",
+      "destination": "/blog/mica-el-nuevo-marco-regulatorio-europeo-para-criptoactivos/",
+      "permanent": true
+    },
+    {
+      "source": "/blog-post23.html",
+      "destination": "/blog/que-empresas-necesitan-blockchain-hoy-y-cuando-realmente-tiene-sentido-implementarlo/",
+      "permanent": true
+    },
+    {
+      "source": "/blog-post25.html",
+      "destination": "/blog/regulacion-de-blockchain-y-tokenizacion-en-latam-panorama-pais-por-pais/",
+      "permanent": true
+    },
+    {
+      "source": "/blog-post26.html",
+      "destination": "/blog/tokenizacion-de-activos-en-argentina-oferta-privada-vs-oferta-publica-que-debe-conocer-ant/",
+      "permanent": true
+    },
+    {
+      "source": "/blog-post18.html",
+      "destination": "/blog/tokenizacion-de-activos-en-el-mercado-de-deuda-y-prestamos-en-ee-uu/",
+      "permanent": true
+    },
+    {
+      "source": "/blog-post10.html",
+      "destination": "/blog/tokenizacion-de-los-mercados-de-huella-de-carbono-un-analisis-de-su-potencial-transformado/",
+      "permanent": true
+    },
+    {
+      "source": "/blog-post22.html",
+      "destination": "/blog/tokenizacion-vs-crowdfunding-diferencias-clave-para-financiar-proyectos/",
+      "permanent": true
+    },
+    {
+      "source": "/blog-post03.html",
+      "destination": "/blog/transacciones-gasless-y-fiat-on-ramp-el-futuro-de-las-finanzas-sin-fricciones/",
+      "permanent": true
+    },
+    {
+      "source": "/blog-post11.html",
+      "destination": "/blog/ventajas-del-uso-de-los-contratos-erc-3643-frente-a-los-erc-20-para-la-emision-de-tokens-r/",
+      "permanent": true
+    },
+    {
+      "source": "/blog-post29.html",
+      "destination": "/blog/wallets-fiat-cripto-la-evolucion-de-las-billeteras-digitales-para-empresas-y-fintechs/",
+      "permanent": true
+    },
+    {
+      "source": "/blog-post12.html",
+      "destination": "/blog/wallets-multisig-en-ethereum-un-analisis-exhaustivo/",
+      "permanent": true
+    }
+  ]
 }
