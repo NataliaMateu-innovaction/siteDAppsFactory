@@ -1,13 +1,13 @@
 ---
 import Eyebrow from '../Eyebrow.astro';
-import { cases } from '../../data/site';
+import { cases, casesSection } from '../../data/site';
 ---
 
 <section id="casos" class="cases section is-dark" aria-labelledby="casos-h2">
   <div class="container">
     <div class="cases__head" data-reveal>
-      <Eyebrow label="Dónde se aplica" center />
-      <h2 id="casos-h2" class="h2">Cuatro problemas que resolvemos.</h2>
+      <Eyebrow label={casesSection.eyebrow} center />
+      <h2 id="casos-h2" class="h2">{casesSection.title}</h2>
     </div>
     <div class="cases__list">
       {cases.map((c) => (

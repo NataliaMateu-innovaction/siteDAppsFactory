@@ -219,27 +219,31 @@ export const archLayers = [
   { key: 'c', title: 'Redes', sub: 'Ethereum · Polygon · Base · redes permisionadas' },
 ];
 
-// Pendiente del handoff: confirmar cuáles son casos reales y cuáles capacidades.
+export const casesSection = {
+  eyebrow: 'Dónde se aplica',
+  title: 'Casos de uso que llevamos a producción',
+};
+
 export const cases = [
   {
     n: '01',
-    title: 'Real estate tokenizado',
-    text: 'Fraccionar un desarrollo inmobiliario en participaciones digitales, con registro de titularidad y distribución automática de rentas.',
+    title: 'Tokenización de activos',
+    text: 'Digitalizamos activos y derechos mediante tecnología blockchain, permitiendo su fraccionamiento, administración y trazabilidad de acuerdo con la estructura de cada proyecto.',
   },
   {
     n: '02',
-    title: 'Cartera de créditos on-chain',
-    text: 'Llevar originación y cesión de cartera a un registro compartido y auditable entre entidades.',
+    title: 'Activos y carteras de crédito on-chain',
+    text: 'Representamos y gestionamos carteras, créditos y derechos económicos mediante infraestructura blockchain, incorporando registros verificables y trazabilidad entre los participantes.',
   },
   {
     n: '03',
-    title: 'Billetera fiat + cripto de marca',
-    text: 'Producto propio con cuentas, conversión y stablecoins, sin construir el back-end desde cero.',
+    title: 'Wallet Fiat + Cripto White Label',
+    text: 'Desarrollamos wallets de marca blanca para que empresas y Fintechs puedan ofrecer una experiencia propia integrando dinero fiat, stablecoins, cripto y activos tokenizados, conectada mediante APIs con la infraestructura necesaria.',
   },
   {
     n: '04',
-    title: 'Liquidación entre entidades',
-    text: 'Settlement en minutos en lugar de días, con trazabilidad completa por operación.',
+    title: 'Liquidación y transferencias entre entidades',
+    text: 'Desarrollamos infraestructura blockchain para optimizar transferencias y procesos de liquidación entre empresas o entidades, con trazabilidad e integración con los sistemas existentes.',
   },
 ];
 
