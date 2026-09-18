@@ -1,8 +1,9 @@
 ---
 /*
   Landing de servicio. El contenido viene de src/data/servicios.ts; acá solo
-  está la estructura. Las secciones opcionales (planes, grilla, pasos,
-  comparativa, infraestructura) se muestran si el servicio las define.
+  está la estructura. Las secciones se renderizan en el orden declarado y el
+  fondo alterna claro/oscuro (empieza claro, después del hero oscuro), salvo
+  que la sección fije `theme`.
 */
 import Base from '../../layouts/Base.astro';
 import Eyebrow from '../../components/Eyebrow.astro';
@@ -16,6 +17,8 @@ export function getStaticPaths() {
 }
 const { s } = Astro.props;
 const arrow = `<svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 12L12 4M12 4H6M12 4v6" stroke="#060607" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
+const themeOf = (i: number, forced?: 'light' | 'dark') => forced ?? (i % 2 === 0 ? 'light' : 'dark');
+const nn = (i: number) => String(i + 1).padStart(2, '0');
 ---
 
 <Base title={s.seoTitle} description={s.seoDescription}>
@@ -35,105 +38,135 @@ const arrow = `<svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-
     </div>
   </header>
 
-  {s.plans && (
-    <section class="plans section is-light" aria-labelledby="plans-h2">
-      <div class="container">
-        <div class="plans__head" data-reveal>
-          <h2 id="plans-h2" class="h2">{s.plans.title}</h2>
-          {s.plans.lead && <p class="lead plans__lead">{s.plans.lead}</p>}
-        </div>
-        <div class="plans__grid">
-          {s.plans.items.map((p, i) => (
-            <article class:list={['plan', { 'plan--featured is-dark': p.featured, 'is-light': !p.featured }]} data-reveal data-delay={i ? 120 : undefined}>
-              <div class="plan__eyebrow">{p.eyebrow}</div>
-              <h3 class="h3 plan__title">{p.title}</h3>
-              <p class="body plan__text">{p.text}</p>
-              <div class="plan__label">Puede incluir</div>
-              <ul class="plan__list">
-                {p.includes.map((it) => <li>{it}</li>)}
-              </ul>
-              <p class="plan__ideal">{p.ideal}</p>
-            </article>
-          ))}
-        </div>
-        <div class="plans__cta" data-reveal>
-          <a href={agendaHref} class="btn-primary" data-magnetic>
-            {s.plans.cta}
-            <Fragment set:html={arrow} />
-          </a>
-        </div>
-      </div>
-    </section>
-  )}
-
-  {s.grid && (
-    <section class="igrid section is-dark" aria-labelledby="grid-h2">
-      <div class="container">
-        <div class="igrid__head" data-reveal>
-          <h2 id="grid-h2" class="h2">{s.grid.title}</h2>
-          <p class="lead igrid__lead">{s.grid.lead}</p>
-        </div>
-        <div class="igrid__grid">
-          {s.grid.items.map((it, i) => (
-            <div class="igrid__item" data-reveal data-delay={[0, 120, 240][i % 3] || undefined}>
-              <span class="igrid__n">{String(i + 1).padStart(2, '0')}</span>
-              <h3 class="h3 igrid__title">{it.title}</h3>
-              <p class="body igrid__text">{it.text}</p>
+  {s.sections.map((sec, i) => {
+    const theme = themeOf(i, sec.theme);
+    const id = `sec-${i}`;
+    return (
+      <section class:list={['svc-sec', 'section', `svc-sec--${sec.type}`, `is-${theme}`]} aria-labelledby={id}>
+        {sec.type === 'plans' && (
+          <div class="container">
+            <div class="svc-sec__head" data-reveal>
+              <h2 id={id} class="h2">{sec.title}</h2>
+              {sec.lead && <p class="lead svc-sec__lead">{sec.lead}</p>}
             </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  )}
-
-  {s.steps && (
-    <section class="steps section is-light" aria-labelledby="steps-h2">
-      <div class="container split">
-        <div class="split__head" data-reveal>
-          <h2 id="steps-h2" class="h2 steps__h2">{s.steps.title}</h2>
-          <p class="lead steps__lead">{s.steps.lead}</p>
-        </div>
-        <ol class="steps__list">
-          {s.steps.items.map((st, i) => (
-            <li class="step" data-reveal>
-              <span class="step__n gradient-text">{String(i + 1).padStart(2, '0')}</span>
-              <div>
-                <h3 class="h3 step__title">{st.title}</h3>
-                <p class="body step__text">{st.text}</p>
+            <div class="plans__grid">
+              {sec.items.map((p, j) => (
+                <article class:list={['plan', { 'plan--featured is-dark': p.featured }]} data-reveal data-delay={j ? 120 : undefined}>
+                  <div class="plan__eyebrow">{p.eyebrow}</div>
+                  <h3 class="h3 plan__title">{p.title}</h3>
+                  <p class="body plan__text">{p.text}</p>
+                  <div class="plan__label">Puede incluir</div>
+                  <ul class="check-list">{p.includes.map((it) => <li>{it}</li>)}</ul>
+                  <p class="plan__ideal">{p.ideal}</p>
+                </article>
+              ))}
+            </div>
+            {sec.cta && (
+              <div class="svc-sec__cta" data-reveal>
+                <a href={agendaHref} class="btn-primary" data-magnetic>{sec.cta}<Fragment set:html={arrow} /></a>
               </div>
-            </li>
-          ))}
-        </ol>
-      </div>
-    </section>
-  )}
+            )}
+          </div>
+        )}
 
-  {s.compare && (
-    <section class="compare section is-dark" aria-labelledby="compare-h2">
-      <div class="container split">
-        <div class="split__head" data-reveal>
-          <h2 id="compare-h2" class="h2">{s.compare.title}</h2>
-        </div>
-        <div class="compare__body" data-reveal data-delay="120">
-          {s.compare.paragraphs.map((p, i) => (
-            <p class:list={['lead', { 'compare__last': i === s.compare!.paragraphs.length - 1 }]}>{p}</p>
-          ))}
-        </div>
-      </div>
-    </section>
-  )}
+        {sec.type === 'features' && (
+          <div class="container">
+            <div class="svc-sec__head" data-reveal>
+              <h2 id={id} class="h2">{sec.title}</h2>
+              {sec.lead && <p class="lead svc-sec__lead">{sec.lead}</p>}
+            </div>
+            <div class="features__box" data-reveal>
+              <div class="plan__label">Puede incluir</div>
+              <ul class="check-list check-list--cols">{sec.includes.map((it) => <li>{it}</li>)}</ul>
+              {sec.closing && <p class="features__closing">{sec.closing}</p>}
+            </div>
+          </div>
+        )}
 
-  {s.infra && (
-    <section class="infra section is-light" aria-labelledby="infra-h2">
-      <div class="container infra__inner" data-reveal>
-        <h2 id="infra-h2" class="h2">{s.infra.title}</h2>
-        <p class="lead infra__text">{s.infra.text}</p>
-        <ul class="infra__tags" aria-label="Características">
-          {s.infra.tags.map((t) => <li>{t}</li>)}
-        </ul>
-      </div>
-    </section>
-  )}
+        {sec.type === 'grid' && (
+          <div class="container">
+            <div class="svc-sec__head" data-reveal>
+              <h2 id={id} class="h2">{sec.title}</h2>
+              {sec.lead && <p class="lead svc-sec__lead">{sec.lead}</p>}
+            </div>
+            <div class="igrid__grid">
+              {sec.items.map((it, j) => (
+                <div class="igrid__item" data-reveal data-delay={[0, 120, 240][j % 3] || undefined}>
+                  <span class="igrid__n">{nn(j)}</span>
+                  <h3 class="h3 igrid__title">{it.title}</h3>
+                  <p class="body igrid__text">{it.text}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {sec.type === 'steps' && (
+          <div class="container split">
+            <div class="split__head" data-reveal>
+              <h2 id={id} class="h2 steps__h2">{sec.title}</h2>
+              {sec.lead && <p class="lead steps__lead">{sec.lead}</p>}
+            </div>
+            <ol class="steps__list">
+              {sec.items.map((st, j) => (
+                <li class="step" data-reveal>
+                  <span class="step__n gradient-text">{nn(j)}</span>
+                  <div>
+                    <h3 class="h3 step__title">{st.title}</h3>
+                    <p class="body step__text">{st.text}</p>
+                  </div>
+                </li>
+              ))}
+            </ol>
+          </div>
+        )}
+
+        {sec.type === 'text' && (
+          <div class="container split">
+            <div class="split__head" data-reveal>
+              <h2 id={id} class="h2 text__h2">{sec.title}</h2>
+            </div>
+            <div class="text__body" data-reveal data-delay="120">
+              {sec.paragraphs.map((p, j) => (
+                <p class:list={['lead', { 'text__last': !sec.tagline && !sec.flow && j === sec.paragraphs.length - 1 }]}>{p}</p>
+              ))}
+              {sec.tagline && <p class="text__tagline">{sec.tagline}</p>}
+              {sec.flow && (
+                <ol class="flow" aria-label="Flujo">
+                  {sec.flow.map((f, j) => (
+                    <li>
+                      <span class="flow__item">{f}</span>
+                      {j < sec.flow!.length - 1 && <span class="flow__arrow" aria-hidden="true">→</span>}
+                    </li>
+                  ))}
+                </ol>
+              )}
+            </div>
+          </div>
+        )}
+
+        {sec.type === 'infra' && (
+          <div class:list={['container', { 'infra__inner': !sec.items }]} data-reveal>
+            <div class:list={['svc-sec__head', { 'infra__center': !sec.items }]}>
+              <h2 id={id} class="h2">{sec.title}</h2>
+              {sec.text && <p class="lead svc-sec__lead">{sec.text}</p>}
+            </div>
+            {sec.tags && <ul class="infra__tags" aria-label="Características">{sec.tags.map((t) => <li>{t}</li>)}</ul>}
+            {sec.items && (
+              <div class="infra__grid">
+                {sec.items.map((it, j) => (
+                  <div class="infra__item" data-reveal data-delay={[0, 120, 240][j % 3] || undefined}>
+                    <h3 class="h3 infra__title">{it.title}</h3>
+                    <p class="body infra__text">{it.text}</p>
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
+        )}
+      </section>
+    );
+  })}
 
   <Cta title={s.cta.title} text={s.cta.text} label={s.cta.label} />
 

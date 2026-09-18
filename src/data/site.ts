@@ -173,7 +173,7 @@ export const services = [
     caption: 'Dos flujos de dinero —pesos y cripto— convergen en una sola cuenta.',
     text:
       'Una sola billetera donde conviven pesos, dólares y stablecoins. Onboarding con KYC, cuentas, transferencias y conversión — bajo tu marca y tus reglas de negocio.',
-    link: { href: '#', label: 'Ver wallets fiat + cripto' },
+    link: { href: '/servicios/wallet-fiat-cripto/', label: 'Ver wallets fiat + cripto' },
   },
   {
     n: '03',

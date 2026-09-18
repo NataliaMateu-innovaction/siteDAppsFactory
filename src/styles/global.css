@@ -904,22 +904,32 @@ html.preload .preloader__ring {
 
 /* ---- landings de servicio (/servicios/<slug>/) ---------------------------------- */
 .page-head--service { padding-bottom: clamp(64px, 8vw, 110px); }
-.service-hero__text { max-width: 720px; }
+.service-hero__text { max-width: 760px; }
 .service-hero__p2 { margin-top: 14px; }
 .service-hero__cta { margin-top: 36px; }
 @media (min-width: 641px) { .service-hero__cta { width: auto; } }
 
+/* fondo según tema (alterna claro/oscuro) */
+.svc-sec.is-light { background: var(--bg-light); --surface: var(--surface-light); }
+.svc-sec.is-dark { background: var(--bg-dark); --surface: var(--surface-dark); }
+.svc-sec__head { max-width: 640px; }
+.svc-sec__lead { margin-top: 20px; }
+.svc-sec__cta { display: flex; justify-content: center; margin-top: clamp(40px, 5vw, 56px); }
+
+/* lista con viñetas de degradé (planes y features) */
+.check-list { list-style: none; margin: 14px 0 0; padding: 0; display: grid; gap: 10px; }
+.check-list li { position: relative; padding-left: 22px; font-size: 1rem; line-height: 1.5; color: var(--text); }
+.check-list li::before { content: ''; position: absolute; left: 0; top: 0.55em; width: 8px; height: 8px; border-radius: 50%; background: var(--brand-gradient); }
+@media (min-width: 769px) { .check-list--cols { grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: clamp(24px, 4vw, 48px); } }
+
 /* planes */
-.plans { background: var(--bg-light); }
-.plans__head { max-width: 640px; }
-.plans__lead { margin-top: 20px; }
 .plans__grid { display: grid; grid-template-columns: 1fr; gap: clamp(20px, 3vw, 32px); margin-top: clamp(40px, 5vw, 64px); }
 .plan {
   display: flex; flex-direction: column;
   padding: clamp(28px, 3.5vw, 44px);
-  border: 1px solid var(--hairline-light);
+  border: 1px solid var(--hairline);
   border-radius: 24px;
-  background: var(--surface-light);
+  background: var(--surface);
 }
 .plan--featured { position: relative; overflow: hidden; background: var(--bg-dark); border-color: transparent; }
 .plan--featured::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 1px; background: var(--brand-gradient); }
@@ -927,51 +937,59 @@ html.preload .preloader__ring {
 .plan__title { margin-top: 14px; }
 .plan__text { margin-top: 12px; }
 .plan__label { margin-top: 28px; font-size: 0.75rem; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); }
-.plan__list { list-style: none; margin: 14px 0 0; padding: 0; display: grid; gap: 10px; }
-.plan__list li { position: relative; padding-left: 22px; font-size: 1rem; line-height: 1.5; color: var(--text); }
-.plan__list li::before { content: ''; position: absolute; left: 0; top: 0.55em; width: 8px; height: 8px; border-radius: 50%; background: var(--brand-gradient); }
 .plan__ideal { margin: auto 0 0; padding-top: 28px; font-size: 0.9375rem; line-height: 1.55; color: var(--muted); }
-.plans__cta { display: flex; justify-content: center; margin-top: clamp(40px, 5vw, 56px); }
 @media (min-width: 900px) { .plans__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 
-/* grilla de ítems (qué se puede tokenizar) */
-.igrid { background: var(--surface-dark); }
-.igrid__head { max-width: 640px; }
-.igrid__lead { margin-top: 20px; }
-.igrid__grid { display: grid; grid-template-columns: 1fr; gap: 0 clamp(24px, 3vw, 40px); margin-top: clamp(40px, 5vw, 64px); border-top: 1px solid var(--hairline-dark); }
-.igrid__item { padding: clamp(24px, 3vw, 32px) 0; border-bottom: 1px solid var(--hairline-dark); }
-.igrid__n { display: block; font-family: var(--font-display); font-size: 0.8125rem; font-weight: 600; letter-spacing: 0.14em; color: var(--muted-on-dark); }
+/* features: una sola lista en caja */
+.features__box {
+  margin-top: clamp(40px, 5vw, 64px);
+  padding: clamp(28px, 3.5vw, 44px);
+  border: 1px solid var(--hairline);
+  border-radius: 24px;
+  background: var(--surface);
+}
+.features__box .plan__label { margin-top: 0; }
+.features__closing { margin: 28px 0 0; padding-top: 24px; border-top: 1px solid var(--hairline); font-family: var(--font-display); font-weight: 600; font-size: clamp(1.0625rem, 1.5vw, 1.25rem); letter-spacing: -0.01em; line-height: 1.4; color: var(--text); }
+
+/* grilla de ítems numerados */
+.igrid__grid { display: grid; grid-template-columns: 1fr; gap: 0 clamp(24px, 3vw, 40px); margin-top: clamp(40px, 5vw, 64px); border-top: 1px solid var(--hairline); }
+.igrid__item { padding: clamp(24px, 3vw, 32px) 0; border-bottom: 1px solid var(--hairline); }
+.igrid__n { display: block; font-family: var(--font-display); font-size: 0.8125rem; font-weight: 600; letter-spacing: 0.14em; color: var(--muted); }
 .igrid__title { margin-top: 12px; }
 .igrid__text { margin-top: 8px; max-width: 40ch; }
 @media (min-width: 641px) { .igrid__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (min-width: 1025px) { .igrid__grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
 
 /* pasos */
-.steps { background: var(--bg-light); }
-.steps__h2 { max-width: 14ch; margin-bottom: 20px; }
-.steps__lead { max-width: 44ch; }
-.steps__list { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--hairline-light); }
-.step { display: grid; grid-template-columns: 56px minmax(0, 1fr); gap: 16px; padding: clamp(22px, 3vw, 32px) 0; border-bottom: 1px solid var(--hairline-light); }
+.steps__h2 { max-width: 14ch; }
+.steps__lead { margin-top: 20px; max-width: 44ch; }
+.steps__list { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--hairline); }
+.step { display: grid; grid-template-columns: 56px minmax(0, 1fr); gap: 16px; padding: clamp(22px, 3vw, 32px) 0; border-bottom: 1px solid var(--hairline); }
 .step__n { font-family: var(--font-display); font-weight: 700; font-size: 1.5rem; letter-spacing: -0.03em; line-height: 1.2; }
 .step__title { margin: 0; }
 .step__text { margin-top: 8px; max-width: 52ch; }
 
-/* comparativa */
-.compare { background: var(--bg-dark); }
-.compare__body { display: grid; gap: 18px; }
-.compare__last { color: var(--text-on-dark); }
+/* texto: título + párrafos, opcional tagline o flujo */
+.text__h2 { max-width: 16ch; }
+.text__body { display: grid; gap: 18px; }
+.text__last { color: var(--text); }
+.text__tagline { margin: 10px 0 0; font-family: var(--font-display); font-weight: 700; font-size: clamp(1.25rem, 2vw, 1.6rem); letter-spacing: -0.02em; line-height: 1.2; color: var(--text); }
+.flow { list-style: none; margin: 12px 0 0; padding: 0; display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
+.flow li { display: inline-flex; align-items: center; gap: 10px; }
+.flow__item { padding: 10px 18px; border: 1px solid var(--hairline); border-radius: 999px; font-family: var(--font-display); font-weight: 600; font-size: 0.9375rem; letter-spacing: -0.01em; color: var(--text); }
+.flow__arrow { font-size: 1.1rem; background: var(--brand-gradient); -webkit-background-clip: text; background-clip: text; color: transparent; }
 
-/* infraestructura */
-.infra { background: var(--bg-light); }
-.infra__inner { max-width: 760px; text-align: center; }
-.infra__text { margin-top: 20px; }
+/* infraestructura: etiquetas o ítems con descripción */
+.infra__inner { max-width: 760px; }
+.infra__center { max-width: none; text-align: center; }
 .infra__tags { list-style: none; margin: 32px 0 0; padding: 0; display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
-.infra__tags li {
-  padding: 10px 18px;
-  border: 1px solid var(--hairline-light); border-radius: 999px;
-  font-family: var(--font-display); font-weight: 600; font-size: 0.9375rem; letter-spacing: -0.01em;
-  color: var(--text-on-light);
-}
+.infra__tags li { padding: 10px 18px; border: 1px solid var(--hairline); border-radius: 999px; font-family: var(--font-display); font-weight: 600; font-size: 0.9375rem; letter-spacing: -0.01em; color: var(--text); }
+.infra__grid { display: grid; grid-template-columns: 1fr; gap: clamp(20px, 3vw, 28px); margin-top: clamp(40px, 5vw, 64px); }
+.infra__item { padding: clamp(24px, 3vw, 32px); border: 1px solid var(--hairline); border-radius: 20px; background: var(--surface); }
+.infra__title { margin: 0; }
+.infra__text { margin-top: 10px; }
+@media (min-width: 641px) { .infra__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (min-width: 1025px) { .infra__grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
 /* ---- reveals al scroll (scroll-driven; sin soporte simplemente se ve) --------- */
 @supports (animation-timeline: view()) {
   @media (prefers-reduced-motion: no-preference) {
