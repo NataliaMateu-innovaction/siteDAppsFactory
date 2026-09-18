@@ -167,24 +167,27 @@ html.preload .preloader__ring {
   transform-origin: 32px 32px;
 }
 
+/* "Volver arriba": 36px (25% más chico que antes), claro y con sombra suave para
+   no competir con el verde de WhatsApp; va centrado encima de ese botón. */
 .btt {
   position: fixed;
   bottom: clamp(20px, 4vw, 32px);
-  right: clamp(20px, 4vw, 32px);
+  right: calc(clamp(20px, 4vw, 32px) + 10px);
   z-index: 90;
   display: flex; align-items: center; justify-content: center;
-  width: 48px; height: 48px;
+  width: 36px; height: 36px;
   border-radius: 50%;
-  color: var(--text-on-dark);
-  background: rgba(16, 16, 20, 0.8);
-  backdrop-filter: blur(8px);
-  border: 1px solid var(--hairline-dark);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  color: var(--text-on-light);
+  background: rgba(245, 243, 239, 0.94);
+  border: 1px solid rgba(11, 11, 13, 0.08);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.18);
   opacity: 0;
   visibility: hidden;
   transform: translateY(10px);
-  transition: opacity 300ms ease, visibility 300ms ease, transform 300ms ease;
+  transition: opacity 300ms ease, visibility 300ms ease, transform 300ms ease, background 200ms ease;
 }
+.btt svg { width: 18px; height: 18px; }
+.btt:hover { background: #fff; }
 .btt.is-visible { opacity: 1; visibility: visible; transform: none; }
 
 /* WhatsApp flotante. El botón "volver arriba" se apila encima para no chocar. */
@@ -207,7 +210,7 @@ html.preload .preloader__ring {
 @media (max-width: 640px) {
   .wa { width: 48px; height: 48px; }
   .wa svg { width: 24px; height: 24px; }
-  .btt { bottom: calc(clamp(20px, 4vw, 32px) + 48px + 12px); }
+  .btt { bottom: calc(clamp(20px, 4vw, 32px) + 48px + 10px); right: calc(clamp(20px, 4vw, 32px) + 6px); }
 }
 
 /* ---- nav ------------------------------------------------------------------ */
