@@ -26,8 +26,8 @@ export type Plan = {
 
 export type Section =
   | (Base & { type: 'plans'; title: string; lead?: string; items: Plan[]; cta?: string })
-  | (Base & { type: 'features'; title: string; lead?: string; includes: string[]; closing?: string })
-  | (Base & { type: 'grid'; title: string; lead?: string; items: { title: string; text: string }[] })
+  | (Base & { type: 'features'; title: string; lead?: string | string[]; label?: string; includes: string[]; closing?: string })
+  | (Base & { type: 'grid'; title: string; lead?: string | string[]; items: { title: string; text: string }[] })
   | (Base & { type: 'steps'; title: string; lead?: string; items: { title: string; text: string }[] })
   | (Base & { type: 'text'; title: string; paragraphs: string[]; tagline?: string; flow?: string[] })
   | (Base & { type: 'infra'; title: string; text?: string; tags?: string[]; items?: { title: string; text: string }[] });
@@ -311,6 +311,107 @@ export const serviceLandings: ServiceLanding[] = [
         q: '¿Cuánto cuesta desarrollar una Wallet Fiat + Cripto?',
         a: 'El costo depende de las funcionalidades, activos, países, proveedores, integraciones y nivel de personalización requerido. El alcance se define a partir de la arquitectura y necesidades del proyecto.',
       },
+    ],
+  },
+  // ---- 03 · Desarrollos Blockchain a Medida ------------------------------------
+  {
+    slug: 'desarrollo-blockchain',
+    name: 'Desarrollos Blockchain a Medida',
+    seoTitle: 'Desarrollos Blockchain a Medida · DAppsFactory',
+    seoDescription:
+      'Soluciones blockchain a medida para empresas y Fintechs: Smart Contracts, dApps, trazabilidad, identidad digital, activos digitales e integraciones con CRM, ERP y core financiero mediante APIs.',
+    hero: {
+      eyebrow: 'Desarrollos Blockchain a Medida',
+      title: 'Blockchain diseñado para su modelo de negocio',
+      paragraphs: [
+        'En DAppsFactory desarrollamos soluciones blockchain a medida para empresas y Fintechs, desde Smart Contracts y aplicaciones descentralizadas hasta plataformas completas integradas con sistemas existentes.',
+        'Diseñamos la arquitectura según el caso de uso, los procesos y los requerimientos de cada organización.',
+      ],
+      cta: 'Cuéntenos su proyecto',
+    },
+    sections: [
+      {
+        type: 'features',
+        title: 'De una necesidad de negocio a una solución blockchain',
+        lead: [
+          'No todos los proyectos pueden resolverse con una plataforma estándar.',
+          'Cuando el modelo requiere lógica específica, integraciones particulares o una arquitectura propia, diseñamos y desarrollamos la solución desde cero o la integramos sobre la infraestructura existente.',
+        ],
+        label: 'Podemos desarrollar',
+        includes: [
+          'Smart Contracts',
+          'Aplicaciones descentralizadas (dApps)',
+          'Plataformas blockchain',
+          'Sistemas de trazabilidad',
+          'Identidad digital',
+          'Automatización de procesos',
+          'Infraestructura para activos digitales',
+          'Integraciones Web3',
+          'APIs y servicios blockchain',
+          'Integraciones con sistemas empresariales',
+          'Soluciones de firma y validación',
+          'Arquitecturas multichain',
+        ],
+      },
+      {
+        type: 'grid',
+        title: '¿Qué podemos construir?',
+        items: [
+          { title: 'Smart Contracts', text: 'Desarrollamos contratos inteligentes para automatizar reglas de negocio, operaciones, permisos y transacciones sobre blockchain.' },
+          { title: 'Trazabilidad y certificación', text: 'Creamos soluciones para registrar y verificar información, documentos, activos y procesos mediante registros blockchain.' },
+          { title: 'Identidad digital', text: 'Integramos tecnologías de identidad para gestionar credenciales, usuarios, permisos y validaciones dentro de ecosistemas digitales.' },
+          { title: 'Pagos y activos digitales', text: 'Desarrollamos infraestructura para integrar stablecoins, tokens y otros activos digitales con aplicaciones y sistemas empresariales.' },
+          { title: 'Plataformas Web3', text: 'Construimos aplicaciones y plataformas que permiten a empresas incorporar funcionalidades blockchain sin modificar completamente su infraestructura actual.' },
+          { title: 'Integraciones blockchain', text: 'Conectamos blockchain con CRM, ERP, core financiero, wallets, sistemas de pagos, proveedores de identidad y otras plataformas mediante APIs.' },
+        ],
+      },
+      {
+        type: 'text',
+        title: 'Blockchain integrado a su infraestructura',
+        paragraphs: [
+          'El verdadero desafío no es solamente desarrollar un Smart Contract.',
+          'Una solución empresarial debe poder interactuar con sistemas existentes, gestionar usuarios y permisos, incorporar seguridad y mantenerse operativa en producción.',
+          'Por eso diseñamos blockchain como una capa tecnológica integrada al ecosistema de cada organización.',
+        ],
+        flow: ['Sistemas existentes', 'APIs', 'Blockchain', 'Smart Contracts', 'Aplicaciones'],
+      },
+      {
+        type: 'steps',
+        title: 'De la arquitectura a producción',
+        items: [
+          { title: 'Diagnóstico y arquitectura', text: 'Analizamos el caso de uso, los procesos, integraciones y objetivos del proyecto.' },
+          { title: 'Diseño de la solución', text: 'Definimos red blockchain, Smart Contracts, APIs, componentes e infraestructura.' },
+          { title: 'Desarrollo e integración', text: 'Construimos la solución y la conectamos con los sistemas y proveedores necesarios.' },
+          { title: 'Testing y validación', text: 'Realizamos pruebas funcionales, de integración, rendimiento y seguridad. Cuando el proyecto lo requiere, incorporamos auditorías externas.' },
+          { title: 'Producción y soporte', text: 'Desplegamos la solución con documentación, monitoreo y soporte para su operación.' },
+        ],
+      },
+      {
+        type: 'infra',
+        title: 'Tecnología adaptada al proyecto',
+        items: [
+          { title: 'A medida', text: 'La arquitectura responde al modelo de negocio y no al revés.' },
+          { title: 'Integrable', text: 'Conectamos blockchain con la infraestructura tecnológica existente.' },
+          { title: 'Multichain', text: 'Evaluamos la red y tecnología adecuada según las necesidades del proyecto.' },
+          { title: 'Escalable', text: 'Diseñamos soluciones preparadas para evolucionar e incorporar nuevas funcionalidades.' },
+          { title: 'Seguridad desde el diseño', text: 'Testing, permisos y procesos de validación forman parte de la arquitectura desde las primeras etapas.' },
+        ],
+      },
+    ],
+    cta: {
+      title: 'Más que desarrollo blockchain',
+      text: 'Combinamos arquitectura de software, blockchain, Smart Contracts, APIs e integración de sistemas para construir soluciones que puedan operar dentro de entornos empresariales reales. Desde una funcionalidad específica hasta una plataforma completa.',
+      label: 'Hablemos de su proyecto',
+    },
+    faqs: [
+      { q: '¿Qué tipo de desarrollos blockchain realiza DAppsFactory?', a: 'Desarrollamos Smart Contracts, dApps, sistemas de trazabilidad, identidad digital, infraestructura para activos digitales, integraciones Web3 y plataformas blockchain a medida.' },
+      { q: '¿DAppsFactory desarrolla Smart Contracts?', a: 'Sí. Diseñamos y desarrollamos Smart Contracts adaptados a las reglas y procesos de cada proyecto.' },
+      { q: '¿Una solución blockchain puede integrarse con nuestros sistemas actuales?', a: 'Sí. Podemos conectar la infraestructura blockchain mediante APIs con CRM, ERP, core financiero, sistemas de pagos, wallets y otras plataformas.' },
+      { q: '¿Trabajan con diferentes redes blockchain?', a: 'Sí. La tecnología y la red se definen de acuerdo con los requerimientos técnicos y operativos del proyecto.' },
+      { q: '¿Es necesario migrar nuestros sistemas actuales a blockchain?', a: 'No necesariamente. Blockchain puede incorporarse como una nueva capa de infraestructura e integrarse con los sistemas existentes.' },
+      { q: '¿Realizan auditorías de Smart Contracts?', a: 'Los desarrollos incluyen procesos de testing y revisión. Cuando se requiere una auditoría independiente, puede incorporarse una firma externa especializada.' },
+      { q: '¿Pueden desarrollar un MVP o prueba de concepto?', a: 'Sí. Podemos comenzar con un alcance acotado para validar la arquitectura y el caso de uso antes de avanzar hacia una implementación de mayor escala.' },
+      { q: '¿Cuánto cuesta un desarrollo blockchain a medida?', a: 'Depende de la arquitectura, Smart Contracts, funcionalidades, integraciones y complejidad del proyecto. El alcance se define luego de analizar los requerimientos técnicos y de negocio.' },
     ],
   },
 ];

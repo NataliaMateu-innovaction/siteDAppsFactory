@@ -181,7 +181,7 @@ export const services = [
     caption: 'Una llamada emite el activo con sus reglas de cumplimiento adentro.',
     text:
       'Smart contracts auditados, integración con tu core y APIs que tu equipo puede mantener. Sin dependencia eterna del proveedor.',
-    link: { href: '#', label: 'Ver desarrollo blockchain' },
+    link: { href: '/servicios/desarrollo-blockchain/', label: 'Ver desarrollo blockchain' },
   },
   {
     n: '04',

@@ -19,6 +19,7 @@ const { s } = Astro.props;
 const arrow = `<svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 12L12 4M12 4H6M12 4v6" stroke="#060607" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
 const themeOf = (i: number, forced?: 'light' | 'dark') => forced ?? (i % 2 === 0 ? 'light' : 'dark');
 const nn = (i: number) => String(i + 1).padStart(2, '0');
+const leads = (l?: string | string[]) => (l ? (Array.isArray(l) ? l : [l]) : []);
 ---
 
 <Base title={s.seoTitle} description={s.seoDescription}>
@@ -47,7 +48,7 @@ const nn = (i: number) => String(i + 1).padStart(2, '0');
           <div class="container">
             <div class="svc-sec__head" data-reveal>
               <h2 id={id} class="h2">{sec.title}</h2>
-              {sec.lead && <p class="lead svc-sec__lead">{sec.lead}</p>}
+              {leads(sec.lead).map((l) => <p class="lead svc-sec__lead">{l}</p>)}
             </div>
             <div class="plans__grid">
               {sec.items.map((p, j) => (
@@ -73,10 +74,10 @@ const nn = (i: number) => String(i + 1).padStart(2, '0');
           <div class="container">
             <div class="svc-sec__head" data-reveal>
               <h2 id={id} class="h2">{sec.title}</h2>
-              {sec.lead && <p class="lead svc-sec__lead">{sec.lead}</p>}
+              {leads(sec.lead).map((l) => <p class="lead svc-sec__lead">{l}</p>)}
             </div>
             <div class="features__box" data-reveal>
-              <div class="plan__label">Puede incluir</div>
+              <div class="plan__label">{sec.label ?? 'Puede incluir'}</div>
               <ul class="check-list check-list--cols">{sec.includes.map((it) => <li>{it}</li>)}</ul>
               {sec.closing && <p class="features__closing">{sec.closing}</p>}
             </div>
@@ -87,7 +88,7 @@ const nn = (i: number) => String(i + 1).padStart(2, '0');
           <div class="container">
             <div class="svc-sec__head" data-reveal>
               <h2 id={id} class="h2">{sec.title}</h2>
-              {sec.lead && <p class="lead svc-sec__lead">{sec.lead}</p>}
+              {leads(sec.lead).map((l) => <p class="lead svc-sec__lead">{l}</p>)}
             </div>
             <div class="igrid__grid">
               {sec.items.map((it, j) => (
