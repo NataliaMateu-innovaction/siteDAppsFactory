@@ -41,7 +41,7 @@ public/
   logos/                       logos de clientes (portfolio + franja del hero)
   logo-dappsfactory.svg        logo oficial (wordmark ya convertido a curvas)
   favicon.svg
-  media/                       video del hero (webm/mp4) + poster
+  media/                       video del hero (hero02.mp4, 1080p, loop sin corte, sin audio) + poster
 ```
 
 ### Dónde tocar qué
@@ -101,6 +101,13 @@ cumplimiento, URL de agenda, páginas de privacidad y términos.
   duración proporcional a la distancia, se cancela con rueda/touch, directo con
   reduced-motion.
 - Nav completo desde 1025px (antes 769): con Proyectos, Blog y Contacto son 6 links.
+
+## Video del hero (17/09/2026)
+
+`her02.mp4` del cliente (1080p, con audio, 2 MB). Se le quitó el audio, se hizo el loop
+sin salto con un fundido de 0,8 s entre el final y el principio (ffmpeg `xfade`) y
+quedó en 818 KB. El original está en `src/assets/video/`. En mobile el recorte se
+centra a la derecha (`object-position: 70%`) porque ahí está el monolito.
 
 ## Blog y contacto (17/09/2026)
 

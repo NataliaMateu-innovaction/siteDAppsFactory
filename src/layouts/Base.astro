@@ -10,7 +10,7 @@ interface Props {
   /** Imagen para Open Graph, relativa a /public. */
   ogImage?: string;
 }
-const { title, description, ogImage = '/media/V1-poster.jpg' } = Astro.props;
+const { title, description, ogImage = '/media/hero02-poster.jpg' } = Astro.props;
 const canonical = new URL(Astro.url.pathname, Astro.site);
 ---
 

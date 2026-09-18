@@ -301,6 +301,8 @@ html.preload .preloader__ring {
   overflow: hidden;
   background: var(--bg-dark);
 }
+/* En mobile el encuadre 16:9 se recorta: el monolito del video está a la derecha, así que se centra ahí. */
+@media (max-width: 768px) { .hero__video, .hero__poster { object-position: 70% 50%; } }
 .hero__video, .hero__poster {
   position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;
 }
@@ -635,20 +637,20 @@ html.preload .preloader__ring {
 .project { display: flex; flex-direction: column; align-items: flex-start; }
 .project__tile {
   position: relative; overflow: hidden;
-  width: 100%; aspect-ratio: 16 / 10;
+  width: 100%; aspect-ratio: 16 / 5; /* franja baja: los logos son todos de tamaño parecido */
   display: flex; align-items: center; justify-content: center;
-  padding: 24px;
+  padding: 16px 24px 16px 64px;
   border-radius: 24px;
   background: var(--bg-dark);
   color: var(--text-on-dark);
 }
 .project__tile-line { position: absolute; top: 0; left: 0; width: 100%; height: 1px; background: var(--brand-gradient); opacity: 0.7; }
 .project__tile-n {
-  position: absolute; left: 24px; top: 20px;
+  position: absolute; left: 24px; top: 50%; transform: translateY(-50%);
   font-family: var(--font-display); font-size: 0.8125rem; font-weight: 600; letter-spacing: 0.14em;
   color: var(--muted-on-dark);
 }
-.project__logo { max-width: 60%; max-height: 40%; width: auto; height: auto; object-fit: contain; }
+.project__logo { max-width: 70%; max-height: 58%; width: auto; height: auto; object-fit: contain; }
 .project__wordmark {
   font-family: var(--font-display); font-weight: 700;
   font-size: clamp(1.5rem, 2.2vw, 2rem); line-height: 1.1; letter-spacing: -0.03em;
