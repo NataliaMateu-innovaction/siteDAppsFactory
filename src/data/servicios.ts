@@ -414,4 +414,102 @@ export const serviceLandings: ServiceLanding[] = [
       { q: '¿Cuánto cuesta un desarrollo blockchain a medida?', a: 'Depende de la arquitectura, Smart Contracts, funcionalidades, integraciones y complejidad del proyecto. El alcance se define luego de analizar los requerimientos técnicos y de negocio.' },
     ],
   },
+  // ---- 04 · Pagos Masivos en Cripto ---------------------------------------------
+  // BORRADOR: el hero es texto del cliente; el resto lo redactó Claude en el mismo
+  // tono para completar la landing, y está pendiente de validación.
+  {
+    slug: 'pagos-masivos-cripto',
+    name: 'Pagos Masivos en Cripto',
+    seoTitle: 'Pagos Masivos en Cripto · DAppsFactory',
+    seoDescription:
+      'Infraestructura de pagos masivos en cripto para empresas: ejecute grandes volúmenes de transferencias de activos digitales de forma rápida, automatizada y trazable, integrada con sus sistemas.',
+    hero: {
+      eyebrow: 'Pagos Masivos en Cripto',
+      title: 'Envíe múltiples pagos en cripto de forma inmediata y a escala.',
+      paragraphs: [
+        'Desarrollamos una infraestructura de pagos masivos en cripto de alta velocidad, diseñada para empresas que necesitan ejecutar grandes volúmenes de transferencias de activos digitales de forma rápida y automatizada.',
+        'La solución permite centralizar la gestión de pagos y ejecutar múltiples transacciones sobre blockchain, reduciendo procesos manuales y tiempos operativos.',
+        'Puede aplicarse a pagos a usuarios, proveedores, partners, distribución de fondos y otras operaciones que requieran transferencias masivas de activos digitales.',
+      ],
+      cta: 'Quiero conocer la solución',
+    },
+    sections: [
+      {
+        type: 'features',
+        title: 'Una infraestructura para operar pagos a escala',
+        lead: 'La solución centraliza la gestión de pagos y ejecuta múltiples transacciones sobre blockchain desde una misma operación, con control y registro de cada movimiento.',
+        includes: [
+          'Carga masiva de destinatarios y montos',
+          'Ejecución de lotes de transferencias on-chain',
+          'Stablecoins y otros activos digitales',
+          'Programación y automatización de pagos',
+          'Validación y aprobación de lotes',
+          'Estado y trazabilidad de cada transacción',
+          'Reporting y conciliación',
+          'Integración vía API con sistemas existentes',
+          'Gestión de wallets y permisos',
+          'Notificaciones a destinatarios',
+        ],
+        closing: 'De cientos de transferencias manuales a una sola operación, con trazabilidad completa.',
+      },
+      {
+        type: 'grid',
+        title: '¿Dónde se aplica?',
+        lead: 'Cualquier operación que requiera enviar activos digitales a muchos destinatarios de forma recurrente o en un mismo momento.',
+        items: [
+          { title: 'Pagos a usuarios', text: 'Acreditaciones, reembolsos e incentivos a la base de usuarios de una plataforma.' },
+          { title: 'Pagos a proveedores', text: 'Liquidación de servicios y facturas a proveedores locales e internacionales.' },
+          { title: 'Partners y afiliados', text: 'Comisiones y liquidaciones periódicas a redes de partners, agentes o afiliados.' },
+          { title: 'Distribución de fondos', text: 'Reparto de fondos entre cuentas, entidades o unidades de negocio.' },
+          { title: 'Rendimientos y recompensas', text: 'Distribución de rendimientos, recompensas o beneficios a tenedores de activos digitales.' },
+          { title: 'Operaciones recurrentes', text: 'Pagos programados que se repiten con una frecuencia definida, sin intervención manual.' },
+        ],
+      },
+      {
+        type: 'text',
+        title: 'De un proceso manual a una operación automatizada',
+        paragraphs: [
+          'Ejecutar cientos de transferencias una por una implica tiempo, errores y costos operativos.',
+          'La infraestructura de pagos masivos permite preparar, validar y ejecutar lotes completos de transacciones sobre blockchain, con el estado y la trazabilidad de cada pago.',
+          'Operaciones que antes llevaban horas se resuelven en minutos, con control y registro de cada movimiento.',
+        ],
+        flow: ['Carga', 'Validación', 'Ejecución', 'Trazabilidad'],
+      },
+      {
+        type: 'steps',
+        title: 'Del proyecto a producción',
+        items: [
+          { title: 'Diagnóstico y arquitectura', text: 'Definimos activos, volúmenes, redes, destinatarios y las integraciones necesarias.' },
+          { title: 'Configuración', text: 'Adaptamos los flujos de carga, validación y ejecución al modelo operativo de la empresa.' },
+          { title: 'Integraciones', text: 'Conectamos wallets, custodia, proveedores y sistemas existentes mediante APIs.' },
+          { title: 'Testing y validación', text: 'Probamos los flujos, los límites y la seguridad de la operación antes de salir a producción.' },
+          { title: 'Producción', text: 'Despliegue con monitoreo, documentación y soporte para la operación diaria.' },
+        ],
+      },
+      {
+        type: 'infra',
+        title: 'Pensada para operar a escala',
+        items: [
+          { title: 'Alta velocidad', text: 'Lotes de transferencias ejecutados de forma inmediata sobre blockchain.' },
+          { title: 'Automatizada', text: 'Pagos programados y flujos de aprobación sin procesos manuales.' },
+          { title: 'Trazable', text: 'Estado, registro y conciliación de cada transacción.' },
+          { title: 'Integrable', text: 'APIs para conectar la operación con los sistemas existentes.' },
+          { title: 'Multiactivo', text: 'Stablecoins y otros activos digitales según el modelo de negocio.' },
+        ],
+      },
+    ],
+    cta: {
+      title: 'Construya su infraestructura de pagos masivos con DAppsFactory',
+      text: 'Desarrollamos la tecnología para ejecutar grandes volúmenes de pagos en cripto de forma rápida, automatizada y trazable, integrada con su operación.',
+      label: 'Quiero conocer la solución',
+    },
+    faqs: [
+      { q: '¿Qué es una infraestructura de pagos masivos en cripto?', a: 'Es una solución que permite preparar, validar y ejecutar múltiples transferencias de activos digitales en una misma operación sobre blockchain, con trazabilidad de cada pago.' },
+      { q: '¿Qué activos se pueden enviar?', a: 'Stablecoins y otros activos digitales, según las redes y proveedores que se integren en cada proyecto.' },
+      { q: '¿Cuántos pagos se pueden ejecutar por lote?', a: 'La solución está diseñada para grandes volúmenes. El límite concreto depende de la red, los activos y la configuración definida para cada implementación.' },
+      { q: '¿Puede integrarse con nuestros sistemas actuales?', a: 'Sí. La infraestructura puede conectarse mediante APIs con ERP, sistemas de pagos, plataformas propias y otros sistemas existentes.' },
+      { q: '¿Cómo se controla y audita cada pago?', a: 'Cada transacción queda registrada con su estado y su referencia on-chain, y la solución puede incorporar flujos de validación y aprobación antes de ejecutar un lote.' },
+      { q: '¿Cuánto cuesta implementar pagos masivos en cripto?', a: 'Depende de los activos, volúmenes, integraciones y nivel de personalización requerido. El alcance se define a partir de la arquitectura y las necesidades de cada proyecto.' },
+    ],
+  },
 ];

@@ -90,8 +90,8 @@ marquee, parallax, scroll animado y preloader.
 ## Pendientes
 
 Ver [HANDOFF-DAppsFactory.md](HANDOFF-DAppsFactory.md). En resumen, todo lo que
-depende de datos del cliente: logo de MB&L y de NYBANQ, año de NYBANQ, URLs de las páginas
-de servicio, endpoint real de la API, cuáles casos son reales, datos verificables de
+depende de datos del cliente: logo de MB&L y de NYBANQ, año de NYBANQ, texto definitivo de la
+landing de Pagos Masivos (hoy borrador salvo el hero), endpoint real de la API, cuáles casos son reales, datos verificables de
 cumplimiento, URL de agenda, páginas de privacidad y términos.
 
 ## Cambios de contenido (17/09/2026)

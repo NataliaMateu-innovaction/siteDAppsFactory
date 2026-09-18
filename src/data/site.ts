@@ -189,7 +189,7 @@ export const services = [
     caption: 'Cientos de transferencias de activos digitales, ejecutadas en una sola operación.',
     text:
       'Infraestructura de alta velocidad para ejecutar grandes volúmenes de pagos en cripto de forma automatizada: a usuarios, proveedores, partners o distribución de fondos. Gestión centralizada, sin procesos manuales ni tiempos operativos.',
-    link: { href: '/contacto/', label: 'Quiero conocer la solución' },
+    link: { href: '/servicios/pagos-masivos-cripto/', label: 'Quiero conocer la solución' },
   },
 ];
 
