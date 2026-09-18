@@ -42,6 +42,7 @@ export const portfolio = {
 export const projects: Project[] = [
   {
     client: 'NYBANQ',
+    logo: '/logos/nybanq.png',
     title: 'Neobanco corporativo con cuentas en USD y USDC',
     // year: pendiente de confirmar
     text: 'Plataforma para empresas de EE. UU. e instituciones reguladas: cuentas business con ACH, wire y FedWire, pagos internacionales, tarjetas, y rieles de stablecoins con on/off ramp y custodia de activos digitales.',
