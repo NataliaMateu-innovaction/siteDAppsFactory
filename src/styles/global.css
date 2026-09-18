@@ -696,6 +696,10 @@ html.preload .preloader__ring {
   color: var(--muted-on-dark);
 }
 .project__logo { max-width: 70%; max-height: 58%; width: auto; height: auto; object-fit: contain; }
+/* Logos oscuros: tarjeta blanca con borde fino en vez de negra. */
+.project__tile--light { background: #fff; color: var(--text-on-light); border: 1px solid var(--hairline-light); }
+.project__tile--light .project__tile-n { color: var(--muted-on-light); }
+.project__tile--light .project__logo { max-height: 70%; }
 .project__wordmark {
   font-family: var(--font-display); font-weight: 700;
   font-size: clamp(1.5rem, 2.2vw, 2rem); line-height: 1.1; letter-spacing: -0.03em;

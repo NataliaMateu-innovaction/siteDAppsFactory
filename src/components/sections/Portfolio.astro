@@ -20,7 +20,7 @@ const delays = [0, 120, 240];
     <div class="portfolio__grid">
       {projects.map((p, i) => (
         <article class="project" data-reveal data-delay={delays[i % 3] || undefined}>
-          <div class="project__tile" aria-hidden="true">
+          <div class:list={['project__tile', { 'project__tile--light': p.logoBg === 'light' }]} aria-hidden="true">
             <span class="project__tile-line"></span>
             <span class="project__tile-n">{String(i + 1).padStart(2, '0')}</span>
             {p.logo ? (

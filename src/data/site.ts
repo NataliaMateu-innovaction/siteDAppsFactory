@@ -29,6 +29,8 @@ export type Project = {
   tags: string[];
   href?: string;
   logo?: string;
+  // logo oscuro que solo funciona sobre claro: la tarjeta lo muestra en un recuadro blanco
+  logoBg?: 'light';
 };
 
 export const portfolio = {
@@ -48,7 +50,7 @@ export const projects: Project[] = [
   },
   {
     client: 'Metro Futuro',
-    logo: '/logos/metro-futuro.png',
+    logo: '/logos/metro-futuro.svg',
     title: 'Plataforma de tokenización inmobiliaria',
     year: '2024',
     text: 'Compra y venta de tokens vinculados a bienes raíces sobre el estándar ERC-3643: inversión inmobiliaria fraccionada con trazabilidad de cada transacción.',
@@ -83,6 +85,8 @@ export const projects: Project[] = [
   },
   {
     client: 'MB&L',
+    logo: '/logos/mbyl.png',
+    logoBg: 'light',
     title: 'Credenciales académicas en blockchain',
     year: '2023',
     text: 'Certificados digitales seguros, portables y verificables para estudiantes, con metadatos que enriquecen cada credencial y agilizan su validación.',
@@ -131,12 +135,12 @@ export const projects: Project[] = [
     year: '2023',
     text: 'Compra y venta de artículos con tarjeta, Apple Pay, Google Pay o criptomonedas, programa de lealtad y colecciones con impacto social.',
     tags: ['Marketplace', 'Pagos', 'NFTs'],
-    href: 'http://www.perceptionface.com',
   },
 ];
 
 // Franja de logos debajo del hero: los mismos clientes del portfolio.
-export const clients = projects.map((p) => ({ name: p.client, src: p.logo }));
+// Los logos oscuros (logoBg light) van como texto en la franja, que es oscura.
+export const clients = projects.map((p) => ({ name: p.client, src: p.logoBg === 'light' ? undefined : p.logo }));
 
 
 // Links absolutos (/#id) para que funcionen también desde /blog y /contacto.
