@@ -68,12 +68,10 @@ export const projects: Project[] = [
     href: 'https://opensea.io/es/collection/galicia-certificates/',
   },
   {
-    client: 'Galicia Seguros',
-    logo: '/logos/galicia-seguros.png',
+    client: 'DApps Seguros',
     title: 'Gestión de pólizas y reclamos con evidencia inalterable',
-    year: '2023',
-    text: 'Solución premiada en el hackathon Techrevolution: gestión de pólizas, consultas con IA y reclamos con imágenes registradas en blockchain.',
-    tags: ['Blockchain', 'IA', 'Time stamping'],
+    text: 'Aplicación para aseguradoras: gestión de pólizas activas, consultas con un asistente de IA e inicio de reclamos con imágenes registradas en blockchain, disponible 24/7.',
+    tags: ['Producto propio', 'Seguros', 'IA', 'Time stamping'],
   },
   {
     client: 'Certify Forever',
