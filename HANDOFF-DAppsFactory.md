@@ -86,7 +86,7 @@ Valores de la animación: `pin: true, start: "top top", end: "+=150%", scrub: 0.
 | 1 | Número de usuarios finales | Métricas, 1ª cifra |
 | 2 | Logos de clientes autorizados a publicar | Franja de confianza + Métricas |
 | 3 | Logo oficial en PNG (hoy es texto) | Nav y footer |
-| 4 | Email de contacto real (`hello@dappsfactory.com`) | CTA final y footer (✅ Actualizado) |
+| 4 | Email de contacto real (`hello@dappsfactory.io`) | CTA final y footer (✅ Actualizado) |
 | 5 | Endpoint real de la API | Panel de código del servicio 03 |
 | 6 | URLs de las 3 páginas de servicio | Links terciarios (hoy apuntan a `#`) |
 | 7 | Confirmar cuáles de los 4 casos de uso son casos reales y cuáles capacidades | Sección Casos de uso |

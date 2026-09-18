@@ -4,7 +4,7 @@
 */
 
 export const contact = {
-  email: 'hello@dappsfactory.com',
+  email: 'hello@dappsfactory.io',
   linkedin: 'https://es.linkedin.com/company/dappsfactory',
   instagram: 'https://www.instagram.com/dappsfactory/',
   whatsapp:
