@@ -50,6 +50,13 @@ export const projects: Project[] = [
     href: 'https://nybanq.com/',
   },
   {
+    client: 'Bloom Divisas',
+    logo: '/logos/bloom.png',
+    title: 'Pagos internacionales a China desde México',
+    text: 'Fondeá en pesos mexicanos, convertí a dólares y pagá proveedores en China con trazabilidad, control operativo y seguimiento en tiempo real.',
+    tags: ['Pagos internacionales', 'Divisas', 'Trazabilidad'],
+  },
+  {
     client: 'Metro Futuro',
     logo: '/logos/metro-futuro.svg',
     title: 'Plataforma de tokenización inmobiliaria',
