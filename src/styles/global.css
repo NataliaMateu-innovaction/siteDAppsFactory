@@ -455,8 +455,9 @@ html.preload .preloader__ring {
   background-size: 280% 100%;
 }
 .svc__num--1 { background-position: 0% 0; }
-.svc__num--2 { background-position: 50% 0; }
-.svc__num--3 { background-position: 100% 0; }
+.svc__num--2 { background-position: 33% 0; }
+.svc__num--3 { background-position: 66% 0; }
+.svc__num--4 { background-position: 100% 0; }
 .svc__h3 { margin-top: 12px; }
 .svc__p { margin-top: 14px; max-width: 560px; }
 
@@ -475,6 +476,44 @@ html.preload .preloader__ring {
 .code__i1 { padding-left: 2ch; }
 .code__i2 { padding-left: 4ch; }
 
+/* Servicio 04: lote de pagos (misma caja que el panel de código) */
+.payouts {
+  display: flex; flex-direction: column;
+  padding: 28px;
+  font-family: var(--font-mono);
+  font-size: 0.78rem; line-height: 1.6;
+  color: #9AA0A8;
+}
+.payouts__head { display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; }
+.payouts__badge { display: inline-flex; align-items: center; gap: 8px; color: #B4F759; }
+.payouts__dot { width: 7px; height: 7px; border-radius: 50%; background: #B4F759; box-shadow: 0 0 0 0 rgba(180, 247, 89, 0.5); animation: dfPing 1.6s ease-out infinite; }
+.payouts__bar { margin-top: 18px; height: 3px; border-radius: 3px; background: rgba(255, 255, 255, 0.08); overflow: hidden; }
+.payouts__bar-fill { display: block; height: 100%; width: 72%; border-radius: 3px; background: var(--brand-gradient); animation: dfBar 6s cubic-bezier(0.22, 1, 0.36, 1) infinite; }
+.payouts__count { margin-top: 12px; font-family: var(--font-display); font-weight: 700; font-size: clamp(1.6rem, 2.4vw, 2rem); letter-spacing: -0.03em; color: var(--text-on-dark); }
+.payouts__count .gradient-text { font-size: 1em; }
+.payouts__rows { list-style: none; margin: 22px 0 0; padding: 0; border-top: 1px solid rgba(255, 255, 255, 0.08); }
+.payouts__rows li {
+  display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr) minmax(0, 1fr) 20px;
+  gap: 10px; align-items: center;
+  padding: 9px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  white-space: nowrap;
+}
+.payouts__rows li span:nth-child(2) { color: #5A6068; }
+.payouts__rows li span:nth-child(3) { text-align: right; color: var(--text-on-dark); }
+.payouts__ok { color: #B4F759; text-align: right; }
+.payouts__pending { color: #5A6068; text-align: right; }
+.payouts__foot { display: flex; justify-content: space-between; margin-top: auto; padding-top: 16px; color: var(--text-on-dark); }
+.payouts__foot span:first-child { color: #5A6068; }
+/* En mobile la caja 4:5 no alcanza para las 9 filas: se deja crecer y se recortan filas. */
+@media (max-width: 640px) {
+  .payouts { aspect-ratio: auto; }
+  .payouts__rows li:nth-child(n + 7) { display: none; }
+  .payouts__foot { margin-top: 20px; }
+}
+@keyframes dfPing { 0% { box-shadow: 0 0 0 0 rgba(180, 247, 89, 0.5); } 100% { box-shadow: 0 0 0 8px rgba(180, 247, 89, 0); } }
+@keyframes dfBar { 0% { width: 8%; } 70% { width: 92%; } 100% { width: 92%; } }
+
 @media (min-width: 900px) {
   .svc__grid { grid-template-columns: 340px minmax(0, 1fr); }
   .svc__index { display: block; }
@@ -483,16 +522,19 @@ html.preload .preloader__ring {
 /* El índice sigue a los paneles con scroll-driven animations donde existen;
    en el resto de browsers lo hace el JS con aria-current. */
 @supports (animation-timeline: view()) {
-  .svc__grid { timeline-scope: --dfp0, --dfp1, --dfp2; }
+  .svc__grid { timeline-scope: --dfp0, --dfp1, --dfp2, --dfp3; }
   .svc__panel[data-panel="0"] { view-timeline-name: --dfp0; }
   .svc__panel[data-panel="1"] { view-timeline-name: --dfp1; }
   .svc__panel[data-panel="2"] { view-timeline-name: --dfp2; }
+  .svc__panel[data-panel="3"] { view-timeline-name: --dfp3; }
   .svc__idx[data-idx="0"] { animation: dfIdxOn 1s linear none; animation-timeline: --dfp0; animation-range: cover 0% cover 100%; }
   .svc__idx[data-idx="1"] { animation: dfIdxOn 1s linear none; animation-timeline: --dfp1; animation-range: cover 0% cover 100%; }
   .svc__idx[data-idx="2"] { animation: dfIdxOn 1s linear none; animation-timeline: --dfp2; animation-range: cover 0% cover 100%; }
+  .svc__idx[data-idx="3"] { animation: dfIdxOn 1s linear none; animation-timeline: --dfp3; animation-range: cover 0% cover 100%; }
   .svc__idx[data-idx="0"] .svc__idx-bar { animation: dfIdxBar 1s linear none; animation-timeline: --dfp0; animation-range: cover 0% cover 100%; }
   .svc__idx[data-idx="1"] .svc__idx-bar { animation: dfIdxBar 1s linear none; animation-timeline: --dfp1; animation-range: cover 0% cover 100%; }
   .svc__idx[data-idx="2"] .svc__idx-bar { animation: dfIdxBar 1s linear none; animation-timeline: --dfp2; animation-range: cover 0% cover 100%; }
+  .svc__idx[data-idx="3"] .svc__idx-bar { animation: dfIdxBar 1s linear none; animation-timeline: --dfp3; animation-range: cover 0% cover 100%; }
 }
 
 /* ---- layout compartido: cabecera sticky + columna (Proceso, Seguridad) ---- */

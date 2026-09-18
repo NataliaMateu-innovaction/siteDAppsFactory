@@ -109,7 +109,7 @@ if (faqMoreBtn && faqMore) {
 }
 
 /* ---- índice de Servicios ------------------------------------------------ */
-const panels = [0, 1, 2].map((i) => $('[data-panel="' + i + '"]')).filter(Boolean);
+const panels = $$('[data-panel]');
 const idxBtns = $$('[data-idx]');
 let active = 0;
 function paintIdx() {

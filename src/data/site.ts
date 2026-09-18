@@ -152,6 +152,12 @@ export const navLinks = [
 ];
 
 // Pendiente del handoff: URLs reales de las 3 páginas de servicio.
+export const servicesSection = {
+  eyebrow: 'Qué construimos',
+  title: 'Cuatro capas. Un mismo sistema.',
+  lead: 'Se contratan por separado. Funcionan mejor juntas.',
+};
+
 export const services = [
   {
     n: '01',
@@ -176,6 +182,14 @@ export const services = [
     text:
       'Smart contracts auditados, integración con tu core y APIs que tu equipo puede mantener. Sin dependencia eterna del proveedor.',
     link: { href: '#', label: 'Ver desarrollo blockchain' },
+  },
+  {
+    n: '04',
+    name: 'Pagos masivos en cripto',
+    caption: 'Cientos de transferencias de activos digitales, ejecutadas en una sola operación.',
+    text:
+      'Infraestructura de alta velocidad para ejecutar grandes volúmenes de pagos en cripto de forma automatizada: a usuarios, proveedores, partners o distribución de fondos. Gestión centralizada, sin procesos manuales ni tiempos operativos.',
+    link: { href: '/contacto/', label: 'Quiero conocer la solución' },
   },
 ];
 

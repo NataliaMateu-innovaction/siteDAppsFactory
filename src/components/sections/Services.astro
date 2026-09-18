@@ -1,21 +1,21 @@
 ---
 import { Picture } from 'astro:assets';
 import Eyebrow from '../Eyebrow.astro';
-import { services } from '../../data/site';
+import { services, servicesSection } from '../../data/site';
 import img01 from '../../assets/DF-servicio-01-tokenizacion.png';
 import img02 from '../../assets/DF-servicio-02-wallets.png';
 
 const visualSizes = '(min-width: 900px) 520px, calc(100vw - 40px)';
-const [s1, s2, s3] = services;
+const [s1, s2, s3, s4] = services;
 ---
 
 <section id="soluciones" class="svc is-light" data-sec="svc" aria-labelledby="svc-h2">
   <div class="svc__topline" aria-hidden="true"></div>
   <div class="container">
     <div class="svc__head" data-reveal>
-      <Eyebrow label="Qué construimos" />
-      <h2 id="svc-h2" class="h2">Tres capas. Un mismo sistema.</h2>
-      <p class="lead">Se contratan por separado. Funcionan mejor juntas.</p>
+      <Eyebrow label={servicesSection.eyebrow} />
+      <h2 id="svc-h2" class="h2">{servicesSection.title}</h2>
+      <p class="lead">{servicesSection.lead}</p>
     </div>
 
     <div class="svc__grid">
@@ -102,6 +102,38 @@ const [s1, s2, s3] = services;
           <p class="lead svc__p">{s3.text}</p>
           <a href={s3.link.href} class="tlink">
             {s3.link.label}
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7" /><path d="M7 7h10v10" /></svg>
+          </a>
+        </article>
+        <article class="svc__panel" data-panel="3" data-reveal>
+          {/* Servicio 04: panel de lote de pagos, mismo tamaño y radio que las
+              imágenes. Datos ilustrativos. */}
+          <div class="svc__visual payouts" aria-label="Ejemplo ilustrativo de un lote de pagos masivos">
+            <div class="payouts__head">
+              <span class="code__dim">lote #A3F9 · USDC · Polygon</span>
+              <span class="payouts__badge"><span class="payouts__dot"></span>ejecutando</span>
+            </div>
+            <div class="payouts__bar" aria-hidden="true"><span class="payouts__bar-fill"></span></div>
+            <div class="payouts__count"><span class="gradient-text">1.240</span> pagos · 3 s</div>
+            <ul class="payouts__rows">
+              <li><span class="code__cyan">0x8a1c…f204</span><span>proveedor</span><span>12.500,00</span><span class="payouts__ok">✓</span></li>
+              <li><span class="code__cyan">0x3be7…9d11</span><span>usuario</span><span>84,90</span><span class="payouts__ok">✓</span></li>
+              <li><span class="code__cyan">0xd45f…02aa</span><span>partner</span><span>2.300,00</span><span class="payouts__ok">✓</span></li>
+              <li><span class="code__cyan">0x71e0…c8b3</span><span>usuario</span><span>150,00</span><span class="payouts__ok">✓</span></li>
+              <li><span class="code__cyan">0x9c22…4e7f</span><span>fondo</span><span>40.000,00</span><span class="payouts__ok">✓</span></li>
+              <li><span class="code__cyan">0x2f8d…b190</span><span>usuario</span><span>63,25</span><span class="payouts__pending">…</span></li>
+              <li><span class="code__cyan">0xa0b4…7715</span><span>proveedor</span><span>7.980,00</span><span class="payouts__pending">…</span></li>
+              <li><span class="code__cyan">0x5e19…d3c6</span><span>usuario</span><span>220,00</span><span class="payouts__pending">…</span></li>
+              <li><span class="code__cyan">0xc7a3…18e2</span><span>partner</span><span>5.150,00</span><span class="payouts__pending">…</span></li>
+            </ul>
+            <div class="payouts__foot"><span>total del lote</span><span>312.480,00 USDC</span></div>
+          </div>
+          <p class="svc__cap">{s4.caption}</p>
+          <div class="svc__num svc__num--4 gradient-text">{s4.n}</div>
+          <h3 class="h3 svc__h3">{s4.name}</h3>
+          <p class="lead svc__p">{s4.text}</p>
+          <a href={s4.link.href} class="tlink">
+            {s4.link.label}
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7" /><path d="M7 7h10v10" /></svg>
           </a>
         </article>
