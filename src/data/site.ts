@@ -87,7 +87,6 @@ export const projects: Project[] = [
   {
     client: 'MB&L',
     logo: '/logos/mbyl.png',
-    logoBg: 'light',
     title: 'Credenciales académicas en blockchain',
     year: '2023',
     text: 'Certificados digitales seguros, portables y verificables para estudiantes, con metadatos que enriquecen cada credencial y agilizan su validación.',
