@@ -1,5 +1,16 @@
 ---
 import { contact, agendaHref } from '../../data/site';
+
+interface Props {
+  title?: string;
+  text?: string;
+  label?: string;
+}
+const {
+  title,
+  text = '30 minutos con alguien que ya construyó esto. Sin pitch de ventas.',
+  label = 'Agendar la llamada',
+} = Astro.props;
 ---
 
 <section id="contacto" class="cta is-dark" aria-labelledby="cta-h2">
@@ -10,12 +21,12 @@ import { contact, agendaHref } from '../../data/site';
   </div>
   <div class="cta__inner">
     <h2 id="cta-h2" class="h2 cta__h2" data-reveal>
-      Contanos qué querés poner en <span class="gradient-text">producción</span>.
+      {title ? title : <>Contanos qué querés poner en <span class="gradient-text">producción</span>.</>}
     </h2>
-    <p class="lead cta__lead" data-reveal data-delay="120">30 minutos con alguien que ya construyó esto. Sin pitch de ventas.</p>
+    <p class="lead cta__lead" data-reveal data-delay="120">{text}</p>
     <div class="cta__btn" data-reveal data-delay="240">
       <a href={agendaHref} class="btn-primary btn-primary--lg" data-magnetic>
-        Agendar la llamada
+        {label}
         <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 12L12 4M12 4H6M12 4v6" stroke="#060607" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" /></svg>
       </a>
     </div>

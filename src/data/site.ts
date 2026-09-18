@@ -165,7 +165,7 @@ export const services = [
     caption: 'Un activo entero se fracciona en participaciones idénticas, transferibles y trazables.',
     text:
       'Convertimos un activo real —un inmueble, una cartera de créditos, un fondo— en un instrumento digital que se emite, se transfiere y se liquida on-chain. Con la estructura legal y el registro que tu regulador espera ver.',
-    link: { href: '#', label: 'Ver tokenización de activos' },
+    link: { href: '/servicios/tokenizacion-de-activos/', label: 'Ver tokenización de activos' },
   },
   {
     n: '02',

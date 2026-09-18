@@ -23,6 +23,7 @@ src/
     index.astro                la home: arma las 10 secciones en orden
     blog/index.astro           listado de notas · blog/[slug].astro: cada nota
     contacto.astro             formulario del CRM (LeadConnector) embebido
+    servicios/[slug].astro     landing de cada servicio, armada desde data/servicios.ts
   content/blog/*.md            las notas (una por archivo, con frontmatter)
   content.config.ts            esquema de las notas
   layouts/Base.astro           <head>, fuentes, preloader, nav, footer, botón "arriba"
@@ -32,6 +33,7 @@ src/
     sections/                  Hero · Trust · Services · Process · Architecture ·
                                Cases · Portfolio · Security · Faq · Cta
   data/site.ts                 TODO el contenido editable (textos, proyectos, links, FAQ…)
+  data/servicios.ts            contenido de las landings de servicio (una entrada por servicio)
   styles/global.css            una sola hoja: tokens de marca, layout, animaciones
   scripts/site.js              scroll animado, menú, FAQ, índice, magnéticos, scroll driver
   assets/                      PNG originales + assets/blog/ (portadas); Astro genera AVIF/WebP
@@ -51,6 +53,9 @@ public/
 - **URL de agenda (Calendly, etc.):** `contact.agendaUrl` en site.ts. Vacía → el botón del CTA final cae al mail.
 - **Colores / tipografía / espaciados:** variables al principio de [`src/styles/global.css`](src/styles/global.css).
 - **Una sección puntual:** su archivo en `src/components/sections/`.
+- **Landing de un servicio:** una entrada en [`src/data/servicios.ts`](src/data/servicios.ts) (hero, planes,
+  grilla, pasos, comparativa, infraestructura, CTA y FAQ; las secciones son opcionales). La URL es
+  `/servicios/<slug>/`. Después, apuntar el link del servicio en `services` (site.ts) y el footer.
 - **Una nota nueva del blog:** crear `src/content/blog/mi-nota.md` con frontmatter
   `title`, `description`, `pubDate` (YYYY-MM-DD), `author` y opcional `cover`
   (ruta relativa a la imagen en `src/assets/blog/`). El nombre del archivo es la URL.

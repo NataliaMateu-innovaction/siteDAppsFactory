@@ -1,5 +1,14 @@
 ---
-import { faq, faqs, faqVisible } from '../../data/site';
+import { faq, faqs as homeFaqs, faqVisible as homeVisible } from '../../data/site';
+
+interface Props {
+  items?: { q: string; a: string }[];
+  title?: string;
+  visible?: number;
+}
+const { items = homeFaqs, title = faq.title, visible = homeVisible } = Astro.props;
+const faqs = items;
+const faqVisible = visible;
 
 // Datos estructurados FAQPage: Google y los asistentes de IA leen las
 // preguntas y respuestas directamente de acá. Incluye también las plegadas:
@@ -20,7 +29,7 @@ const rest = faqs.slice(faqVisible);
 
 <section class="faq section is-light" aria-labelledby="faq-h2">
   <div class="container">
-    <h2 id="faq-h2" class="h2 faq__h2" data-reveal>{faq.title}</h2>
+    <h2 id="faq-h2" class="h2 faq__h2" data-reveal>{title}</h2>
     <div class="faq__list">
       {[first, rest].map((group, g) => (
         <div class:list={{ faq__more: g === 1 }} id={g === 1 ? 'faq-more' : undefined} hidden={g === 1 || undefined}>

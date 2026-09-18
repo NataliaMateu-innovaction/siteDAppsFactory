@@ -1,0 +1,141 @@
+---
+/*
+  Landing de servicio. El contenido viene de src/data/servicios.ts; acá solo
+  está la estructura. Las secciones opcionales (planes, grilla, pasos,
+  comparativa, infraestructura) se muestran si el servicio las define.
+*/
+import Base from '../../layouts/Base.astro';
+import Eyebrow from '../../components/Eyebrow.astro';
+import Faq from '../../components/sections/Faq.astro';
+import Cta from '../../components/sections/Cta.astro';
+import { serviceLandings } from '../../data/servicios';
+import { agendaHref } from '../../data/site';
+
+export function getStaticPaths() {
+  return serviceLandings.map((s) => ({ params: { slug: s.slug }, props: { s } }));
+}
+const { s } = Astro.props;
+const arrow = `<svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 12L12 4M12 4H6M12 4v6" stroke="#060607" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
+---
+
+<Base title={s.seoTitle} description={s.seoDescription}>
+  <header class="page-head page-head--service is-dark">
+    <div class="container service-hero">
+      <div class="service-hero__text">
+        <Eyebrow label={s.hero.eyebrow} />
+        <h1 class="page-head__h1">{s.hero.title}</h1>
+        {s.hero.paragraphs.map((p, i) => (
+          <p class:list={['lead', 'page-head__lead', { 'service-hero__p2': i > 0 }]}>{p}</p>
+        ))}
+        <a href={agendaHref} class="btn-primary service-hero__cta" data-magnetic>
+          {s.hero.cta}
+          <Fragment set:html={arrow} />
+        </a>
+      </div>
+    </div>
+  </header>
+
+  {s.plans && (
+    <section class="plans section is-light" aria-labelledby="plans-h2">
+      <div class="container">
+        <div class="plans__head" data-reveal>
+          <h2 id="plans-h2" class="h2">{s.plans.title}</h2>
+          {s.plans.lead && <p class="lead plans__lead">{s.plans.lead}</p>}
+        </div>
+        <div class="plans__grid">
+          {s.plans.items.map((p, i) => (
+            <article class:list={['plan', { 'plan--featured is-dark': p.featured, 'is-light': !p.featured }]} data-reveal data-delay={i ? 120 : undefined}>
+              <div class="plan__eyebrow">{p.eyebrow}</div>
+              <h3 class="h3 plan__title">{p.title}</h3>
+              <p class="body plan__text">{p.text}</p>
+              <div class="plan__label">Puede incluir</div>
+              <ul class="plan__list">
+                {p.includes.map((it) => <li>{it}</li>)}
+              </ul>
+              <p class="plan__ideal">{p.ideal}</p>
+            </article>
+          ))}
+        </div>
+        <div class="plans__cta" data-reveal>
+          <a href={agendaHref} class="btn-primary" data-magnetic>
+            {s.plans.cta}
+            <Fragment set:html={arrow} />
+          </a>
+        </div>
+      </div>
+    </section>
+  )}
+
+  {s.grid && (
+    <section class="igrid section is-dark" aria-labelledby="grid-h2">
+      <div class="container">
+        <div class="igrid__head" data-reveal>
+          <h2 id="grid-h2" class="h2">{s.grid.title}</h2>
+          <p class="lead igrid__lead">{s.grid.lead}</p>
+        </div>
+        <div class="igrid__grid">
+          {s.grid.items.map((it, i) => (
+            <div class="igrid__item" data-reveal data-delay={[0, 120, 240][i % 3] || undefined}>
+              <span class="igrid__n">{String(i + 1).padStart(2, '0')}</span>
+              <h3 class="h3 igrid__title">{it.title}</h3>
+              <p class="body igrid__text">{it.text}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+
+  {s.steps && (
+    <section class="steps section is-light" aria-labelledby="steps-h2">
+      <div class="container split">
+        <div class="split__head" data-reveal>
+          <h2 id="steps-h2" class="h2 steps__h2">{s.steps.title}</h2>
+          <p class="lead steps__lead">{s.steps.lead}</p>
+        </div>
+        <ol class="steps__list">
+          {s.steps.items.map((st, i) => (
+            <li class="step" data-reveal>
+              <span class="step__n gradient-text">{String(i + 1).padStart(2, '0')}</span>
+              <div>
+                <h3 class="h3 step__title">{st.title}</h3>
+                <p class="body step__text">{st.text}</p>
+              </div>
+            </li>
+          ))}
+        </ol>
+      </div>
+    </section>
+  )}
+
+  {s.compare && (
+    <section class="compare section is-dark" aria-labelledby="compare-h2">
+      <div class="container split">
+        <div class="split__head" data-reveal>
+          <h2 id="compare-h2" class="h2">{s.compare.title}</h2>
+        </div>
+        <div class="compare__body" data-reveal data-delay="120">
+          {s.compare.paragraphs.map((p, i) => (
+            <p class:list={['lead', { 'compare__last': i === s.compare!.paragraphs.length - 1 }]}>{p}</p>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+
+  {s.infra && (
+    <section class="infra section is-light" aria-labelledby="infra-h2">
+      <div class="container infra__inner" data-reveal>
+        <h2 id="infra-h2" class="h2">{s.infra.title}</h2>
+        <p class="lead infra__text">{s.infra.text}</p>
+        <ul class="infra__tags" aria-label="Características">
+          {s.infra.tags.map((t) => <li>{t}</li>)}
+        </ul>
+      </div>
+    </section>
+  )}
+
+  <Cta title={s.cta.title} text={s.cta.text} label={s.cta.label} />
+
+  <Faq items={s.faqs} title="Preguntas frecuentes" visible={s.faqs.length} />
+</Base>
