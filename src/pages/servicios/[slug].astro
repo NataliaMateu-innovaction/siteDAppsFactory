@@ -5,6 +5,7 @@
   fondo alterna claro/oscuro (empieza claro, después del hero oscuro), salvo
   que la sección fije `theme`.
 */
+import { Picture } from 'astro:assets';
 import Base from '../../layouts/Base.astro';
 import Eyebrow from '../../components/Eyebrow.astro';
 import Faq from '../../components/sections/Faq.astro';
@@ -20,11 +21,14 @@ const arrow = `<svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-
 const themeOf = (i: number, forced?: 'light' | 'dark') => forced ?? (i % 2 === 0 ? 'light' : 'dark');
 const nn = (i: number) => String(i + 1).padStart(2, '0');
 const leads = (l?: string | string[]) => (l ? (Array.isArray(l) ? l : [l]) : []);
+// Imágenes de hero: se resuelven acá para que Astro las optimice (AVIF/WebP).
+const heroImages = import.meta.glob<{ default: ImageMetadata }>('../../assets/servicios/*.{png,jpg,jpeg,webp}', { eager: true });
+const heroImage = s.hero.image ? heroImages['../../assets/servicios/' + s.hero.image]?.default : undefined;
 ---
 
 <Base title={s.seoTitle} description={s.seoDescription}>
-  <header class="page-head page-head--service is-dark">
-    <div class="container service-hero">
+  <header class:list={['page-head page-head--service is-dark', { 'page-head--with-image': heroImage }]}>
+    <div class:list={['container service-hero', { 'service-hero--split': heroImage }]}>
       <div class="service-hero__text">
         <Eyebrow label={s.hero.eyebrow} />
         <h1 class="page-head__h1">{s.hero.title}</h1>
@@ -36,6 +40,19 @@ const leads = (l?: string | string[]) => (l ? (Array.isArray(l) ? l : [l]) : [])
           <Fragment set:html={arrow} />
         </a>
       </div>
+      {heroImage && (
+        <div class="service-hero__media">
+          <Picture
+            src={heroImage}
+            formats={['avif', 'webp']}
+            fallbackFormat="webp"
+            widths={[560, 1120]}
+            sizes="(min-width: 1025px) 560px, (min-width: 641px) 70vw, calc(100vw - 40px)"
+            alt={s.hero.imageAlt ?? ''}
+            loading="eager"
+          />
+        </div>
+      )}
     </div>
   </header>
 

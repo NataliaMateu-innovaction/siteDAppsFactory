@@ -37,7 +37,8 @@ export type ServiceLanding = {
   name: string;
   seoTitle: string;
   seoDescription: string;
-  hero: { eyebrow: string; title: string; paragraphs: string[]; cta: string };
+  // `image`: archivo en src/assets/servicios/ (sin ruta); se muestra a la derecha del hero
+  hero: { eyebrow: string; title: string; paragraphs: string[]; cta: string; image?: string; imageAlt?: string };
   sections: Section[];
   cta: { title: string; text: string; label: string };
   faqs: { q: string; a: string }[];
@@ -193,6 +194,8 @@ export const serviceLandings: ServiceLanding[] = [
         'Integre en una misma solución dinero fiat, stablecoins, criptomonedas y activos tokenizados, conectando los proveedores y servicios que necesita su modelo de negocio.',
       ],
       cta: 'Quiero desarrollar una wallet',
+      image: 'wallet-celulares.png',
+      imageAlt: 'Tres pantallas de una wallet de marca: login, cuentas en dólar, euro, USDC y bitcoin, y el balance total con activos tokenizados',
     },
     sections: [
       {

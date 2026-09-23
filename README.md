@@ -53,6 +53,8 @@ public/
 - **URL de agenda (Calendly, etc.):** `contact.agendaUrl` en site.ts. Vacía → el botón del CTA final cae al mail.
 - **Colores / tipografía / espaciados:** variables al principio de [`src/styles/global.css`](src/styles/global.css).
 - **Una sección puntual:** su archivo en `src/components/sections/`.
+- **Imagen del hero de una landing:** dejar el archivo en `src/assets/servicios/` y poner su nombre en
+  `hero.image` (con `hero.imageAlt`). Astro la optimiza y el hero pasa a dos columnas en desktop.
 - **Landing de un servicio:** una entrada en [`src/data/servicios.ts`](src/data/servicios.ts) (hero, planes,
   grilla, pasos, comparativa, infraestructura, CTA y FAQ; las secciones son opcionales). La URL es
   `/servicios/<slug>/`. Después, apuntar el link del servicio en `services` (site.ts) y el footer.
