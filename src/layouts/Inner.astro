@@ -12,12 +12,13 @@ interface Props {
   h1: string;
   lead?: string;
   ogImage?: string;
+  ogImageSize?: { w: number; h: number };
   noindex?: boolean;
 }
-const { title, description, eyebrow, h1, lead, ogImage, noindex } = Astro.props;
+const { title, description, eyebrow, h1, lead, ogImage, ogImageSize, noindex } = Astro.props;
 ---
 
-<Base title={title} description={description} ogImage={ogImage} noindex={noindex}>
+<Base title={title} description={description} ogImage={ogImage} ogImageSize={ogImageSize} noindex={noindex}>
   <header class="page-head is-dark">
     <div class="container">
       {eyebrow && (
