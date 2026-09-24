@@ -47,6 +47,10 @@ const webConfig = `<?xml version="1.0" encoding="utf-8"?>
     <!-- IIS devuelve 404 para extensiones que no conoce: sin esto no se ven
          las imágenes (.webp, .avif) ni el video del hero (.mp4). -->
     <staticContent>
+      <!-- Sin esto IIS manda 'text/html' a secas y quien lea la pagina sin
+           mirar el <meta charset> la interpreta en otra codificacion. -->
+      <remove fileExtension=".html" />
+      <mimeMap fileExtension=".html" mimeType="text/html; charset=utf-8" />
       <remove fileExtension=".webp" />
       <mimeMap fileExtension=".webp" mimeType="image/webp" />
       <remove fileExtension=".avif" />
