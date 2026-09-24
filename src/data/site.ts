@@ -24,6 +24,27 @@ export const analytics = {
 // Todos los "Agendar" del sitio van a la página de contacto.
 export const agendaHref = '/contacto/';
 
+// Las otras dos empresas de InnovAction Group, en el pie. Los logos están en
+// negativo porque el footer es oscuro; los originales son para fondo claro.
+export const grupo = [
+  {
+    name: 'Action Fintech',
+    href: 'https://actionfintech.com/',
+    logo: '/logos/action-fintech.png',
+    w: 480,
+    h: 172,
+    alto: 31,
+  },
+  {
+    name: 'InnovAction Group',
+    href: 'https://innovaction.com.ar/',
+    logo: '/logos/innovaction.png',
+    w: 520,
+    h: 224,
+    alto: 42,
+  },
+];
+
 // ---- Clientes y proyectos (portfolio) ---------------------------------------
 // Tomados del sitio anterior (dappsfactory.io/#clientes), reescritos en el tono
 // nuevo. Orden: primero lo más cercano al posicionamiento actual (tokenización,

@@ -1,5 +1,5 @@
 ---
-import { contact } from '../data/site';
+import { contact, grupo } from '../data/site';
 const year = new Date().getFullYear();
 ---
 
@@ -11,6 +11,16 @@ const year = new Date().getFullYear();
           <img src="/logo-dappsfactory.svg" alt="DAppsFactory" width="744" height="310" />
         </a>
         <p class="footer__p">Infraestructura blockchain para tokenización, wallets y productos financieros digitales.</p>
+        <div class="footer__grupo">
+          <div class="footer__title">Nuestras empresas</div>
+          <div class="footer__grupo-logos">
+            {grupo.map((e) => (
+              <a href={e.href} target="_blank" rel="noopener noreferrer" aria-label={`Visitar el sitio de ${e.name}`} style={`--alto: ${e.alto}px`}>
+                <img src={e.logo} alt={e.name} width={e.w} height={e.h} loading="lazy" />
+              </a>
+            ))}
+          </div>
+        </div>
       </div>
       <div>
         <div class="footer__title">Soluciones</div>

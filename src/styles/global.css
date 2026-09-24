@@ -792,6 +792,14 @@ html.preload .preloader__ring {
 .footer__title { margin-bottom: 16px; font-size: 0.75rem; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: #6F6F79; }
 .footer__links { display: flex; flex-direction: column; gap: 10px; font-size: 0.9375rem; color: var(--muted-on-dark); }
 .footer__links a:hover { color: var(--text-on-dark); }
+/* Las otras dos empresas del grupo, debajo de la marca. */
+.footer__grupo { margin-top: 34px; }
+.footer__grupo .footer__title { margin-bottom: 14px; }
+.footer__grupo-logos { display: flex; align-items: center; gap: clamp(22px, 3vw, 34px); }
+.footer__grupo-logos a { display: block; opacity: 0.74; transition: opacity 180ms var(--ease-out); }
+.footer__grupo-logos a:hover { opacity: 1; }
+.footer__grupo-logos img { display: block; height: var(--alto, 34px); width: auto; }
+
 .footer__rule { margin-top: 56px; height: 1px; background: var(--brand-gradient); opacity: 0.4; }
 .footer__bottom {
   display: flex; flex-wrap: wrap; gap: 12px 24px; justify-content: space-between;
