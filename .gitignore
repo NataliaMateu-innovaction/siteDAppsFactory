@@ -19,3 +19,6 @@ Thumbs.db
 
 # Paquete para subir por FTP
 dist-ftp.zip
+
+# Vistas previas del blog: las genera scripts/og-blog.mjs en cada build
+public/og/

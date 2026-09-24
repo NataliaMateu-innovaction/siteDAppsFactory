@@ -10,7 +10,8 @@
     "check": "astro check",
     "redirects": "node scripts/redirects.mjs",
     "ftp": "node scripts/ftp.mjs",
-    "deploy:ftp": "npm run redirects && astro build && node scripts/ftp.mjs"
+    "deploy:ftp": "npm run redirects && npm run build && node scripts/ftp.mjs",
+    "prebuild": "node scripts/og-blog.mjs"
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.7.4",
