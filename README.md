@@ -24,10 +24,16 @@ npm run preview
 npm run deploy:ftp     # redirects + build + .htaccess + dist-ftp.zip
 ```
 
-Subir **el contenido** de `dist/` (no la carpeta) dentro de `public_html/`, o subir
-`dist-ftp.zip` y descomprimirlo ahí desde el administrador de archivos del panel.
-Incluye `.htaccess` con los 301 de las URLs viejas, https sin www, gzip y caché;
-si el hosting usa nginx, esos redirects hay que pasarlos a la config del servidor.
+Subir **el contenido** de `dist/` (no la carpeta) a la raíz del sitio. En el hosting
+actual (Azure App Service) la raíz es `/site/wwwroot`; en cPanel sería `public_html/`.
+
+El build deja los dos archivos de configuración y cada servidor usa el suyo:
+
+| Archivo | Servidor | Para qué |
+|---|---|---|
+| `web.config` | IIS / Azure | **Tipos MIME de .webp, .avif y .mp4** — sin esto IIS devuelve 404 y no se ven las imágenes ni el video — más redirects 301, página 404, compresión y caché |
+| `.htaccess` | Apache | lo mismo, en su sintaxis |
+
 Es un sitio estático: no necesita Node ni base de datos.
 
 ## Estructura
