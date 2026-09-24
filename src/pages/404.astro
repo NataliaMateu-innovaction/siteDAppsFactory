@@ -1,0 +1,32 @@
+---
+import Inner from '../layouts/Inner.astro';
+import { agendaHref } from '../data/site';
+---
+
+<Inner
+  title="Página no encontrada · DAppsFactory"
+  description="La página que buscás no existe o cambió de dirección."
+  eyebrow="Error 404"
+  h1="Esta página no existe."
+  lead="Puede que la dirección haya cambiado o que el enlace esté mal escrito."
+>
+  <section class="section is-light" style="background: var(--bg-light);">
+    <div class="container">
+      <div class="notfound__links">
+        <a href="/" class="tlink">Ir al inicio
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7" /><path d="M7 7h10v10" /></svg>
+        </a>
+        <a href="/#soluciones" class="tlink">Ver soluciones
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7" /><path d="M7 7h10v10" /></svg>
+        </a>
+        <a href="/blog/" class="tlink">Leer el blog
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7" /><path d="M7 7h10v10" /></svg>
+        </a>
+      </div>
+      <a href={agendaHref} class="btn-primary notfound__cta" data-magnetic>
+        Agendar 30 min con un especialista
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 12L12 4M12 4H6M12 4v6" stroke="#060607" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" /></svg>
+      </a>
+    </div>
+  </section>
+</Inner>

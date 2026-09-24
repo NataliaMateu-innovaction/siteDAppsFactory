@@ -8,7 +8,9 @@
     "build": "astro build",
     "preview": "astro preview",
     "check": "astro check",
-    "redirects": "node scripts/redirects.mjs"
+    "redirects": "node scripts/redirects.mjs",
+    "ftp": "node scripts/ftp.mjs",
+    "deploy:ftp": "npm run redirects && astro build && node scripts/ftp.mjs"
   },
   "dependencies": {
     "astro": "^7.3.3",

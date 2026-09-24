@@ -13,7 +13,22 @@ npm run build    # -> dist/
 npm run preview
 ```
 
-Deploy: Vercel, conectado al repo de GitHub — cada push a `main` despliega a producción. `vercel.json` fija framework Astro, salida `dist/` y los redirects.
+## Deploy
+
+**Vercel** (actual): conectado al repo de GitHub, cada push a `main` despliega a producción.
+`vercel.json` fija framework Astro, salida `dist/` y los redirects.
+
+**Hosting propio por FTP:**
+
+```bash
+npm run deploy:ftp     # redirects + build + .htaccess + dist-ftp.zip
+```
+
+Subir **el contenido** de `dist/` (no la carpeta) dentro de `public_html/`, o subir
+`dist-ftp.zip` y descomprimirlo ahí desde el administrador de archivos del panel.
+Incluye `.htaccess` con los 301 de las URLs viejas, https sin www, gzip y caché;
+si el hosting usa nginx, esos redirects hay que pasarlos a la config del servidor.
+Es un sitio estático: no necesita Node ni base de datos.
 
 ## Estructura
 
@@ -39,6 +54,7 @@ src/
   assets/                      PNG originales + assets/blog/ (portadas); Astro genera AVIF/WebP
   utils/date.ts                fechas de las notas en español, sin corrimiento de zona
 scripts/redirects.mjs          genera vercel.json con los 301 desde las URLs viejas
+scripts/ftp.mjs                .htaccess + zip para subir a un hosting por FTP
 public/
   logos/                       logos de clientes (portfolio + franja del hero)
   logo-dappsfactory.svg        logo oficial (wordmark ya convertido a curvas)
