@@ -13,6 +13,14 @@ export const contact = {
   crmFormId: 'rrZtffYMYXrbz5Hwmwqh',
 };
 
+// Medición (los mismos IDs del sitio anterior). Vaciar un ID lo desactiva.
+// Solo se cargan en el build de producción, no en `npm run dev`.
+export const analytics = {
+  ga4: 'G-7J07ZDLRPS',
+  gtm: 'GTM-MB2QSPVX',
+  metaPixel: '1520569462695769',
+};
+
 // Todos los "Agendar" del sitio van a la página de contacto.
 export const agendaHref = '/contacto/';
 

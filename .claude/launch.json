@@ -6,6 +6,12 @@
       "runtimeExecutable": "cmd",
       "runtimeArgs": ["/c", "npm run dev -- --port 4321"],
       "port": 4321
+    },
+    {
+      "name": "astro-preview",
+      "runtimeExecutable": "cmd",
+      "runtimeArgs": ["/c", "npm run preview -- --port 4330"],
+      "port": 4330
     }
   ]
 }

@@ -78,6 +78,8 @@ public/
   `title`, `description`, `pubDate` (YYYY-MM-DD), `author` y opcional `cover`
   (ruta relativa a la imagen en `src/assets/blog/`). El nombre del archivo es la URL.
   `draft: true` la oculta.
+- **Analytics y pixel:** IDs en `analytics` (site.ts): GA4, Google Tag Manager y Meta Pixel,
+  los mismos del sitio anterior. Se cargan solo en el build de producción; vaciar un ID lo apaga.
 - **Formulario de contacto:** es el del CRM LeadConnector/GoHighLevel; el ID está en
   `contact.crmFormId` (site.ts). Colores y campos se cambian desde el CRM.
 
