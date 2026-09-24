@@ -77,9 +77,12 @@ const webConfig = `<?xml version="1.0" encoding="utf-8"?>
       </files>
     </defaultDocument>
 
+    <!-- "File" sirve la pagina 404 devolviendo el codigo 404. Con
+         "ExecuteURL", que es lo natural de escribir, IIS contesta 200 y
+         Google toma esas URLs como paginas validas con contenido repetido. -->
     <httpErrors errorMode="Custom" existingResponse="Replace">
       <remove statusCode="404" subStatusCode="-1" />
-      <error statusCode="404" path="/404.html" responseMode="ExecuteURL" />
+      <error statusCode="404" path="404.html" responseMode="File" />
     </httpErrors>
 
     <urlCompression doStaticCompression="true" doDynamicCompression="true" />
