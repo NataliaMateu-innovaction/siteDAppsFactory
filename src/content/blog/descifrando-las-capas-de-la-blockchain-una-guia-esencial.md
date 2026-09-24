@@ -1,5 +1,6 @@
 ---
 title: "Descifrando las Capas de la Blockchain: Una Guía Esencial"
+seoTitle: "Las capas de la blockchain: guía esencial"
 description: "La blockchain ha emergido como una herramienta transformadora con el poder de revolucionar industrias. Más allá de las criptomonedas, esta tecnología ofrece apl"
 pubDate: 2025-01-22
 author: "Horacio Lampe"

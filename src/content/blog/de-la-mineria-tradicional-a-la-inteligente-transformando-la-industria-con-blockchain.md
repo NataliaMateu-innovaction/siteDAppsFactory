@@ -1,5 +1,6 @@
 ---
 title: "De la Minería Tradicional a la Inteligente: Transformando la Industria con Blockchain"
+seoTitle: "Blockchain en la industria minera"
 description: "La industria minera, un pilar fundamental de la economía global, se encuentra en constante evolución, buscando nuevas tecnologías para optimizar sus operaciones"
 pubDate: 2025-01-15
 author: "Horacio Lampe"

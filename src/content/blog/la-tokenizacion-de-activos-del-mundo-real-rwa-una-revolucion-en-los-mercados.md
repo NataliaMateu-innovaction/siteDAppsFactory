@@ -1,5 +1,6 @@
 ---
 title: "La Tokenización de Activos del Mundo Real (RWA): Una Revolución en los Mercados"
+seoTitle: "Tokenización de activos del mundo real (RWA)"
 description: "Al combinar la tecnología blockchain con activos tangibles, esta innovación está abriendo un abanico de oportunidades sin precedentes para inversores, empresas "
 pubDate: 2025-01-15
 author: "Horacio Lampe"

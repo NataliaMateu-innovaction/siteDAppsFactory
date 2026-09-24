@@ -1,5 +1,6 @@
 ---
 title: "Desarrollo de tokenización de activos con ERC-3643: cómo construir plataformas reguladas en blockchain"
+seoTitle: "Tokenización con ERC-3643: plataformas reguladas"
 description: "La tokenización de activos del mundo real está entrando en una nueva etapa. Durante los primeros años, muchos proyectos se enfocaron en experimentar con tokens "
 pubDate: 2026-04-30
 author: "Horacio Lampe"

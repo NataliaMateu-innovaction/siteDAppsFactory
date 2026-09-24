@@ -1,5 +1,6 @@
 ---
 title: "ERC-3643: el estándar para la tokenización regulada de activos"
+seoTitle: "ERC-3643: tokenización regulada de activos"
 description: "La tokenización de activos del mundo real está evolucionando rápidamente. Sin embargo, uno de los principales desafíos para su adopción institucional ha sido el"
 pubDate: 2026-03-10
 author: "Horacio Lampe"

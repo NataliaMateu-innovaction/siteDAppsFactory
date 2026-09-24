@@ -1,5 +1,6 @@
 ---
 title: "Certificados Ambientales en Blockchain: Transparencia y Trazabilidad Garantizada"
+seoTitle: "Certificados ambientales en blockchain"
 description: "La creciente demanda de transparencia en las prácticas ambientales ha llevado a la exploración de la tecnología blockchain como una solución innovadora. La bloc"
 pubDate: 2025-01-24
 author: "Horacio Lampe"

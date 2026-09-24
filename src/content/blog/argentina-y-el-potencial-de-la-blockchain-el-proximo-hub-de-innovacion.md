@@ -1,5 +1,6 @@
 ---
 title: "Argentina y el Potencial de la Blockchain: ¿El Próximo Hub de Innovación?"
+seoTitle: "Argentina y el potencial de la blockchain"
 description: "Argentina se encuentra ante una oportunidad histórica para posicionarse como líder global en innovación tecnológica. Según Charles Hoskinson, cofundador de Card"
 pubDate: 2024-11-19
 author: "Andrés Kühnel"

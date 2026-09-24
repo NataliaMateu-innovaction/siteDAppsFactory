@@ -10,8 +10,10 @@ interface Props {
   description: string;
   /** Imagen para Open Graph, relativa a /public. */
   ogImage?: string;
+  /** true en páginas que no deben aparecer en buscadores (404). */
+  noindex?: boolean;
 }
-const { title, description, ogImage = '/media/hero02-poster.jpg' } = Astro.props;
+const { title, description, ogImage = '/media/hero02-poster.jpg', noindex = false } = Astro.props;
 const canonical = new URL(Astro.url.pathname, Astro.site);
 ---
 
@@ -25,6 +27,7 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
     <meta name="description" content={description} />
     <link rel="canonical" href={canonical} />
     <meta name="theme-color" content="#060607" />
+    {noindex ? <meta name="robots" content="noindex, follow" /> : <meta name="robots" content="index, follow, max-image-preview:large" />}
 
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="DAppsFactory" />

@@ -1,5 +1,6 @@
 ---
 title: "Regulación de blockchain y tokenización en LATAM: panorama país por país"
+seoTitle: "Regulación blockchain en LATAM, país por país"
 description: "El crecimiento de la tokenización de activos y las soluciones basadas en blockchain está impulsando una nueva discusión regulatoria en América Latina. Durante l"
 pubDate: 2026-06-15
 author: "Horacio Lampe"

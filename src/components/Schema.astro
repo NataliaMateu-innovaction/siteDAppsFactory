@@ -1,0 +1,66 @@
+---
+/*
+  Datos estructurados comunes (JSON-LD):
+  · Organization + WebSite en la home → ayuda a que Google arme el panel de
+    conocimiento con el logo y las redes de la empresa.
+  · BreadcrumbList en páginas interiores → muestra la ruta en los resultados.
+*/
+import { contact } from '../data/site';
+
+interface Props {
+  /** Migas: [{ name, path }] sin incluir la home, que se agrega sola. */
+  breadcrumbs?: { name: string; path?: string }[];
+  /** true solo en la home: agrega Organization y WebSite. */
+  organization?: boolean;
+}
+const { breadcrumbs, organization = false } = Astro.props;
+const site = Astro.site?.toString().replace(/\/$/, '') ?? 'https://dappsfactory.io';
+
+const bloques: object[] = [];
+
+if (organization) {
+  bloques.push({
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: 'DAppsFactory',
+    alternateName: 'DApps Factory',
+    url: site + '/',
+    logo: site + '/logo-dappsfactory.svg',
+    description:
+      'Infraestructura blockchain para empresas, fintechs e instituciones financieras: tokenización de activos, wallets fiat + cripto, desarrollo blockchain y pagos masivos en cripto.',
+    email: contact.email,
+    parentOrganization: { '@type': 'Organization', name: 'InnovAction Group' },
+    areaServed: ['AR', 'MX', 'US', 'ES'],
+    sameAs: [contact.linkedin, contact.instagram],
+    contactPoint: {
+      '@type': 'ContactPoint',
+      contactType: 'sales',
+      email: contact.email,
+      availableLanguage: ['es', 'en'],
+      url: site + '/contacto/',
+    },
+  });
+  bloques.push({
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: 'DAppsFactory',
+    url: site + '/',
+    inLanguage: 'es-AR',
+  });
+}
+
+if (breadcrumbs?.length) {
+  bloques.push({
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [{ name: 'Inicio', path: '/' }, ...breadcrumbs].map((b, i) => ({
+      '@type': 'ListItem',
+      position: i + 1,
+      name: b.name,
+      ...(b.path ? { item: site + b.path } : {}),
+    })),
+  });
+}
+---
+
+{bloques.map((b) => <script type="application/ld+json" set:html={JSON.stringify(b)} />)}

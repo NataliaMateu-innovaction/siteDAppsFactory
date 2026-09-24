@@ -2,6 +2,7 @@
 import { getCollection, render } from 'astro:content';
 import { Picture } from 'astro:assets';
 import Base from '../../layouts/Base.astro';
+import Schema from '../../components/Schema.astro';
 
 export async function getStaticPaths() {
   const posts = await getCollection('blog', ({ data }) => !data.draft);
@@ -10,6 +11,12 @@ export async function getStaticPaths() {
 
 const { post } = Astro.props;
 const { Content } = await render(post);
+
+// Google corta el <title> cerca de los 60 caracteres: el sufijo de marca solo
+// se agrega cuando entra. `seoTitle` en el frontmatter permite acortar a mano.
+const base = post.data.seoTitle ?? post.data.title;
+const seoTitle = base.length <= 43 ? `${base} · DAppsFactory` : base;
+const seoDescription = post.data.seoDescription || post.data.description || post.data.title;
 import { fechaLarga as fmt } from '../../utils/date';
 
 // Otras notas, para no dejar al lector en un callejón
@@ -24,13 +31,16 @@ const jsonLd = JSON.stringify({
   headline: post.data.title,
   description: post.data.description,
   datePublished: post.data.pubDate.toISOString(),
+  dateModified: post.data.pubDate.toISOString(),
+  inLanguage: 'es-AR',
   author: { '@type': 'Person', name: post.data.author },
   publisher: { '@type': 'Organization', name: 'DAppsFactory' },
   mainEntityOfPage: new URL(`/blog/${post.id}/`, Astro.site).toString(),
 });
 ---
 
-<Base title={`${post.data.title} · Blog DAppsFactory`} description={post.data.description || post.data.title}>
+<Base title={seoTitle} description={seoDescription}>
+  <Schema breadcrumbs={[{ name: 'Blog', path: '/blog/' }, { name: post.data.title }]} />
   <article class="post">
     <header class="page-head page-head--post is-dark">
       <div class="container post__head">
@@ -51,7 +61,7 @@ const jsonLd = JSON.stringify({
       <div class="container">
         {post.data.cover && (
           <div class="post__cover">
-            <Picture src={post.data.cover} formats={['avif', 'webp']} fallbackFormat="webp" widths={[760, 1520]} sizes="(min-width: 900px) 760px, calc(100vw - 40px)" alt="" loading="eager" />
+            <Picture src={post.data.cover} formats={['avif', 'webp']} fallbackFormat="webp" widths={[760, 1520]} sizes="(min-width: 900px) 760px, calc(100vw - 40px)" alt={`Ilustración de la nota: ${post.data.title}`} loading="eager" />
           </div>
         )}
         <div class="prose">
@@ -76,7 +86,7 @@ const jsonLd = JSON.stringify({
               <a href={`/blog/${p.id}/`} class="post-card">
                 <div class="post-card__tile">
                   {p.data.cover ? (
-                    <Picture src={p.data.cover} formats={['avif', 'webp']} fallbackFormat="webp" widths={[420, 840]} sizes="(min-width: 1025px) 400px, (min-width: 641px) 50vw, calc(100vw - 40px)" alt="" loading="lazy" />
+                    <Picture src={p.data.cover} formats={['avif', 'webp']} fallbackFormat="webp" widths={[420, 840]} sizes="(min-width: 1025px) 400px, (min-width: 641px) 50vw, calc(100vw - 40px)" alt={`Ilustración de la nota: ${p.data.title}`} loading="lazy" />
                   ) : (
                     <span class="post-card__tile-line" aria-hidden="true"></span>
                   )}

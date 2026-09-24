@@ -1,6 +1,7 @@
 ---
 title: "Antes de tokenizar un activo, estas son las cinco decisiones estratégicas que debe tomar"
-description: "La tokenización suele presentarse como una solución tecnológica."
+seoTitle: "Cinco decisiones antes de tokenizar un activo"
+description: "La tokenización suele presentarse como una solución tecnológica. Sin embargo, la experiencia demuestra que los proyectos exitosos no comienzan con blockchain."
 pubDate: 2026-08-05
 author: "Horacio Lampe"
 cover: "../../assets/blog/blog-30.png"

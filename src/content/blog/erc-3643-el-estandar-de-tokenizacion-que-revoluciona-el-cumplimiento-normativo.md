@@ -1,5 +1,6 @@
 ---
 title: "ERC-3643: El Estándar de Tokenización que Revoluciona el Cumplimiento Normativo"
+seoTitle: "ERC-3643: tokenización y cumplimiento normativo"
 description: "La tecnología blockchain está transformando la forma en que interactuamos con los activos, y la tokenización de activos del mundo real (RWA) es una de las áreas"
 pubDate: 2025-01-15
 author: "Horacio Lampe"

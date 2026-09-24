@@ -1,5 +1,6 @@
 ---
 title: "Tokenización vs Crowdfunding: diferencias clave para financiar proyectos"
+seoTitle: "Tokenización vs. crowdfunding: diferencias"
 description: "Durante la última década, el crowdfunding se consolidó como una alternativa interesante para financiar proyectos fuera del sistema financiero tradicional. Sin e"
 pubDate: 2026-03-11
 author: "Horacio Lampe"

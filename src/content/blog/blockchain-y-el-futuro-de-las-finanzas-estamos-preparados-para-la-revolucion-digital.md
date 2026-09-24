@@ -1,5 +1,6 @@
 ---
 title: "Blockchain y el Futuro de las Finanzas: ¿Estamos Preparados para la Revolución Digital?"
+seoTitle: "Blockchain y el futuro de las finanzas"
 description: "El sector financiero global está en la cúspide de una transformación histórica, impulsada por la adopción de tecnologías blockchain y el creciente interés en la"
 pubDate: 2025-01-06
 author: "Andrés Kühnel"

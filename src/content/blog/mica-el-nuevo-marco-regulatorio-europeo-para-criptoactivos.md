@@ -1,5 +1,6 @@
 ---
 title: "MiCA: El Nuevo Marco Regulatorio Europeo para Criptoactivos"
+seoTitle: "MiCA: el marco europeo para criptoactivos"
 description: "El colapso de FTX en 2022 puso de manifiesto la necesidad de una regulación clara y global en el mundo de las criptomonedas. En este contexto, el Reglamento sob"
 pubDate: 2025-01-20
 author: "Horacio Lampe"

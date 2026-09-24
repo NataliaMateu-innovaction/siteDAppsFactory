@@ -4,17 +4,19 @@
   que usaba el sitio anterior, embebido en iframe. El ID vive en site.ts.
 */
 import Inner from '../layouts/Inner.astro';
+import Schema from '../components/Schema.astro';
 import { contact } from '../data/site';
 const formId = contact.crmFormId;
 ---
 
 <Inner
   title="Contacto · DAppsFactory"
-  description="Agendá 30 minutos con un especialista de DAppsFactory. Contanos qué querés poner en producción: tokenización de activos, wallets fiat + cripto o desarrollo blockchain."
+  description="Agendá 30 minutos con un especialista en tokenización de activos, wallets fiat + cripto y desarrollo blockchain. Sin pitch de ventas."
   eyebrow="Contacto"
   h1="Contanos qué querés poner en producción."
   lead="30 minutos con alguien que ya construyó esto. Sin pitch de ventas. Dejanos tus datos y te escribimos para coordinar."
 >
+  <Schema breadcrumbs={[{ name: 'Contacto' }]} />
   <section class="contact section is-dark">
     <div class="container contact__grid">
       <div class="contact__form" data-reveal>

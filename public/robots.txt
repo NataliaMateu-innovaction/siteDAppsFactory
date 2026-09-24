@@ -1,0 +1,8 @@
+# DAppsFactory — https://dappsfactory.io
+User-agent: *
+Allow: /
+
+# Los assets con hash no aportan nada en los resultados de búsqueda.
+Disallow: /_astro/
+
+Sitemap: https://dappsfactory.io/sitemap-index.xml

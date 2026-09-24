@@ -1,5 +1,6 @@
 ---
 title: "ERC3643: La Tokenización Inmobiliaria en América Latina"
+seoTitle: "Tokenización inmobiliaria en América Latina"
 description: "Según un informe de Boston Consulting Group, se espera que para el año 2030, el mercado de la tokenización de activos alcance un valor de $16 billones de dólare"
 pubDate: 2024-07-22
 author: "Horacio Lampe"

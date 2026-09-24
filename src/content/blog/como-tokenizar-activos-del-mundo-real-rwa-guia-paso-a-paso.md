@@ -1,5 +1,6 @@
 ---
 title: "Cómo tokenizar activos del mundo real (RWA): guía paso a paso"
+seoTitle: "Cómo tokenizar activos del mundo real (RWA)"
 description: "La tokenización de activos se está convirtiendo en una de las transformaciones más importantes dentro del sistema financiero digital. A través de blockchain, es"
 pubDate: 2026-03-10
 author: "Horacio Lampe"

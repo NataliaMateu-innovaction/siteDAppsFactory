@@ -1,5 +1,6 @@
 ---
 title: "DappsFactory, desarrolladora de plataformas de RWA Tokenization* y miembros de la ERC3643 Association, promueve la adopción del nuevo standard ERC3643"
+seoTitle: "DAppsFactory, miembro de la ERC-3643 Association"
 description: "*(Real World Asset Tokenization) La evolución de la tokenización de activos en el mundo real (RWA) ha dado lugar a estándares innovadores, y entre ellos destaca"
 pubDate: 2024-07-22
 author: "Horacio Lampe"

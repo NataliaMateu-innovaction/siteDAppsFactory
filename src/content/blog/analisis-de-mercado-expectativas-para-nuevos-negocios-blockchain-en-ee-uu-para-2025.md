@@ -1,5 +1,6 @@
 ---
 title: "Análisis de Mercado: Expectativas para Nuevos Negocios Blockchain en EE. UU. para 2025"
+seoTitle: "Mercado blockchain en EE. UU.: expectativas para 2025"
 description: "Este informe elaborado por DApps Factory, presenta un análisis exhaustivo del mercado blockchain en Estados Unidos, con un enfoque en las expectativas para nuev"
 pubDate: 2025-01-25
 author: "Horacio Lampe"

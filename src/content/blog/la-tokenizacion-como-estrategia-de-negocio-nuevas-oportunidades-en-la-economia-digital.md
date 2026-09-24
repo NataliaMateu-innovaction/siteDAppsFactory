@@ -1,5 +1,6 @@
 ---
 title: "La Tokenización como Estrategia de Negocio: Nuevas Oportunidades en la Economía Digital"
+seoTitle: "La tokenización como estrategia de negocio"
 description: "La tokenización está emergiendo como una poderosa herramienta para las empresas que buscan innovar y prosperar en la economía digital. Este proceso, que consist"
 pubDate: 2025-01-17
 author: "Horacio Lampe"

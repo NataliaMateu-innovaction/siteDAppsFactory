@@ -2,6 +2,7 @@
 import { getCollection } from 'astro:content';
 import { Picture } from 'astro:assets';
 import Inner from '../../layouts/Inner.astro';
+import Schema from '../../components/Schema.astro';
 
 const posts = (await getCollection('blog', ({ data }) => !data.draft)).sort(
   (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
@@ -12,11 +13,12 @@ const [featured, ...rest] = posts;
 
 <Inner
   title="Blog · DAppsFactory"
-  description="Tokenización de activos, ERC-3643, wallets fiat + cripto y regulación blockchain en Argentina y Latinoamérica, explicados para quien tiene que decidir."
+  description="Tokenización de activos, ERC-3643, wallets fiat + cripto y regulación blockchain en Argentina y Latinoamérica, para quien tiene que decidir."
   eyebrow="Blog"
   h1="Lo que aprendemos poniendo blockchain en producción."
   lead="Tokenización, ERC-3643, wallets fiat + cripto y regulación en Argentina y Latinoamérica, escrito para quien tiene que decidir."
 >
+  <Schema breadcrumbs={[{ name: 'Blog' }]} />
   <section class="blog section is-light">
     <div class="container">
       {posts.length === 0 && <p class="lead">Estamos preparando las primeras notas.</p>}
@@ -25,7 +27,7 @@ const [featured, ...rest] = posts;
         <a href={`/blog/${featured.id}/`} class="post-card post-card--featured" data-reveal>
           <div class="post-card__tile">
             {featured.data.cover ? (
-              <Picture src={featured.data.cover} formats={['avif', 'webp']} fallbackFormat="webp" widths={[640, 1280]} sizes="(min-width: 900px) 60vw, calc(100vw - 40px)" alt="" loading="eager" />
+              <Picture src={featured.data.cover} formats={['avif', 'webp']} fallbackFormat="webp" widths={[640, 1280]} sizes="(min-width: 900px) 60vw, calc(100vw - 40px)" alt={`Ilustración de la nota: ${featured.data.title}`} loading="eager" />
             ) : (
               <span class="post-card__tile-line" aria-hidden="true"></span>
             )}
@@ -50,7 +52,7 @@ const [featured, ...rest] = posts;
           <a href={`/blog/${post.id}/`} class="post-card" data-reveal data-delay={[0, 120, 240][i % 3] || undefined}>
             <div class="post-card__tile">
               {post.data.cover ? (
-                <Picture src={post.data.cover} formats={['avif', 'webp']} fallbackFormat="webp" widths={[420, 840]} sizes="(min-width: 1025px) 400px, (min-width: 641px) 50vw, calc(100vw - 40px)" alt="" loading="lazy" />
+                <Picture src={post.data.cover} formats={['avif', 'webp']} fallbackFormat="webp" widths={[420, 840]} sizes="(min-width: 1025px) 400px, (min-width: 641px) 50vw, calc(100vw - 40px)" alt={`Ilustración de la nota: ${post.data.title}`} loading="lazy" />
               ) : (
                 <span class="post-card__tile-line" aria-hidden="true"></span>
               )}

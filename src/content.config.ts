@@ -8,6 +8,9 @@ const blog = defineCollection({
   schema: ({ image }) =>
     z.object({
       title: z.string(),
+      // Título y descripción para buscadores, cuando los de la nota son largos.
+      seoTitle: z.string().optional(),
+      seoDescription: z.string().optional(),
       description: z.string().default(''),
       pubDate: z.coerce.date(),
       author: z.string().default('DAppsFactory'),

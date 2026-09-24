@@ -51,7 +51,7 @@ export const serviceLandings: ServiceLanding[] = [
     name: 'Tokenización de activos',
     seoTitle: 'Tokenización de activos · DAppsFactory',
     seoDescription:
-      'Plataformas de tokenización de activos para representar, emitir y administrar activos y derechos mediante blockchain. Base con ERC-20 o Enterprise con ERC-3643, identidad y compliance.',
+      'Plataformas de tokenización de activos con blockchain: ERC-20 para empezar o ERC-3643 con identidad, compliance y reglas de transferencia.',
     hero: {
       eyebrow: 'Tokenización de activos',
       title: 'Convierta activos y derechos en oportunidades digitales',
@@ -185,7 +185,7 @@ export const serviceLandings: ServiceLanding[] = [
     name: 'Wallet Fiat + Cripto White Label',
     seoTitle: 'Wallet Fiat + Cripto White Label · DAppsFactory',
     seoDescription:
-      'Wallets Fiat + Cripto de marca blanca para empresas y Fintechs: dinero fiat, stablecoins, criptomonedas y activos tokenizados en una misma experiencia, con onboarding, KYC/AML, custodia y APIs.',
+      'Wallets Fiat + Cripto White Label para empresas y fintechs: fiat, stablecoins, cripto y activos tokenizados en una misma experiencia, con KYC/AML y APIs.',
     hero: {
       eyebrow: 'Wallet Fiat + Cripto White Label',
       title: 'Su propia wallet. Su marca. Una infraestructura preparada para integrar fiat y activos digitales.',
@@ -322,7 +322,7 @@ export const serviceLandings: ServiceLanding[] = [
     name: 'Desarrollos Blockchain a Medida',
     seoTitle: 'Desarrollos Blockchain a Medida · DAppsFactory',
     seoDescription:
-      'Soluciones blockchain a medida para empresas y Fintechs: Smart Contracts, dApps, trazabilidad, identidad digital, activos digitales e integraciones con CRM, ERP y core financiero mediante APIs.',
+      'Desarrollos blockchain a medida: Smart Contracts, dApps, trazabilidad, identidad digital e integraciones con CRM, ERP y core financiero vía APIs.',
     hero: {
       eyebrow: 'Desarrollos Blockchain a Medida',
       title: 'Blockchain diseñado para su modelo de negocio',
@@ -425,7 +425,7 @@ export const serviceLandings: ServiceLanding[] = [
     name: 'Pagos Masivos en Cripto',
     seoTitle: 'Pagos Masivos en Cripto · DAppsFactory',
     seoDescription:
-      'Infraestructura de pagos masivos en cripto para empresas: ejecute grandes volúmenes de transferencias de activos digitales de forma rápida, automatizada y trazable, integrada con sus sistemas.',
+      'Infraestructura de pagos masivos en cripto: grandes volúmenes de transferencias de activos digitales de forma rápida, automatizada y trazable.',
     hero: {
       eyebrow: 'Pagos Masivos en Cripto',
       title: 'Envíe múltiples pagos en cripto de forma inmediata y a escala.',

@@ -1,5 +1,6 @@
 ---
 title: "ERC-3643: el estándar que está impulsando la tokenización institucional"
+seoTitle: "ERC-3643 y la tokenización institucional"
 description: "Durante los primeros años de la tokenización, la mayoría de los proyectos se desarrollaban utilizando estándares como ERC-20 o ERC-721. Estas tecnologías permit"
 pubDate: 2026-07-30
 author: "Horacio Lampe"

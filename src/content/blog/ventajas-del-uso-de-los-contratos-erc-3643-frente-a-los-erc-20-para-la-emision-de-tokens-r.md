@@ -1,5 +1,6 @@
 ---
 title: "Ventajas del uso de los contratos ERC 3643 frente a los ERC 20 para la emisión de tokens RWA (Real World Assets)"
+seoTitle: "ERC-3643 frente a ERC-20: ventajas"
 description: "La tecnología blockchain ha abierto un nuevo abanico de posibilidades para la tokenización de activos del mundo real (RWA), permitiendo su representación digita"
 pubDate: 2025-01-13
 author: "Horacio Lampe"

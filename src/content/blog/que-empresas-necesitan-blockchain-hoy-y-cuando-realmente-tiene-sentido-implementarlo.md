@@ -1,5 +1,6 @@
 ---
 title: "Qué empresas necesitan blockchain hoy (y cuándo realmente tiene sentido implementarlo)"
+seoTitle: "Qué empresas necesitan blockchain hoy"
 description: "Durante los últimos años, la tecnología blockchain ha generado un enorme interés en múltiples industrias. Sin embargo, a medida que el mercado madura, una pregu"
 pubDate: 2026-04-28
 author: "Horacio Lampe"

@@ -1,5 +1,6 @@
 ---
 title: "Tokenización de Activos en el Mercado de Deuda y Préstamos en EE.UU."
+seoTitle: "Tokenización de deuda y préstamos en EE. UU."
 description: "La tokenización de activos está emergiendo como una fuerza disruptiva en el mundo financiero, y el mercado de deuda y préstamos en EE.UU. no es la excepción. Es"
 pubDate: 2025-02-02
 author: "Horacio Lampe"

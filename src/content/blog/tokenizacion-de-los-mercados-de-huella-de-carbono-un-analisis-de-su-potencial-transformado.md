@@ -1,5 +1,6 @@
 ---
 title: "Tokenización de los Mercados de Huella de Carbono: Un análisis de su Potencial Transformador"
+seoTitle: "Tokenización de los mercados de carbono"
 description: "El cambio climático exige una acción global coordinada para mitigar sus efectos. Los mercados de carbono, que permiten el intercambio de derechos de emisión de "
 pubDate: 2025-01-15
 author: "Horacio Lampe"

@@ -1,5 +1,6 @@
 ---
 title: "Transacciones Gasless y Fiat On-Ramp: El Futuro de las Finanzas sin Fricciones"
+seoTitle: "Transacciones gasless y fiat on-ramp"
 description: "La adopción masiva de blockchain está impulsada por tecnologías que facilitan la interacción entre las finanzas tradicionales y el ecosistema cripto, como las t"
 pubDate: 2024-10-07
 author: "Andrés Kühnel"

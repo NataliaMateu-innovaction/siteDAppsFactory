@@ -1,5 +1,6 @@
 ---
 title: "Tokenización de activos en Argentina: oferta privada vs. oferta pública, ¿qué debe conocer antes de comenzar?"
+seoTitle: "Tokenización en Argentina: privada vs. pública"
 description: "La tokenización de activos dejó de ser una tendencia para convertirse en una herramienta concreta de financiamiento, inversión y transformación digital. Sin emb"
 pubDate: 2026-07-15
 author: "Horacio Lampe"

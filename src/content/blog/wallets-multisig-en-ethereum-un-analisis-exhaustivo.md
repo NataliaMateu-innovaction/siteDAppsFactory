@@ -1,6 +1,7 @@
 ---
 title: "Wallets Multisig en Ethereum: Un análisis exhaustivo"
-description: "Las wallets multisig, abreviatura de \"multi-signature wallets\", han surgido como una solución crucial para mejorar la seguridad y la gestión de activos digitale"
+seoTitle: "Wallets multisig en Ethereum"
+description: "Las wallets multisig (multi-signature) son una solución clave para mejorar la seguridad y la gestión de activos digitales en Ethereum."
 pubDate: 2025-01-13
 author: "Horacio Lampe"
 cover: "../../assets/blog/blog-12.png"

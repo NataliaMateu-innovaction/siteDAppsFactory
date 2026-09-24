@@ -1,5 +1,6 @@
 ---
 title: "Desarrollo de plataformas de tokenización: arquitectura, regulación y tecnología"
+seoTitle: "Desarrollo de plataformas de tokenización"
 description: "La tokenización de activos está dejando de ser una tendencia experimental para convertirse en una infraestructura real dentro del sistema financiero digital. De"
 pubDate: 2026-03-10
 author: "Horacio Lampe"

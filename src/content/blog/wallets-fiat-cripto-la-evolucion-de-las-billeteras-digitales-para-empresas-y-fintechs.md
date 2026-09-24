@@ -1,5 +1,6 @@
 ---
 title: "Wallets Fiat + Cripto: la evolución de las billeteras digitales para empresas y fintechs"
+seoTitle: "Wallets Fiat + Cripto para empresas y fintechs"
 description: "Durante mucho tiempo, las wallets digitales fueron asociadas exclusivamente al ecosistema cripto. Su función principal era almacenar, enviar y recibir activos d"
 pubDate: 2026-08-02
 author: "Horacio Lampe"

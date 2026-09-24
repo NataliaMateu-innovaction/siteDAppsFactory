@@ -1,5 +1,6 @@
 ---
 title: "Blockchain ya no es una tendencia: por qué se está convirtiendo en la nueva infraestructura financiera"
+seoTitle: "Blockchain: la nueva infraestructura financiera"
 description: "Durante mucho tiempo, hablar de blockchain era hablar casi exclusivamente de criptomonedas."
 pubDate: 2026-07-25
 author: "Horacio Lampe"

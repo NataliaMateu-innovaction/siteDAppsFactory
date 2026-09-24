@@ -78,6 +78,11 @@ public/
   `title`, `description`, `pubDate` (YYYY-MM-DD), `author` y opcional `cover`
   (ruta relativa a la imagen en `src/assets/blog/`). El nombre del archivo es la URL.
   `draft: true` la oculta.
+- **SEO:** `sitemap-index.xml` lo genera `@astrojs/sitemap` en cada build; `public/robots.txt`
+  lo apunta. Títulos ≤60 y descripciones ≤160 caracteres (lo que muestra Google): en las notas,
+  `seoTitle` y `seoDescription` del frontmatter pisan los visibles. Datos estructurados en
+  `src/components/Schema.astro` (Organization y WebSite en la home, BreadcrumbList en interiores)
+  más FAQPage y BlogPosting en sus secciones.
 - **Analytics y pixel:** IDs en `analytics` (site.ts): GA4, Google Tag Manager y Meta Pixel,
   los mismos del sitio anterior. Se cargan solo en el build de producción; vaciar un ID lo apaga.
 - **Formulario de contacto:** es el del CRM LeadConnector/GoHighLevel; el ID está en
