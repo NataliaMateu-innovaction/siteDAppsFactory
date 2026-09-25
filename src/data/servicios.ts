@@ -60,6 +60,8 @@ export const serviceLandings: ServiceLanding[] = [
         'Nuestra infraestructura se adapta al tipo de activo, modelo de negocio y nivel de compliance de cada proyecto, desde implementaciones ágiles hasta soluciones Enterprise para escenarios de mayor complejidad.',
       ],
       cta: 'Quiero tokenizar un activo',
+      image: 'metro-futuro.png',
+      imageAlt: 'Metrofuturo, plataforma de inversión en metros cuadrados tokenizados, en una notebook y un celular',
     },
     sections: [
       {
@@ -331,6 +333,8 @@ export const serviceLandings: ServiceLanding[] = [
         'Diseñamos la arquitectura según el caso de uso, los procesos y los requerimientos de cada organización.',
       ],
       cta: 'Cuéntenos su proyecto',
+      image: 'galicia.png',
+      imageAlt: 'Plataforma de certificados en blockchain de Banco Galicia: el panel para emitirlos y la colección publicada, vista desde un celular',
     },
     sections: [
       {
