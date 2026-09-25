@@ -22,3 +22,6 @@ dist-ftp.zip
 
 # Vistas previas del blog: las genera scripts/og-blog.mjs en cada build
 public/og/
+
+# scripts sueltos de una sola vez
+_tmp-*
