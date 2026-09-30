@@ -1020,6 +1020,10 @@ html.preload .preloader__ring {
 @media (min-width: 1025px) { .infra__grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
 
 /* 404 */
+/* Páginas legales: una sola columna, con el ancho de lectura del blog. */
+.legal { padding: clamp(40px, 5vw, 64px) 0 clamp(72px, 9vw, 112px); }
+.legal__prose { max-width: 74ch; }
+
 /* Página de gracias: dos columnas que se apilan en pantalla chica.
    Es una página corta, así que arranca más cerca de la cabecera que una
    sección normal (que abre con hasta 180px). */

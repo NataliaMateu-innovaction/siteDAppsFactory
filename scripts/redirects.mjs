@@ -9,6 +9,8 @@ const redirects = [
   ...[2, 3, 4, 5].map((n) => ({ source: `/blog0${n}.html`, destination: '/blog/', permanent: true })),
   { source: '/blogs.html', destination: '/blog/', permanent: true },
   { source: '/index.html', destination: '/', permanent: true },
+  // En el sitio anterior esta política vivía en terminos.html
+  { source: '/terminos.html', destination: '/politica-de-privacidad/', permanent: true },
   // Por si el CRM queda apuntando a la forma con .html
   { source: '/gracias-contacto.html', destination: '/gracias-contacto/', permanent: true },
 ];

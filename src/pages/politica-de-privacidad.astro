@@ -1,0 +1,135 @@
+---
+/*
+  Política de privacidad. El texto es el del sitio anterior, que vivía en
+  terminos.html aunque su contenido era este; se transcribe tal cual, solo
+  con la grafía de marca del sitio (DAppsFactory) y los títulos como h2.
+*/
+import Inner from '../layouts/Inner.astro';
+import Schema from '../components/Schema.astro';
+import { contact } from '../data/site';
+
+const actualizada = '24 de enero de 2025';
+---
+
+<Inner
+  title="Política de privacidad · DAppsFactory"
+  description="Cómo DAppsFactory recopila, usa, protege y comparte la información de quienes visitan el sitio, y qué derechos tenés sobre tus datos."
+  compacto
+  eyebrow="Legales"
+  h1="Política de privacidad"
+  lead={`Última actualización: ${actualizada}.`}
+>
+  <Schema breadcrumbs={[{ name: 'Política de privacidad' }]} />
+  <section class="section is-light legal" style="background: var(--bg-light);">
+    <div class="container">
+      <div class="prose legal__prose">
+        <p>
+          En DAppsFactory, la protección de la privacidad y la seguridad de nuestros usuarios es nuestra máxima
+          prioridad. Este documento describe cómo recopilamos, utilizamos, protegemos y compartimos la información
+          que obtenemos a través de nuestro sitio web <a href="https://dappsfactory.io/">dappsfactory.io</a>. Al
+          interactuar con nuestro sitio, aceptás las prácticas descritas en esta Política de Privacidad.
+        </p>
+
+        <h2>1. Información que recopilamos</h2>
+        <p>Recopilamos información personal y no personal para proporcionar y mejorar nuestros servicios:</p>
+        <ul>
+          <li>
+            <strong>Información personal:</strong> datos que los usuarios proporcionan voluntariamente, como nombre,
+            dirección de correo electrónico, número de teléfono, y cualquier otra información ingresada en
+            formularios de contacto o suscripciones.
+          </li>
+          <li>
+            <strong>Información técnica:</strong> datos recopilados automáticamente, como direcciones IP, tipo de
+            navegador, páginas visitadas, tiempo de permanencia, ubicación geográfica aproximada y cookies.
+          </li>
+        </ul>
+
+        <h2>2. Uso de la información</h2>
+        <p>Utilizamos la información recopilada para:</p>
+        <ul>
+          <li>Proveer, mantener y mejorar nuestros servicios.</li>
+          <li>Responder a consultas y solicitudes de los usuarios.</li>
+          <li>Enviar boletines informativos, materiales promocionales y actualizaciones relevantes sobre nuestros servicios.</li>
+          <li>Personalizar la experiencia del usuario en nuestra plataforma.</li>
+          <li>Cumplir con requisitos legales o regulatorios.</li>
+        </ul>
+
+        <h2>3. Cookies y tecnologías similares</h2>
+        <p>Empleamos cookies para optimizar la navegación y experiencia en nuestro sitio web. Las cookies nos ayudan a:</p>
+        <ul>
+          <li>Recordar preferencias del usuario.</li>
+          <li>Analizar patrones de tráfico y uso del sitio.</li>
+          <li>Ofrecer contenido personalizado y relevante.</li>
+        </ul>
+        <p>
+          Podés desactivar las cookies a través de la configuración de tu navegador, aunque esto podría afectar la
+          funcionalidad del sitio.
+        </p>
+
+        <h2>4. Compartición de la información</h2>
+        <p>
+          En DAppsFactory no compartimos, vendemos ni alquilamos información personal a terceros, excepto en las
+          siguientes circunstancias:
+        </p>
+        <ul>
+          <li>
+            <strong>Con proveedores de servicios:</strong> cuando es necesario para operar nuestra plataforma o
+            ejecutar campañas específicas.
+          </li>
+          <li>
+            <strong>Por obligación legal:</strong> si la ley lo exige o si es necesario para proteger nuestros
+            derechos o responder a solicitudes gubernamentales.
+          </li>
+          <li>
+            <strong>En caso de transacciones comerciales:</strong> como parte de una fusión, adquisición o venta de
+            activos, la información podría transferirse a la entidad sucesora.
+          </li>
+        </ul>
+
+        <h2>5. Seguridad de la información</h2>
+        <p>
+          Implementamos medidas de seguridad técnicas y organizativas para proteger los datos de accesos no
+          autorizados, pérdida, alteración o divulgación indebida. Sin embargo, ningún sistema es completamente
+          seguro; instamos a los usuarios a tomar precauciones para proteger su información.
+        </p>
+
+        <h2>6. Derechos del usuario</h2>
+        <p>Como usuario, tenés derecho a:</p>
+        <ul>
+          <li>Acceder, rectificar o eliminar tu información personal.</li>
+          <li>Solicitar la limitación del uso de tus datos.</li>
+          <li>Retirar tu consentimiento para el tratamiento de tus datos en cualquier momento.</li>
+        </ul>
+        <p>
+          Podés contactarnos para ejercer estos derechos escribiendo a
+          <a href={`mailto:${contact.email}`}>{contact.email}</a>.
+        </p>
+
+        <h2>7. Enlaces a sitios de terceros</h2>
+        <p>
+          Nuestro sitio web puede contener enlaces a páginas externas que no están bajo nuestro control. No nos
+          hacemos responsables por las políticas de privacidad ni las prácticas de dichos sitios.
+        </p>
+
+        <h2>8. Cambios en la política de privacidad</h2>
+        <p>
+          Podemos actualizar esta Política de Privacidad periódicamente. Cualquier cambio se publicará en esta página
+          con la fecha de revisión actualizada. Te recomendamos revisarla regularmente para estar informado sobre
+          cómo protegemos tu información.
+        </p>
+
+        <h2>9. Contacto</h2>
+        <p>
+          Si tenés preguntas o inquietudes sobre esta Política de Privacidad o el manejo de tu información, podés
+          contactarnos en:
+        </p>
+        <p>
+          <strong>DAppsFactory</strong><br />
+          Correo: <a href={`mailto:${contact.email}`}>{contact.email}</a><br />
+          Sitio web: <a href="https://dappsfactory.io/">dappsfactory.io</a>
+        </p>
+
+      </div>
+    </div>
+  </section>
+</Inner>

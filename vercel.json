@@ -39,6 +39,11 @@
       "permanent": true
     },
     {
+      "source": "/terminos.html",
+      "destination": "/politica-de-privacidad/",
+      "permanent": true
+    },
+    {
       "source": "/gracias-contacto.html",
       "destination": "/gracias-contacto/",
       "permanent": true
