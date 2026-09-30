@@ -24,6 +24,14 @@ export const analytics = {
 // Todos los "Agendar" del sitio van a la página de contacto.
 export const agendaHref = '/contacto/';
 
+// Qué pasa después de dejar los datos. Lo muestran /contacto y la página de
+// gracias, así que se escribe una sola vez.
+export const queSigue = [
+  'Te respondemos en el día hábil siguiente.',
+  'Una llamada de 30 minutos para entender el caso, el activo y la jurisdicción.',
+  'Si tiene sentido, un documento con arquitectura y alcance. Si no, te lo decimos.',
+];
+
 // Las otras dos empresas de InnovAction Group, en el pie. Los logos están en
 // negativo porque el footer es oscuro; los originales son para fondo claro.
 export const grupo = [

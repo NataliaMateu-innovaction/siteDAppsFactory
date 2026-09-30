@@ -1019,6 +1019,13 @@ html.preload .preloader__ring {
 @media (min-width: 1025px) { .infra__grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
 
 /* 404 */
+/* Página de gracias: dos columnas que se apilan en pantalla chica. */
+.gracias__grid { display: grid; grid-template-columns: 1fr; gap: clamp(40px, 5vw, 72px); align-items: start; }
+@media (min-width: 769px) { .gracias__grid { grid-template-columns: minmax(0, 6fr) minmax(0, 5fr); } }
+.gracias__steps { margin-top: 0; }
+.gracias__links { flex-direction: column; gap: 14px; }
+.gracias__cta { margin-top: clamp(40px, 5vw, 56px); }
+
 .notfound__links { display: flex; flex-wrap: wrap; gap: 12px 36px; }
 .notfound__links .tlink { margin-top: 0; }
 .notfound__cta { margin-top: clamp(40px, 5vw, 56px); }

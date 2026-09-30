@@ -9,6 +9,8 @@ const redirects = [
   ...[2, 3, 4, 5].map((n) => ({ source: `/blog0${n}.html`, destination: '/blog/', permanent: true })),
   { source: '/blogs.html', destination: '/blog/', permanent: true },
   { source: '/index.html', destination: '/', permanent: true },
+  // Por si el CRM queda apuntando a la forma con .html
+  { source: '/gracias-contacto.html', destination: '/gracias-contacto/', permanent: true },
 ];
 for (const f of readdirSync('./src/content/blog').filter((f) => f.endsWith('.md')).sort()) {
   const m = readFileSync(`./src/content/blog/${f}`, 'utf8').match(/^legacy:\s*"?([^"\n]+)"?/m);

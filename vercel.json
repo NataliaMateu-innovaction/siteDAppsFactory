@@ -39,6 +39,11 @@
       "permanent": true
     },
     {
+      "source": "/gracias-contacto.html",
+      "destination": "/gracias-contacto/",
+      "permanent": true
+    },
+    {
       "source": "/blog-post16.html",
       "destination": "/blog/analisis-de-mercado-expectativas-para-nuevos-negocios-blockchain-en-ee-uu-para-2025/",
       "permanent": true

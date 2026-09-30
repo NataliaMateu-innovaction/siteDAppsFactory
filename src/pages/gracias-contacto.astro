@@ -1,0 +1,72 @@
+---
+/*
+  A donde cae quien manda el formulario de /contacto.
+
+  La redirección se configura en el CRM (LeadConnector / GoHighLevel), en el
+  formulario "Form Contacto Web DappsFactory" → On Submit → Redirect a
+  https://dappsfactory.io/gracias-contacto/
+
+  Va noindex: no tiene por qué salir en Google, y si saliera se llenaría de
+  visitas que no son conversiones.
+*/
+import Inner from '../layouts/Inner.astro';
+import { contact, queSigue } from '../data/site';
+---
+
+<Inner
+  title="Gracias por escribirnos · DAppsFactory"
+  description="Recibimos tus datos. Te respondemos en el día hábil siguiente para coordinar una llamada de 30 minutos."
+  noindex
+  eyebrow="Mensaje recibido"
+  h1="Gracias. Ya tenemos tus datos."
+  lead="Te escribimos en el día hábil siguiente para coordinar la llamada. Si es urgente, escribinos por WhatsApp y lo vemos hoy."
+>
+  <section class="section is-light gracias" style="background: var(--bg-light);">
+    <div class="container">
+      <div class="gracias__grid">
+        <div data-reveal>
+          <div class="footer__title">Qué pasa después</div>
+          <ol class="contact__steps gracias__steps">
+            {queSigue.map((paso) => <li>{paso}</li>)}
+          </ol>
+        </div>
+
+        <div data-reveal data-delay="120">
+          <div class="footer__title">Mientras tanto</div>
+          <div class="notfound__links gracias__links">
+            <a href="/blog/" class="tlink">Leer el blog
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7" /><path d="M7 7h10v10" /></svg>
+            </a>
+            <a href="/#proyectos" class="tlink">Ver proyectos que hicimos
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7" /><path d="M7 7h10v10" /></svg>
+            </a>
+            <a href="/#soluciones" class="tlink">Ver soluciones
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7" /><path d="M7 7h10v10" /></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <a href={contact.whatsapp} class="btn-primary gracias__cta" target="_blank" rel="noopener noreferrer" data-magnetic>
+        Escribirnos por WhatsApp
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 12L12 4M12 4H6M12 4v6" stroke="#060607" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" /></svg>
+      </a>
+    </div>
+  </section>
+</Inner>
+
+{import.meta.env.PROD && (
+  <script is:inline>
+    /* Esta página es el punto de conversión: llegar acá es un lead.
+       `gtag` queda encerrado en el script de Analytics, así que se escribe
+       en dataLayer, que es lo que gtag.js y GTM leen igual. */
+    (function () {
+      try {
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { window.dataLayer.push(arguments); }
+        gtag('event', 'generate_lead');
+        if (typeof window.fbq === 'function') window.fbq('track', 'Lead');
+      } catch (e) {}
+    })();
+  </script>
+)}

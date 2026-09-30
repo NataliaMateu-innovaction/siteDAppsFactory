@@ -5,7 +5,7 @@
 */
 import Inner from '../layouts/Inner.astro';
 import Schema from '../components/Schema.astro';
-import { contact } from '../data/site';
+import { contact, queSigue } from '../data/site';
 const formId = contact.crmFormId;
 ---
 
@@ -59,9 +59,7 @@ const formId = contact.crmFormId;
         <div class="contact__block">
           <div class="footer__title">Qué pasa después</div>
           <ol class="contact__steps">
-            <li>Te respondemos en el día hábil siguiente.</li>
-            <li>Una llamada de 30 minutos para entender el caso, el activo y la jurisdicción.</li>
-            <li>Si tiene sentido, un documento con arquitectura y alcance. Si no, te lo decimos.</li>
+            {queSigue.map((paso) => <li>{paso}</li>)}
           </ol>
         </div>
       </aside>

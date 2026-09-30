@@ -21,7 +21,8 @@ export default defineConfig({
         else item.priority = 0.5;
         return item;
       },
-      filter: (page) => !page.includes('/404'),
+      // 404 y la pagina de gracias son noindex: no van al sitemap.
+      filter: (page) => !page.includes('/404') && !page.includes('/gracias-'),
     }),
   ],
   // Los redirects desde las URLs viejas (blog-postNN.html) viven en vercel.json;
