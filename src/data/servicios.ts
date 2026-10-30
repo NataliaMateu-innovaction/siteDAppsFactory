@@ -54,6 +54,9 @@ export type ServiceLanding = {
     cta: string;
     /** Segundo botón, discreto, para un destino externo (el sitio del producto). */
     link?: { href: string; label: string };
+    /** Video del banner, servido desde public/. Si está, se muestra en lugar de
+        `image`; con prefers-reduced-motion queda el poster quieto. */
+    video?: { src: string; poster: string };
     image?: string;
     imageAlt?: string;
   };
@@ -461,6 +464,7 @@ export const serviceLandings: ServiceLanding[] = [
       ],
       cta: 'Quiero conocer la solución',
       link: { href: 'https://www.sempayment.com/', label: 'Ver SemPay' },
+      video: { src: '/media/sempay-demo.mp4', poster: '/media/sempay-demo-poster.jpg' },
       image: 'sempay.png',
       imageAlt:
         'La pantalla de SemPay ejecutando un lote: 4.731 de 5.002 pagos enviados, 38,39 pagos por segundo, con los montos en USDC y EURC y el costo de red',

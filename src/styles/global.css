@@ -1020,6 +1020,14 @@ html.preload .preloader__ring {
 @media (min-width: 1025px) { .infra__grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
 
 /* 404 */
+/* Video del banner de una landing: mismo aspecto que la imagen que reemplaza. */
+.svc-video, .svc-video__poster {
+  display: block; width: 100%; height: auto;
+  border-radius: 14px;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.45);
+}
+.svc-video__poster { display: none; }
+
 /* Números medidos de una landing de servicio. El valor pesa; la nota de
    abajo dice de dónde sale, que es lo que lo hace creíble. */
 .service-hero__acciones { display: flex; flex-wrap: wrap; align-items: center; gap: 16px 28px; }
@@ -1086,6 +1094,8 @@ html.preload .preloader__ring {
   }
   :root { --cut: 0px; }
   .hero__video { display: none; }
+  .svc-video { display: none; }
+  .svc-video__poster { display: block; }
   .hero__poster { display: block; }
   .marquee__track { animation: none; transform: none; }
   .proc__step { opacity: 1; }

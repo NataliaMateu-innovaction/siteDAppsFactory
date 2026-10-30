@@ -50,7 +50,16 @@ const heroImage = s.hero.image ? heroImages['../../assets/servicios/' + s.hero.i
           )}
         </div>
       </div>
-      {heroImage && (
+      {s.hero.video ? (
+        <div class="service-hero__media">
+          {/* El poster queda como <img> para quien pidió menos movimiento: el
+              CSS esconde uno u otro, así el video no arranca igual. */}
+          <video class="svc-video" autoplay muted loop playsinline preload="metadata" poster={s.hero.video.poster} aria-label={s.hero.imageAlt}>
+            <source src={s.hero.video.src} type="video/mp4" />
+          </video>
+          <img class="svc-video__poster" src={s.hero.video.poster} alt={s.hero.imageAlt ?? ''} loading="eager" />
+        </div>
+      ) : heroImage ? (
         <div class="service-hero__media">
           <Picture
             src={heroImage}
@@ -62,7 +71,7 @@ const heroImage = s.hero.image ? heroImages['../../assets/servicios/' + s.hero.i
             loading="eager"
           />
         </div>
-      )}
+      ) : null}
     </div>
   </header>
 
