@@ -12,6 +12,7 @@
   · text      título + párrafos (el último resaltado) y opcional tagline o flujo
   · infra     título + texto y etiquetas (tags) o ítems con descripción (items)
   · stats     números medidos, con una nota al pie que dice de dónde salen
+  · demo      el producto: logo, video de la demo y link a su sitio
 */
 
 type Base = { theme?: 'light' | 'dark' };
@@ -39,6 +40,18 @@ export type Section =
       items: { value: string; label: string; text: string }[];
       /** De dónde salen los números: sin esto, no se publican. */
       nota: string;
+    })
+  | (Base & {
+      type: 'demo';
+      /** Logo del producto, en public/logos/. */
+      logo?: string;
+      logoAlt?: string;
+      title: string;
+      lead?: string;
+      video: { src: string; poster: string };
+      videoAlt?: string;
+      caption?: string;
+      link?: { href: string; label: string };
     });
 
 export type ServiceLanding = {
@@ -57,6 +70,9 @@ export type ServiceLanding = {
     /** Video del banner, servido desde public/. Si está, se muestra en lugar de
         `image`; con prefers-reduced-motion queda el poster quieto. */
     video?: { src: string; poster: string };
+    /** Ilustración animada (SVG con capas) en lugar de `image`. Con
+        prefers-reduced-motion se muestra `image`, que queda de respaldo. */
+    motion?: 'sempay';
     image?: string;
     imageAlt?: string;
   };
@@ -464,10 +480,10 @@ export const serviceLandings: ServiceLanding[] = [
       ],
       cta: 'Quiero conocer la solución',
       link: { href: 'https://www.sempayment.com/', label: 'Ver SemPay' },
-      video: { src: '/media/sempay-demo.mp4', poster: '/media/sempay-demo-poster.jpg' },
-      image: 'sempay.png',
+      motion: 'sempay',
+      image: 'sempay-hero.png',
       imageAlt:
-        'La pantalla de SemPay ejecutando un lote: 4.731 de 5.002 pagos enviados, 38,39 pagos por segundo, con los montos en USDC y EURC y el costo de red',
+        'Una planilla de empleados que se abre en pagos hacia varias wallets, cada uno con su comprobante',
     },
     sections: [
       {
@@ -483,6 +499,17 @@ export const serviceLandings: ServiceLanding[] = [
           { value: '100', label: 'relayers en paralelo', text: 'Al terminar devuelven el gas que no usaron.' },
         ],
         nota: 'Demo filmada el 26 de octubre de 2026 sobre Arc testnet, la red de Circle. Lote 3286473979534202183.',
+      },
+      {
+        type: 'demo',
+        logo: '/logos/sempay.svg',
+        logoAlt: 'SemPay',
+        title: 'Así se ve mientras paga',
+        lead: 'El lote completo, del arranque hasta la última confirmación. Sin cortes y sin acelerar el reloj de la pantalla.',
+        video: { src: '/media/sempay-demo.mp4', poster: '/media/sempay-demo-poster.jpg' },
+        videoAlt: 'SemPay ejecutando el lote: el contador avanza hasta 5.002 de 5.002 pagos confirmados',
+        caption: 'La velocidad no la pone la interfaz: son cien relayers enviando en paralelo contra el contrato.',
+        link: { href: 'https://www.sempayment.com/', label: 'Probar SemPay' },
       },
       {
         type: 'steps',

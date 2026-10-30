@@ -25,6 +25,10 @@ const leads = (l?: string | string[]) => (l ? (Array.isArray(l) ? l : [l]) : [])
 // Imágenes de hero: se resuelven acá para que Astro las optimice (AVIF/WebP).
 const heroImages = import.meta.glob<{ default: ImageMetadata }>('../../assets/servicios/*.{png,jpg,jpeg,webp}', { eager: true });
 const heroImage = s.hero.image ? heroImages['../../assets/servicios/' + s.hero.image]?.default : undefined;
+// Ilustración animada del hero: SVG con las capas separadas, que se mueven con
+// CSS. Pesa menos que la imagen plana y no necesita video.
+const motions = import.meta.glob<string>('../../assets/motion/*.svg', { eager: true, query: '?raw', import: 'default' });
+const heroMotion = s.hero.motion ? motions['../../assets/motion/' + s.hero.motion + '-hero.svg'] : undefined;
 ---
 
 <Base title={s.seoTitle} description={s.seoDescription}>
@@ -50,7 +54,23 @@ const heroImage = s.hero.image ? heroImages['../../assets/servicios/' + s.hero.i
           )}
         </div>
       </div>
-      {s.hero.video ? (
+      {heroMotion ? (
+        <div class="service-hero__media hero-motion__wrap">
+          <Fragment set:html={heroMotion} />
+          {heroImage && (
+            <Picture
+              class="hero-motion__quieta"
+              src={heroImage}
+              formats={['avif', 'webp']}
+              fallbackFormat="webp"
+              widths={[560, 1120]}
+              sizes="(min-width: 1025px) 560px, (min-width: 641px) 70vw, calc(100vw - 40px)"
+              alt={s.hero.imageAlt ?? ''}
+              loading="eager"
+            />
+          )}
+        </div>
+      ) : s.hero.video ? (
         <div class="service-hero__media">
           {/* El poster queda como <img> para quien pidió menos movimiento: el
               CSS esconde uno u otro, así el video no arranca igual. */}
@@ -198,6 +218,29 @@ const heroImage = s.hero.image ? heroImages['../../assets/servicios/' + s.hero.i
               ))}
             </div>
             <p class="stats__nota" data-reveal>{sec.nota}</p>
+          </div>
+        )}
+
+        {sec.type === 'demo' && (
+          <div class="container demo" data-reveal>
+            {sec.logo && <img class="demo__logo" src={sec.logo} alt={sec.logoAlt ?? ''} loading="lazy" />}
+            <div class="svc-sec__head">
+              <h2 id={id} class="h2">{sec.title}</h2>
+              {sec.lead && <p class="lead svc-sec__lead">{sec.lead}</p>}
+            </div>
+            <div class="demo__media">
+              <video class="svc-video" autoplay muted loop playsinline preload="metadata" poster={sec.video.poster} aria-label={sec.videoAlt}>
+                <source src={sec.video.src} type="video/mp4" />
+              </video>
+              <img class="svc-video__poster" src={sec.video.poster} alt={sec.videoAlt ?? ''} loading="lazy" />
+            </div>
+            {sec.caption && <p class="demo__caption">{sec.caption}</p>}
+            {sec.link && (
+              <a href={sec.link.href} class="tlink demo__link" target="_blank" rel="noopener noreferrer">
+                {sec.link.label}
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7" /><path d="M7 7h10v10" /></svg>
+              </a>
+            )}
           </div>
         )}
 

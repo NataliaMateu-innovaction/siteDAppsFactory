@@ -1020,6 +1020,80 @@ html.preload .preloader__ring {
 @media (min-width: 1025px) { .infra__grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
 
 /* 404 */
+/* Ilustración animada del hero (SemPay): las capas de la ilustración se mueven
+   con CSS, como en el sitio del producto. Todo cuelga de .hero-motion porque
+   las clases de adentro (.card, .scan, .glow) son nombres genéricos que de
+   otro modo chocarían con el resto del sitio. */
+.hero-motion__wrap { position: relative; }
+.hero-motion {
+  --t: 6s; --lime: #d1ff52;
+  display: block; width: 100%; height: auto; aspect-ratio: 1 / 1;
+}
+.hero-motion .route,
+.hero-motion .port-flash,
+.hero-motion .scan,
+.hero-motion .check-glow { mix-blend-mode: screen; }
+
+.hero-motion .scan { animation: hm-scan var(--t) linear infinite; }
+.hero-motion .ghost { animation: hm-ghost var(--dur) ease-in-out var(--phase) infinite alternate; }
+.hero-motion .card { animation: hm-sway var(--dur) ease-in-out var(--phase) infinite alternate; }
+.hero-motion .card-bump { animation: hm-bump var(--t) var(--delay) infinite; }
+.hero-motion .comet {
+  fill: none; stroke-linecap: round;
+  stroke-dasharray: calc(var(--l) * 1px) 2px;
+  stroke-dashoffset: calc(var(--l) * 1px);
+  animation: hm-comet var(--t) var(--delay) infinite;
+}
+.hero-motion .port-flash { fill: #f4ffd0; animation: hm-port var(--t) var(--delay) infinite ease-out; }
+.hero-motion .check-glow { fill: var(--lime); animation: hm-glow var(--t) var(--delay) infinite ease-out; }
+.hero-motion .check-ring { fill: none; stroke: var(--lime); stroke-width: 2.5; animation: hm-ring var(--t) var(--delay) infinite ease-out; }
+
+.hero-motion__quieta { display: none; }
+
+@keyframes hm-scan {
+  0% { transform: translateY(0); opacity: 0; }
+  2%, 14% { opacity: 1; }
+  17%, 100% { transform: translateY(484px); opacity: 0; }
+}
+@keyframes hm-ghost {
+  0% { transform: translate(0); }
+  100% { transform: translate(var(--dx), var(--dy)); }
+}
+@keyframes hm-sway {
+  0% { transform: rotate(-1.4deg); }
+  100% { transform: rotate(1.4deg); }
+}
+@keyframes hm-bump {
+  0%, 19% { transform: scale(1); animation-timing-function: cubic-bezier(0.2, 0.8, 0.3, 1); }
+  22% { transform: scale(1.05); animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1); }
+  34%, 100% { transform: scale(1); }
+}
+@keyframes hm-comet {
+  0% { stroke-dashoffset: calc(var(--l) * 1px); animation-timing-function: cubic-bezier(0.4, 0, 0.6, 1); }
+  30%, 100% { stroke-dashoffset: calc((var(--l) - 1.36) * 1px); }
+}
+@keyframes hm-port {
+  0%, 19% { opacity: 0; transform: scale(0.3); }
+  19.5% { opacity: 1; transform: scale(1); }
+  29%, 100% { opacity: 0; transform: scale(2.6); }
+}
+@keyframes hm-glow {
+  0%, 23% { opacity: 0; }
+  24% { opacity: 0.5; }
+  38%, 100% { opacity: 0; }
+}
+@keyframes hm-ring {
+  0%, 23% { opacity: 0; transform: scale(1); }
+  24% { opacity: 0.9; transform: scale(1); }
+  40%, 100% { opacity: 0; transform: scale(1.9); }
+}
+
+/* El producto dentro de una landing: logo, video y pie. */
+.demo__logo { display: block; height: 34px; width: auto; margin-bottom: 22px; }
+.demo__media { margin-top: clamp(36px, 4vw, 52px); }
+.demo__caption { margin: 22px 0 0; max-width: 62ch; font-size: 0.9375rem; color: var(--muted); }
+.demo__link { margin-top: 26px; }
+
 /* Video del banner de una landing: mismo aspecto que la imagen que reemplaza. */
 .svc-video, .svc-video__poster {
   display: block; width: 100%; height: auto;
@@ -1096,6 +1170,8 @@ html.preload .preloader__ring {
   .hero__video { display: none; }
   .svc-video { display: none; }
   .svc-video__poster { display: block; }
+  .hero-motion { display: none; }
+  .hero-motion__quieta { display: block; }
   .hero__poster { display: block; }
   .marquee__track { animation: none; transform: none; }
   .proc__step { opacity: 1; }
