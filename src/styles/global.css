@@ -1020,6 +1020,24 @@ html.preload .preloader__ring {
 @media (min-width: 1025px) { .infra__grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
 
 /* 404 */
+/* Números medidos de una landing de servicio. El valor pesa; la nota de
+   abajo dice de dónde sale, que es lo que lo hace creíble. */
+.service-hero__acciones { display: flex; flex-wrap: wrap; align-items: center; gap: 16px 28px; }
+.service-hero__link { margin-top: 0; }
+
+.stats__grid { display: grid; grid-template-columns: 1fr; gap: 28px 32px; margin-top: clamp(40px, 5vw, 64px); }
+@media (min-width: 641px) { .stats__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (min-width: 1025px) { .stats__grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+.stats__item { padding-top: 22px; border-top: 1px solid var(--hairline); }
+.stats__value {
+  display: block;
+  font-family: var(--font-display); font-weight: 700;
+  font-size: clamp(2.2rem, 3.6vw, 3rem); line-height: 1; letter-spacing: -0.03em;
+}
+.stats__label { display: block; margin-top: 8px; font-size: 0.9375rem; font-weight: 500; }
+.stats__text { margin-top: 12px; color: var(--muted); }
+.stats__nota { margin-top: clamp(36px, 4vw, 52px); font-size: 0.875rem; color: var(--muted); max-width: 70ch; }
+
 /* Páginas legales: una sola columna, con el ancho de lectura del blog. */
 .legal { padding: clamp(40px, 5vw, 64px) 0 clamp(72px, 9vw, 112px); }
 .legal__prose { max-width: 74ch; }

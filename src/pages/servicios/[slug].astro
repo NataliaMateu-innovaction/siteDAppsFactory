@@ -37,10 +37,18 @@ const heroImage = s.hero.image ? heroImages['../../assets/servicios/' + s.hero.i
         {s.hero.paragraphs.map((p, i) => (
           <p class:list={['lead', 'page-head__lead', { 'service-hero__p2': i > 0 }]}>{p}</p>
         ))}
-        <a href={agendaHref} class="btn-primary service-hero__cta" data-magnetic>
-          {s.hero.cta}
-          <Fragment set:html={arrow} />
-        </a>
+        <div class="service-hero__acciones">
+          <a href={agendaHref} class="btn-primary service-hero__cta" data-magnetic>
+            {s.hero.cta}
+            <Fragment set:html={arrow} />
+          </a>
+          {s.hero.link && (
+            <a href={s.hero.link.href} class="tlink service-hero__link" target="_blank" rel="noopener noreferrer">
+              {s.hero.link.label}
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7" /><path d="M7 7h10v10" /></svg>
+            </a>
+          )}
+        </div>
       </div>
       {heroImage && (
         <div class="service-hero__media">
@@ -162,6 +170,25 @@ const heroImage = s.hero.image ? heroImages['../../assets/servicios/' + s.hero.i
                 </ol>
               )}
             </div>
+          </div>
+        )}
+
+        {sec.type === 'stats' && (
+          <div class="container">
+            <div class="svc-sec__head" data-reveal>
+              <h2 id={id} class="h2">{sec.title}</h2>
+              {sec.lead && <p class="lead svc-sec__lead">{sec.lead}</p>}
+            </div>
+            <div class="stats__grid">
+              {sec.items.map((it, j) => (
+                <div class="stats__item" data-reveal data-delay={[0, 100, 200][j % 3] || undefined}>
+                  <span class="stats__value">{it.value}</span>
+                  <span class="stats__label">{it.label}</span>
+                  <p class="body stats__text">{it.text}</p>
+                </div>
+              ))}
+            </div>
+            <p class="stats__nota" data-reveal>{sec.nota}</p>
           </div>
         )}
 

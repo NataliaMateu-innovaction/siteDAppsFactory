@@ -232,9 +232,9 @@ export const services = [
   {
     n: '04',
     name: 'Pagos masivos en cripto',
-    caption: 'Cientos de transferencias de activos digitales, ejecutadas en una sola operación.',
+    caption: 'Miles de transferencias en stablecoins, ejecutadas en una sola operación.',
     text:
-      'Infraestructura de alta velocidad para ejecutar grandes volúmenes de pagos en cripto de forma automatizada: a usuarios, proveedores, partners o distribución de fondos. Gestión centralizada, sin procesos manuales ni tiempos operativos.',
+      'Desarrollamos SemPay: se carga un Excel, se firma una vez y cada pago llega con su comprobante en blockchain. 5.002 pagos en 2 minutos y 33 segundos, sin que los fondos salgan de la wallet de la empresa.',
     link: { href: '/servicios/pagos-masivos-cripto/', label: 'Quiero conocer la solución' },
   },
 ];

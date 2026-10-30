@@ -11,6 +11,7 @@
   · steps     pasos numerados con cabecera sticky
   · text      título + párrafos (el último resaltado) y opcional tagline o flujo
   · infra     título + texto y etiquetas (tags) o ítems con descripción (items)
+  · stats     números medidos, con una nota al pie que dice de dónde salen
 */
 
 type Base = { theme?: 'light' | 'dark' };
@@ -30,7 +31,15 @@ export type Section =
   | (Base & { type: 'grid'; title: string; lead?: string | string[]; items: { title: string; text: string }[] })
   | (Base & { type: 'steps'; title: string; lead?: string; items: { title: string; text: string }[] })
   | (Base & { type: 'text'; title: string; paragraphs: string[]; tagline?: string; flow?: string[] })
-  | (Base & { type: 'infra'; title: string; text?: string; tags?: string[]; items?: { title: string; text: string }[] });
+  | (Base & { type: 'infra'; title: string; text?: string; tags?: string[]; items?: { title: string; text: string }[] })
+  | (Base & {
+      type: 'stats';
+      title: string;
+      lead?: string;
+      items: { value: string; label: string; text: string }[];
+      /** De dónde salen los números: sin esto, no se publican. */
+      nota: string;
+    });
 
 export type ServiceLanding = {
   slug: string;
@@ -38,7 +47,16 @@ export type ServiceLanding = {
   seoTitle: string;
   seoDescription: string;
   // `image`: archivo en src/assets/servicios/ (sin ruta); se muestra a la derecha del hero
-  hero: { eyebrow: string; title: string; paragraphs: string[]; cta: string; image?: string; imageAlt?: string };
+  hero: {
+    eyebrow: string;
+    title: string;
+    paragraphs: string[];
+    cta: string;
+    /** Segundo botón, discreto, para un destino externo (el sitio del producto). */
+    link?: { href: string; label: string };
+    image?: string;
+    imageAlt?: string;
+  };
   sections: Section[];
   cta: { title: string; text: string; label: string };
   faqs: { q: string; a: string }[];
@@ -422,101 +440,193 @@ export const serviceLandings: ServiceLanding[] = [
     ],
   },
   // ---- 04 · Pagos Masivos en Cripto ---------------------------------------------
-  // BORRADOR: el hero es texto del cliente; el resto lo redactó Claude en el mismo
-  // tono para completar la landing, y está pendiente de validación.
+  // ---- 04 · Pagos masivos en cripto ----------------------------------------
+  // La protagoniza SemPay (sempayment.com), el producto propio. Los números
+  // son los de la demo filmada el 26/10/2026 sobre Arc testnet, la misma que
+  // publica el sitio de SemPay; la red se aclara donde se muestran, porque
+  // quien evalúa esto lo va a verificar.
   {
     slug: 'pagos-masivos-cripto',
     name: 'Pagos Masivos en Cripto',
-    seoTitle: 'Pagos Masivos en Cripto · DAppsFactory',
+    seoTitle: 'Pagos masivos en USDC y EURC · DAppsFactory',
     seoDescription:
-      'Infraestructura de pagos masivos en cripto: grandes volúmenes de transferencias de activos digitales de forma rápida, automatizada y trazable.',
+      'SemPay ejecuta miles de pagos en USDC y EURC en un solo lote: una firma, comprobante on-chain por pago y los fondos siempre en su wallet.',
     hero: {
       eyebrow: 'Pagos Masivos en Cripto',
       title: 'Envíe múltiples pagos en cripto de forma inmediata y a escala.',
       paragraphs: [
-        'Desarrollamos una infraestructura de pagos masivos en cripto de alta velocidad, diseñada para empresas que necesitan ejecutar grandes volúmenes de transferencias de activos digitales de forma rápida y automatizada.',
-        'La solución permite centralizar la gestión de pagos y ejecutar múltiples transacciones sobre blockchain, reduciendo procesos manuales y tiempos operativos.',
-        'Puede aplicarse a pagos a usuarios, proveedores, partners, distribución de fondos y otras operaciones que requieran transferencias masivas de activos digitales.',
+        'Desarrollamos SemPay: una infraestructura que ejecuta miles de transferencias en USDC y EURC desde una sola operación. Se carga un Excel, se firma una vez y cada pago llega con su comprobante en blockchain.',
+        'Los fondos nunca salen de la wallet de la empresa. El contrato solo puede tomar exactamente lo que se firmó, y únicamente para ese lote.',
+        'Ya está construido y se puede probar. Si su operación necesita otra cosa, desarrollamos la infraestructura a medida sobre la misma base.',
       ],
       cta: 'Quiero conocer la solución',
+      link: { href: 'https://www.sempayment.com/', label: 'Ver SemPay' },
+      image: 'sempay.png',
+      imageAlt:
+        'La pantalla de SemPay ejecutando un lote: 4.731 de 5.002 pagos enviados, 38,39 pagos por segundo, con los montos en USDC y EURC y el costo de red',
     },
     sections: [
       {
-        type: 'features',
-        title: 'Una infraestructura para operar pagos a escala',
-        lead: 'La solución centraliza la gestión de pagos y ejecuta múltiples transacciones sobre blockchain desde una misma operación, con control y registro de cada movimiento.',
-        includes: [
-          'Carga masiva de destinatarios y montos',
-          'Ejecución de lotes de transferencias on-chain',
-          'Stablecoins y otros activos digitales',
-          'Programación y automatización de pagos',
-          'Validación y aprobación de lotes',
-          'Estado y trazabilidad de cada transacción',
-          'Reporting y conciliación',
-          'Integración vía API con sistemas existentes',
-          'Gestión de wallets y permisos',
-          'Notificaciones a destinatarios',
+        type: 'stats',
+        title: 'Un lote de 5.002 pagos, medido',
+        lead: '2.500 pagos en USDC y 2.500 en EURC en la misma operación. Los números son de una corrida real, no de una estimación.',
+        items: [
+          { value: '5.002', label: 'de 5.002 confirmadas', text: 'Ninguna transacción falló.' },
+          { value: '2:33', label: 'minutos', text: 'Tiempo real de envío del lote completo.' },
+          { value: '~33', label: 'pagos por segundo', text: 'Promedio sostenido, con picos cerca de 50.' },
+          { value: '0,0033', label: 'USDC de gas por pago', text: 'Un tercio de centavo, sin importar el monto.' },
+          { value: '1', label: 'firma por lote', text: 'Una aprobación autoriza las 5.002 transacciones.' },
+          { value: '100', label: 'relayers en paralelo', text: 'Al terminar devuelven el gas que no usaron.' },
         ],
-        closing: 'De cientos de transferencias manuales a una sola operación, con trazabilidad completa.',
+        nota: 'Demo filmada el 26 de octubre de 2026 sobre Arc testnet, la red de Circle. Lote 3286473979534202183.',
+      },
+      {
+        type: 'steps',
+        title: 'De la planilla a los comprobantes',
+        lead: 'Cuatro pasos. No hay registro, ni formularios, ni esperas: la wallet de la empresa es la cuenta.',
+        items: [
+          {
+            title: 'Conectar la wallet',
+            text: 'MetaMask, Ledger o cualquier wallet compatible. Los fondos quedan donde están.',
+          },
+          {
+            title: 'Subir el Excel o CSV',
+            text: 'Una fila por pago: wallet, monto y referencia. O armar el lote desde el sistema propio con la API.',
+          },
+          {
+            title: 'Verificar y firmar una vez',
+            text: 'El navegador recalcula el lote antes de firmar y lo compara con el archivo. Si algo no coincide, no se firma.',
+          },
+          {
+            title: 'Seguir los pagos en vivo',
+            text: 'Cada pago con su hash de transacción. Al terminar se exporta el Excel de comprobantes, listo para conciliar.',
+          },
+        ],
       },
       {
         type: 'grid',
-        title: '¿Dónde se aplica?',
-        lead: 'Cualquier operación que requiera enviar activos digitales a muchos destinatarios de forma recurrente o en un mismo momento.',
+        title: 'Por qué importa cómo está construido',
+        lead: 'Lo que distingue a SemPay no es la velocidad: es que no hay que confiar en nadie para conseguirla.',
         items: [
-          { title: 'Pagos a usuarios', text: 'Acreditaciones, reembolsos e incentivos a la base de usuarios de una plataforma.' },
-          { title: 'Pagos a proveedores', text: 'Liquidación de servicios y facturas a proveedores locales e internacionales.' },
-          { title: 'Partners y afiliados', text: 'Comisiones y liquidaciones periódicas a redes de partners, agentes o afiliados.' },
-          { title: 'Distribución de fondos', text: 'Reparto de fondos entre cuentas, entidades o unidades de negocio.' },
-          { title: 'Rendimientos y recompensas', text: 'Distribución de rendimientos, recompensas o beneficios a tenedores de activos digitales.' },
-          { title: 'Operaciones recurrentes', text: 'Pagos programados que se repiten con una frecuencia definida, sin intervención manual.' },
+          {
+            title: 'Sin custodia',
+            text: 'El dinero no se deposita en ningún lado. Queda en la wallet de la empresa hasta el momento exacto de cada pago.',
+          },
+          {
+            title: 'Una firma, y acotada',
+            text: 'Se firma la huella del lote. Nadie puede agregar, quitar ni cambiar un pago sin que esa huella deje de coincidir.',
+          },
+          {
+            title: 'Verificación en el navegador',
+            text: 'Antes de cada firma, el navegador recalcula el lote por su cuenta. Si el servidor cambiara un monto o una dirección, no firma.',
+          },
+          {
+            title: 'Contrato auditable',
+            text: 'El contrato que ejecuta los pagos está verificado y se puede revisar en el explorador de la red. El código es público.',
+          },
+          {
+            title: 'Prueba por pago',
+            text: 'Cada transferencia queda atada al lote firmado y tiene su registro en blockchain. No hay planilla que conciliar a mano.',
+          },
+          {
+            title: 'Costo a la vista',
+            text: 'La comisión y el gas se muestran antes de firmar, no después. En Arc el gas se paga en el mismo USDC.',
+          },
+        ],
+      },
+      {
+        type: 'features',
+        title: 'Dónde se usa',
+        lead: 'Cualquier operación que tenga que pagarle a muchas personas o empresas a la vez, de forma recurrente o en un mismo momento.',
+        label: 'Casos de uso',
+        includes: [
+          'Sueldos de todo el equipo en un solo lote',
+          'Pagos a proveedores con la referencia de cada factura',
+          'Comisiones de vendedores y afiliados, período a período',
+          'Liquidaciones entre plataformas y partners',
+          'Premios, incentivos y airdrops corporativos',
+          'Remesas a familias y colaboradores en otros países',
+          'Acreditaciones y reembolsos a usuarios',
+          'Distribución de rendimientos a tenedores de activos',
+        ],
+        closing: 'De cientos de transferencias de a una a una sola operación, con comprobante de cada pago.',
+      },
+      {
+        type: 'infra',
+        title: 'Conectado a su sistema',
+        text: 'Los lotes se pueden crear desde el sistema que ya usa la empresa, sin pasar por la interfaz.',
+        items: [
+          {
+            title: 'API REST',
+            text: 'Se arma el lote con una llamada, en JSON, Excel o CSV, y se firma con la wallet.',
+          },
+          {
+            title: 'Webhooks firmados',
+            text: 'Avisos por pago y por lote, firmados y ordenados, para actualizar el sistema propio.',
+          },
+          {
+            title: 'Reintentos seguros',
+            text: 'Si una llamada se repite, el lote no se duplica. Está pensado para fallar sin romper nada.',
+          },
+          {
+            title: 'Dos monedas',
+            text: 'USDC y EURC en el mismo lote, cada fila en la moneda que corresponda.',
+          },
         ],
       },
       {
         type: 'text',
-        title: 'De un proceso manual a una operación automatizada',
+        title: '¿Y si necesita otra cosa?',
         paragraphs: [
-          'Ejecutar cientos de transferencias una por una implica tiempo, errores y costos operativos.',
-          'La infraestructura de pagos masivos permite preparar, validar y ejecutar lotes completos de transacciones sobre blockchain, con el estado y la trazabilidad de cada pago.',
-          'Operaciones que antes llevaban horas se resuelven en minutos, con control y registro de cada movimiento.',
+          'SemPay resuelve el caso más común: pagar a muchos destinatarios en stablecoins, rápido y con prueba de cada pago.',
+          'Pero hay operaciones que necesitan otros activos, otras redes, flujos de aprobación propios o una integración profunda con el core de la empresa.',
+          'En esos casos desarrollamos la infraestructura a medida, sobre la misma base que ya está construida y probada.',
         ],
-        flow: ['Carga', 'Validación', 'Ejecución', 'Trazabilidad'],
-      },
-      {
-        type: 'steps',
-        title: 'Del proyecto a producción',
-        items: [
-          { title: 'Diagnóstico y arquitectura', text: 'Definimos activos, volúmenes, redes, destinatarios y las integraciones necesarias.' },
-          { title: 'Configuración', text: 'Adaptamos los flujos de carga, validación y ejecución al modelo operativo de la empresa.' },
-          { title: 'Integraciones', text: 'Conectamos wallets, custodia, proveedores y sistemas existentes mediante APIs.' },
-          { title: 'Testing y validación', text: 'Probamos los flujos, los límites y la seguridad de la operación antes de salir a producción.' },
-          { title: 'Producción', text: 'Despliegue con monitoreo, documentación y soporte para la operación diaria.' },
-        ],
-      },
-      {
-        type: 'infra',
-        title: 'Pensada para operar a escala',
-        items: [
-          { title: 'Alta velocidad', text: 'Lotes de transferencias ejecutados de forma inmediata sobre blockchain.' },
-          { title: 'Automatizada', text: 'Pagos programados y flujos de aprobación sin procesos manuales.' },
-          { title: 'Trazable', text: 'Estado, registro y conciliación de cada transacción.' },
-          { title: 'Integrable', text: 'APIs para conectar la operación con los sistemas existentes.' },
-          { title: 'Multiactivo', text: 'Stablecoins y otros activos digitales según el modelo de negocio.' },
-        ],
+        tagline: 'La diferencia entre partir de cero y partir de algo que ya funciona.',
       },
     ],
     cta: {
-      title: 'Construya su infraestructura de pagos masivos con DAppsFactory',
-      text: 'Desarrollamos la tecnología para ejecutar grandes volúmenes de pagos en cripto de forma rápida, automatizada y trazable, integrada con su operación.',
+      title: 'Pague a miles de personas en una sola operación',
+      text: 'Contanos el volumen, los activos y los sistemas con los que tiene que conectarse, y vemos si SemPay resuelve tu caso tal como está o conviene desarrollarlo a medida.',
       label: 'Quiero conocer la solución',
     },
     faqs: [
-      { q: '¿Qué es una infraestructura de pagos masivos en cripto?', a: 'Es una solución que permite preparar, validar y ejecutar múltiples transferencias de activos digitales en una misma operación sobre blockchain, con trazabilidad de cada pago.' },
-      { q: '¿Qué activos se pueden enviar?', a: 'Stablecoins y otros activos digitales, según las redes y proveedores que se integren en cada proyecto.' },
-      { q: '¿Cuántos pagos se pueden ejecutar por lote?', a: 'La solución está diseñada para grandes volúmenes. El límite concreto depende de la red, los activos y la configuración definida para cada implementación.' },
-      { q: '¿Puede integrarse con nuestros sistemas actuales?', a: 'Sí. La infraestructura puede conectarse mediante APIs con ERP, sistemas de pagos, plataformas propias y otros sistemas existentes.' },
-      { q: '¿Cómo se controla y audita cada pago?', a: 'Cada transacción queda registrada con su estado y su referencia on-chain, y la solución puede incorporar flujos de validación y aprobación antes de ejecutar un lote.' },
-      { q: '¿Cuánto cuesta implementar pagos masivos en cripto?', a: 'Depende de los activos, volúmenes, integraciones y nivel de personalización requerido. El alcance se define a partir de la arquitectura y las necesidades de cada proyecto.' },
+      {
+        q: '¿Hay que registrarse?',
+        a: 'No. Se conecta la wallet y se empieza: no hay formularios de alta, ni aprobaciones, ni espera.',
+      },
+      {
+        q: '¿Ustedes custodian los fondos?',
+        a: 'No, en ningún momento. El dinero queda en la wallet de la empresa y el contrato solo puede tomar lo que autorizan las firmas, y solo para ese lote.',
+      },
+      {
+        q: '¿Qué activos se pueden enviar?',
+        a: 'USDC y EURC, y los dos pueden ir en el mismo lote: cada fila en la moneda que corresponda. Para otros activos o redes, se evalúa como desarrollo a medida.',
+      },
+      {
+        q: '¿Cuántos pagos entran en un lote?',
+        a: 'La corrida filmada fue de 5.002 transacciones en una sola operación, y antes se hizo una de 10.000 pagos en 4 minutos y 32 segundos. El límite práctico depende de la red y de la configuración de cada implementación.',
+      },
+      {
+        q: '¿En qué red funciona hoy?',
+        a: 'En Arc, la red de Circle, donde el gas se paga en el mismo USDC y no hace falta comprar otro token. Las mediciones publicadas son sobre Arc testnet.',
+      },
+      {
+        q: '¿Qué pasa si un pago falla?',
+        a: 'Cada pago es independiente dentro del lote: si uno no entra, el resto sigue. Todo queda registrado con su estado, y un pago nunca se ejecuta dos veces.',
+      },
+      {
+        q: '¿Se puede integrar con nuestros sistemas?',
+        a: 'Sí. Hay una API REST para crear los lotes desde el sistema propio y webhooks firmados para seguir el estado de cada pago, con claves, límites de uso y reintentos seguros.',
+      },
+      {
+        q: '¿Cuánto cuesta?',
+        a: 'Una comisión del 1% del lote más el gas de la red, que en la corrida medida fue de un tercio de centavo por pago. Las dos cosas se muestran antes de firmar.',
+      },
+      {
+        q: '¿Funciona con Ledger?',
+        a: 'Sí, y con cualquier wallet que siga el estándar habitual de conexión. La wallet de la empresa es la cuenta.',
+      },
     ],
   },
 ];
